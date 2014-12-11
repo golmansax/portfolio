@@ -2,8 +2,6 @@ var express = require('express');
 var app = express();
 var expressHandlebars = require('express-handlebars');
 
-app.listen(7704);
-
 app.engine('hbs', expressHandlebars());
 app.set('view engine', 'hbs');
 
