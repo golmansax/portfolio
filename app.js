@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express();
+var expressHandlebars = require('express-handlebars');
 
 app.listen(7704);
 
-app.get('/', function(request, response) {
-  response.sendfile('./public/index.html');
+app.engine('hbs', expressHandlebars());
+app.set('view engine', 'hbs');
+
+app.get('/', function(req, res) {
+  res.render('index');
 });
 
 app.get('/assets/main.css', function(request, response) {
