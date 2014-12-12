@@ -15,7 +15,7 @@ app.use(i18n.init);
 var expressHandlebars = require('express-handlebars');
 var hbs = expressHandlebars.create({
   helpers: {
-    '__': function () {
+    '__': function() {
       return i18n.__.apply(this, arguments);
     }
   }
