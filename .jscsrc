@@ -1,4 +1,8 @@
 {
   "preset": "google",
-  "excludeFiles": ["node_modules/**"]
+  "excludeFiles": ["node_modules/**"],
+
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  }
 }
