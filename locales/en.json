@@ -7,7 +7,12 @@
           "text": "Chalk Schools",
           "url": "http://www.room77.com?new=1"
         },
-        " Software Engineer: Jan 2014 - Current"
+        ", Software Engineer: Jan 2014 - Current"
+      ],
+      "notesInProgress": [
+        ["One of the first engineers on the team, helped develop an engineering culture that emphasizes:"],
+        ["Working code through full code coverage and strong integration specs"],
+        ["Dedication to school employees and parents through responsive support"]
       ]
     },
     {
@@ -16,7 +21,7 @@
           "text": "Room 77",
           "url": "http://www.room77.com?new=1"
         },
-        " Software Engineer: Jul 2012 - Jan 2014"
+        ", Software Engineer: Jul 2012 - Jan 2014"
       ],
       "notes": [
         [
@@ -49,11 +54,18 @@
             "text": "Fun teams page"
           },
           " created in an internal hackathon"
+        ],
+        [
+          "Company was ",
+          {
+            "url": "http://www.bloomberg.com/news/2014-04-07/google-licenses-room-77-software-in-mobile-travel-booking-push.html",
+            "text": "acquired by Google"
+          }
         ]
       ]
     },
     {
-      "title": "University of Maryland, BS, Computer Engineering and Mathematics: Class of 2012",
+      "title": ["University of Maryland, BS, Computer Engineering and Mathematics: Class of 2012"],
       "notes": [
         [
           {
