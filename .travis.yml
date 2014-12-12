@@ -2,3 +2,10 @@ language: node_js
 node_js: '0.10'
 script:
 - jscs .
+deploy:
+  provider: heroku
+  strategy: git
+  api_key:
+    secure: ERr28OXoNvokbiM9EccyPA2GDC2A0Jd6Z3YBXrFPW9FFd+IhTCG47T8ZBqEh+woMXfCsDSnrtgA6crlw4NauTED2lkabhjg/z44ggcOKQ6BVejJ+EyfDTM2SCNcsf+GxU5+kxB0o+KM9Qq7Usk3oOLwCJxCdOcekIl8f8nWgoCM=
+  app:
+    secure: Fl1NNHj018HMaSYwzc9zpl+1jrxip4J8pYshVkPnUExhRQBKS+NU3f7Krh1lnRKZTAHAlOkZLLrU6EjYGDnNZeruGHRdR9GwNND4MoNSOf5aQJc3SyIsqfuvHYRB+dMfuGMXWPGS6ZiNEh2imWE7bFvvYc6CtgyzSBiGv4Mb+U8=
