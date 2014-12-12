@@ -6,7 +6,7 @@
     "jscs": "latest"
   },
   "dependencies": {
-    "express": "4.x",
-    "express-handlebars": ""
+    "express": "latest",
+    "express-handlebars": "latest"
   }
 }
