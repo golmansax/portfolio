@@ -1,7 +1,10 @@
 language: node_js
 node_js: '0.10'
 script:
-- jscs .
+  - jscs .
+cache:
+  directories:
+    - node_modules
 deploy:
   provider: heroku
   strategy: git
