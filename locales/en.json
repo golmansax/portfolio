@@ -1,3 +1,80 @@
 {
-  "meta_description": "Personal site of Holman Gao, software engineer at Chalk Schools, University of Maryland and Blair Magnet alum, living in San Francisco"
+  "metaDescription": "Personal site of Holman Gao, software engineer at Chalk Schools, University of Maryland and Blair Magnet alum, living in San Francisco",
+  "resume": [
+    {
+      "title": [
+        {
+          "text": "Chalk Schools",
+          "url": "http://www.room77.com?new=1"
+        },
+        " Software Engineer: Jan 2014 - Current"
+      ]
+    },
+    {
+      "title": [
+        {
+          "text": "Room 77",
+          "url": "http://www.room77.com?new=1"
+        },
+        " Software Engineer: Jul 2012 - Jan 2014"
+      ],
+      "notes": [
+        [
+          "Developer on mobile app [",
+          {
+            "url": "http://m.room77.com?new=1",
+            "text": "website"
+          },
+          ", ",
+          {
+            "url": "https://itunes.apple.com/us/app/room-77-hotel-deal-finder/id418078412?mt=8",
+            "text": "iOS"
+          },
+          "]"
+        ],
+        ["Designed and implemented a native-like HTML5 and Angular JS single-page mobile app framework"],
+        [
+          "Author and maintainer of ",
+          {
+            "url": "https://github.com/room77/angular-recompile",
+            "text": "a recompile library for Angular JS"
+          },
+          " created to significantly reduce $watches on an Angular app"
+        ],
+        ["Occasional forays into backend and production infrastructure projects"],
+        [
+          {
+            "url": "https://github.com/golmansax/office-street-view",
+            "urlFake": "http://www.golmansax.com/office-street-view/#office",
+            "text": "Fun teams page"
+          },
+          " created in an internal hackathon"
+        ]
+      ]
+    },
+    {
+      "title": "University of Maryland, BS, Computer Engineering and Mathematics: Class of 2012",
+      "notes": [
+        [
+          {
+            "url": "http://www.newsdesk.umd.edu/engaged/release.cfm?ArticleID=2429",
+            "text": "Participant"
+          },
+          " in the 2011 ACM-ICPC World Finals"
+        ]
+      ]
+    },
+    {
+      "title": ["Montgomery Blair Magnet Program: Class of 2008"]
+    },
+    {
+      "title": [
+        "Hobbies: ",
+        {
+          "url": "http://www.sfgate.com/music/slideshow/Outside-Lands-2014-91325.php",
+          "text": "acroyoga"
+        }
+      ]
+    }
+  ]
 }

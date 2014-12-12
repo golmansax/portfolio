@@ -6,7 +6,6 @@ var i18n = require('i18n');
 app.listen(process.env.PORT || 3000);
 
 i18n.configure({
-  locales: ['en'],
   directory: __dirname + '/locales',
   objectNotation: true
 });
@@ -14,6 +13,7 @@ app.use(i18n.init);
 
 var expressHandlebars = require('express-handlebars');
 var hbs = expressHandlebars.create({
+  extname: '.hbs',
   helpers: {
     '__': function() {
       return i18n.__.apply(this, arguments);
