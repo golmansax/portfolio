@@ -6,5 +6,7 @@
     "beforeOpeningRoundBrace": true
   },
 
+  "disallowTrailingComma": true,
+
   "disallowSpacesInAnonymousFunctionExpression": null
 }

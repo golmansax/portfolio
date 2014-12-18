@@ -7,7 +7,8 @@
     "url" : "http://github.com/golmansax/my-site-in-express.git"
   },
   "devDependencies": {
-    "jscs": "latest"
+    "jscs": "latest",
+    "jshint": "latest"
   },
   "dependencies": {
     "express": "latest",
