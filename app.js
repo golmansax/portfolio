@@ -24,10 +24,18 @@ var hbs = expressHandlebars.create({
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
+var stylus = require('stylus');
+var nib = require('nib');
+app.use(stylus.middleware({
+  src: __dirname + '/stylesheets',
+  dest: __dirname + '/public/assets',
+  compile: function compile(str, path) {
+    return stylus(str).set('filename', path).use(nib());
+  }
+}))
+
+app.use(express.static(__dirname + '/public'))
+
 app.get('/', function (req, res) {
   res.render('index');
-});
-
-app.get('/assets/main.css', function (request, response) {
-  response.sendfile('./public/main.css');
 });

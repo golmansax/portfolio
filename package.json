@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "latest",
     "express-handlebars": "latest",
-    "i18n": "latest"
+    "i18n": "latest",
+    "nib": "latest",
+    "stylus": "latest"
   }
 }
