@@ -13,7 +13,8 @@
         ["Helped create the engineering culture as an early employee"],
         ["Practice agile development through full code coverage and strong integration specs"],
         ["Focus on customer satisfaction through integrating user feedback and responsive support"],
-        ["Comfortable with full stack of website development, from code architecting to frontend design"]
+        ["Comfortable with full stack of website development, from code architecting to frontend design"],
+        ["Stack includes Rails, plain JavaScript, Haml, Sass, PostgreSQL, Heroku"]
       ]
     },
     {
@@ -82,7 +83,7 @@
     },
     {
       "title": [
-        "Hobbies: ",
+        "Interests: ",
         {
           "url": "http://www.sfgate.com/music/slideshow/Outside-Lands-2014-91325.php",
           "text": "acroyoga"
