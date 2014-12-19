@@ -2,16 +2,16 @@
 
 global-reset()
 
+$container-width = 1000px
+
 body {
   font-family 'PT Sans', sans-serif
   font-size 16px
   line-height 1.5
-  margin 1em
 }
 
 h1 {
   font-size 24px
-  padding .2em 0
 }
 
 .resume-entry {
@@ -27,11 +27,23 @@ h1 {
   margin-left 2em
 }
 
-.contact {
-  padding-top .5em
-  border-top 1px solid #000
-}
-
 .hide {
   display none
+}
+
+$pdf-landscape-width = 960px
+$pdf-landscape-height = 720px
+$pdf-viewer-width = 720px
+
+.pdf-viewer-landscape {
+  width $pdf-viewer-width
+  height ($pdf-viewer-width * $pdf-landscape-height / $pdf-landscape-width)
+}
+
+.container {
+  max-width $container-width
+  width 100%
+  margin-left auto
+  margin-right auto
+  padding 0 1em
 }

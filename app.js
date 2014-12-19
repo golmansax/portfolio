@@ -17,6 +17,7 @@
   var expressHandlebars = require('express-handlebars');
   var hbs = expressHandlebars.create({
     extname: '.hbs',
+    defaultLayout: 'default',
     helpers: {
       '__': function () {
         return i18n.__.apply(this, arguments);
@@ -41,5 +42,9 @@
 
   app.get('/', function (req, res) {
     res.render('index');
+  });
+
+  app.get('/human-centered-design', function (req, res) {
+    res.render('hcd');
   });
 })();
