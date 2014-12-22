@@ -1,6 +1,6 @@
 {
   "preset": "google",
-  "excludeFiles": ["node_modules/**"],
+  "excludeFiles": ["node_modules/**", "vendor/**"],
 
   "requireSpacesInAnonymousFunctionExpression": {
     "beforeOpeningRoundBrace": true
