@@ -51,8 +51,7 @@
         ["Occasional forays into backend and production infrastructure projects"],
         [
           {
-            "url": "https://github.com/golmansax/office-street-view",
-            "urlFake": "http://www.golmansax.com/office-street-view/#office",
+            "url": "/office-street-view/#office",
             "text": "Fun teams page"
           },
           " created in an internal hackathon"

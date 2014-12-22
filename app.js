@@ -56,4 +56,9 @@
 
     res.render('hcd', { link: link });
   });
+
+  var osvApp = express();
+  osvApp.use(express.static(__dirname + '/vendor/office-street-view/dist/'));
+
+  app.use('/office-street-view', osvApp);
 })();
