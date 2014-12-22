@@ -8,5 +8,9 @@
 
   "disallowTrailingComma": true,
 
-  "disallowSpacesInAnonymousFunctionExpression": null
+  "disallowSpacesInAnonymousFunctionExpression": null,
+
+  "disallowSpacesInsideObjectBrackets": null,
+
+  "requireSpacesInsideObjectBrackets": "allButNested"
 }

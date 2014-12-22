@@ -2,7 +2,7 @@ language: node_js
 node_js: '0.10'
 script:
 - jscs .
-- jshint --exclude-path .gitignore
+- jshint . --exclude-path .gitignore
 cache:
   directories:
   - node_modules
