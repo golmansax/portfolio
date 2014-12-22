@@ -45,6 +45,15 @@
   });
 
   app.get('/human-centered-design', function (req, res) {
-    res.render('hcd');
+    var link = 'https://docs.google.com/viewer?' + [
+      'srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs',
+      'pid=explorer',
+      'efh=false',
+      'a=v',
+      'chrome=false',
+      'embedded=true'
+    ].join('&');
+
+    res.render('hcd', { link: link });
   });
 })();
