@@ -8,9 +8,11 @@
   },
   "devDependencies": {
     "jscs": "latest",
-    "jshint": "latest"
+    "jshint": "latest",
+    "travis-lint": "latest"
   },
   "dependencies": {
+    "backbone-sortable-collection": "latest",
     "express": "latest",
     "express-handlebars": "latest",
     "i18n": "latest",
