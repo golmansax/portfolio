@@ -40,25 +40,8 @@
 
   app.use(express.static(__dirname + '/public'));
 
-  app.get('/', function (req, res) {
-    res.render('index');
-  });
-
-  app.get('/human-centered-design', function (req, res) {
-    var link = 'https://docs.google.com/viewer?' + [
-      'srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs',
-      'pid=explorer',
-      'efh=false',
-      'a=v',
-      'chrome=false',
-      'embedded=true'
-    ].join('&');
-
-    res.render('hcd', { link: link });
-  });
-
-  var osvApp = express();
-  osvApp.use(express.static(__dirname + '/vendor/office-street-view/dist/'));
-
-  app.use('/office-street-view', osvApp);
+  var routes = require('./routes');
+  app.get('/', routes.index);
+  app.get('/human-centered-design', routes.hcd);
+  app.use('/office-street-view', require('./osv_app').app);
 })();
