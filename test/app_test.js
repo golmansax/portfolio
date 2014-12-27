@@ -10,7 +10,7 @@ describe('app', function () {
 
   beforeEach(function () {
     this.server = app.listen(3000);
-    browser = new Browser({ site: 'http://localhost:3000' })
+    browser = new Browser({ site: 'http://localhost:3000' });
   });
 
   afterEach(function () {
