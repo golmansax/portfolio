@@ -1,12 +1,10 @@
-(function () {
+(function (exports) {
   'use strict';
 
   var express = require('express');
   var app = express();
 
   var i18n = require('i18n');
-
-  app.listen(process.env.PORT || 3000);
 
   i18n.configure({
     directory: __dirname + '/locales',
@@ -44,4 +42,7 @@
   app.get('/', routes.index);
   app.get('/human-centered-design', routes.hcd);
   app.use('/office-street-view', require('./osv_app').app);
-})();
+
+  exports.app = app;
+  if (!module.parent) { app.listen(process.env.PORT || 3000); }
+})(exports);

@@ -4,6 +4,7 @@ script:
 - travis-lint .travis.yml
 - jscs .
 - jshint . --exclude-path .jshintignore
+- npm test
 cache:
   directories:
   - node_modules

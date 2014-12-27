@@ -7,9 +7,12 @@
     "url" : "http://github.com/golmansax/my-site-in-express.git"
   },
   "devDependencies": {
+    "chai": "latest",
     "jscs": "latest",
     "jshint": "latest",
-    "travis-lint": "latest"
+    "mocha": "latest",
+    "travis-lint": "latest",
+    "zombie": "latest"
   },
   "dependencies": {
     "backbone-sortable-collection": "latest",
@@ -18,5 +21,8 @@
     "i18n": "latest",
     "nib": "latest",
     "stylus": "latest"
+  },
+  "scripts": {
+    "test": "make test"
   }
 }
