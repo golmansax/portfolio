@@ -29,7 +29,7 @@
   var stylus = require('stylus');
   var nib = require('nib');
   server.use(stylus.middleware({
-    src: __dirname + '/stylesheets',
+    src: __dirname + '/assets',
     dest: __dirname + '/public/assets',
     compile: function compile(str, path) {
       return stylus(str).set('filename', path).use(nib());

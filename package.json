@@ -23,6 +23,7 @@
     "stylus": "latest"
   },
   "scripts": {
+    "start": "node server.js",
     "test": "make test"
   }
 }
