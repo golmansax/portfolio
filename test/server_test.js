@@ -1,15 +1,15 @@
 var expect = require('chai').expect;
 var Browser = require('zombie');
-var app = require('../app').app;
+var server = require('../server').server;
 
-describe('app', function () {
+describe('server', function () {
   'use strict';
 
   var browser;
   this.timeout(9000);
 
   beforeEach(function () {
-    this.server = app.listen(3000);
+    this.server = server.listen(3000);
     browser = new Browser({ site: 'http://localhost:3000' });
   });
 

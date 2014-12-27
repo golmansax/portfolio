@@ -2,7 +2,7 @@
   'use strict';
 
   var express = require('express');
-  var app = express();
+  var server = express();
 
   var i18n = require('i18n');
 
@@ -10,7 +10,7 @@
     directory: __dirname + '/locales',
     objectNotation: true
   });
-  app.use(i18n.init);
+  server.use(i18n.init);
 
   var expressHandlebars = require('express-handlebars');
   var hbs = expressHandlebars.create({
@@ -23,12 +23,12 @@
     }
   });
 
-  app.engine('hbs', hbs.engine);
-  app.set('view engine', 'hbs');
+  server.engine('hbs', hbs.engine);
+  server.set('view engine', 'hbs');
 
   var stylus = require('stylus');
   var nib = require('nib');
-  app.use(stylus.middleware({
+  server.use(stylus.middleware({
     src: __dirname + '/stylesheets',
     dest: __dirname + '/public/assets',
     compile: function compile(str, path) {
@@ -36,13 +36,13 @@
     }
   }));
 
-  app.use(express.static(__dirname + '/public'));
+  server.use(express.static(__dirname + '/public'));
 
   var routes = require('./routes');
-  app.get('/', routes.index);
-  app.get('/human-centered-design', routes.hcd);
-  app.use('/office-street-view', require('./osv_app').app);
+  server.get('/', routes.index);
+  server.get('/human-centered-design', routes.hcd);
+  server.use('/office-street-view', require('./osv_server').server);
 
-  exports.app = app;
-  if (!module.parent) { app.listen(process.env.PORT || 3000); }
+  exports.server = server;
+  if (!module.parent) { server.listen(process.env.PORT || 3000); }
 })(exports);
