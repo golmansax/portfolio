@@ -22,7 +22,8 @@
     "express-handlebars": "latest",
     "i18n": "latest",
     "nib": "latest",
-    "stylus": "latest"
+    "stylus": "latest",
+    "uglifyify": "latest"
   },
   "scripts": {
     "build": "make build",
