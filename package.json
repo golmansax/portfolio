@@ -22,6 +22,9 @@
     "express-handlebars": "latest",
     "i18n": "latest",
     "nib": "latest",
+    "node-jsx": "latest",
+    "react": "latest",
+    "reactify": "latest",
     "stylus": "latest",
     "uglifyify": "latest"
   },

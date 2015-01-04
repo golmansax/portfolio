@@ -1,8 +1,17 @@
 (function (exports) {
   'use strict';
 
+  require('node-jsx').install({ extension: '.jsx' });
+  var React = require('react');
+  var ResumeFactory = React.createFactory(require('./components/resume'));
+  var i18n = require('i18n');
+
   exports.index = function (req, res) {
-    res.render('index');
+    var resume = React.renderToString(
+      ResumeFactory({ entries: i18n.__('resume') })
+    );
+
+    res.render('index', { resume: resume });
   };
 
   exports.hcd = function (req, res) {

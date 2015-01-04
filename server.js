@@ -1,4 +1,4 @@
-(function (exports) {
+exports.server = (function () {
   'use strict';
 
   var express = require('express');
@@ -16,12 +16,7 @@
   var expressHandlebars = require('express-handlebars');
   var hbs = expressHandlebars.create({
     extname: '.hbs',
-    defaultLayout: 'default',
-    helpers: {
-      '__': function () {
-        return i18n.__.apply(this, arguments);
-      }
-    }
+    defaultLayout: 'default'
   });
 
   server.engine('hbs', hbs.engine);
@@ -47,6 +42,7 @@
   server.get('/human-centered-design', routes.hcd);
   server.use('/office-street-view', require('./osv_server').server);
 
-  exports.server = server;
   if (!module.parent) { server.listen(process.env.PORT || 3000); }
-})(exports);
+
+  return server;
+})();

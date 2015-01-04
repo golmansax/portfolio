@@ -2,15 +2,4 @@
   <h1>Holman Gao</h1>
 </div>
 <hr />
-<div class="resume container">
-  {{#each (__ 'resume')}}
-    <div class="resume-entry">
-      {{> 'fragments' title}}
-      {{#each notes}}
-        <div class="resume-entry-note">
-          {{> 'fragments' this}}
-        </div>
-      {{/each}}
-    </div>
-  {{/each}}
-</div>
+{{{resume}}}
