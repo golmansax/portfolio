@@ -3,6 +3,7 @@
 
   var express = require('express');
   var server = express();
+  var env = process.env.NODE_ENV || 'development';
 
   var i18n = require('i18n');
 
@@ -31,6 +32,7 @@
   server.use(stylus.middleware({
     src: __dirname + '/assets',
     dest: __dirname + '/public/assets',
+    compress: env !== 'development',
     compile: function compile(str, path) {
       return stylus(str).set('filename', path).use(nib());
     }
