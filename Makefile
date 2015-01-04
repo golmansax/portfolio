@@ -1,5 +1,6 @@
 .PHONY: build
 build:
+	mkdir -p public/assets
 	./node_modules/.bin/browserify assets/main.js -o public/assets/bundle.js
 
 .PHONY: test
