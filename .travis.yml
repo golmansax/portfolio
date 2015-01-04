@@ -15,3 +15,4 @@ deploy:
     secure: Ltd+/+uqs8KZHH7DDAPzbjcyFTXmnxSq5Q50cH+eF8VYcr+vA6jkOh60Ku5UwtJE6dpGD/3nbPUyVcbIjGHIuSCe761VOIOz2pUprQ83NL011weZOQFV51SGdm9n+nZ0Yr/XWZzaPs78LXYSjW9Q69eS+jr2eB/tHaMMfubj0TU=
   app:
     secure: Fl1NNHj018HMaSYwzc9zpl+1jrxip4J8pYshVkPnUExhRQBKS+NU3f7Krh1lnRKZTAHAlOkZLLrU6EjYGDnNZeruGHRdR9GwNND4MoNSOf5aQJc3SyIsqfuvHYRB+dMfuGMXWPGS6ZiNEh2imWE7bFvvYc6CtgyzSBiGv4Mb+U8=
+  run: 'npm run build'
