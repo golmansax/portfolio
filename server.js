@@ -32,9 +32,11 @@
   server.use(stylus.middleware({
     src: __dirname + '/assets',
     dest: __dirname + '/public/assets',
-    compress: env !== 'development',
     compile: function compile(str, path) {
-      return stylus(str).set('filename', path).use(nib());
+      return stylus(str)
+        .set('filename', path)
+        .use(nib())
+        .set('compress', env !== 'development');
     }
   }));
 
