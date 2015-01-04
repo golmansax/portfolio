@@ -12,9 +12,11 @@
     "jshint": "latest",
     "mocha": "latest",
     "travis-lint": "latest",
+    "watchify": "latest",
     "zombie": "latest"
   },
   "dependencies": {
+    "browserify": "latest",
     "backbone-sortable-collection": "latest",
     "express": "latest",
     "express-handlebars": "latest",
@@ -23,7 +25,10 @@
     "stylus": "latest"
   },
   "scripts": {
+    "build": "make build",
+    "postinstall": "npm run build",
     "start": "node server.js",
-    "test": "make test"
+    "test": "make test",
+    "watch": "make watch"
   }
 }
