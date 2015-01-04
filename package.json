@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "make build",
+    "postinstall": "npm run build",
     "start": "node server.js",
     "test": "make test",
     "watch": "make watch"
