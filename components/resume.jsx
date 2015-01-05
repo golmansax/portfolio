@@ -1,11 +1,12 @@
 var React = require('react');
-var Entry = require('./entry');
+var Entry = require('./entry.jsx');
 
 module.exports = React.createClass({
   getInitialProps: function () {
     return { entries: [] };
   },
   render: function () {
+    console.log('HELLO');
     var entriesHtml = this.props.entries.map(function (entry, index) {
       return (
         <Entry {...entry} key={index} />

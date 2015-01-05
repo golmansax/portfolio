@@ -1,7 +1,7 @@
 .PHONY: build
 build:
 	mkdir -p public/assets
-	./node_modules/.bin/browserify -t reactify -t uglifyify assets/main.js -o public/assets/bundle.js
+	./node_modules/.bin/browserify -t reactify assets/main.jsx -o public/assets/bundle.js
 
 .PHONY: test
 test:
@@ -9,4 +9,4 @@ test:
 
 .PHONY: watch
 watch:
-	./node_modules/.bin/watchify assets/main.js -o public/assets/bundle.js -v
+	./node_modules/.bin/watchify assets/main.jsx -o public/assets/bundle.js -v

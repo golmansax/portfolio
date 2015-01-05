@@ -1,5 +1,5 @@
 var React = require('react');
-var Fragments = require('./fragments');
+var Fragments = require('./fragments.jsx');
 
 module.exports = React.createClass({
   getInitialProps: function () {
