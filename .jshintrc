@@ -15,7 +15,7 @@
   "noempty": true,
   "nonew": true,
   "plusplus": false,
-  "quotmark": "single",
+  "quotmark": false, // Use jscs for this
   "undef": true, // See below for a list of globals
   "unused": true,
   "strict": true,
@@ -24,7 +24,7 @@
   "maxdepth": 4,
   "maxstatements": 50,
   "maxcomplexity": 4,
-  "maxlen": 80,
+  "maxlen": false, // Use jscs for this
 
   // Relaxing options: when set to true, produces fewer errors
   "asi": false,
@@ -57,7 +57,7 @@
   // Environments and exposing globals
   "browser": false,
   "couch": false,
-  "devel": true,
+  "devel": false,
   "dojo": false,
   "jquery": false,
   "mootools": false,

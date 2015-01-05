@@ -1,11 +1,16 @@
-exports.server = (function () {
+var express = require('express');
+var i18n = require('i18n');
+var expressHandlebars = require('express-handlebars');
+var stylus = require('stylus');
+var nib = require('nib');
+var routes = require('./routes');
+var osvServer = require('./osv_server');
+
+module.exports = (function () {
   'use strict';
 
-  var express = require('express');
   var server = express();
   var env = process.env.NODE_ENV || 'development';
-
-  var i18n = require('i18n');
 
   i18n.configure({
     directory: __dirname + '/locales',
@@ -13,7 +18,6 @@ exports.server = (function () {
   });
   server.use(i18n.init);
 
-  var expressHandlebars = require('express-handlebars');
   var hbs = expressHandlebars.create({
     extname: '.hbs',
     defaultLayout: 'default'
@@ -22,8 +26,6 @@ exports.server = (function () {
   server.engine('hbs', hbs.engine);
   server.set('view engine', 'hbs');
 
-  var stylus = require('stylus');
-  var nib = require('nib');
   server.use(stylus.middleware({
     src: __dirname + '/assets',
     dest: __dirname + '/public/assets',
@@ -37,10 +39,9 @@ exports.server = (function () {
 
   server.use(express.static(__dirname + '/public'));
 
-  var routes = require('./routes');
   server.get('/', routes.index);
   server.get('/human-centered-design', routes.hcd);
-  server.use('/office-street-view', require('./osv_server').server);
+  server.use('/office-street-view', osvServer);
 
   if (!module.parent) { server.listen(process.env.PORT || 3000); }
 

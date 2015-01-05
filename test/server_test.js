@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var Browser = require('zombie');
-var server = require('../server').server;
+var server = require('../server');
 
 describe('server', function () {
   'use strict';
@@ -9,8 +9,9 @@ describe('server', function () {
   this.timeout(9000);
 
   beforeEach(function () {
-    this.server = server.listen(3000);
-    browser = new Browser({ site: 'http://localhost:3000' });
+    var port = 3001;
+    this.server = server.listen(port);
+    browser = new Browser({ site: 'http://localhost:' + port });
   });
 
   afterEach(function () {

@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "chai": "latest",
-    "jscs": "latest",
-    "jshint": "latest",
+    "jsxcs": "latest",
+    "jsxhint": "latest",
     "mocha": "latest",
     "travis-lint": "latest",
     "watchify": "latest",

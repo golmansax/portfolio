@@ -1,31 +1,33 @@
-(function (exports) {
+require('node-jsx').install({ extension: '.jsx' });
+var React = require('react');
+var ResumeFactory = React.createFactory(require('./components/resume'));
+var i18n = require('i18n');
+
+module.exports = (function () {
   'use strict';
 
-  require('node-jsx').install({ extension: '.jsx' });
-  var React = require('react');
-  var ResumeFactory = React.createFactory(require('./components/resume'));
-  var i18n = require('i18n');
+  return {
+    index: function (req, res) {
+      var resumeEntries = i18n.__('resume');
+      var resume = React.renderToString(
+        ResumeFactory({ entries: resumeEntries })
+      );
 
-  exports.index = function (req, res) {
-    var resumeEntries = i18n.__('resume');
-    var resume = React.renderToString(
-      ResumeFactory({ entries: resumeEntries })
-    );
+      var gon = JSON.stringify({ resumeEntries: resumeEntries });
+      res.render('index', { resume: resume, gon: gon });
+    },
 
-    var gon = JSON.stringify({ resumeEntries: resumeEntries });
-    res.render('index', { resume: resume, gon: gon });
+    hcd: function (req, res) {
+      var link = 'https://docs.google.com/viewer?' + [
+        'srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs',
+        'pid=explorer',
+        'efh=false',
+        'a=v',
+        'chrome=false',
+        'embedded=true'
+      ].join('&');
+
+      res.render('hcd', { link: link });
+    }
   };
-
-  exports.hcd = function (req, res) {
-    var link = 'https://docs.google.com/viewer?' + [
-      'srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs',
-      'pid=explorer',
-      'efh=false',
-      'a=v',
-      'chrome=false',
-      'embedded=true'
-    ].join('&');
-
-    res.render('hcd', { link: link });
-  };
-})(exports);
+})();
