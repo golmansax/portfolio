@@ -6,7 +6,7 @@ module.exports = React.createClass({
     return { entries: [] };
   },
   render: function () {
-    console.log('HELLO');
+    console.log(this.props.entries);
     var entriesHtml = this.props.entries.map(function (entry, index) {
       return (
         <Entry {...entry} key={index} />

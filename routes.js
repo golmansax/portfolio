@@ -7,11 +7,13 @@
   var i18n = require('i18n');
 
   exports.index = function (req, res) {
+    var resumeEntries = i18n.__('resume');
     var resume = React.renderToString(
-      ResumeFactory({ entries: i18n.__('resume') })
+      ResumeFactory({ entries: resumeEntries })
     );
 
-    res.render('index', { resume: resume });
+    var gon = JSON.stringify({ resumeEntries: resumeEntries });
+    res.render('index', { resume: resume, gon: gon });
   };
 
   exports.hcd = function (req, res) {
