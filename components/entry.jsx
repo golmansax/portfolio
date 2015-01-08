@@ -11,12 +11,9 @@ module.exports = (function () {
       return { title: [], notes: [], showMore: false };
     },
     getInitialState: function () {
-      return { showingMore: true };
-    },
-    componentDidMount: function () {
-      if (this.props.showMore) {
-        this.setState({ showingMore: false });
-      }
+      // We start by showing all if showMore is turned off, but we start with
+      // a small list if showMore is turned on
+      return { showingMore: !this.showMore };
     },
     _toggleShowMore: function () {
       this.setState({ showingMore: !this.state.showingMore });
