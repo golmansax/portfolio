@@ -14,17 +14,33 @@ h1 {
   font-size 24px
 }
 
+h3 {
+  font-size 18px
+}
+
+a i {
+  text-decoration: underline;
+}
+
 .resume-entry {
-  margin-top .5em
+  margin-top 1em
 
   &:first-child {
     margin-top auto
   }
 }
 
-.resume-entry-note {
-  display list-item
+$resume-entry-child {
   margin-left 2em
+}
+
+.resume-entry-show-more {
+  @extends $resume-entry-child
+}
+
+.resume-entry-note {
+  @extends $resume-entry-child
+  display list-item
 }
 
 .hide {

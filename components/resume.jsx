@@ -9,14 +9,14 @@ module.exports = (function () {
       return { entries: [] };
     },
     render: function () {
-      var entriesHtml = this.props.entries.map(function (entry, index) {
+      var entries = this.props.entries.map(function (entry, index) {
         return (
-          <Entry {...entry} key={index} />
+          <Entry {...entry} key={index} showMore={index > 0} />
         );
       });
 
       return (
-        <div className='resume container'>{entriesHtml}</div>
+        <div className='resume container'>{entries}</div>
       );
     }
   });

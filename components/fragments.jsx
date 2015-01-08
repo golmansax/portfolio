@@ -9,7 +9,7 @@ module.exports = (function () {
       return { fragments: [] };
     },
     render: function () {
-      var fragmentsHtml = this.props.fragments.map(function (fragment, index) {
+      var fragments = this.props.fragments.map(function (fragment, index) {
         if (!fragment.text) { fragment = { text: fragment }; }
 
         return (
@@ -18,7 +18,7 @@ module.exports = (function () {
       });
 
       return (
-        <span>{fragmentsHtml}</span>
+        <span>{fragments}</span>
       );
     }
   });

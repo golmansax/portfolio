@@ -82,16 +82,20 @@
     },
     {
       "title": [
-        "Interests: ",
-        {
-          "url": "http://www.sfgate.com/music/slideshow/Outside-Lands-2014-91325.php",
-          "text": "acroyoga"
-        },
-        ", ",
-        {
-          "url": "/human-centered-design",
-          "text": "social change"
-        }
+        "Interests:"
+      ],
+      "notes": [
+        [
+          {
+            "url": "http://www.sfgate.com/music/slideshow/Outside-Lands-2014-91325.php",
+            "text": "acroyoga"
+          },
+          ", ",
+          {
+            "url": "/human-centered-design",
+            "text": "social change"
+          }
+        ]
       ]
     }
   ]
