@@ -29,10 +29,13 @@ module.exports = (function () {
       );
     },
     _renderShowMore: function () {
+      var iconClass = 'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down');
+
       return (
-        <a className='resume-entry-show-more' href='javascript:void(0)' onClick={this._toggleShowMore}>
+        <a className='resume-entry-show-more' href='javascript:void(0)'
+            onClick={this._toggleShowMore}>
           {this.state.showingMore ? 'Less' : 'More'}&nbsp;
-          <i className={'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down')}></i>
+          <i className={iconClass}></i>
         </a>
       );
     },

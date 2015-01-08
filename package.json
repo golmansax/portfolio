@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "chai": "latest",
-    "jsxcs": "latest",
+    "esprima-fb": "latest",
+    "jscs": "latest",
     "jsxhint": "latest",
     "mocha": "latest",
     "travis-lint": "latest",

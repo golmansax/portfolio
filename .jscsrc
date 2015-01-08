@@ -3,15 +3,17 @@
   "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**"],
   "fileExtensions": [".js", ".jsx"],
 
-  "requireSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningRoundBrace": true
-  },
-
   "disallowTrailingComma": true,
+
+  "disallowMultipleVarDecl": "exceptUndefined",
 
   "disallowSpacesInAnonymousFunctionExpression": null,
 
   "disallowSpacesInsideObjectBrackets": null,
 
-  "requireSpacesInsideObjectBrackets": "allButNested"
+  "requireSpacesInsideObjectBrackets": "allButNested",
+
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  }
 }

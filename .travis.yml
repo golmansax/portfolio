@@ -2,7 +2,7 @@ language: node_js
 node_js: '0.10'
 script:
 - travis-lint .travis.yml
-- jsxcs .
+- jscs . --esprima=esprima-fb
 - jsxhint . --exclude-path .jshintignore
 - npm test
 cache:
