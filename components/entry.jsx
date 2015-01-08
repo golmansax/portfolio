@@ -11,7 +11,7 @@ module.exports = (function () {
       return { title: [], notes: [], showMore: false };
     },
     getInitialState: function () {
-      return { showingMore: true }
+      return { showingMore: true };
     },
     componentDidMount: function () {
       if (this.props.showMore) {
@@ -20,6 +20,8 @@ module.exports = (function () {
     },
     _toggleShowMore: function () {
       this.setState({ showingMore: !this.state.showingMore });
+      // Prevent URL change
+      return false;
     },
     _renderNote: function (note, index) {
       return (
@@ -32,7 +34,7 @@ module.exports = (function () {
       var iconClass = 'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down');
 
       return (
-        <a className='resume-entry-show-more' href='javascript:void(0)'
+        <a className='resume-entry-show-more' href='#'
             onClick={this._toggleShowMore}>
           {this.state.showingMore ? 'Less' : 'More'}&nbsp;
           <i className={iconClass}></i>
