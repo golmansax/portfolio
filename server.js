@@ -5,6 +5,7 @@ var stylus = require('stylus');
 var nib = require('nib');
 var routes = require('./routes');
 var osvServer = require('./osv_server');
+var cachifyStatic = require('connect-cachify-static');
 
 module.exports = (function () {
   'use strict';
@@ -22,6 +23,8 @@ module.exports = (function () {
     extname: '.hbs',
     defaultLayout: 'default'
   });
+
+  server.use(cachifyStatic(__dirname + '/public'));
 
   server.engine('hbs', hbs.engine);
   server.set('view engine', 'hbs');

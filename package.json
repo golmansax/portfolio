@@ -19,6 +19,7 @@
   "dependencies": {
     "browserify": "latest",
     "backbone-sortable-collection": "latest",
+    "connect-cachify-static": "latest",
     "express": "latest",
     "express-handlebars": "latest",
     "i18n": "latest",
