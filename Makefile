@@ -1,7 +1,7 @@
 .PHONY: build
 build:
 	mkdir -p public/assets
-	./node_modules/.bin/browserify -t reactify assets/main.jsx -o public/assets/bundle.js
+	./node_modules/.bin/browserify -t reactify -t envify assets/main.jsx | ./node_modules/.bin/uglifyjs -c > public/assets/bundle.js
 
 .PHONY: test
 test:

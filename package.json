@@ -20,6 +20,7 @@
     "browserify": "latest",
     "backbone-sortable-collection": "latest",
     "connect-cachify-static": "latest",
+    "envify": "latest",
     "express": "latest",
     "express-handlebars": "latest",
     "i18n": "latest",
@@ -28,7 +29,7 @@
     "react": "latest",
     "reactify": "latest",
     "stylus": "latest",
-    "uglifyify": "latest"
+    "uglify-js": "latest"
   },
   "scripts": {
     "build": "make build",

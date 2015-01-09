@@ -13,7 +13,7 @@ module.exports = (function () {
     getInitialState: function () {
       // We start by showing all if showMore is turned off, but we start with
       // a small list if showMore is turned on
-      return { showingMore: !this.showMore };
+      return { showingMore: !this.props.showMore };
     },
     _toggleShowMore: function () {
       this.setState({ showingMore: !this.state.showingMore });
