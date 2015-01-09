@@ -1,17 +1,22 @@
+var env = process.env.NODE_ENV || 'development';
 var express = require('express');
 var i18n = require('i18n');
 var expressHandlebars = require('express-handlebars');
-var stylus = require('stylus');
-var nib = require('nib');
 var routes = require('./routes');
 var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
+
+var stylus;
+var nib;
+if (env === 'development') {
+  stylus = require('stylus');
+  nib = require('nib');
+}
 
 module.exports = (function () {
   'use strict';
 
   var server = express();
-  var env = process.env.NODE_ENV || 'development';
 
   i18n.configure({
     directory: __dirname + '/locales',
@@ -29,16 +34,17 @@ module.exports = (function () {
   server.engine('hbs', hbs.engine);
   server.set('view engine', 'hbs');
 
-  server.use(stylus.middleware({
-    src: __dirname + '/assets',
-    dest: __dirname + '/public/assets',
-    compile: function compile(str, path) {
-      return stylus(str)
-        .set('filename', path)
-        .use(nib())
-        .set('compress', env !== 'development');
-    }
-  }));
+  if (env === 'development') {
+    server.use(stylus.middleware({
+      src: __dirname + '/assets',
+      dest: __dirname + '/public/assets',
+      compile: function compile(str, path) {
+        return stylus(str)
+          .set('filename', path)
+          .use(nib());
+      }
+    }));
+  }
 
   server.use(express.static(__dirname + '/public'));
 
