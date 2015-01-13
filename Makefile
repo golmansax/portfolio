@@ -17,4 +17,4 @@ test:
 
 .PHONY: watch
 watch:
-	./node_modules/.bin/watchify -t reactify assets/main.jsx -o public/assets/bundle.js -v
+	./node_modules/.bin/watchify -t reactify assets/main.jsx -o public/assets/main.js -v

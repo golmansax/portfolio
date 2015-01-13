@@ -15,14 +15,18 @@ module.exports = (function () {
       // a small list if showMore is turned on
       return { showingMore: !this.props.showMore };
     },
-    _toggleShowMore: function () {
+    _toggleShowMore: function (event) {
+      event.preventDefault();
       this.setState({ showingMore: !this.state.showingMore });
-      // Prevent URL change
-      return false;
     },
     _renderNote: function (note, index) {
+      var noteClass = 'resume-entry-note';
+      if (!this.state.showingMore && index >= NOTE_LIMIT) {
+        noteClass += ' hide'
+      }
+
       return (
-        <div className='resume-entry-note' key={index}>
+        <div className={noteClass} key={index}>
           <Fragments fragments={note} />
         </div>
       );
@@ -42,11 +46,7 @@ module.exports = (function () {
       var notes, showMore;
 
       if (this.props.notes) {
-        if (this.state.showingMore) {
-          notes = this.props.notes.map(this._renderNote);
-        } else {
-          notes = this.props.notes.slice(0, NOTE_LIMIT).map(this._renderNote);
-        }
+        notes = this.props.notes.map(this._renderNote);
 
         if (this.props.showMore && this.props.notes.length > NOTE_LIMIT) {
           showMore = this._renderShowMore();
