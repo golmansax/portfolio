@@ -22,7 +22,7 @@ module.exports = (function () {
     _renderNote: function (note, index) {
       var noteClass = 'resume-entry-note';
       if (!this.state.showingMore && index >= NOTE_LIMIT) {
-        noteClass += ' hide'
+        noteClass += ' hide';
       }
 
       return (
