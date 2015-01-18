@@ -6,7 +6,7 @@ window.document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   React.render(
-    <Resume entries={gon.resumeEntries} />,
+    <Resume {...gon} />,
     window.document.getElementById('react-container')
   );
 });

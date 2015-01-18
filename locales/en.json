@@ -1,6 +1,6 @@
 {
   "metaDescription": "Personal site of Holman Gao, software engineer at Chalk Schools, University of Maryland and Blair Magnet alum, living in San Francisco",
-  "resume": [
+  "work": [
     {
       "title": [
         {
@@ -64,7 +64,9 @@
           }
         ]
       ]
-    },
+    }
+  ],
+  "education": [
     {
       "title": ["University of Maryland, BS, Computer Engineering and Mathematics: Class of 2012"],
       "notes": [
@@ -79,6 +81,20 @@
     },
     {
       "title": ["Montgomery Blair Magnet Program: Class of 2008"]
+    }
+  ],
+  "other": [
+    {
+      "title": [
+        "Volunteering:"
+      ],
+      "notes": [
+        ["First Graduate, Academic Coach: Nov 2014 - Current"],
+        ["Mission Graduates, Math Tutor: Mar 2014 - Nov 2014"],
+        ["Eastside High School, Math Tutor: Mar 2013 - Nov 2013"],
+        ["Ronald McDonald House, CLIK Room Supervisor: Mar 2013 - Nov 2013"],
+        ["Smithsonian Freer and Sackler Galleries, ImaginAsia Family Program Volunteer: June 2006 - May 2012"]
+      ]
     },
     {
       "title": [

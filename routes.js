@@ -8,13 +8,16 @@ module.exports = (function () {
 
   return {
     index: function (req, res) {
-      var resumeEntries = i18n.__('resume');
-      var resume = React.renderToString(
-        ResumeFactory({ entries: resumeEntries })
-      );
+      var resumeAttrs = {
+        work: i18n.__('work'),
+        education: i18n.__('education'),
+        other: i18n.__('other')
+      };
 
-      var gon = JSON.stringify({ resumeEntries: resumeEntries });
-      res.render('index', { resume: resume, gon: gon });
+      res.render('index', {
+        resume: React.renderToString(ResumeFactory(resumeAttrs)),
+        gon: JSON.stringify(resumeAttrs)
+      });
     },
 
     hcd: function (req, res) {

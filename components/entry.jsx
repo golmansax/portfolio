@@ -4,16 +4,14 @@ var Fragments = require('./fragments.jsx');
 module.exports = (function () {
   'use strict';
 
-  var NOTE_LIMIT = 2;
-
   return React.createClass({
     getInitialProps: function () {
-      return { title: [], notes: [], showMore: false };
+      return { title: [], notes: [], showMoreAfter: false };
     },
     getInitialState: function () {
-      // We start by showing all if showMore is turned off, but we start with
-      // a small list if showMore is turned on
-      return { showingMore: !this.props.showMore };
+      // We start by showing all if showMoreAfter is turned off, but we start
+      // with a small list if showMoreAfter is turned on
+      return { showingMore: !this.props.showMoreAfter };
     },
     _toggleShowMore: function (event) {
       event.preventDefault();
@@ -21,7 +19,7 @@ module.exports = (function () {
     },
     _renderNote: function (note, index) {
       var noteClass = 'resume-entry-note';
-      if (!this.state.showingMore && index >= NOTE_LIMIT) {
+      if (!this.state.showingMore && index >= this.props.showMoreAfter) {
         noteClass += ' hide';
       }
 
@@ -48,7 +46,8 @@ module.exports = (function () {
       if (this.props.notes) {
         notes = this.props.notes.map(this._renderNote);
 
-        if (this.props.showMore && this.props.notes.length > NOTE_LIMIT) {
+        var showMoreAfter = this.props.showMoreAfter;
+        if (showMoreAfter && this.props.notes.length > showMoreAfter) {
           showMore = this._renderShowMore();
         }
       }
