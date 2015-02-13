@@ -89,11 +89,28 @@
         "Volunteering:"
       ],
       "notes": [
-        ["First Graduate, Academic Coach: Nov 2014 - Current"],
-        ["Mission Graduates, Math Tutor: Mar 2014 - Current"],
-        ["Eastside High School, Math Tutor: Mar 2013 - Nov 2013"],
-        ["Ronald McDonald House, CLIK Room Supervisor: Mar 2013 - Nov 2013"],
-        ["Smithsonian Freer and Sackler Galleries, ImaginAsia Family Program Volunteer: June 2006 - May 2012"]
+        [
+          { "text": "First Graduate", "url": "http://firstgraduate.org/" },
+          ", Academic Coach: Nov 2014 - Current"
+        ],
+        [
+          { "text": "Mission Graduates", "url": "http://www.missiongraduates.org/" },
+          ", Math Tutor: Mar 2014 - Current"
+        ],
+        [
+          { "text": "Eastside High School", "url": "http://www.eastside.org/" },
+          ", Math Tutor: Mar 2013 - Nov 2013"
+        ],
+        [
+          { "text": "Ronald McDonald House", "url": "http://www.ronaldhouse.net/" },
+          ", CLIK Room Supervisor: Mar 2013 - Nov 2013"
+        ],
+        [
+          {
+            "text": "Smithsonian Freer and Sackler Galleries",
+            "url": "http://www.asia.si.edu/events/imaginasia.asp"
+          },
+          ", ImaginAsia Family Program Volunteer: June 2006 - May 2012"]
       ]
     },
     {
