@@ -21,7 +21,7 @@ module.exports = (function () {
           </div>
         );
       } else {
-        return <Fragments fragments={this.props.data} />
+        return <Fragments fragments={this.props.data} />;
       }
     }
   });
