@@ -1,5 +1,5 @@
 var React = require('react');
-var Fragments = require('./fragments.jsx');
+var FragmentBlock = require('./fragment_block.jsx');
 
 module.exports = (function () {
   'use strict';
@@ -24,20 +24,22 @@ module.exports = (function () {
       }
 
       return (
-        <div className={noteClass} key={index}>
-          <Fragments fragments={note} />
-        </div>
+        <li className={noteClass} key={index}>
+          <FragmentBlock data={note} />
+        </li>
       );
     },
     _renderShowMore: function () {
       var iconClass = 'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down');
 
       return (
-        <a className='resume-entry-show-more' href='#'
-            onClick={this._toggleShowMore}>
-          {this.state.showingMore ? 'Less' : 'More'}&nbsp;
-          <i className={iconClass}></i>
-        </a>
+        <li>
+          <a className='resume-entry-show-more' href='#'
+              onClick={this._toggleShowMore}>
+            {this.state.showingMore ? 'Less' : 'More'}&nbsp;
+            <i className={iconClass}></i>
+          </a>
+        </li>
       );
     },
     render: function () {
@@ -54,9 +56,11 @@ module.exports = (function () {
 
       return (
         <div className='resume-entry'>
-          <h3><Fragments fragments={this.props.title} /></h3>
-          {notes}
-          {showMore}
+          <h3><FragmentBlock data={this.props.title} /></h3>
+          <ul>
+            {notes}
+            {showMore}
+          </ul>
         </div>
       );
     }

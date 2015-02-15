@@ -2,7 +2,7 @@
 
 global-reset()
 
-$container-width = 1000px
+$container-width = 900px
 
 body {
   font-family 'PT Sans', sans-serif
@@ -50,7 +50,6 @@ $resume-entry-child {
 
 .resume-entry-note {
   @extends $resume-entry-child
-  display list-item
 }
 
 .hide {
@@ -76,4 +75,8 @@ $pdf-viewer-width = 720px
   margin-left auto
   margin-right auto
   padding 0 1em
+}
+
+.clearfix {
+  clearfix();
 }
