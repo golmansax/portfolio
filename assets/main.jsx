@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Resume = require('../components/resume.jsx');
+var Resume = require('../jsx/resume.jsx');
 var gon = require('./gon');
 
 window.document.addEventListener('DOMContentLoaded', function () {

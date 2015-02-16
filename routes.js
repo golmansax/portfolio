@@ -2,7 +2,7 @@
 
 require('node-jsx').install({ extension: '.jsx' });
 var React = require('react');
-var ResumeFactory = React.createFactory(require('./components/resume'));
+var ResumeFactory = React.createFactory(require('./jsx/resume'));
 var i18n = require('i18n');
 var routes = {};
 
