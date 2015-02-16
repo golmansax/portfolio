@@ -1,10 +1,10 @@
+'use strict';
+
 var expect = require('chai').expect;
 var Browser = require('zombie');
 var server = require('../server');
 
 describe('server', function () {
-  'use strict';
-
   var browser;
   this.timeout(9000);
 
