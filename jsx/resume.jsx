@@ -4,10 +4,11 @@ var React = require('react');
 var Entry = require('./entry.jsx');
 
 var CATEGORIES = ['work', 'education', 'other'];
-
-function capitalize(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+var TITLES = {
+  work: 'WORK EXPERIENCE',
+  education: 'EDUCATION',
+  other: 'OTHER'
+};
 
 module.exports = React.createClass({
   getInitialProps: function () {
@@ -17,8 +18,8 @@ module.exports = React.createClass({
   _renderEntry: function (entry, index) {
     var showMoreAfter = index > 0 ? 2 : false;
     // TODO make this less specific
-    if (entry.title[0] === 'Volunteering:') {
-      showMoreAfter = 1;
+    if (entry.title[0] === 'Volunteer Experience:') {
+      showMoreAfter = 2;
     }
 
     return (<Entry {...entry} key={index} showMoreAfter={showMoreAfter} />);
@@ -31,7 +32,7 @@ module.exports = React.createClass({
 
     return (
       <div className='resume-category' key={category}>
-        <h2>{capitalize(category)}</h2>
+        <h2>{TITLES[category]}</h2>
         {entries}
         {breaks}
       </div>
