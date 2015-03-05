@@ -5,9 +5,9 @@ var Entry = require('./entry.jsx');
 
 var CATEGORIES = ['work', 'education', 'other'];
 var TITLES = {
-  work: 'WORK EXPERIENCE',
-  education: 'EDUCATION',
-  other: 'OTHER'
+  work: 'Work Experience',
+  education: 'Education',
+  other: 'Other'
 };
 
 module.exports = React.createClass({
