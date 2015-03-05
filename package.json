@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "chai": "latest",
-    "esprima-fb": "latest",
+    "esprima-fb": "12001.1.0-dev-harmony-fb",
     "jscs": "latest",
     "jsxhint": "latest",
     "mocha": "latest",
