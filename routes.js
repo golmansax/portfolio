@@ -3,6 +3,7 @@
 require('node-jsx').install({ extension: '.jsx' });
 var React = require('react');
 var ResumeFactory = React.createFactory(require('./jsx/resume'));
+var DonationsFactory = React.createFactory(require('./jsx/donations'));
 var i18n = require('i18n');
 var routes = {};
 
@@ -16,6 +17,16 @@ routes.index = function (req, res) {
   res.render('index', {
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
+  });
+};
+
+routes.donations = function (req, res) {
+  var donationAttrs = {
+    donations: i18n.__('donations')
+  };
+
+  res.render('donations', {
+    donations: React.renderToString(DonationsFactory(donationAttrs))
   });
 };
 

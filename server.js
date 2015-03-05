@@ -48,6 +48,7 @@ server.use(express.static(__dirname + '/public'));
 
 server.get('/', routes.index);
 server.get('/human-centered-design', routes.hcd);
+server.get('/donations-pledge', routes.donations);
 server.use('/office-street-view', osvServer);
 
 if (!module.parent) { server.listen(process.env.PORT || 3000); }
