@@ -31,9 +31,11 @@ module.exports = React.createClass({
     if (index < CATEGORIES.length - 1) { breaks = (<div><br /><hr /></div>); }
 
     return (
-      <div className='resume-category' key={category}>
-        <h2>{TITLES[category]}</h2>
-        {entries}
+      <div key={category}>
+        <div className='resume-category container'>
+          <h2>{TITLES[category]}</h2>
+          {entries}
+        </div>
         {breaks}
       </div>
     );
@@ -42,6 +44,6 @@ module.exports = React.createClass({
   render: function () {
     var categories = CATEGORIES.map(this._renderCategory);
 
-    return (<div className='resume container'>{categories}</div>);
+    return (<div className='resume'>{categories}</div>);
   }
 });
