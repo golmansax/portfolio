@@ -19,7 +19,7 @@ module.exports = React.createClass({
   _renderDonation: function (donation) {
     return (
       <div key={donation.year}>
-        {donation.year} &emdash;
+        {donation.year} –&nbsp;
         <Fragment {...donation.organization} />
       </div>
     );
