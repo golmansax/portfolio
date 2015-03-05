@@ -1,15 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Entry = require('./entry.jsx');
 var Fragment = require('./fragment.jsx');
-
-var CATEGORIES = ['work', 'education', 'other'];
-var TITLES = {
-  work: 'Work Experience',
-  education: 'Education',
-  other: 'Other'
-};
 
 module.exports = React.createClass({
   getInitialProps: function () {
