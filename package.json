@@ -27,6 +27,7 @@
     "nib": "latest",
     "node-jsx": "latest",
     "react": "latest",
+    "react-bind-mixin": "latest",
     "reactify": "latest",
     "stylus": "latest",
     "uglify-js": "latest"
