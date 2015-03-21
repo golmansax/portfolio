@@ -20,7 +20,6 @@ i18n.configure({
   directory: __dirname + '/locales',
   objectNotation: true
 });
-server.use(i18n.init);
 
 var hbs = expressHandlebars.create({
   extname: '.hbs',
