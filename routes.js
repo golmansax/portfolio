@@ -15,6 +15,7 @@ routes.index = function (req, res) {
   };
 
   res.render('index', {
+    title: 'Holman Gao',
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
   });
@@ -26,6 +27,7 @@ routes.donations = function (req, res) {
   };
 
   res.render('donations', {
+    title: 'Donations Pledge — Holman Gao',
     donations: React.renderToString(DonationsFactory(donationAttrs))
   });
 };
@@ -40,7 +42,10 @@ routes.hcd = function (req, res) {
     'embedded=true'
   ].join('&');
 
-  res.render('hcd', { link: link });
+  res.render('hcd', {
+    title: 'Human-Centered Design — Holman Gao',
+    link: link
+  });
 };
 
 module.exports = routes;
