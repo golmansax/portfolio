@@ -24,11 +24,13 @@
     "express": "latest",
     "express-handlebars": "latest",
     "i18n": "latest",
+    "jeet": "latest",
     "nib": "latest",
     "node-jsx": "latest",
     "react": "latest",
     "react-bind-mixin": "latest",
     "reactify": "latest",
+    "rupture": "latest",
     "stylus": "latest",
     "uglify-js": "latest"
   },

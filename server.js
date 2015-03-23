@@ -9,11 +9,13 @@ var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
 var stylus;
 var nib;
+var jeet;
 var server = express();
 
 if (env === 'development') {
   stylus = require('stylus');
   nib = require('nib');
+  jeet = require('jeet');
 }
 
 i18n.configure({
@@ -38,6 +40,7 @@ if (env === 'development') {
     compile: function compile(str, path) {
       return stylus(str)
         .set('filename', path)
+        .use(jeet())
         .use(nib());
     }
   }));

@@ -1,4 +1,5 @@
 @import 'nib'
+@import 'jeet'
 
 global-reset()
 
@@ -45,7 +46,7 @@ p {
 }
 
 .resume-entry {
-  margin 1em 1em 0
+  margin 1em 0 0
 }
 
 $resume-entry-child {
@@ -78,13 +79,18 @@ $pdf-viewer-width = 720px
 }
 
 .container {
-  max-width $container-width
-  width 100%
-  margin-left auto
-  margin-right auto
-  padding 0 1em
+  center($container-width, 1em)
+}
+
+.fragment-left {
+  col(3/5)
+}
+
+.fragment-right {
+  col(2/5)
+  text-align right
 }
 
 .clearfix {
-  clearfix();
+  clearfix()
 }

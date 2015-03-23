@@ -11,12 +11,12 @@ module.exports = React.createClass({
     if (this.props.data.left) {
       return (
         <div className='clearfix'>
-          <span className='pull-left'>
+          <div className='fragment-left'>
             <Fragments fragments={this.props.data.left} />
-          </span>
-          <span className='pull-right'>
+          </div>
+          <div className='fragment-right'>
             <Fragments fragments={this.props.data.right} />
-          </span>
+          </div>
         </div>
       );
     } else {
