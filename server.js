@@ -10,12 +10,14 @@ var cachifyStatic = require('connect-cachify-static');
 var stylus;
 var nib;
 var jeet;
+var rupture;
 var server = express();
 
 if (env === 'development') {
   stylus = require('stylus');
   nib = require('nib');
   jeet = require('jeet');
+  rupture = require('rupture');
 }
 
 i18n.configure({
@@ -41,6 +43,7 @@ if (env === 'development') {
       return stylus(str)
         .set('filename', path)
         .use(jeet())
+        .use(rupture())
         .use(nib());
     }
   }));

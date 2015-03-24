@@ -29,8 +29,8 @@ h3 {
   font-size 18px
 }
 
-a i {
-  text-decoration: underline;
+em {
+  font-style italic
 }
 
 p {
@@ -47,18 +47,12 @@ p {
 
 .resume-entry {
   margin 1em 0 0
-}
 
-$resume-entry-child {
-  margin-left 2em
-}
-
-.resume-entry-show-more {
-  @extends $resume-entry-child
-}
-
-.resume-entry-note {
-  @extends $resume-entry-child
+  .fa-li {
+    font-size .5em
+    left -3em
+    top 1em
+  }
 }
 
 .hide {
@@ -89,6 +83,17 @@ $pdf-viewer-width = 720px
 .fragment-right {
   col(2/5)
   text-align right
+}
+
++below('m') {
+  .fragment-left,
+  .fragment-right {
+    stack()
+  }
+
+  .fragment-right {
+    text-align left
+  }
 }
 
 .clearfix {

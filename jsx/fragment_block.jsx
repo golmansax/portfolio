@@ -15,7 +15,9 @@ module.exports = React.createClass({
             <Fragments fragments={this.props.data.left} />
           </div>
           <div className='fragment-right'>
-            <Fragments fragments={this.props.data.right} />
+            <em>
+              <Fragments fragments={this.props.data.right} />
+            </em>
           </div>
         </div>
       );

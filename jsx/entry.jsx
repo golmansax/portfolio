@@ -24,6 +24,7 @@ module.exports = React.createClass({
 
     return (
       <li className={noteClass} key={index}>
+        <i className='fa-li fa fa-circle' />
         <FragmentBlock data={note} />
       </li>
     );
@@ -56,7 +57,7 @@ module.exports = React.createClass({
     return (
       <div className='resume-entry'>
         <h3><FragmentBlock data={this.props.title} /></h3>
-        <ul>
+        <ul className='fa-ul'>
           {notes}
           {showMore}
         </ul>
