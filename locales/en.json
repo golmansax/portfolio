@@ -21,7 +21,7 @@
           },
           ", Software Engineer"
         ],
-        "right": ["San Francisco, CA: Jan ’14 - Current"]
+        "right": ["San Francisco, CA: Jan ’14 – Current"]
       },
       "notes": [
         ["Helped create the engineering culture as an early employee"],
@@ -40,7 +40,7 @@
           },
           ", Software Engineer"
         ],
-        "right": ["Mountain View, CA: Jul ’12 - Jan ’14"]
+        "right": ["Mountain View, CA: Jul ’12 – Jan ’14"]
       },
       "notes": [
         [
@@ -117,28 +117,28 @@
             { "text": "First Graduate", "url": "http://firstgraduate.org/" },
             ", Academic Coach"
           ],
-          "right": ["San Francisco, CA: Nov ’14 - Current"]
+          "right": ["San Francisco, CA: Nov ’14 – Current"]
         },
         {
           "left": [
             { "text": "Mission Graduates", "url": "http://www.missiongraduates.org/" },
             ", Math Tutor"
           ],
-          "right": ["San Francisco, CA: Mar ’14 - Current"]
+          "right": ["San Francisco, CA: Mar ’14 – Current"]
         },
         {
           "left": [
             { "text": "Eastside High School", "url": "http://www.eastside.org/" },
             ", Math Tutor"
           ],
-          "right": ["East Palo Alto, CA: Mar ’13 - Nov ’13"]
+          "right": ["East Palo Alto, CA: Mar ’13 – Nov ’13"]
         },
         {
           "left": [
             { "text": "Ronald McDonald House", "url": "http://www.ronaldhouse.net/" },
             ", CLIK Room Supervisor"
           ],
-          "right": ["Palo Alto, CA: Mar ’13 - Nov ’13"]
+          "right": ["Palo Alto, CA: Mar ’13 – Nov ’13"]
         },
         {
           "left": [
@@ -148,7 +148,7 @@
             },
             ", ImaginAsia Family Program"
           ],
-          "right": ["Washington, DC: June ’06 - May ’12"]
+          "right": ["Washington, DC: June ’06 – May ’12"]
         }
       ]
     },
