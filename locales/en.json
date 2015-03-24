@@ -21,7 +21,7 @@
           },
           ", Software Engineer"
         ],
-        "right": ["San Francisco, CA: Jan 2014 - Current"]
+        "right": ["San Francisco, CA: Jan ’14 - Current"]
       },
       "notes": [
         ["Helped create the engineering culture as an early employee"],
@@ -40,7 +40,7 @@
           },
           ", Software Engineer"
         ],
-        "right": ["Mountain View, CA: Jul 2012 - Jan 2014"]
+        "right": ["Mountain View, CA: Jul ’12 - Jan ’14"]
       },
       "notes": [
         [
@@ -87,7 +87,7 @@
     {
       "title": {
         "left": ["University of Maryland, BS, Computer Engineering and Mathematics"],
-        "right": ["College Park, MD: Class of 2012"]
+        "right": ["College Park, MD: Class of ’12"]
       },
       "notes": [
         [
@@ -102,7 +102,7 @@
     {
       "title": {
         "left": ["Montgomery Blair Magnet Program"],
-        "right": ["Silver Spring, MD: Class of 2008"]
+        "right": ["Silver Spring, MD: Class of ’08"]
       }
     }
   ],
@@ -117,28 +117,28 @@
             { "text": "First Graduate", "url": "http://firstgraduate.org/" },
             ", Academic Coach"
           ],
-          "right": ["San Francisco, CA: Nov 2014 - Current"]
+          "right": ["San Francisco, CA: Nov ’14 - Current"]
         },
         {
           "left": [
             { "text": "Mission Graduates", "url": "http://www.missiongraduates.org/" },
             ", Math Tutor"
           ],
-          "right": ["San Francisco, CA: Mar 2014 - Current"]
+          "right": ["San Francisco, CA: Mar ’14 - Current"]
         },
         {
           "left": [
             { "text": "Eastside High School", "url": "http://www.eastside.org/" },
             ", Math Tutor"
           ],
-          "right": ["East Palo Alto, CA: Mar 2013 - Nov 2013"]
+          "right": ["East Palo Alto, CA: Mar ’13 - Nov ’13"]
         },
         {
           "left": [
             { "text": "Ronald McDonald House", "url": "http://www.ronaldhouse.net/" },
             ", CLIK Room Supervisor"
           ],
-          "right": ["Palo Alto, CA: Mar 2013 - Nov 2013"]
+          "right": ["Palo Alto, CA: Mar ’13 - Nov ’13"]
         },
         {
           "left": [
@@ -148,7 +148,7 @@
             },
             ", ImaginAsia Family Program"
           ],
-          "right": ["Washington, DC: June 2006 - May 2012"]
+          "right": ["Washington, DC: June ’06 - May ’12"]
         }
       ]
     },
