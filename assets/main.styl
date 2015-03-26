@@ -4,24 +4,25 @@
 global-reset()
 
 $container-width = 900px
+$my-green = #198565
+$dark-gray = #222
+$white = white
 
 body {
   font-family 'PT Sans', sans-serif
   font-size 16px
   line-height 1.5
-}
-
-h1,
-h2 {
-  margin-bottom: .5em
+  color $dark-gray
 }
 
 h1 {
-  font-size 24px
+  font-size 28px
+  font-weight bold
 }
 
 h2 {
   font-size 20px
+  margin-bottom: .5em
   font-weight bold
 }
 
@@ -38,13 +39,19 @@ p {
   margin-bottom .5em
 }
 
-$my-green = #198565
 a {
   color $my-green
 
   &:hover {
     color darken($my-green, 30%)
   }
+}
+
+.header {
+  color $white
+  background $my-green
+  padding 1em 0
+  margin-bottom 1em
 }
 
 .resume-category {
