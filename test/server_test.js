@@ -33,6 +33,13 @@ describe('server', function () {
     });
   });
 
+  it('routes donations page', function (done) {
+    browser.visit('/donations-pledge', function () {
+      expect(browser.text('h1')).to.equal('Donations Pledge');
+      done();
+    });
+  });
+
   it('routes street view page', function (done) {
     browser.visit('/office-street-view', function () {
       expect(browser.text('h1')).to.equal('Office Street View');

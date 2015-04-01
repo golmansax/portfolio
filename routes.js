@@ -43,7 +43,7 @@ routes.hcd = function (req, res) {
   ].join('&');
 
   res.render('hcd', {
-    metaData: i18n.__('metaData.donations'),
+    metaData: i18n.__('metaData.hcd'),
     link: link
   });
 };
