@@ -118,6 +118,20 @@
   "other": [
     {
       "title": [
+        "Side Projects of Note:"
+      ],
+      "notes": [
+        [
+          {
+            "url": "https://github.com/stephenball1/Twinkle",
+            "text": "Circl Dating App"
+          },
+          " – Winner of the Firebase sponsor prize at the 2015 LAUNCH Hackathon"
+        ]
+      ]
+    },
+    {
+      "title": [
         "Volunteer Experience:"
       ],
       "notes": [
