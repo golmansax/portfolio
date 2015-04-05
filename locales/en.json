@@ -29,7 +29,7 @@
         ["Focus on customer satisfaction through integrating user feedback and responsive support"],
         ["Comfortable with full stack of website development, from code architecting to frontend design"],
         ["Joined the team when the company had 3 employees (2 engineers)"],
-        ["Stack includes Rails, plain JavaScript, Haml, Sass, PostgreSQL, Heroku"]
+        ["Stack includes Rails, combination of React and vanilla JavaScript, Haml, Sass, PostgreSQL, Heroku"]
       ]
     },
     {
@@ -127,6 +127,20 @@
             "text": "Circl Dating App"
           },
           " – Winner of the Firebase sponsor prize at the 2015 LAUNCH Hackathon"
+        ],
+        [
+          {
+            "url": "https://github.com/golmansax/flux-crud-store",
+            "text": "Flux CRUD Store"
+          },
+          " – A Flux Store implementation that uses Backbone for CRUD actions, and returns ImmutableJS objects to allow for pure rendering"
+        ],
+        [
+          {
+            "url": "https://github.com/golmansax/react-bind-mixin",
+            "text": "React Bind Mixin"
+          },
+          " – A React mixin used to simplify the binding between components and data stores"
         ]
       ]
     },
