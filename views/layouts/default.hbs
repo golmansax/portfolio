@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{metaData.title}}</title>
+    <title>{{title metaData.title}}</title>
     <link href="{{cachify '/assets/main.css'}}" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -14,6 +14,16 @@
   </head>
   <body>
     <div class="content">
+      <div class="header">
+        <div class="container">
+          {{!
+          <a href="/">
+            <img src="cachify '/saxophone-icon.png'" style="float:left;margin-right: 10px"/>
+          </a>
+          }}
+          <h1>{{metaData.title}}</h1>
+        </div>
+      </div>
       {{{body}}}
       <br />
       <hr />

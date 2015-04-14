@@ -27,7 +27,16 @@ i18n.configure({
 
 var hbs = expressHandlebars.create({
   extname: '.hbs',
-  defaultLayout: 'default'
+  defaultLayout: 'default',
+  helpers: {
+    title: function (title) {
+      if (title.indexOf('Holman Gao') === -1) {
+        return title + ' — Holman Gao';
+      } else {
+        return title;
+      }
+    }
+  }
 });
 
 server.use(cachifyStatic(__dirname + '/public'));
