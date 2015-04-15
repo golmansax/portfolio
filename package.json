@@ -14,7 +14,7 @@
     "mocha": "latest",
     "travis-lint": "latest",
     "watchify": "latest",
-    "zombie": "latest"
+    "zombie": "3.1.x"
   },
   "dependencies": {
     "browserify": "latest",
