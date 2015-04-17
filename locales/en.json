@@ -36,6 +36,22 @@
       "title": {
         "left": [
           {
+            "text": "Amass Media",
+            "url": "http://amassmedia.org"
+          },
+          ", Advisor"
+        ],
+        "right": ["San Francisco, CA: Mar ’15 – Current"]
+      },
+      "notes": [
+        ["Work directly with the founders on product and technical strategy"],
+        ["Designed and coded the landing site (which uses Rails, Angular JS)"]
+      ]
+    },
+    {
+      "title": {
+        "left": [
+          {
             "text": "Room 77",
             "url": "http://www.room77.com?new=1"
           },
@@ -133,7 +149,7 @@
             "url": "https://github.com/golmansax/flux-crud-store",
             "text": "Flux CRUD Store"
           },
-          " – A Flux Store implementation that uses Backbone for CRUD actions, and returns ImmutableJS objects to allow for pure rendering"
+          " – A Flux Store implementation that uses Backbone for CRUD actions, and returns Immutable.js objects to allow for pure rendering"
         ],
         [
           {
