@@ -157,6 +157,20 @@
             "text": "React Bind Mixin"
           },
           " – A React mixin used to simplify the binding between components and data stores"
+        ],
+        [
+          {
+            "url": "https://github.com/golmansax/backbone-sortable-collection",
+            "text": "Backbone Sortable Collection"
+          },
+          " – Add robust sorting functionality to Backbone Collections"
+        ],
+        [
+          {
+            "url": "https://github.com/golmansax/my-site-in-express",
+            "text": "Personal site"
+          },
+          " – uses Express and React"
         ]
       ]
     },

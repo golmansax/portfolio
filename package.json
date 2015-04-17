@@ -23,6 +23,7 @@
     "envify": "latest",
     "express": "latest",
     "express-handlebars": "latest",
+    "flux-crud-store": "latest",
     "i18n": "latest",
     "jeet": "latest",
     "nib": "latest",
