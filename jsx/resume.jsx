@@ -16,13 +16,7 @@ module.exports = React.createClass({
   },
 
   _renderEntry: function (entry, index) {
-    var showMoreAfter = index > 0 ? 2 : false;
-    // TODO make this less specific
-    if (entry.title[0] === 'Volunteer Experience:') {
-      showMoreAfter = 2;
-    }
-
-    return (<Entry {...entry} key={index} showMoreAfter={showMoreAfter} />);
+    return <Entry {...entry} key={index} />;
   },
 
   _renderCategory: function (category, index) {

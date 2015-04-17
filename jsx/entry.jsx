@@ -5,12 +5,12 @@ var FragmentBlock = require('./fragment_block.jsx');
 
 module.exports = React.createClass({
   getInitialProps: function () {
-    return { title: [], notes: [], showMoreAfter: false };
+    return { title: [], notes: [], numInitialNotesToShow: false };
   },
   getInitialState: function () {
-    // We start by showing all if showMoreAfter is turned off, but we start
-    // with a small list if showMoreAfter is turned on
-    return { showingMore: !this.props.showMoreAfter };
+    // We start by showing all if numInitialNotesToShow is turned off, but we
+    // start with a small list if numInitialNotesToShow is turned on
+    return { showingMore: !this.props.numInitialNotesToShow };
   },
   _toggleShowMore: function (event) {
     event.preventDefault();
@@ -18,7 +18,7 @@ module.exports = React.createClass({
   },
   _renderNote: function (note, index) {
     var noteClass = 'resume-entry-note';
-    if (!this.state.showingMore && index >= this.props.showMoreAfter) {
+    if (!this.state.showingMore && index >= this.props.numInitialNotesToShow) {
       noteClass += ' hide';
     }
 
@@ -48,8 +48,9 @@ module.exports = React.createClass({
     if (this.props.notes) {
       notes = this.props.notes.map(this._renderNote);
 
-      var showMoreAfter = this.props.showMoreAfter;
-      if (showMoreAfter && this.props.notes.length > showMoreAfter) {
+      var numInitialNotesToShow = this.props.numInitialNotesToShow;
+      if (numInitialNotesToShow &&
+          this.props.notes.length > numInitialNotesToShow) {
         showMore = this._renderShowMore();
       }
     }
