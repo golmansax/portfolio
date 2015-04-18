@@ -33,6 +33,7 @@
     "reactify": "latest",
     "rupture": "latest",
     "stylus": "latest",
+    "stylus-type-utils": "latest",
     "uglify-js": "latest"
   },
   "scripts": {

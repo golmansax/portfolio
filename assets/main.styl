@@ -3,7 +3,7 @@
 
 global-reset()
 
-$container-width = 900px
+$container-width = em(900px)
 $my-green = #198565
 $darker-gray = #444
 $dark-gray = #222
@@ -109,14 +109,14 @@ a {
   display none
 }
 
-$pdf-landscape-width = 960px
-$pdf-landscape-height = 720px
-$pdf-viewer-width = 720px
+$pdf-landscape-width = em(960px)
+$pdf-landscape-height = em(720px)
+$pdf-viewer-width = em(720px)
 
 .pdf-viewer-landscape {
   width $pdf-viewer-width
   height ($pdf-viewer-width * $pdf-landscape-height / $pdf-landscape-width)
-  border 1px #aaa solid
+  border em(1px) #aaa solid
   margin-left auto
   margin-right auto
   display block

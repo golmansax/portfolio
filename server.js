@@ -7,18 +7,7 @@ var expressHandlebars = require('express-handlebars');
 var routes = require('./routes');
 var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
-var stylus;
-var nib;
-var jeet;
-var rupture;
 var server = express();
-
-if (env === 'development') {
-  stylus = require('stylus');
-  nib = require('nib');
-  jeet = require('jeet');
-  rupture = require('rupture');
-}
 
 i18n.configure({
   directory: __dirname + '/locales',
@@ -45,6 +34,12 @@ server.engine('hbs', hbs.engine);
 server.set('view engine', 'hbs');
 
 if (env === 'development') {
+  var stylus = require('stylus');
+  var nib = require('nib');
+  var jeet = require('jeet');
+  var rupture = require('rupture');
+  var stylusTypeUtils = require('stylus-type-utils');
+
   server.use(stylus.middleware({
     src: __dirname + '/assets',
     dest: __dirname + '/public/assets',
@@ -53,6 +48,7 @@ if (env === 'development') {
         .set('filename', path)
         .use(jeet())
         .use(rupture())
+        .use(stylusTypeUtils())
         .use(nib());
     }
   }));
