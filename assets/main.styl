@@ -5,6 +5,7 @@ global-reset()
 
 $container-width = 900px
 $my-green = #198565
+$darker-gray = #444
 $dark-gray = #222
 $white = white
 $header-ratio = 1.25em
@@ -31,6 +32,7 @@ h2,
 h3 {
   line-height 1.2
   padding .15em 0
+  color: $darker-gray
 }
 
 h1 {
@@ -71,10 +73,13 @@ a {
 }
 
 .header {
-  color $white
   background $my-green
   padding 1em 0
   margin-bottom 1em
+
+  h1 {
+    color $white
+  }
 }
 
 .header-logo {
