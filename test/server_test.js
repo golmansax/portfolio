@@ -3,6 +3,9 @@
 var expect = require('chai').expect;
 var Browser = require('zombie');
 var server = require('../server');
+var StinkBomb = require('stink-bomb');
+
+StinkBomb.configure({ raise: true });
 
 describe('server', function () {
   var browser;
@@ -22,6 +25,7 @@ describe('server', function () {
     browser.visit('/', function () {
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
+      StinkBomb.create('2015-06-01', { message: 'Sample stink bomb' });
       done();
     });
   });

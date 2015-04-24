@@ -12,6 +12,7 @@
     "jscs": "latest",
     "jsxhint": "latest",
     "mocha": "latest",
+    "stink-bomb": "latest",
     "travis-lint": "latest",
     "watchify": "latest",
     "zombie": "3.1.x"
