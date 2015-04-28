@@ -45,7 +45,7 @@
       },
       "notes": [
         ["Work directly with the founders on product strategy"],
-        ["Designed and coded the landing site (which uses Rails, Angular JS)"],
+        ["Designed and coded the landing site (which uses Rails, Angular JS, MongoDB)"],
         ["Conduct product and technical interviews"]
       ]
     },
