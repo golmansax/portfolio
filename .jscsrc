@@ -11,6 +11,8 @@
 
   "disallowSpacesInsideObjectBrackets": null,
 
+  "requireSpaceBeforeObjectValues": true,
+
   "requireSpacesInsideObjectBrackets": "allButNested",
 
   "requireSpacesInAnonymousFunctionExpression": {
