@@ -184,17 +184,17 @@
       "notes": [
         {
           "left": [
-            { "text": "First Graduate", "url": "http://firstgraduate.org/" },
-            ", Academic Coach"
-          ],
-          "right": ["San Francisco, CA: Nov ’14 – Current"]
-        },
-        {
-          "left": [
             { "text": "Mission Graduates", "url": "http://www.missiongraduates.org/" },
             ", Math Tutor"
           ],
           "right": ["San Francisco, CA: Mar ’14 – Current"]
+        },
+        {
+          "left": [
+            { "text": "First Graduate", "url": "http://firstgraduate.org/" },
+            ", Academic Coach"
+          ],
+          "right": ["San Francisco, CA: Nov ’14 – May ’15"]
         },
         {
           "left": [
