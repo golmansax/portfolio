@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var FragmentBlock = require('./fragment_block.jsx');
+var FragmentBlock = require('./fragment_block');
 
 module.exports = React.createClass({
   getInitialProps: function () {

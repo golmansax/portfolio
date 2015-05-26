@@ -4,7 +4,7 @@ build: build-css build-js
 
 build-js:
 	mkdir -p public/assets
-	./node_modules/.bin/browserify -t reactify -t envify assets/main.jsx | ./node_modules/.bin/uglifyjs -c > public/assets/main.js
+	./node_modules/.bin/browserify --extension=.jsx -t reactify -t envify assets/main.jsx | ./node_modules/.bin/uglifyjs -c > public/assets/main.js
 
 build-css:
 	mkdir -p public/assets
@@ -14,4 +14,4 @@ test:
 	./node_modules/.bin/mocha -R spec test/**/*
 
 watch:
-	./node_modules/.bin/watchify -t reactify assets/main.jsx -o public/assets/main.js -v
+	./node_modules/.bin/watchify --extension=.jsx -t reactify assets/main.jsx -o public/assets/main.js -v

@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Fragments = require('./fragments.jsx');
+var Fragments = require('./fragments');
 
 module.exports = React.createClass({
   getInitialProps: function () {

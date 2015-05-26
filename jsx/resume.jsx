@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var Entry = require('./entry.jsx');
+var Entry = require('./entry');
 
 var CATEGORIES = ['work', 'education', 'other'];
 var TITLES = {
