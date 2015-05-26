@@ -18,6 +18,7 @@
     "zombie": "3.1.x"
   },
   "dependencies": {
+    "babelify": "latest",
     "browserify": "latest",
     "backbone-sortable-collection": "latest",
     "connect-cachify-static": "latest",

@@ -10,16 +10,18 @@ var TITLES = {
   other: 'Other'
 };
 
-module.exports = React.createClass({
-  getInitialProps: function () {
-    return { work: [], education: [], other: [] };
-  },
+class Resume extends React.Component {
+  constructor(props) {
+    super(props);
+    this._renderEntry = this._renderEntry.bind(this);
+    this._renderCategory = this._renderCategory.bind(this);
+  }
 
-  _renderEntry: function (entry, index) {
+  _renderEntry(entry, index) {
     return <Entry {...entry} key={index} />;
-  },
+  }
 
-  _renderCategory: function (category, index) {
+  _renderCategory(category, index) {
     var entries = this.props[category].map(this._renderEntry);
     var breaks;
     if (index < CATEGORIES.length - 1) { breaks = (<div><br /><hr /></div>); }
@@ -33,11 +35,14 @@ module.exports = React.createClass({
         {breaks}
       </div>
     );
-  },
+  }
 
-  render: function () {
+  render() {
     var categories = CATEGORIES.map(this._renderCategory);
 
     return (<div className='resume'>{categories}</div>);
   }
-});
+}
+Resume.defaultProps = { work: [], education: [], other: [] };
+
+module.exports = Resume;
