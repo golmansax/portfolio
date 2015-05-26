@@ -3,11 +3,8 @@
 var React = require('react');
 var Fragments = require('./fragments');
 
-module.exports = React.createClass({
-  getInitialProps: function () {
-    return { data: [] };
-  },
-  render: function () {
+class FragmentBlock extends React.Component {
+  render() {
     if (this.props.data.left) {
       return (
         <div className='clearfix'>
@@ -25,4 +22,7 @@ module.exports = React.createClass({
       return <Fragments fragments={this.props.data} />;
     }
   }
-});
+}
+FragmentBlock.defaultProps = { data: [] };
+
+module.exports = FragmentBlock;
