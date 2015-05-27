@@ -1,4 +1,4 @@
-.PHONY: build build-js build-css test watch
+.PHONY: build build-js build-css test watch jsxhint
 
 build: build-css build-js
 
@@ -15,3 +15,6 @@ test:
 
 watch:
 	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify assets/main.jsx -o public/assets/main.js -v
+
+jsxhint:
+	./node_modules/.bin/jsxhint . --babel --exclude-path .jshintignore
