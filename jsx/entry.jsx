@@ -3,20 +3,24 @@
 var React = require('react');
 var FragmentBlock = require('./fragment_block');
 
-module.exports = React.createClass({
-  getInitialProps: function () {
-    return { title: [], notes: [], numInitialNotesToShow: false };
-  },
-  getInitialState: function () {
+class Entry extends React.Component {
+  constructor(props) {
+    super(props);
+    this._toggleShowMore = this._toggleShowMore.bind(this);
+    this._renderNote = this._renderNote.bind(this);
+    this._renderShowMore = this._renderShowMore.bind(this);
+
     // We start by showing all if numInitialNotesToShow is turned off, but we
     // start with a small list if numInitialNotesToShow is turned on
-    return { showingMore: !this.props.numInitialNotesToShow };
-  },
-  _toggleShowMore: function (event) {
+    this.state = { showingMore: !this.props.numInitialNotesToShow };
+  }
+
+  _toggleShowMore(event) {
     event.preventDefault();
     this.setState({ showingMore: !this.state.showingMore });
-  },
-  _renderNote: function (note, index) {
+  }
+
+  _renderNote(note, index) {
     var noteClass = 'resume-entry-note';
     if (!this.state.showingMore && index >= this.props.numInitialNotesToShow) {
       noteClass += ' hide';
@@ -28,8 +32,9 @@ module.exports = React.createClass({
         <FragmentBlock data={note} />
       </li>
     );
-  },
-  _renderShowMore: function () {
+  }
+
+  _renderShowMore() {
     var iconClass = 'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down');
 
     return (
@@ -41,8 +46,9 @@ module.exports = React.createClass({
         </a>
       </li>
     );
-  },
-  render: function () {
+  }
+
+  render() {
     var notes, showMore;
 
     if (this.props.notes) {
@@ -65,4 +71,7 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+Entry.defaultProps = { title: [], notes: [], numInitialNotesToShow: false };
+
+module.exports = Entry;

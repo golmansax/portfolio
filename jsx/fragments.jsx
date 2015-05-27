@@ -3,11 +3,8 @@
 var React = require('react');
 var Fragment = require('./fragment');
 
-module.exports = React.createClass({
-  getInitialProps: function () {
-    return { fragments: [] };
-  },
-  render: function () {
+class Fragments extends React.Component {
+  render() {
     var fragments = this.props.fragments.map(function (fragment, index) {
       if (!fragment.text) { fragment = { text: fragment }; }
 
@@ -20,4 +17,7 @@ module.exports = React.createClass({
       <span>{fragments}</span>
     );
   }
-});
+}
+Fragments.defaultProps = { fragments: [] };
+
+module.exports = Fragments;
