@@ -23,6 +23,10 @@
         ],
         "right": ["San Francisco, CA: Jan ’14 – Current"]
       },
+      "image": {
+        "src": "/static/chalk.jpg",
+        "href": "http://chalkschools.com"
+      },
       "notes": [
         ["Helped create the engineering culture as an early employee"],
         ["Practice agile development through full code coverage and strong integration tests"],
@@ -42,6 +46,10 @@
           ", Advisor"
         ],
         "right": ["San Francisco, CA: Mar ’15 – Current"]
+      },
+      "image": {
+        "src": "/static/amass.jpg",
+        "href": "http://amassmedia.org"
       },
       "notes": [
         ["Work directly with the founders on product strategy"],

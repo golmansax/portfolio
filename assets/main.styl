@@ -48,7 +48,7 @@ h2 {
 
 h3 {
   font-size $header-ratio
-  margin-bottom .25em
+  margin-bottom .5em
 }
 
 hr {
@@ -96,12 +96,35 @@ a {
 }
 
 .resume-entry {
-  margin 1em 0 0
+  margin 2em 0 0
 
   .fa-li {
     font-size .5em
     left -3em
     top 1em
+  }
+}
+
+.resume-entry-image-container {
+  padding-top .5em
+}
+
+.resume-entry-image {
+  col(1/3)
+
+  img {
+    width 100%
+  }
+}
+
+.resume-entry-other {
+  col(2/3)
+}
+
++below('m') {
+  .resume-entry-image,
+  .resume-entry-other {
+    stack()
   }
 }
 

@@ -2,13 +2,16 @@
 
 import React from 'react';
 import FragmentBlock from './fragment_block';
+import Image from './image';
 
 export default class Entry extends React.Component {
   constructor(props) {
     super(props);
     this._toggleShowMore = this._toggleShowMore.bind(this);
     this._renderNote = this._renderNote.bind(this);
+    this._renderNotes = this._renderNotes.bind(this);
     this._renderShowMore = this._renderShowMore.bind(this);
+    this._renderContent = this._renderContent.bind(this);
 
     // We start by showing all if numInitialNotesToShow is turned off, but we
     // start with a small list if numInitialNotesToShow is turned on
@@ -48,7 +51,7 @@ export default class Entry extends React.Component {
     );
   }
 
-  render() {
+  _renderNotes() {
     var notes, showMore;
 
     if (this.props.notes) {
@@ -62,12 +65,35 @@ export default class Entry extends React.Component {
     }
 
     return (
+      <ul className='fa-ul'>
+        {notes}
+        {showMore}
+      </ul>
+    );
+  }
+
+  _renderContent() {
+    if (!this.props.image) {
+      return this._renderNotes();
+    }
+
+    return (
+      <div className='resume-entry-image-container clearfix'>
+        <div className='resume-entry-image'>
+          <Image {...this.props.image} />
+        </div>
+        <div className='resume-entry-other'>
+          {this._renderNotes()}
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    return (
       <div className='resume-entry'>
         <h3><FragmentBlock data={this.props.title} /></h3>
-        <ul className='fa-ul'>
-          {notes}
-          {showMore}
-        </ul>
+        {this._renderContent()}
       </div>
     );
   }

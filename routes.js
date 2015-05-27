@@ -4,11 +4,21 @@ var React = require('react');
 var ResumeFactory = React.createFactory(require('./jsx/resume'));
 var DonationsFactory = React.createFactory(require('./jsx/donations'));
 var i18n = require('i18n');
+var cachify = require('connect-cachify-static').cachify;
 var routes = {};
 
 routes.index = function (req, res) {
   var resumeAttrs = {
-    work: i18n.__('work'),
+    work: i18n.__('work').map(function (entry) {
+      if (entry.image) {
+        if (!entry.image.src) {
+          entry.image = { src: entry.image };
+        }
+
+        entry.image.src = cachify(entry.image.src);
+      }
+      return entry;
+    }),
     education: i18n.__('education'),
     other: i18n.__('other')
   };
