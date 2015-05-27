@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
-var Fragments = require('./fragments');
+import React from 'react';
+import Fragments from './fragments';
 
-class FragmentBlock extends React.Component {
+export default class FragmentBlock extends React.Component {
   render() {
     if (this.props.data.left) {
       return (
@@ -24,5 +24,3 @@ class FragmentBlock extends React.Component {
   }
 }
 FragmentBlock.defaultProps = { data: [] };
-
-module.exports = FragmentBlock;

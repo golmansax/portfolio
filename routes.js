@@ -1,6 +1,5 @@
 'use strict';
 
-require('node-jsx').install({ extension: '.jsx', harmony: true });
 var React = require('react');
 var ResumeFactory = React.createFactory(require('./jsx/resume'));
 var DonationsFactory = React.createFactory(require('./jsx/donations'));

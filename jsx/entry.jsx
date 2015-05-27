@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
-var FragmentBlock = require('./fragment_block');
+import React from 'react';
+import FragmentBlock from './fragment_block';
 
-class Entry extends React.Component {
+export default class Entry extends React.Component {
   constructor(props) {
     super(props);
     this._toggleShowMore = this._toggleShowMore.bind(this);
@@ -73,5 +73,3 @@ class Entry extends React.Component {
   }
 }
 Entry.defaultProps = { title: [], notes: [], numInitialNotesToShow: false };
-
-module.exports = Entry;

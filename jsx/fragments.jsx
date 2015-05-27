@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
-var Fragment = require('./fragment');
+import React from 'react';
+import Fragment from './fragment';
 
-class Fragments extends React.Component {
+export default class Fragments extends React.Component {
   render() {
     var fragments = this.props.fragments.map(function (fragment, index) {
       if (!fragment.text) { fragment = { text: fragment }; }
@@ -19,5 +19,3 @@ class Fragments extends React.Component {
   }
 }
 Fragments.defaultProps = { fragments: [] };
-
-module.exports = Fragments;

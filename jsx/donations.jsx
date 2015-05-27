@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
-var Fragment = require('./fragment');
+import React from 'react';
+import Fragment from './fragment';
 
-class Donations extends React.Component {
+export default class Donations extends React.Component {
   constructor(props) {
     super(props);
     this._renderDonation = this._renderDonation.bind(this);
@@ -25,5 +25,3 @@ class Donations extends React.Component {
   }
 }
 Donations.defaultProps = { donations: [] };
-
-module.exports = Donations;

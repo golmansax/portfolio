@@ -1,7 +1,7 @@
 'use strict';
 
-var React = require('react');
-var Entry = require('./entry');
+import React from 'react';
+import Entry from './entry';
 
 var CATEGORIES = ['work', 'education', 'other'];
 var TITLES = {
@@ -10,7 +10,7 @@ var TITLES = {
   other: 'Other'
 };
 
-class Resume extends React.Component {
+export default class Resume extends React.Component {
   constructor(props) {
     super(props);
     this._renderEntry = this._renderEntry.bind(this);
@@ -44,5 +44,3 @@ class Resume extends React.Component {
   }
 }
 Resume.defaultProps = { work: [], education: [], other: [] };
-
-module.exports = Resume;
