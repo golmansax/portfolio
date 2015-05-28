@@ -1,8 +1,11 @@
 {
   "metaData": {
-    "index": {
+    "resume": {
       "description": "Personal site of Holman Gao, software engineer at Chalk Schools, University of Maryland and Blair Magnet alum, living in San Francisco",
       "title": "Holman Gao"
+    },
+    "portfolio": {
+      "title": "Holman Gao / Portfolio"
     },
     "hcd": {
       "title": "Human-Centered Design"

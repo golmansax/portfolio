@@ -57,7 +57,8 @@ if (env === 'development') {
 
 server.use(express.static(__dirname + '/public'));
 
-server.get('/', routes.index);
+server.get('/', routes.resume);
+server.get('/portfolio', routes.portfolio);
 server.get('/human-centered-design', routes.hcd);
 server.get('/donations-pledge', routes.donations);
 server.use('/office-street-view', osvServer);

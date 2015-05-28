@@ -1,13 +1,14 @@
 'use strict';
 
 var React = require('react');
+var PortfolioFactory = React.createFactory(require('./jsx/portfolio'));
 var ResumeFactory = React.createFactory(require('./jsx/resume'));
 var DonationsFactory = React.createFactory(require('./jsx/donations'));
 var i18n = require('i18n');
 var cachify = require('connect-cachify-static').cachify;
 var routes = {};
 
-routes.index = function (req, res) {
+routes.resume = function (req, res) {
   var resumeAttrs = {
     work: i18n.__('work').map(function (entry) {
       if (entry.image) {
@@ -23,10 +24,17 @@ routes.index = function (req, res) {
     other: i18n.__('other')
   };
 
-  res.render('index', {
-    metaData: i18n.__('metaData.index'),
+  res.render('resume', {
+    metaData: i18n.__('metaData.resume'),
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
+  });
+};
+
+routes.portfolio = function (req, res) {
+  res.render('portfolio', {
+    metaData: i18n.__('metaData.portfolio'),
+    portfolio: React.renderToString(PortfolioFactory())
   });
 };
 
