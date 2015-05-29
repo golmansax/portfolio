@@ -25,9 +25,9 @@
     "connect-cachify-static": "latest",
     "envify": "latest",
     "express": "latest",
-    "express-handlebars": "latest",
     "flux-crud-store": "latest",
     "i18n": "latest",
+    "jade": "latest",
     "jeet": "latest",
     "nib": "latest",
     "react": "latest",
@@ -42,7 +42,7 @@
     "build": "make build",
     "postinstall": "npm run build",
     "start": "node server.js",
-    "start-dev": "nodemon -e js,jsx,hbs,json",
+    "start-dev": "nodemon -e js,jsx,jade,json",
     "test": "make test",
     "watch": "make watch"
   }

@@ -4,7 +4,6 @@ require('babel/register');
 var env = process.env.NODE_ENV || 'development';
 var express = require('express');
 var i18n = require('i18n');
-var expressHandlebars = require('express-handlebars');
 var routes = require('./routes');
 var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
@@ -15,24 +14,8 @@ i18n.configure({
   objectNotation: true
 });
 
-var hbs = expressHandlebars.create({
-  extname: '.hbs',
-  defaultLayout: 'default',
-  helpers: {
-    title: function (title) {
-      if (title.indexOf('Holman Gao') === -1) {
-        return title + ' — Holman Gao';
-      } else {
-        return title;
-      }
-    }
-  }
-});
-
 server.use(cachifyStatic(__dirname + '/public'));
-
-server.engine('hbs', hbs.engine);
-server.set('view engine', 'hbs');
+server.set('view engine', 'jade');
 
 if (env === 'development') {
   var stylus = require('stylus');
