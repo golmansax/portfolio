@@ -10,6 +10,9 @@ var ResumeFactory = React.createFactory(
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
+var WorkProjectsListFactory = React.createFactory(
+  require('./client/work_projects/list')
+);
 var i18n = require('i18n');
 var cachify = require('connect-cachify-static').cachify;
 var routes = {};
@@ -35,11 +38,11 @@ routes.resume = function (req, res) {
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
   });
-};
+}
 
 routes.work = function (req, res) {
-  var resumeAttrs = {
-    work: i18n.__('work').map(function (entry) {
+  var attrs = {
+    workProjects: i18n.__('work').map(function (entry) {
       if (entry.image) {
         if (!entry.image.src) {
           entry.image = { src: entry.image };
@@ -48,15 +51,14 @@ routes.work = function (req, res) {
         entry.image.src = cachify(entry.image.src);
       }
       return entry;
-    }),
-    education: i18n.__('education'),
-    other: i18n.__('other')
+    })
   };
 
-  res.render('pages/work', {
+  console.log(React.renderToString(WorkProjectsListFactory(attrs)));
+  res.render('work_projects/page', {
     metaData: i18n.__('metaData.resume'),
-    resume: React.renderToString(ResumeFactory(resumeAttrs)),
-    gon: JSON.stringify(resumeAttrs)
+    work: React.renderToString(WorkProjectsListFactory(attrs)),
+    gon: JSON.stringify(attrs)
   });
 };
 
