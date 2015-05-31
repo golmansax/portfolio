@@ -1,0 +1,40 @@
+.resume-category {
+  margin-top 1em
+
+  .resume-entry:first-of-type {
+    margin-top auto
+  }
+}
+
+.resume-entry {
+  margin 2em 0 0
+
+  .fa-li {
+    font-size .5em
+    left -3em
+    top 1em
+  }
+}
+
+.resume-entry-image-container {
+  padding-top .5em
+}
+
+.resume-entry-image {
+  col(1/3)
+
+  img {
+    width 100%
+  }
+}
+
+.resume-entry-other {
+  col(2/3)
+}
+
++below('m') {
+  .resume-entry-image,
+  .resume-entry-other {
+    stack()
+  }
+}
