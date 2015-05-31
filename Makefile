@@ -8,7 +8,7 @@ build-js:
 
 build-css:
 	mkdir -p public/assets
-	./node_modules/.bin/stylus -u jeet -u stylus-type-utils -u rupture -u ./node_modules/nib/lib/nib -c views/main.styl -o public/assets/
+	./node_modules/.bin/stylus -u jeet -u stylus-type-utils -u rupture -u ./node_modules/nib/lib/nib -c client/main.styl -o public/assets/
 
 test:
 	./node_modules/.bin/mocha -R spec test/**/*
