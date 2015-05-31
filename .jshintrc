@@ -73,6 +73,7 @@
   "globals": {
     "__dirname": true,
     "exports": true,
+    "global": true,
     "module": true,
     "process": true,
     "require": true

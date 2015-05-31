@@ -32,7 +32,6 @@ describe('server', function () {
 
   it('routes hcd page', function (done) {
     browser.visit('/human-centered-design', function () {
-      console.log('here');
       expect(browser.text('h1')).to.include('Human-Centered Design');
       done();
     });
