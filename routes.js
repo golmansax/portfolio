@@ -54,7 +54,6 @@ routes.work = function (req, res) {
     })
   };
 
-  console.log(React.renderToString(WorkProjectsListFactory(attrs)));
   res.render('work_projects/page', {
     metaData: i18n.__('metaData.resume'),
     work: React.renderToString(WorkProjectsListFactory(attrs)),
