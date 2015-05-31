@@ -31,6 +31,29 @@ routes.resume = function (req, res) {
   });
 };
 
+routes.work = function (req, res) {
+  var resumeAttrs = {
+    work: i18n.__('work').map(function (entry) {
+      if (entry.image) {
+        if (!entry.image.src) {
+          entry.image = { src: entry.image };
+        }
+
+        entry.image.src = cachify(entry.image.src);
+      }
+      return entry;
+    }),
+    education: i18n.__('education'),
+    other: i18n.__('other')
+  };
+
+  res.render('work', {
+    metaData: i18n.__('metaData.resume'),
+    resume: React.renderToString(ResumeFactory(resumeAttrs)),
+    gon: JSON.stringify(resumeAttrs)
+  });
+};
+
 routes.portfolio = function (req, res) {
   res.render('portfolio', {
     metaData: i18n.__('metaData.portfolio'),

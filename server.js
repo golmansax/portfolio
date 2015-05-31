@@ -40,9 +40,15 @@ if (env === 'development') {
 
 server.use(express.static(__dirname + '/public'));
 
+// New experimental routes
+server.get('/projects/for-work', routes.work);
+//server.get('/projects/for-fun', routes.resume);
+//server.get('/projects/in-the-community', routes.resume);
+server.get('/portfolio', routes.portfolio);
+
+// Old routes
 server.get('/', routes.resume);
 server.get('/resume', routes.resume);
-server.get('/portfolio', routes.portfolio);
 server.get('/human-centered-design', routes.hcd);
 server.get('/donations-pledge', routes.donations);
 server.use('/office-street-view', osvServer);
