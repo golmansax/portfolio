@@ -3,7 +3,9 @@
 var React = require('react');
 var PortfolioFactory = React.createFactory(require('./jsx/portfolio'));
 var ResumeFactory = React.createFactory(require('./jsx/resume'));
-var DonationsFactory = React.createFactory(require('./jsx/donations'));
+var DonationsListFactory = React.createFactory(
+  require('./client/donations/list')
+);
 var i18n = require('i18n');
 var cachify = require('connect-cachify-static').cachify;
 var routes = {};
@@ -62,13 +64,13 @@ routes.portfolio = function (req, res) {
 };
 
 routes.donations = function (req, res) {
-  var donationAttrs = {
+  var attrs = {
     donations: i18n.__('donations')
   };
 
-  res.render('pages/donations', {
+  res.render('donations/page', {
     metaData: i18n.__('metaData.donations'),
-    donations: React.renderToString(DonationsFactory(donationAttrs))
+    donations: React.renderToString(DonationsListFactory(attrs))
   });
 };
 

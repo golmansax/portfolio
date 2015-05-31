@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Fragment from './fragment';
+import Fragment from '../fragments/fragment';
 
-export default class Donations extends React.Component {
+export default class DonationsList extends React.Component {
   constructor(props) {
     super(props);
     this._renderDonation = this._renderDonation.bind(this);
@@ -24,4 +24,4 @@ export default class Donations extends React.Component {
     return <div className='container'>{donations}</div>;
   }
 }
-Donations.defaultProps = { donations: [] };
+DonationsList.defaultProps = { donations: [] };
