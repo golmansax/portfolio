@@ -25,7 +25,7 @@ if (env === 'development') {
   var stylusTypeUtils = require('stylus-type-utils');
 
   server.use(stylus.middleware({
-    src: __dirname + '/assets',
+    src: __dirname + '/views',
     dest: __dirname + '/public/assets',
     compile: function compile(str, path) {
       return stylus(str)
