@@ -1,8 +1,12 @@
 'use strict';
 
 var React = require('react');
-var PortfolioFactory = React.createFactory(require('./jsx/portfolio'));
-var ResumeFactory = React.createFactory(require('./jsx/resume'));
+var PortfolioFactory = React.createFactory(
+  require('./client/portfolio/portfolio')
+);
+var ResumeFactory = React.createFactory(
+  require('./client/resume/resume')
+);
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
@@ -26,7 +30,7 @@ routes.resume = function (req, res) {
     other: i18n.__('other')
   };
 
-  res.render('pages/resume', {
+  res.render('resume/page', {
     metaData: i18n.__('metaData.resume'),
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
@@ -57,7 +61,7 @@ routes.work = function (req, res) {
 };
 
 routes.portfolio = function (req, res) {
-  res.render('pages/portfolio', {
+  res.render('portfolio/page', {
     metaData: i18n.__('metaData.portfolio'),
     portfolio: React.renderToString(PortfolioFactory())
   });

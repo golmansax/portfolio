@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import Entry from './entry';
+import ResumeEntry from './entry';
 
 var CATEGORIES = ['work', 'education', 'other'];
 var TITLES = {
@@ -18,7 +18,7 @@ export default class Resume extends React.Component {
   }
 
   _renderEntry(entry, index) {
-    return <Entry {...entry} key={index} />;
+    return <ResumeEntry {...entry} key={index} />;
   }
 
   _renderCategory(category, index) {

@@ -3,7 +3,7 @@
 import React from 'react';
 import Fragments from './fragments';
 
-export default class FragmentBlock extends React.Component {
+export default class FragmentsBlock extends React.Component {
   render() {
     if (this.props.data.left) {
       return (
@@ -23,4 +23,4 @@ export default class FragmentBlock extends React.Component {
     }
   }
 }
-FragmentBlock.defaultProps = { data: [] };
+FragmentsBlock.defaultProps = { data: [] };

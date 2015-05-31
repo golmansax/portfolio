@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import FragmentBlock from './fragment_block';
-import Image from './image';
+import FragmentsBlock from '../fragments/block';
+import Image from '../images/image';
 
-export default class Entry extends React.Component {
+export default class ResumeEntry extends React.Component {
   constructor(props) {
     super(props);
     this._toggleShowMore = this._toggleShowMore.bind(this);
@@ -32,7 +32,7 @@ export default class Entry extends React.Component {
     return (
       <li className={noteClass} key={index}>
         <i className='fa-li fa fa-circle' />
-        <FragmentBlock data={note} />
+        <FragmentsBlock data={note} />
       </li>
     );
   }
@@ -92,10 +92,10 @@ export default class Entry extends React.Component {
   render() {
     return (
       <div className='resume-entry'>
-        <h3><FragmentBlock data={this.props.title} /></h3>
+        <h3><FragmentsBlock data={this.props.title} /></h3>
         {this._renderContent()}
       </div>
     );
   }
 }
-Entry.defaultProps = { title: [], notes: [], numInitialNotesToShow: false };
+ResumeEntry.defaultProps = { title: [], notes: [], numInitialNotesToShow: false };
