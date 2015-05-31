@@ -24,7 +24,7 @@ routes.resume = function (req, res) {
     other: i18n.__('other')
   };
 
-  res.render('resume', {
+  res.render('pages/resume', {
     metaData: i18n.__('metaData.resume'),
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
@@ -47,7 +47,7 @@ routes.work = function (req, res) {
     other: i18n.__('other')
   };
 
-  res.render('work', {
+  res.render('pages/work', {
     metaData: i18n.__('metaData.resume'),
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
@@ -55,7 +55,7 @@ routes.work = function (req, res) {
 };
 
 routes.portfolio = function (req, res) {
-  res.render('portfolio', {
+  res.render('pages/portfolio', {
     metaData: i18n.__('metaData.portfolio'),
     portfolio: React.renderToString(PortfolioFactory())
   });
@@ -66,7 +66,7 @@ routes.donations = function (req, res) {
     donations: i18n.__('donations')
   };
 
-  res.render('donations', {
+  res.render('pages/donations', {
     metaData: i18n.__('metaData.donations'),
     donations: React.renderToString(DonationsFactory(donationAttrs))
   });
@@ -82,7 +82,7 @@ routes.hcd = function (req, res) {
     'embedded=true'
   ].join('&');
 
-  res.render('hcd', {
+  res.render('pages/hcd', {
     metaData: i18n.__('metaData.hcd'),
     link: link
   });
