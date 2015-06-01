@@ -42,7 +42,7 @@
     "build": "make build",
     "postinstall": "npm run build",
     "start": "node server.js",
-    "start-dev": "nodemon -e js,jsx,jade,json",
+    "start-dev": "nodemon -e js,jsx,jade,json,styl",
     "test": "make test",
     "watch": "make watch"
   }

@@ -10,8 +10,8 @@ var ResumeFactory = React.createFactory(
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
-var WorkProjectsListFactory = React.createFactory(
-  require('./client/work_projects/list')
+var ProjectsListFactory = React.createFactory(
+  require('./client/projects/list')
 );
 var i18n = require('i18n');
 var cachify = require('connect-cachify-static').cachify;
@@ -42,21 +42,20 @@ routes.resume = function (req, res) {
 
 routes.work = function (req, res) {
   var attrs = {
-    workProjects: i18n.__('work').map(function (entry) {
-      if (entry.image) {
-        if (!entry.image.src) {
-          entry.image = { src: entry.image };
-        }
-
-        entry.image.src = cachify(entry.image.src);
+    projects: i18n.__('workProjects').map(function (project) {
+      if (project.images) {
+        project.images = project.images.map(function (image) {
+          return cachify(image);
+        });
       }
-      return entry;
-    })
+
+      return project;
+    }),
   };
 
   res.render('work_projects/page', {
     metaData: i18n.__('metaData.resume'),
-    work: React.renderToString(WorkProjectsListFactory(attrs)),
+    workProjects: React.renderToString(ProjectsListFactory(attrs)),
     gon: JSON.stringify(attrs)
   });
 };

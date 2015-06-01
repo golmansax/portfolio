@@ -14,6 +14,29 @@
       "title": "Donations Pledge"
     }
   },
+  "workProjects": [
+    {
+      "name": "Chalk Schools",
+      "url": "http://chalkschools.com",
+      "images": [
+        "/static/chalk.jpg"
+      ]
+    },
+    {
+      "name": "Amass Media",
+      "url": "http://amassmedia.org",
+      "images": [
+        "/static/chalk.jpg"
+      ]
+    },
+    {
+      "name": "Room 77",
+      "url": "https://m.room77.com",
+      "images": [
+        "/static/chalk.jpg"
+      ]
+    }
+  ],
   "work": [
     {
       "title": {
