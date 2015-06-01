@@ -25,7 +25,7 @@ describe('server', function () {
     browser.visit('/', function () {
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
-      StinkBomb.create('2015-06-01', { message: 'Sample stink bomb' });
+      StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
       done();
     });
   });

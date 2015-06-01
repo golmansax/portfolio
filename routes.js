@@ -50,7 +50,7 @@ routes.work = function (req, res) {
       }
 
       return project;
-    }),
+    })
   };
 
   res.render('work_projects/page', {
