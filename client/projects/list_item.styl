@@ -1,6 +1,13 @@
+$image-container {
+  img {
+    width 100%
+    border $muted-border
+  }
+}
+
 .projects-list-item {
   & {
-    border-bottom em(1px) $my-green solid;
+    border-bottom $colored-border
     padding 1em 0
 
     &:last-child {
@@ -13,18 +20,12 @@
   }
 
   +e(image-container) {
+    @extend $image-container
     col(1/2)
 
-    img {
-      width 100%
-    }
-
     +m(small) {
+      @extend $image-container
       col(1/4)
-
-      img {
-        width 100%
-      }
     }
   }
 

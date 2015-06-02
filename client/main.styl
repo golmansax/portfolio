@@ -1,6 +1,9 @@
 @import 'nib'
 @import 'jeet'
 
+global-reset()
+
+
 e(name)
   &__{name}
     {block}
@@ -9,15 +12,19 @@ m(name)
   &--{name}
     {block}
 
-
-global-reset()
-
 $container-width = em(900px)
+
+// Colors
 $my-green = #198565
-$darker-gray = #444
-$dark-gray = #222
+$darker-gray = #222
+$dark-gray = #444
+$light-gray = #bbb
 $white = white
 $header-ratio = 1.25em
+
+// Borders
+$colored-border = em(1px) $my-green solid
+$muted-border = em(1px) $light-gray solid
 
 html,
 body {
