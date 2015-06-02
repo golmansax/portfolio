@@ -1,6 +1,15 @@
 @import 'nib'
 @import 'jeet'
 
+e(name)
+  &__{name}
+    {block}
+
+m(name)
+  &--{name}
+    {block}
+
+
 global-reset()
 
 $container-width = em(900px)
@@ -42,13 +51,11 @@ h1 {
 
 h2 {
   font-size $header-ratio ** 2
-  margin-bottom: .5em
   font-weight bold
 }
 
 h3 {
   font-size $header-ratio
-  margin-bottom .5em
 }
 
 hr {
@@ -126,4 +133,4 @@ $pdf-viewer-width = em(720px)
 
 @require './layout/navbar'
 @require './resume/resume'
-@require './projects/list'
+@require './projects/list_item'

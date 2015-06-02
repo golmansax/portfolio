@@ -1,52 +1,92 @@
 'use strict';
 
 import React from 'react';
-import FragmentsBlock from '../fragments/block';
+import Fragments from '../fragments/fragments';
 import Image from '../images/image';
+import Position from '../positions/position';
 
 export default class ProjectsListItem extends React.Component {
   constructor(props) {
     super(props);
+
+    this._renderPress = this._renderPress.bind(this);
+    this._renderImages = this._renderImages.bind(this);
+    this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
+  }
+
+  _renderPress() {
+    if (!this.props.press) {
+      return null;
+    }
+
+    return [
+      <dt key='dt'>Press:</dt>,
+      <dd key='dd'>
+        <ul>{this.props.press.map(this._renderFragmentsItem)}</ul>
+      </dd>
+    ];
+  }
+
+  _renderImages() {
+    if (this.props.images.length === 1) {
+      return (
+        <div className='projects-list-item__image-container'>
+          <img src={this.props.images[0]} />;
+        </div>
+      );
+    }
+
+    return this.props.images.map(function (image, index) {
+      return (
+        <div className='projects-list-item__image-container--small' key={index}>
+          <img src={image} />
+        </div>
+      );
+    });
+  }
+
+  _renderFragmentsItem(fragments, index) {
+    return <li key={index}><Fragments fragments={fragments} /></li>;
+  }
+
+  _renderPosition(position) {
+    return <Position {...position} key={position.title} />;
+  }
+
+  _renderJoinedWhen() {
+    if (!this.props.joinedWhen) {
+      return null;
+    }
+
+    return [
+      <dt key='dt'>Joined when:</dt>,
+      <dd key='dd'>{this.props.joinedWhen}</dd>
+    ];
   }
 
   render() {
     return (
       <div className='projects-list-item'>
         <div className='container'>
-          <div className='projects-list-item-left'>
-            <img src={this.props.images[0]} />
-          </div>
-          <div className='projects-list-item-right'>
+          {this._renderImages()}
+          <div className='projects-list-item__content'>
             <h2><a href={this.props.url}>{this.props.name}</a></h2>
+            <p className='projects-list-item__description'>
+              {this.props.description}
+            </p>
             <dl>
-              <dt>Product:</dt>
-              <dd>An online form management tool for schools</dd>
               <dt>Position:</dt>
-              <dd>Software Engineer (May - 2014)</dd>
+              <dd>{this.props.positions.map(this._renderPosition)}</dd>
               <dt>Stack:</dt>
-              <dd>Rails, ReactJS, Haml, Sass, PostgreSQL, Heroku</dd>
-              <dt>Joined when:</dt>
-              <dd>Team had 3 employees (2 engineers)</dd>
+              <dd>{this.props.stack}</dd>
+              {this._renderJoinedWhen()}
               <dt>Involved with:</dt>
               <dd>
                 <ul>
-                  <li>
-                    Helped create the engineering culture as an early employee
-                  </li>
-                  <li>
-                    Practice agile development through full code coverage and
-                    strong integration tests
-                  </li>
-                  <li>
-                    Focus on customer satisfaction through integrating user
-                    feedback and fast response times to support requests
-                  </li>
-                  <li>
-                    Comfortable with full stack of website development, from
-                    code architecting to frontend design
-                  </li>
+                  {this.props.involvedWith.map(this._renderFragmentsItem)}
                 </ul>
               </dd>
+              {this._renderPress()}
             </dl>
           </div>
         </div>
@@ -56,5 +96,12 @@ export default class ProjectsListItem extends React.Component {
 }
 
 ProjectsListItem.propTypes = {
-  name: React.PropTypes.string.isRequired
+  name: React.PropTypes.string.isRequired,
+  images: React.PropTypes.array.isRequired,
+  url: React.PropTypes.string.isRequired,
+  description: React.PropTypes.string.isRequired,
+  stack: React.PropTypes.string.isRequired,
+  joinedWhen: React.PropTypes.string,
+  involvedWith: React.PropTypes.array.isRequired,
+  press: React.PropTypes.array
 };
