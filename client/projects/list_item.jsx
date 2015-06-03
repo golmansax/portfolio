@@ -3,6 +3,7 @@
 import React from 'react';
 import ProjectsImages from './images';
 import ProjectsContent from './content';
+import Pdf from '../pdfs/pdf';
 
 export default class ProjectsListItem extends React.Component {
   constructor(props) {
@@ -15,11 +16,17 @@ export default class ProjectsListItem extends React.Component {
   }
 
   _hasVisuals() {
-    return this.props.images; // || this.props.pdf;
+    return this.props.images || this.props.pdf;
   }
 
   _renderVisuals() {
-    return <ProjectsImages images={this.props.images} />;
+    if (this.props.images) {
+      return <ProjectsImages images={this.props.images} />;
+    }
+
+    if (this.props.pdf) {
+      return <Pdf url={this.props.pdf} />;
+    }
   }
 
   _renderContent() {

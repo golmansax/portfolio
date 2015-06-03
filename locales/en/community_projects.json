@@ -1,0 +1,57 @@
+{
+	"metaData": {
+    "title": "Efforts in Community"
+	},
+	"communityProjects": [
+		{
+			"name": "Volunteering",
+			"description": "Places I have volunteered with",
+			"involvedWith": []
+		},
+		{
+			"name": "My Donations Pledge",
+			"description": [
+				"After obtaining my undergraduate degree, I made a pledge to donate ",
+				"cash every year on my birthday, to support organizations that I feel ",
+				"are making a positive impact in society. All of the organizations ",
+				"that I have chosen so far are ones that have helped me become who I ",
+				"am today."
+			],
+			"custom": [
+				{
+					"klass": "Donations",
+					"attrs": {
+						"donations": [
+							{
+								"year": 2015,
+								"organization": {
+									"text": "TBD"
+								}
+							},
+							{
+								"year": 2014,
+								"organization": {
+									"url": "https://www.hopechineseschool.org/hcscp/",
+									"text": "Hope Chinese School College Park Campus"
+								}
+							},
+							{
+								"year": 2013,
+								"organization": {
+									"url": "http://www.asia.si.edu/events/imaginasia.asp",
+									"text": "Smithsonian ImaginAsia Family Program"
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Human-Centered Design course",
+			"description": "Acumen course",
+			"pdf": "https://docs.google.com/viewer?srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs&pid=explorer&efh=false&a=v&chrome=false&embedded=true",
+			"involvedWith": []
+		}
+	]
+}

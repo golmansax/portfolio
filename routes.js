@@ -13,13 +13,33 @@ var DonationsListFactory = React.createFactory(
 var ProjectsListFactory = React.createFactory(
   require('./client/projects/list')
 );
-var i18n = require('i18n');
+var CommunityProjectsRoute = require('./routes/community_projects');
+var i18n = require('i18next');
 var cachify = require('connect-cachify-static').cachify;
 var routes = {};
 
+i18n.init({
+  lng: 'en-US',
+  ns: {
+    namespaces: ['app', 'community_projects'],
+    defaultNs: 'app'
+  },
+  returnObjectTrees: true
+});
+
+/*
+i18n.configure({
+  directory: __dirname + '/locales',
+  objectNotation: true,
+  updateFiles: false,
+  register: global
+});
+*/
+
 routes.resume = function (req, res) {
+  console.log(i18n.t('work'));
   var resumeAttrs = {
-    work: i18n.__('work').map(function (entry) {
+    work: i18n.t('work', { returnObjectTrees: true  }).map(function (entry) {
       if (entry.image) {
         if (!entry.image.src) {
           entry.image = { src: entry.image };
@@ -29,12 +49,12 @@ routes.resume = function (req, res) {
       }
       return entry;
     }),
-    education: i18n.__('education'),
-    other: i18n.__('other')
+    education: i18n.t('education'),
+    other: i18n.t('other')
   };
 
   res.render('resume/page', {
-    metaData: i18n.__('metaData.resume'),
+    metaData: i18n.t('metaData.resume'),
     resume: React.renderToString(ResumeFactory(resumeAttrs)),
     gon: JSON.stringify(resumeAttrs)
   });
@@ -78,24 +98,7 @@ routes.sideProjects = function (req, res) {
   });
 };
 
-routes.communityProjects = function (req, res) {
-  var attrs = {
-    projects: i18n.__('communityProjects').map(function (project) {
-      if (project.images) {
-        project.images = project.images.map(function (image) {
-          return cachify(image);
-        });
-      }
-
-      return project;
-    })
-  };
-
-  res.render('community_projects/page', {
-    metaData: i18n.__('metaData.communityProjects'),
-    communityProjects: React.renderToString(ProjectsListFactory(attrs))
-  });
-};
+routes.communityProjects = CommunityProjectsRoute;
 
 routes.portfolio = function (req, res) {
   res.render('portfolio/page', {

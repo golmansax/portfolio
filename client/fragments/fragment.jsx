@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-class Fragment extends React.Component {
+export default class Fragment extends React.Component {
   render() {
     if (this.props.url) {
       return (
@@ -14,5 +14,3 @@ class Fragment extends React.Component {
   }
 }
 Fragment.defaultProps = { url: '', text: '' };
-
-module.exports = Fragment;

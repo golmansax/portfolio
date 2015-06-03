@@ -3,16 +3,10 @@
 require('babel/register');
 var env = process.env.NODE_ENV || 'development';
 var express = require('express');
-var i18n = require('i18n');
 var routes = require('./routes');
 var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
 var server = express();
-
-i18n.configure({
-  directory: __dirname + '/locales',
-  objectNotation: true
-});
 
 server.use(cachifyStatic(__dirname + '/public'));
 server.set('view engine', 'jade');
