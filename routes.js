@@ -60,7 +60,6 @@ routes.workProjects = function (req, res) {
 };
 
 routes.sideProjects = function (req, res) {
-  console.log(i18n.__('sideProjects').length);
   var attrs = {
     projects: i18n.__('sideProjects').map(function (project) {
       if (project.images) {
@@ -78,6 +77,26 @@ routes.sideProjects = function (req, res) {
     sideProjects: React.renderToString(ProjectsListFactory(attrs))
   });
 };
+
+routes.communityProjects = function (req, res) {
+  var attrs = {
+    projects: i18n.__('communityProjects').map(function (project) {
+      if (project.images) {
+        project.images = project.images.map(function (image) {
+          return cachify(image);
+        });
+      }
+
+      return project;
+    })
+  };
+
+  res.render('community_projects/page', {
+    metaData: i18n.__('metaData.communityProjects'),
+    communityProjects: React.renderToString(ProjectsListFactory(attrs))
+  });
+};
+
 routes.portfolio = function (req, res) {
   res.render('portfolio/page', {
     metaData: i18n.__('metaData.portfolio'),
