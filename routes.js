@@ -13,6 +13,7 @@ var DonationsListFactory = React.createFactory(
 var SideProjectsRoute = require('./routes/side_projects');
 var WorkProjectsRoute = require('./routes/work_projects');
 var CommunityProjectsRoute = require('./routes/community_projects');
+var PortfolioRoute = require('./client/portfolio/route');
 var i18n = require('i18next');
 var cachify = require('connect-cachify-static').cachify;
 var routes = {};
@@ -52,13 +53,7 @@ routes.resume = function (req, res) {
 routes.workProjects = WorkProjectsRoute;
 routes.sideProjects = SideProjectsRoute;
 routes.communityProjects = CommunityProjectsRoute;
-
-routes.portfolio = function (req, res) {
-  res.render('portfolio/page', {
-    metaData: i18n.t('metaData.portfolio'),
-    portfolio: React.renderToString(PortfolioFactory())
-  });
-};
+routes.portfolio = PortfolioRoute;
 
 routes.donations = function (req, res) {
   var attrs = {
