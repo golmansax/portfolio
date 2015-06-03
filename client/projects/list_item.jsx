@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
+import ProjectImages from './images';
 import Fragments from '../fragments/fragments';
-import Image from '../images/image';
 import Position from '../positions/position';
 
 export default class ProjectsListItem extends React.Component {
@@ -10,7 +10,6 @@ export default class ProjectsListItem extends React.Component {
     super(props);
 
     this._renderPress = this._renderPress.bind(this);
-    this._renderImages = this._renderImages.bind(this);
     this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
   }
 
@@ -25,24 +24,6 @@ export default class ProjectsListItem extends React.Component {
         <ul>{this.props.press.map(this._renderFragmentsItem)}</ul>
       </dd>
     ];
-  }
-
-  _renderImages() {
-    if (this.props.images.length === 1) {
-      return (
-        <div className='projects-list-item__image-container'>
-          <img src={this.props.images[0]} />;
-        </div>
-      );
-    }
-
-    return this.props.images.map(function (image, index) {
-      return (
-        <div className='projects-list-item__image-container--small' key={index}>
-          <img src={image} />
-        </div>
-      );
-    });
   }
 
   _renderFragmentsItem(fragments, index) {
@@ -68,7 +49,9 @@ export default class ProjectsListItem extends React.Component {
     return (
       <div className='projects-list-item'>
         <div className='container'>
-          {this._renderImages()}
+          <div className='projects-list-item__image-container'>
+            <ProjectImages images={this.props.images} />
+          </div>
           <div className='projects-list-item__content'>
             <h2><a href={this.props.url}>{this.props.name}</a></h2>
             <p className='projects-list-item__description'>
