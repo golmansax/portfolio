@@ -10,9 +10,6 @@ var ResumeFactory = React.createFactory(
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
-var ProjectsListFactory = React.createFactory(
-  require('./client/projects/list')
-);
 var SideProjectsRoute = require('./routes/side_projects');
 var WorkProjectsRoute = require('./routes/work_projects');
 var CommunityProjectsRoute = require('./routes/community_projects');

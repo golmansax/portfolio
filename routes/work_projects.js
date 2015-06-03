@@ -12,7 +12,9 @@ export default function WorkProjectsRoute(req, res) {
     projects: i18n.t('workProjects').map(function (project) {
       if (project.images) {
         project.images = project.images.map(function (image) {
+          /* jshint -W067 */
           return cachify(image);
+          /* jshint +W067 */
         });
       }
 
