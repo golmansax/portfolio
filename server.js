@@ -42,7 +42,8 @@ if (env === 'development') {
 server.use(express.static(__dirname + '/public'));
 
 // New experimental routes
-server.get('/projects/for-work', routes.work);
+server.get('/projects/for-work', routes.workProjects);
+server.get('/projects/on-the-side', routes.sideProjects);
 //server.get('/projects/for-fun', routes.resume);
 //server.get('/projects/in-the-community', routes.resume);
 server.get('/portfolio', routes.portfolio);

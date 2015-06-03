@@ -40,7 +40,7 @@ routes.resume = function (req, res) {
   });
 }
 
-routes.work = function (req, res) {
+routes.workProjects = function (req, res) {
   var attrs = {
     projects: i18n.__('workProjects').map(function (project) {
       if (project.images) {
@@ -54,12 +54,30 @@ routes.work = function (req, res) {
   };
 
   res.render('work_projects/page', {
-    metaData: i18n.__('metaData.resume'),
-    workProjects: React.renderToString(ProjectsListFactory(attrs)),
-    gon: JSON.stringify(attrs)
+    metaData: i18n.__('metaData.workProjects'),
+    workProjects: React.renderToString(ProjectsListFactory(attrs))
   });
 };
 
+routes.sideProjects = function (req, res) {
+  console.log(i18n.__('sideProjects').length);
+  var attrs = {
+    projects: i18n.__('sideProjects').map(function (project) {
+      if (project.images) {
+        project.images = project.images.map(function (image) {
+          return cachify(image);
+        });
+      }
+
+      return project;
+    })
+  };
+
+  res.render('side_projects/page', {
+    metaData: i18n.__('metaData.sideProjects'),
+    sideProjects: React.renderToString(ProjectsListFactory(attrs))
+  });
+};
 routes.portfolio = function (req, res) {
   res.render('portfolio/page', {
     metaData: i18n.__('metaData.portfolio'),
