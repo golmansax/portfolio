@@ -102,7 +102,11 @@
     {
       "name": "Circl Dating App",
       "description": "Dating app",
-      "stack": "Android app in Java",
+      "stack": "Android app in Java, Firebase",
+      "images": [
+        "static/circl_match.jpg",
+        "static/circl_chat.jpg"
+      ],
       "involvedWith": []
     },
     {
