@@ -27,19 +27,9 @@ i18n.init({
   returnObjectTrees: true
 });
 
-/*
-i18n.configure({
-  directory: __dirname + '/locales',
-  objectNotation: true,
-  updateFiles: false,
-  register: global
-});
-*/
-
 routes.resume = function (req, res) {
-  console.log(i18n.t('work'));
   var resumeAttrs = {
-    work: i18n.t('work', { returnObjectTrees: true  }).map(function (entry) {
+    work: i18n.t('work').map(function (entry) {
       if (entry.image) {
         if (!entry.image.src) {
           entry.image = { src: entry.image };
@@ -62,7 +52,7 @@ routes.resume = function (req, res) {
 
 routes.workProjects = function (req, res) {
   var attrs = {
-    projects: i18n.__('workProjects').map(function (project) {
+    projects: i18n.t('workProjects').map(function (project) {
       if (project.images) {
         project.images = project.images.map(function (image) {
           return cachify(image);
@@ -74,14 +64,14 @@ routes.workProjects = function (req, res) {
   };
 
   res.render('work_projects/page', {
-    metaData: i18n.__('metaData.workProjects'),
+    metaData: i18n.t('metaData.workProjects'),
     workProjects: React.renderToString(ProjectsListFactory(attrs))
   });
 };
 
 routes.sideProjects = function (req, res) {
   var attrs = {
-    projects: i18n.__('sideProjects').map(function (project) {
+    projects: i18n.t('sideProjects').map(function (project) {
       if (project.images) {
         project.images = project.images.map(function (image) {
           return cachify(image);
@@ -93,7 +83,7 @@ routes.sideProjects = function (req, res) {
   };
 
   res.render('side_projects/page', {
-    metaData: i18n.__('metaData.sideProjects'),
+    metaData: i18n.t('metaData.sideProjects'),
     sideProjects: React.renderToString(ProjectsListFactory(attrs))
   });
 };
@@ -102,18 +92,18 @@ routes.communityProjects = CommunityProjectsRoute;
 
 routes.portfolio = function (req, res) {
   res.render('portfolio/page', {
-    metaData: i18n.__('metaData.portfolio'),
+    metaData: i18n.t('metaData.portfolio'),
     portfolio: React.renderToString(PortfolioFactory())
   });
 };
 
 routes.donations = function (req, res) {
   var attrs = {
-    donations: i18n.__('donations')
+    donations: i18n.t('donations')
   };
 
   res.render('donations/page', {
-    metaData: i18n.__('metaData.donations'),
+    metaData: i18n.t('metaData.donations'),
     donations: React.renderToString(DonationsListFactory(attrs))
   });
 };
@@ -129,7 +119,7 @@ routes.hcd = function (req, res) {
   ].join('&');
 
   res.render('pages/hcd', {
-    metaData: i18n.__('metaData.hcd'),
+    metaData: i18n.t('metaData.hcd'),
     link: link
   });
 };
