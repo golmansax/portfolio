@@ -1,9 +1,6 @@
 'use strict';
 
 var React = require('react');
-var PortfolioFactory = React.createFactory(
-  require('./client/portfolio/portfolio')
-);
 var ResumeFactory = React.createFactory(
   require('./client/resume/resume')
 );

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ProjectsListItem from './list_item';
+import ProjectsGridItem from './grid_item';
 
 export default class ProjectsGrid extends React.Component {
   constructor(props) {
@@ -10,12 +10,16 @@ export default class ProjectsGrid extends React.Component {
   }
 
   _renderProject(entry, index) {
-    return <ProjectsListItem {...entry} key={index} />;
+    return <ProjectsGridItem {...entry} key={index} />;
   }
 
   render() {
+    var filteredProjects = this.props.projects.filter(function (project) {
+      return project.images;
+    });
+
     return (
-      <div className='projects-list'>
+      <div className='container'>
         {this.props.projects.map(this._renderProject)}
       </div>
     );

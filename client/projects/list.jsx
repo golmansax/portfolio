@@ -14,11 +14,7 @@ export default class ProjectsList extends React.Component {
   }
 
   render() {
-    return (
-      <div className='projects-list'>
-        {this.props.projects.map(this._renderProject)}
-      </div>
-    );
+    return <div>{this.props.projects.map(this._renderProject)}</div>;
   }
 }
 ProjectsList.propTypes = { projects: React.PropTypes.array.isRequired };
