@@ -22,6 +22,7 @@
 	},
 	"workProjects": [
 		{
+      "slug": "chalk",
 			"name": "Chalk Schools",
 			"url": "http://chalkschools.com",
 			"images": [
@@ -53,6 +54,7 @@
 			]
 		},
 		{
+      "slug": "amass",
 			"name": "Amass Media",
 			"url": "http://amassmedia.org",
 			"images": [
@@ -70,6 +72,7 @@
 			"involvedWith": []
 		},
 		{
+      "slug": "room77",
 			"name": "Room 77",
 			"url": "https://m.room77.com",
 			"images": [

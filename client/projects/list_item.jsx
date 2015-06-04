@@ -54,7 +54,7 @@ export default class ProjectsListItem extends React.Component {
 
   render() {
     return (
-      <div className='projects-list-item'>
+      <div id={this.props.slug} className='projects-list-item'>
         <div className='container'>
           {this._renderProject()}
         </div>
