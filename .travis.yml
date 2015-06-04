@@ -4,7 +4,6 @@ node_js: '0.10'
 script:
 - travis-lint .travis.yml
 - make jscs
-- make jshint
 - npm test
 cache:
   directories:

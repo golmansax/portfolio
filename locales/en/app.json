@@ -72,12 +72,12 @@
 			"involvedWith": []
 		},
 		{
-      "slug": "room77",
+      "slug": "room-77",
 			"name": "Room 77",
 			"url": "https://m.room77.com",
 			"images": [
-				"/a5e8d75dde/static/room77_1.jpg",
-				"/53f7a9b79c/static/room77_2.jpg"
+				"/a5e8d75dde/static/room-77_1.jpg",
+				"/53f7a9b79c/static/room-77_2.jpg"
 			],
 			"description": "A good hotel search",
 			"stack": "AngularJS, Sass, PHP",
@@ -103,6 +103,7 @@
 	],
   "sideProjects": [
     {
+      "slug": "circl",
       "name": "Circl Dating App",
       "description": "Dating app",
       "stack": "Android app in Java, Firebase",
@@ -113,12 +114,14 @@
       "involvedWith": []
     },
     {
+      "slug": "chip-in",
       "name": "Chip In",
       "description": "Volunteer platform",
       "stack": "Rails, AngularJS",
       "involvedWith": []
     },
     {
+      "slug": "personal-site",
       "name": "Personal Site",
       "url": "http://golmansax.com",
       "description": "Personal website",
@@ -126,6 +129,7 @@
       "involvedWith": []
     },
     {
+      "slug": "office-street-view",
       "name": "Office Street View",
       "description": "Navigate through an office and meet the employees!",
       "stack": "AngularJS, Sass, PHP",

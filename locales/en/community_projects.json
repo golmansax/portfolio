@@ -4,11 +4,13 @@
 	},
 	"communityProjects": [
 		{
+      "slug": "volunteering",
 			"name": "Volunteering",
 			"description": "Places I have volunteered with",
 			"involvedWith": []
 		},
 		{
+      "slug": "my-donations-pledge",
 			"name": "My Donations Pledge",
 			"description": [
 				"After obtaining my undergraduate degree, I made a pledge to donate ",
@@ -48,8 +50,12 @@
 			]
 		},
 		{
-			"name": "Human-Centered Design course",
+      "slug": "human-centered-design",
+			"name": "Human-Centered Design Project",
 			"description": "Acumen course",
+      "images": [
+        "/static/human-centered-design.jpg"
+      ],
 			"pdf": "https://docs.google.com/viewer?srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs&pid=explorer&efh=false&a=v&chrome=false&embedded=true",
 			"involvedWith": []
 		}

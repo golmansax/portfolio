@@ -16,7 +16,7 @@ export default class ProjectsGrid extends React.Component {
     var projectChunks = [];
     var projects = this.props.projects;
 
-    while(projects.length > 0) {
+    while (projects.length > 0) {
       projectChunks.push(projects.splice(0, 3));
     }
 

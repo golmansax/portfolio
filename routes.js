@@ -7,9 +7,9 @@ var ResumeFactory = React.createFactory(
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
-var SideProjectsRoute = require('./routes/side_projects');
+var SideProjectsRoute = require('./client/side_projects/route');
 var WorkProjectsRoute = require('./client/work_projects/route');
-var CommunityProjectsRoute = require('./routes/community_projects');
+var CommunityProjectsRoute = require('./client/community_projects/route');
 var PortfolioRoute = require('./client/portfolio/route');
 var i18n = require('i18next');
 var cachify = require('connect-cachify-static').cachify;
