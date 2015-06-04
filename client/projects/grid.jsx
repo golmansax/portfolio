@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ProjectsImages from './images';
+import Fragment from '../fragments/fragment';
 
 export default class ProjectsGrid extends React.Component {
   constructor(props) {
@@ -23,14 +24,19 @@ export default class ProjectsGrid extends React.Component {
   }
 
   _renderChunk(projectChunk, index) {
-    return <div key={index}>{projectChunk.map(this._renderProject)}</div>;
+    return (
+      <div className='projects-grid__chunk' key={index}>
+        {projectChunk.map(this._renderProject)}
+      </div>
+    );
   }
 
   _renderProject(project, index) {
+    console.log(project.projectPath);
     return (
       <div className='projects-grid__item' key={index}>
         <ProjectsImages images={project.images} />
-        <h2>{project.name}</h2>
+        <h2><Fragment text={project.name} url={project.projectPath} /></h2>
       </div>
     );
   }
