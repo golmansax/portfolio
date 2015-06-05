@@ -133,6 +133,9 @@
       "name": "Office Street View",
       "description": "Navigate through an office and meet the employees!",
       "stack": "AngularJS, Sass, PHP",
+      "images": [
+        "/static/office-street-view_1.jpg"
+      ],
       "involvedWith": []
     }
   ],
