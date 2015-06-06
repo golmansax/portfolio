@@ -6,10 +6,18 @@
       text-align: center;
       margin-bottom: .25em;
     }
+
+    +below('m') {
+      stack()
+      padding: 1em 0;
+    }
   }
 
   +e(chunk) {
     clearfix()
-    padding: 1em 0;
+
+    +above('m') {
+      padding: 1em 0;
+    }
   }
 }

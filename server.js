@@ -39,11 +39,10 @@ server.use(express.static(__dirname + '/public'));
 server.get('/work', routes.workProjects);
 server.get('/side-projects', routes.sideProjects);
 server.get('/in-community', routes.communityProjects);
-server.get('/portfolio', routes.portfolio);
+server.get('/', routes.portfolio);
+server.get('/resume', routes.resume);
 
 // Old routes
-server.get('/', routes.resume);
-server.get('/resume', routes.resume);
 server.get('/human-centered-design', routes.hcd);
 server.get('/donations-pledge', routes.donations);
 server.use('/office-street-view', osvServer);
