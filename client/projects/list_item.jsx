@@ -20,14 +20,14 @@ export default class ProjectsListItem extends React.Component {
   }
 
   _renderVisuals() {
+    if (this.props.pdf) {
+      return <Pdf url={this.props.pdf} />;
+    }
+
     if (this.props.images) {
       return this.props.images.map(function (image, index) {
         return <ProjectsImage image={image} key={index} />;
       });
-    }
-
-    if (this.props.pdf) {
-      return <Pdf url={this.props.pdf} />;
     }
   }
 

@@ -5,9 +5,11 @@ import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
 import Position from '../positions/position';
 import Donations from '../donations/list';
+import ResumeNotes from '../resume/notes';
 
 var Custom = {
-  Donations: Donations
+  Donations: Donations,
+  ResumeNotes: ResumeNotes
 };
 
 export default class ProjectsContent extends React.Component {
@@ -21,6 +23,18 @@ export default class ProjectsContent extends React.Component {
     this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
     this._renderPositions = this._renderPositions.bind(this);
     this._renderDescription = this._renderDescription.bind(this);
+    this._renderCreatedFor = this._renderCreatedFor.bind(this);
+  }
+
+  _renderCreatedFor() {
+    if (!this.props.createdFor) {
+      return null;
+    }
+
+    return [
+      <dt key='dt'>Created as part of:</dt>,
+      <dd key='dd'>{this.props.createdFor}</dd>
+    ];
   }
 
   _renderGithub() {
@@ -70,7 +84,7 @@ export default class ProjectsContent extends React.Component {
     return [
       <dt key='dt'>Responsibilities:</dt>,
       <dd key='dd'>
-        <ul>
+        <ul className='projects-content__list'>
           {this.props.involvedWith.map(this._renderFragmentsItem)}
         </ul>
       </dd>
@@ -111,7 +125,9 @@ export default class ProjectsContent extends React.Component {
     return [
       <dt key='dt'>Press:</dt>,
       <dd key='dd'>
-        <ul>{this.props.press.map(this._renderFragmentsItem)}</ul>
+        <ul className='projects-content__list'>
+          {this.props.press.map(this._renderFragmentsItem)}
+        </ul>
       </dd>
     ];
   }
@@ -144,12 +160,13 @@ export default class ProjectsContent extends React.Component {
         {this._renderDescription()}
         <dl>
           {this._renderPositions()}
+          {this._renderCreatedFor()}
           {this._renderStack()}
           {this._renderJoinedWhen()}
           {this._renderResponsibilities()}
           {this._renderPress()}
-          {this._renderCustom()}
         </dl>
+        {this._renderCustom()}
       </div>
     );
   }
@@ -158,8 +175,13 @@ export default class ProjectsContent extends React.Component {
 ProjectsContent.propTypes = {
   name: React.PropTypes.string.isRequired,
   url: React.PropTypes.string,
-  description: React.PropTypes.string.isRequired,
-  stack: React.PropTypes.string.isRequired,
+  description: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.array
+  ]).isRequired,
+  createdFor: React.PropTypes.string,
+  stack: React.PropTypes.string,
+  github: React.PropTypes.string,
   joinedWhen: React.PropTypes.string,
   involvedWith: React.PropTypes.array,
   press: React.PropTypes.array

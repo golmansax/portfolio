@@ -6,8 +6,79 @@
 		{
       "slug": "volunteering",
 			"name": "Volunteering",
-			"description": "Places I have volunteered with",
-			"involvedWith": []
+      "description": [
+        "I try to stay involved with the community through volunteering.  ",
+        "Here is a list of the organizations that I have worked with:"
+      ],
+      "custom": [
+				{
+					"klass": "ResumeNotes",
+					"attrs": {
+            "notes": [
+              {
+                "left": [
+                  {
+                    "text": "Mission Graduates",
+                    "url": "http://www.missiongraduates.org/"
+                  },
+                  ", Math Tutor"
+                ],
+                "right": [
+                  "San Francisco, CA: Mar ’14 – Current"
+                ]
+              },
+              {
+                "left": [
+                  {
+                    "text": "First Graduate",
+                    "url": "http://firstgraduate.org/"
+                  },
+                  ", Academic Coach"
+                ],
+                "right": [
+                  "San Francisco, CA: Nov ’14 – May ’15"
+                ]
+              },
+              {
+                "left": [
+                  {
+                    "text": "Eastside High School",
+                    "url": "http://www.eastside.org/"
+                  },
+                  ", Math Tutor"
+                ],
+                "right": [
+                  "East Palo Alto, CA: Mar ’13 – Nov ’13"
+                ]
+              },
+              {
+                "left": [
+                  {
+                    "text": "Ronald McDonald House",
+                    "url": "http://www.ronaldhouse.net/"
+                  },
+                  ", CLIK Room Supervisor"
+                ],
+                "right": [
+                  "Palo Alto, CA: Mar ’13 – Nov ’13"
+                ]
+              },
+              {
+                "left": [
+                  {
+                    "text": "Smithsonian Freer and Sackler Galleries",
+                    "url": "http://www.asia.si.edu/events/imaginasia.asp"
+                  },
+                  ", ImaginAsia Family Program"
+                ],
+                "right": [
+                  "Washington, DC: June ’06 – May ’12"
+                ]
+              }
+            ]
+					}
+				}
+      ]
 		},
 		{
       "slug": "my-donations-pledge",
@@ -52,12 +123,27 @@
 		{
       "slug": "human-centered-design",
 			"name": "Human-Centered Design",
-			"description": "Acumen course",
+			"description": [
+        "A few friends and I took a ",
+        {
+          "url": "http://plusacumen.org/courses/hcd-for-social-innovation/",
+          "text": "human-centered design course"
+        },
+        " on creating effective solutions for human-centered design ",
+        "course on creating effective solutions for social change.  Our ",
+        "project brainstorm was on promoting healthy ",
+        "eating in the Tenderloin neighborhood in San Francisco, CA.  ",
+        "Check out the presentation detailing our project!"
+      ],
       "images": [
         "/static/human-centered-design.jpg"
       ],
 			"pdf": "https://docs.google.com/viewer?srcid=0BzCKqkqhnFJQRFFyTDZFQ1R6OGs&pid=explorer&efh=false&a=v&chrome=false&embedded=true",
-			"involvedWith": []
+      "involvedWith": [
+        ["Conduct interviews in the Tenderloin to understand feelings towards healthy food"],
+        ["Brainstorm ideas based on insights gained from user research"],
+        ["Create user personas and a project prototype"]
+      ]
 		}
 	]
 }
