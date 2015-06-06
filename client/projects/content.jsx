@@ -23,6 +23,20 @@ export default class ProjectsContent extends React.Component {
     this._renderDescription = this._renderDescription.bind(this);
   }
 
+  _renderGithub() {
+    if (!this.props.github) {
+      return null;
+    }
+
+    return (
+      <div>
+        <a href={this.props.github}>
+          {this.props.github}
+        </a>
+      </div>
+    );
+  }
+
   _renderCustom() {
     if (!this.props.custom) {
       return null;
@@ -41,7 +55,10 @@ export default class ProjectsContent extends React.Component {
 
     return [
       <dt key='dt'>Stack:</dt>,
-      <dd key='dd'>{this.props.stack}</dd>
+      <dd key='dd'>
+        {this.props.stack}
+        {this._renderGithub()}
+      </dd>
     ];
   }
 
@@ -121,7 +138,9 @@ export default class ProjectsContent extends React.Component {
   render() {
     return (
       <div className='projects-content'>
-        <h2><Fragment url={this.props.url} text={this.props.name} /></h2>
+        <h2>
+          <Fragment url={this.props.url} text={this.props.name} />
+        </h2>
         {this._renderDescription()}
         <dl>
           {this._renderPositions()}

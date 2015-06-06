@@ -1,0 +1,85 @@
+{
+	"projects": [
+		{
+      "slug": "chalk",
+			"name": "Chalk Schools",
+			"url": "http://chalkschools.com",
+			"images": [
+				"/90921e0249/static/chalk.jpg"
+			],
+			"description": "A form system",
+			"stack": "Rails, Backbone + ReactJS, Haml, Bootstrap + Sass, PostgreSQL, Heroku",
+			"positions": [
+				{
+					"title": "Software Engineer",
+					"start": "Jan ’14",
+					"end": "Current"
+				}
+			],
+			"joinedWhen": "Team had 3 employees (2 engineers)",
+			"involvedWith": [
+				[
+					"Creating the engineering culture"
+				],
+				[
+					"Practice agile development through full code coverage and strong integration tests"
+				],
+				[
+					"Focus on customer satisfaction through integrating user feedback and fast response times to support requests"
+				],
+				[
+					"Full stack of website development, from code architecting to frontend design"
+				]
+			]
+		},
+		{
+      "slug": "amass",
+			"name": "Amass Media",
+			"url": "http://amassmedia.org",
+			"images": [
+				"/039296b2cf/static/amass.jpg"
+			],
+			"description": "A platform for filmmakers and organizations to meet",
+			"stack": "Rails, AngularJS, Haml, Foundation + Sass, MongoDB, Heroku",
+			"positions": [
+				{
+					"title": "Advisor",
+					"start": "Mar ’14",
+					"end": "Current"
+				}
+			],
+			"involvedWith": []
+		},
+		{
+      "slug": "room-77",
+			"name": "Room 77",
+			"url": "https://m.room77.com",
+			"images": [
+        [
+          "/a5e8d75dde/static/room-77_1.jpg",
+          "/53f7a9b79c/static/room-77_2.jpg"
+        ]
+			],
+			"description": "A good hotel search",
+			"stack": "AngularJS, Sass, PHP",
+			"positions": [
+				{
+					"title": "Software Engineer",
+					"start": "Jul ’12",
+					"end": "Jan ’14"
+				}
+			],
+			"joinedWhen": "Team had 15 employees (6 engineers)",
+			"involvedWith": [],
+			"press": [
+				[
+					"Company was ",
+					{
+						"url": "http://www.bloomberg.com/news/2014-04-07/google-licenses-room-77-software-in-mobile-travel-booking-push.html",
+						"text": "acquired by Google"
+					}
+				]
+			]
+		}
+	]
+}

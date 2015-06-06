@@ -34,8 +34,8 @@ export default class ProjectsGrid extends React.Component {
   _renderProject(project, index) {
     return (
       <div className='projects-grid__item' key={index}>
-        <ProjectsImage image={project.images[0]} />
         <h2><Fragment text={project.name} url={project.projectPath} /></h2>
+        <ProjectsImage image={project.images[0]} />
       </div>
     );
   }

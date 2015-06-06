@@ -18,7 +18,7 @@ var routes = {};
 i18n.init({
   lng: 'en-US',
   ns: {
-    namespaces: ['app', 'community_projects'],
+    namespaces: ['app', 'community_projects', 'work_projects', 'side_projects'],
     defaultNs: 'app'
   },
   returnObjectTrees: true

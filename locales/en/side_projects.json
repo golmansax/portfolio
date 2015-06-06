@@ -1,0 +1,57 @@
+{
+  "projects": [
+    {
+      "slug": "circl",
+      "name": "Circl Dating App",
+      "description": "Dating app",
+      "github": "https://github.com/stephenball1/Twinkle",
+      "stack": "Android app in Java, Firebase",
+      "images": [
+        [
+          "static/circl_match.jpg",
+          "static/circl_chat.jpg"
+        ]
+      ],
+      "involvedWith": []
+    },
+    {
+      "slug": "office-street-view",
+      "name": "Office Street View",
+      "description": "Navigate through an office and meet the employees!",
+      "stack": "AngularJS, Sass, PHP",
+      "github": "https://github.com/golmansax/office-street-view",
+      "images": [
+        "/static/office-street-view_1.jpg",
+        "/static/office-street-view_2.jpg"
+      ],
+      "involvedWith": []
+    },
+    {
+      "slug": "personal-site",
+      "name": "Personal Site",
+      "url": "http://golmansax.com",
+      "github": "https://github.com/golmansax/my-site-in-express",
+      "description": "Personal website",
+      "stack": "ExpressJS, ES6, ReactJS",
+      "images": [
+        "/static/personal-site.jpg"
+      ],
+      "involvedWith": []
+    },
+    {
+      "slug": "chip-in",
+      "name": "Chip In",
+      "description": "Volunteer platform",
+      "stack": "Rails, AngularJS",
+      "involvedWith": []
+    },
+    {
+      "slug": "battlecode-2015",
+      "name": "Battlecode 2015",
+      "github": "https://github.com/y4n9squared/battlecode",
+      "description": "Volunteer platform",
+      "stack": "Java",
+      "involvedWith": []
+    }
+  ]
+}

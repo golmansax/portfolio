@@ -10,7 +10,6 @@ export default class ProjectsImage extends React.Component {
   }
 
   _renderImage() {
-    console.log(Array.isArray(this.props.image));
     if (Array.isArray(this.props.image)) {
       return this.props.image.map(function (image, index) {
         return (
