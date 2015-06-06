@@ -1,5 +1,10 @@
 .navbar
   .container
-    a(href='/')
-      img.navbar-logo(src=cachify('/static/navbar-icon.png'))
-    h1= metaData.title === 'Holman Gao' ? metaData.title : 'Holman Gao / ' + metaData.title
+    .navbar-left
+      a.navbar-logo(href='/')
+        img(src=cachify('/static/navbar-icon.png'))
+      h1= metaData.title
+    .navbar-right
+      a(href='/work') Work
+      a(href='/side-projects') Side Projects
+      a(href='/in-community') In Community

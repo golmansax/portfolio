@@ -1,7 +1,6 @@
 .navbar {
   background $my-green
-  padding 1em 0
-  margin-bottom 1em
+  padding .75em 0 .5em
 
   h1 {
     color $white
@@ -11,4 +10,29 @@
 .navbar-logo {
   float left
   margin-right .75em
+}
+
+.navbar-left {
+  clearfix()
+  float left
+
+  h1 {
+    float left
+  }
+}
+
+.navbar-right {
+  float right
+  line-height em(50px)
+
+  a {
+    color $white
+    padding 0 1em
+    text-transform uppercase
+    text-decoration none
+
+    &:hover {
+      text-decoration underline
+    }
+  }
 }
