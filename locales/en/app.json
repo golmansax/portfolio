@@ -76,8 +76,10 @@
 			"name": "Room 77",
 			"url": "https://m.room77.com",
 			"images": [
-				"/a5e8d75dde/static/room-77_1.jpg",
-				"/53f7a9b79c/static/room-77_2.jpg"
+        [
+          "/a5e8d75dde/static/room-77_1.jpg",
+          "/53f7a9b79c/static/room-77_2.jpg"
+        ]
 			],
 			"description": "A good hotel search",
 			"stack": "AngularJS, Sass, PHP",
@@ -108,8 +110,10 @@
       "description": "Dating app",
       "stack": "Android app in Java, Firebase",
       "images": [
-        "static/circl_match.jpg",
-        "static/circl_chat.jpg"
+        [
+          "static/circl_match.jpg",
+          "static/circl_chat.jpg"
+        ]
       ],
       "involvedWith": []
     },
@@ -134,7 +138,8 @@
       "description": "Navigate through an office and meet the employees!",
       "stack": "AngularJS, Sass, PHP",
       "images": [
-        "/static/office-street-view_1.jpg"
+        "/static/office-street-view_1.jpg",
+        "/static/office-street-view_2.jpg"
       ],
       "involvedWith": []
     }

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ProjectsImages from './images';
+import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
 
 export default class ProjectsGrid extends React.Component {
@@ -32,10 +32,9 @@ export default class ProjectsGrid extends React.Component {
   }
 
   _renderProject(project, index) {
-    console.log(project.projectPath);
     return (
       <div className='projects-grid__item' key={index}>
-        <ProjectsImages images={project.images} />
+        <ProjectsImage image={project.images[0]} />
         <h2><Fragment text={project.name} url={project.projectPath} /></h2>
       </div>
     );

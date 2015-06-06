@@ -7,9 +7,11 @@ export default class ProjectsArray extends Array {
     var decoratedProjects = projects.map(function (project) {
       if (project.images) {
         project.images = project.images.map(function (image) {
-          /* jshint -W067 */
-          return cachify(image);
-          /* jshint +W067 */
+          if (Array.isArray(image)) {
+            return image.map(cachify);
+          } else {
+            return cachify(image);
+          }
         });
       }
 

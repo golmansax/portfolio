@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ProjectsImages from './images';
+import ProjectsImage from './image';
 import ProjectsContent from './content';
 import Pdf from '../pdfs/pdf';
 
@@ -21,7 +21,9 @@ export default class ProjectsListItem extends React.Component {
 
   _renderVisuals() {
     if (this.props.images) {
-      return <ProjectsImages images={this.props.images} />;
+      return this.props.images.map(function (image, index) {
+        return <ProjectsImage image={image} key={index} />;
+      });
     }
 
     if (this.props.pdf) {

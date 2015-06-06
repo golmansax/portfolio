@@ -62,7 +62,7 @@ export default class ProjectsContent extends React.Component {
 
   _renderDescription() {
     var description;
-    if (this.props.description.isArray && this.props.description.isArray()) {
+    if (Array.isArray(this.props.description)) {
       description = this.props.description;
     } else {
       description = [this.props.description];
