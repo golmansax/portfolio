@@ -7,17 +7,17 @@
   }
 }
 
-.navbar-logo {
-  float left
-  margin-right .75em
-}
-
 .navbar-left {
   clearfix()
   float left
 
+  img,
   h1 {
     float left
+  }
+
+  img {
+    margin-right .75em
   }
 }
 
@@ -32,6 +32,10 @@
     text-decoration none
 
     &:hover {
+      text-decoration underline
+    }
+
+    &.active {
       text-decoration underline
     }
   }

@@ -1,10 +1,10 @@
 .navbar
   .container
     .navbar-left
-      a.navbar-logo(href='/')
+      a(href='/')
         img(src=cachify('/static/navbar-icon.png'))
-      h1 Holman Gao
+        h1 Holman Gao
     .navbar-right
-      a(href='/work') Work
-      a(href='/side-projects') Side Projects
-      a(href='/in-community') In Community
+      each navbarLink in navbarLinks
+        - className = navbarLink.url === currentPath ? 'active' : null
+        a(href=navbarLink.url, class=className)= navbarLink.text

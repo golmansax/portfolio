@@ -34,6 +34,15 @@ if (env === 'development') {
 }
 
 server.use(express.static(__dirname + '/public'));
+server.use(function (req, res, next) {
+  res.locals.currentPath = req.path;
+  res.locals.navbarLinks = [
+    { text: 'Work', url: '/work' },
+    { text: 'Side Projects', url: '/side-projects' },
+    { url: '/in-community', text: 'In Community' }
+  ];
+  next();
+});
 
 // New experimental routes
 server.get('/work', routes.workProjects);
