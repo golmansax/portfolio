@@ -1,12 +1,10 @@
 'use strict';
 
 var React = require('react');
-var ResumeFactory = React.createFactory(
-  require('./client/resume/resume')
-);
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
+var ResumeRoute = require('./client/resume/route');
 var SideProjectsRoute = require('./client/side_projects/route');
 var WorkProjectsRoute = require('./client/work_projects/route');
 var CommunityProjectsRoute = require('./client/community_projects/route');
@@ -24,29 +22,7 @@ i18n.init({
   returnObjectTrees: true
 });
 
-routes.resume = function (req, res) {
-  var resumeAttrs = {
-    work: i18n.t('work').map(function (entry) {
-      if (entry.image) {
-        if (!entry.image.src) {
-          entry.image = { src: entry.image };
-        }
-
-        entry.image.src = cachify(entry.image.src);
-      }
-      return entry;
-    }),
-    education: i18n.t('education'),
-    other: i18n.t('other')
-  };
-
-  res.render('resume/page', {
-    metaData: i18n.t('metaData.resume'),
-    resume: React.renderToString(ResumeFactory(resumeAttrs)),
-    gon: JSON.stringify(resumeAttrs)
-  });
-}
-
+routes.resume = ResumeRoute;
 routes.workProjects = WorkProjectsRoute;
 routes.sideProjects = SideProjectsRoute;
 routes.communityProjects = CommunityProjectsRoute;
