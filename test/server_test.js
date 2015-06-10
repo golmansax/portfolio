@@ -32,14 +32,16 @@ describe('server', function () {
 
   it('routes hcd page', function (done) {
     browser.visit('/human-centered-design', function () {
-      expect(browser.text('h1')).to.include('Human-Centered Design');
+      expect(browser.text('h1')).to.include('Holman Gao');
+      expect(browser.text('title')).to.include('Human-Centered Design');
       done();
     });
   });
 
   it('routes donations page', function (done) {
     browser.visit('/donations-pledge', function () {
-      expect(browser.text('h1')).to.include('Donations Pledge');
+      expect(browser.text('h1')).to.include('Holman Gao');
+      expect(browser.text('title')).to.include('Donations Pledge');
       done();
     });
   });
