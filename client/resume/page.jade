@@ -2,8 +2,7 @@ extends ../layout
 
 block content
   != breadcrumbs
-  #react-container!= resume
+  #resume!= resume
 
   script(type='text/javascript').
     var gon = !{gon};
-  script(type='text/javascript', src=cachify('/assets/main.js'))
