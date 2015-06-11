@@ -7,6 +7,6 @@ import LayoutHandler from './layout/handler';
 
 export default (
   <Route handler={LayoutHandler}>
-    <DefaultRoute handler={PortfolioHandler} />
+    <DefaultRoute name='portfolio' handler={PortfolioHandler} />
   </Route>
 );

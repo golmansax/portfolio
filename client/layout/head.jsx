@@ -1,14 +1,21 @@
 'use strict';
 
 import React from 'react';
+import i18n from 'i18next';
 import { RouteHandler } from 'react-router';
 import { cachify } from 'connect-cachify-static';
+import reactMixin from 'react-mixin';
+import { State } from 'react-router';
 
-export default class LayoutHandler extends React.Component {
+export default class LayoutHead extends React.Component {
   render() {
+    var currentRoutes = this.getRoutes();
+    var routeName = currentRoutes[currentRoutes.length - 1].name;
+    var metaData = i18n.t(`metaData.${routeName}`);
+
     return (
       <head>
-        <title>Holman Gao</title>
+        <title>{this._getTitle(metaData.title)}</title>
         <link href={cachify('/assets/main.css')} rel='stylesheet' />
         <link
           type='text/css'
@@ -25,7 +32,22 @@ export default class LayoutHandler extends React.Component {
         />
         <meta name='viewport' content='width=device-width, user-scalable=no' />
         <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        {this._renderMetaDescription(metaData.description)}
       </head>
     );
   }
+
+  _renderMetaDescription(description) {
+    if (!description) {
+      return null;
+    }
+
+    return <meta name='description' content={description} />;
+  }
+
+  _getTitle(title) {
+    return title === 'Holman Gao' ? title : title + ' — Holman Gao ';
+  }
+
 }
+reactMixin.onClass(LayoutHead, State);
