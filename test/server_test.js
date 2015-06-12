@@ -30,6 +30,25 @@ describe('server', function () {
     });
   });
 
+  it('can click on a portfolio link', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Chalk Schools', function () {
+        expect(browser.text('body')).to.include('A digital workflow system');
+        done();
+      });
+    });
+  });
+
+  it('can click on a header link', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Side Projects', function () {
+        expect(browser.text('body')).to.include('LAUNCH Hackathon 2015');
+        expect(browser.text('body')).to.include('Internal Room 77 hackathon');
+        done();
+      });
+    });
+  });
+
   it('routes hcd page', function (done) {
     browser.visit('/human-centered-design', function () {
       expect(browser.text('h1')).to.include('Holman Gao');

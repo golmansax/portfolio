@@ -9,7 +9,7 @@ export default class SideProjectsHandler extends React.Component {
   render() {
     return (
       <div>
-        <BreadcrumbsList breadcrumbs={['Side Porjects']} />
+        <BreadcrumbsList breadcrumbs={['Side Projects']} />
         <ProjectsList projects={SideProjectsStore.getAll()} />
       </div>
     );
