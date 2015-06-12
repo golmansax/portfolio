@@ -6,7 +6,6 @@ var DonationsListFactory = React.createFactory(
 );
 var ResumeRoute = require('./client/resume/route');
 var SideProjectsRoute = require('./client/side_projects/route');
-var WorkProjectsRoute = require('./client/work_projects/route');
 var CommunityProjectsRoute = require('./client/community_projects/route');
 var RouterRoute = require('./client/router/route');
 var i18n = require('i18next');
@@ -23,7 +22,7 @@ i18n.init({
 });
 
 routes.resume = ResumeRoute;
-routes.workProjects = WorkProjectsRoute;
+routes.workProjects = RouterRoute;
 routes.sideProjects = SideProjectsRoute;
 routes.communityProjects = CommunityProjectsRoute;
 routes.portfolio = RouterRoute;
