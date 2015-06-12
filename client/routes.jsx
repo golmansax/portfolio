@@ -8,6 +8,7 @@ import SideProjectsHandler from './side_projects/handler';
 import CommunityProjectsHandler from './community_projects/handler';
 import ContentHandler from './content/handler';
 
+// jscs:disable maximumLineLength
 export default (
   <Route handler={ContentHandler}>
     <DefaultRoute name='portfolio' handler={PortfolioHandler} />
@@ -16,3 +17,4 @@ export default (
     <Route name='communityProjects' path='/in-community' handler={CommunityProjectsHandler} />
   </Route>
 );
+// jscs:enable maximumLineLength

@@ -13,6 +13,7 @@ export default class LayoutHead extends React.Component {
     var routeName = currentRoutes[currentRoutes.length - 1].name;
     var metaData = i18n.t(`metaData.${routeName}`);
 
+    // jscs:disable maximumLineLength
     return (
       <head>
         <title>{this._getTitle(metaData.title)}</title>
@@ -35,6 +36,7 @@ export default class LayoutHead extends React.Component {
         {this._renderMetaDescription(metaData.description)}
       </head>
     );
+    // jscs:enable maximumLineLength
   }
 
   _renderMetaDescription(description) {
