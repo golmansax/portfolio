@@ -5,6 +5,7 @@ import { RouteHandler } from 'react-router';
 import LayoutHead from './head';
 import LayoutNavbar from './navbar';
 import LayoutFooter from './footer';
+import LayoutSidebar from './sidebar';
 
 export default class LayoutHandler extends React.Component {
   render() {
@@ -13,9 +14,11 @@ export default class LayoutHandler extends React.Component {
         <LayoutHead />
         <body>
           <div className='content'>
-            <LayoutNavbar />
-            <RouteHandler />
-            <LayoutFooter />
+            <LayoutSidebar>
+              <LayoutNavbar />
+              <RouteHandler />
+              <LayoutFooter />
+            </LayoutSidebar>
           </div>
         </body>
       </html>

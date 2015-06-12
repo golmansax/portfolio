@@ -1,7 +1,10 @@
 var React = require('react');
+
+// HACK
+global.window = global.window || {};
 var Sidebar = require('react-sidebar');
 
-export default class Sidebar extends React.Component {
+export default class LayoutSidebar extends React.Component {
   constructor(props) {
     super(props)
 
@@ -14,7 +17,7 @@ export default class Sidebar extends React.Component {
     this.setState({ sidebarOpen: open });
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (global.matchMedia) {
       var mql = global.matchMedia(`(min-width: 800px)`);
       mql.addListener(this._mediaQueryChanged);
@@ -38,9 +41,9 @@ export default class Sidebar extends React.Component {
     return (
       <Sidebar
         sidebar={sidebarContent}
-        docked={this.state.sidebarDocked}
+        docked={this.state.docked}
         >
-        <b>Main content</b>
+        {this.props.children}
       </Sidebar>
     );
   }
