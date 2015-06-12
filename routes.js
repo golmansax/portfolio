@@ -5,7 +5,6 @@ var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
 var ResumeRoute = require('./client/resume/route');
-var CommunityProjectsRoute = require('./client/community_projects/route');
 var RouterRoute = require('./client/router/route');
 var i18n = require('i18next');
 var cachify = require('connect-cachify-static').cachify;
@@ -23,7 +22,7 @@ i18n.init({
 routes.resume = ResumeRoute;
 routes.workProjects = RouterRoute;
 routes.sideProjects = RouterRoute;
-routes.communityProjects = CommunityProjectsRoute;
+routes.communityProjects = RouterRoute;
 routes.portfolio = RouterRoute;
 
 routes.donations = function (req, res) {

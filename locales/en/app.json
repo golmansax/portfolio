@@ -19,7 +19,10 @@
 		},
 		"sideProjects": {
 			"title": "Side Projects"
-		}
+		},
+    "communityProjects": {
+      "title": "Efforts in Community"
+    }
 	},
 	"work": [
 		{
