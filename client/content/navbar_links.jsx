@@ -12,7 +12,7 @@ var NAVBAR_LINKS = [
 ];
 var currentPath = 'garbage';
 
-export default class LayoutNavbarLinks extends React.Component {
+export default class ContentNavbarLinks extends React.Component {
   constructor(props) {
     super(props);
     this._renderNavbarLink = this._renderNavbarLink.bind(this);
@@ -32,4 +32,4 @@ export default class LayoutNavbarLinks extends React.Component {
     );
   }
 }
-reactMixin.onClass(LayoutNavbarLinks, State);
+reactMixin.onClass(ContentNavbarLinks, State);

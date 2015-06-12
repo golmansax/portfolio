@@ -3,9 +3,7 @@
 import React from 'react';
 import { RouteHandler } from 'react-router';
 import LayoutHead from './head';
-import LayoutNavbar from './navbar';
-import LayoutFooter from './footer';
-import LayoutSidebar from './sidebar';
+import { cachify } from 'connect-cachify-static';
 
 export default class LayoutHandler extends React.Component {
   render() {
@@ -13,12 +11,8 @@ export default class LayoutHandler extends React.Component {
       <html>
         <LayoutHead />
         <body>
-          <div className='content'>
-            <LayoutSidebar>
-              <LayoutNavbar />
-              <RouteHandler />
-              <LayoutFooter />
-            </LayoutSidebar>
+          <div id='content' className='content'>
+            <RouteHandler />
           </div>
         </body>
       </html>

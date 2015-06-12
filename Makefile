@@ -14,7 +14,7 @@ test:
 	./node_modules/.bin/mocha -R spec test/**/*
 
 watch:
-	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify client/main.jsx -o public/assets/main.js -v
+	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
 
 jshint:
 	./node_modules/.bin/jsxhint . --babel --exclude-path .jshintignore

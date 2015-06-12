@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { cachify } from 'connect-cachify-static';
-import LayoutNavbarLinks from './navbar_links';
+import ContentNavbarLinks from './navbar_links';
 
-export default class LayoutNavbar extends React.Component {
+export default class ContentNavbar extends React.Component {
   render() {
     return (
       <div className='navbar'>
@@ -15,7 +15,7 @@ export default class LayoutNavbar extends React.Component {
               <h1>Holman Gao</h1>
             </a>
           </div>
-          <div className='navbar-right'><LayoutNavbarLinks /></div>
+          <div className='navbar-right'><ContentNavbarLinks /></div>
         </div>
       </div>
     );

@@ -4,7 +4,7 @@ var React = require('react');
 global.window = global.window || {};
 var Sidebar = require('react-sidebar');
 
-export default class LayoutSidebar extends React.Component {
+export default class ContentSidebar extends React.Component {
   constructor(props) {
     super(props)
 
