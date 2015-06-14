@@ -11,18 +11,9 @@ var BreadcrumbsListFactory = React.createFactory(BreadcrumbsList);
 
 export default function ResumeRoute(req, res) {
   var resumeAttrs = {
-    work: i18n.t('work').map(function (entry) {
-      if (entry.image) {
-        if (!entry.image.src) {
-          entry.image = { src: entry.image };
-        }
-
-        entry.image.src = cachify(entry.image.src);
-      }
-      return entry;
-    }),
-    education: i18n.t('education'),
-    other: i18n.t('other')
+    work: i18n.t('resume:work'),
+    education: i18n.t('resume:education'),
+    other: i18n.t('resume:other')
   };
 
   res.render('resume/page', {
