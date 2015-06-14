@@ -7,7 +7,7 @@ import gon from '../gon';
 import { loadData } from '../data/store';
 import { loadImages } from '../images/store';
 
-require("babelify/polyfill");
+require('babelify/polyfill');
 
 loadData(gon.data);
 loadImages(gon.images);

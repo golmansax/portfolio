@@ -7,13 +7,17 @@ export default function getDataFromI18n() {
   return {
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map(function (project) {
-        Object.assign(project, { projectPath: `/in-community#${project.slug}` });
+        Object.assign(project, {
+          projectPath: `/in-community#${project.slug}`
+        });
         return project;
       }),
 
     sideProjects: ProjectsArray.from(i18n.t('side_projects:projects'))
       .map(function (project) {
-        Object.assign(project, { projectPath: `/side-projects#${project.slug}` });
+        Object.assign(project, {
+          projectPath: `/side-projects#${project.slug}`
+        });
         return project;
       }),
 

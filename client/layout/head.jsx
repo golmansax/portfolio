@@ -2,7 +2,6 @@
 
 import React from 'react';
 import i18n from 'i18next';
-import { RouteHandler } from 'react-router';
 import { cachify } from 'connect-cachify-static';
 import reactMixin from 'react-mixin';
 import { State } from 'react-router';
