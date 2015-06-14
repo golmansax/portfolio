@@ -4,7 +4,6 @@ var React = require('react');
 var DonationsListFactory = React.createFactory(
   require('./client/donations/list')
 );
-var ResumeRoute = require('./client/resume/route');
 var RouterRoute = require('./client/router/route');
 var i18n = require('i18next');
 var cachify = require('connect-cachify-static').cachify;
@@ -25,7 +24,7 @@ i18n.init({
   returnObjectTrees: true
 });
 
-routes.resume = ResumeRoute;
+routes.resume = RouterRoute;
 routes.workProjects = RouterRoute;
 routes.sideProjects = RouterRoute;
 routes.communityProjects = RouterRoute;

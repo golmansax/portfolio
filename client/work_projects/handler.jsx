@@ -7,7 +7,6 @@ import { getWorkProjects } from '../data/store';
 
 export default class WorkProjectsHandler extends React.Component {
   render() {
-
     return (
       <div>
         <BreadcrumbsList breadcrumbs={['Work']} />

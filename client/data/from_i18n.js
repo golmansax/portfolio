@@ -25,6 +25,12 @@ export default function getDataFromI18n() {
       .map(function (project) {
         Object.assign(project, { projectPath: `/work#${project.slug}` });
         return project;
-      })
+      }),
+
+    resume: {
+      work: i18n.t('resume:work'),
+      education: i18n.t('resume:education'),
+      other: i18n.t('resume:other')
+    }
   };
 }

@@ -23,3 +23,7 @@ export function getAllProjects() {
     .concat(data.sideProjects)
     .concat(data.communityProjects);
 }
+
+export function getResume() {
+  return data.resume;
+}
