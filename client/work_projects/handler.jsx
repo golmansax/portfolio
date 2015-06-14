@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import * as WorkProjectsStore from './store';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getWorkProjects } from '../data/store';

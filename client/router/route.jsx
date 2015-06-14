@@ -6,6 +6,8 @@ import contentRoutes from '../routes';
 import LayoutHandler from '../layout/handler';
 import getDataFromI18n from '../data/from_i18n';
 import { loadData } from '../data/store';
+import getImagesData from '../images/data';
+import { loadImages } from '../images/store';
 import i18n from 'i18next';
 
 export default function RouterRoute(req, res) {
@@ -17,9 +19,10 @@ export default function RouterRoute(req, res) {
   );
 
   loadData(getDataFromI18n());
+  loadImages(getImagesData());
 
   Router.run(routes, req.path, function (Handler, state) {
-    html = React.renderToString(<Handler/>)
+    html = React.renderToStaticMarkup(<Handler/>)
   })
   res.send(html);
 }

@@ -8,8 +8,7 @@ export default class ContentSidebar extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { docked: false };
-
+    this.state = { docked: false, dockingActive: false };
     this._mediaQueryChanged = this._mediaQueryChanged.bind(this);
   }
 
@@ -21,7 +20,7 @@ export default class ContentSidebar extends React.Component {
     if (global.matchMedia) {
       var mql = global.matchMedia(`(min-width: 800px)`);
       mql.addListener(this._mediaQueryChanged);
-      this.setState({ mql: mql, docked: mql.matches });
+      this.setState({ mql: mql, dockingActive: mql.matches });
     }
   }
 
@@ -32,7 +31,7 @@ export default class ContentSidebar extends React.Component {
   }
 
   _mediaQueryChanged() {
-    this.setState({ docked: this.state.mql.matches });
+    this.setState({ dockingActive: this.state.mql.matches });
   }
 
   render() {
@@ -41,7 +40,7 @@ export default class ContentSidebar extends React.Component {
     return (
       <Sidebar
         sidebar={sidebarContent}
-        docked={this.state.docked}
+        docked={this.state.docked && this.state.dockingActive}
         >
         {this.props.children}
       </Sidebar>

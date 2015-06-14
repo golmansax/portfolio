@@ -3,7 +3,7 @@
 import i18n from 'i18next';
 import ProjectsArray from '../projects/array';
 
-export default function () {
+export default function getDataFromI18n() {
   return {
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map(function (project) {
