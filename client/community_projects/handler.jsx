@@ -1,16 +1,16 @@
 'use strict';
 
 import React from 'react';
-import * as CommunityProjectsStore from './store';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
+import { getCommunityProjects } from '../data/store';
 
 export default class CommunityProjectsHandler extends React.Component {
   render() {
     return (
       <div>
         <BreadcrumbsList breadcrumbs={['Efforts in Community']} />
-        <ProjectsList projects={CommunityProjectsStore.getAll()} />
+        <ProjectsList projects={getCommunityProjects()} />
       </div>
     );
   }

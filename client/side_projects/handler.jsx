@@ -1,16 +1,16 @@
 'use strict';
 
 import React from 'react';
-import * as SideProjectsStore from './store';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
+import { getSideProjects } from '../data/store';
 
 export default class SideProjectsHandler extends React.Component {
   render() {
     return (
       <div>
         <BreadcrumbsList breadcrumbs={['Side Projects']} />
-        <ProjectsList projects={SideProjectsStore.getAll()} />
+        <ProjectsList projects={getSideProjects()} />
       </div>
     );
   }
