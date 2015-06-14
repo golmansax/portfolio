@@ -112,6 +112,11 @@ $pdf-viewer-width = em(720px)
 
 .container {
   center($container-width, 1em)
+
+  +tablet() {
+    padding-left 2em
+    padding-right 2em
+  }
 }
 
 .fragment-left {
@@ -139,6 +144,7 @@ $pdf-viewer-width = em(720px)
 }
 
 @require './breadcrumbs/list'
+@require './content/sidebar'
 @require './layout/footer'
 @require './layout/navbar'
 @require './resume/notes'

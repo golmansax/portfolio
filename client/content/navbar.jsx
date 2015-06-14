@@ -3,6 +3,7 @@
 import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
+import { toggleSidebarDocked } from './state_store';
 
 export default class ContentNavbar extends React.Component {
   render() {
@@ -16,6 +17,12 @@ export default class ContentNavbar extends React.Component {
             </a>
           </div>
           <div className='navbar-right'><ContentNavbarLinks /></div>
+          <button
+            className='navbar__sidebar-trigger'
+            onClick={toggleSidebarDocked}
+            >
+            <i className='fa fa-bars fa-3x' />
+          </button>
         </div>
       </div>
     );

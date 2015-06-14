@@ -5,6 +5,19 @@
   h1 {
     color $white
   }
+
+  +e(sidebar-trigger) {
+    background inherit
+    border none
+    color $white
+    float right
+    margin -.75em -1em -.5em .5em
+    padding 1em
+
+    +above('l') {
+      display none
+    }
+  }
 }
 
 .navbar-left {
@@ -38,5 +51,9 @@
     &.active {
       text-decoration underline
     }
+  }
+
+  +below('m') {
+    display none
   }
 }
