@@ -82,11 +82,4 @@ describe('server', function () {
       });
     });
   });
-
-  it('routes street view page', function (done) {
-    browser.visit('/office-street-view', function () {
-      expect(browser.text('h1')).to.equal('Office Street View');
-      done();
-    });
-  });
 });
