@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import DocumentTitle from 'react-document-title';
 import i18n from 'i18next';
 import { cachify } from 'connect-cachify-static';
 import reactMixin from 'react-mixin';
@@ -12,10 +13,12 @@ export default class LayoutHead extends React.Component {
     var routeName = currentRoutes[currentRoutes.length - 1].name;
     var metaData = i18n.t(`metaData.${routeName}`);
 
+    console.log(DocumentTitle.rewind());
+
     // jscs:disable maximumLineLength
     return (
       <head>
-        <title>{this._getTitle(metaData.title)}</title>
+        <title>{DocumentTitle.rewind()}</title>
         <link href={cachify('/assets/main.css')} rel='stylesheet' />
         <link
           type='text/css'

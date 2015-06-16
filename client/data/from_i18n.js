@@ -8,7 +8,8 @@ export default function getDataFromI18n() {
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map(function (project) {
         Object.assign(project, {
-          projectPath: `/in-community#${project.slug}`
+          projectPath: `/in-community#${project.slug}`,
+          type: 'communityProject'
         });
         return project;
       }),
@@ -16,14 +17,18 @@ export default function getDataFromI18n() {
     sideProjects: ProjectsArray.from(i18n.t('side_projects:projects'))
       .map(function (project) {
         Object.assign(project, {
-          projectPath: `/side-projects#${project.slug}`
+          projectPath: `/side-projects#${project.slug}`,
+          type: 'sideProject'
         });
         return project;
       }),
 
     workProjects: ProjectsArray.from(i18n.t('work_projects:projects'))
       .map(function (project) {
-        Object.assign(project, { projectPath: `/work#${project.slug}` });
+        Object.assign(project, {
+          projectPath: `/work#${project.slug}`,
+          type: 'workProject'
+        });
         return project;
       }),
 

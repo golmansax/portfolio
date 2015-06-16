@@ -26,7 +26,7 @@ export default class BreadcrumbsList extends React.Component {
   }
 
   render() {
-    var breadcrumbs = [{ text: 'Home', url: '/' }]
+    var breadcrumbs = [{ text: 'Home', routeName: '/' }]
       .concat(this.props.breadcrumbs);
 
     return (

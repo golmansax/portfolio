@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import DocumentTitle from 'react-document-title';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getCommunityProjects } from '../data/store';
@@ -8,10 +9,12 @@ import { getCommunityProjects } from '../data/store';
 export default class CommunityProjectsHandler extends React.Component {
   render() {
     return (
-      <div>
-        <BreadcrumbsList breadcrumbs={['Efforts in Community']} />
-        <ProjectsList projects={getCommunityProjects()} />
-      </div>
+      <DocumentTitle title='Efforts in Community — Holman Gao'>
+        <div>
+          <BreadcrumbsList breadcrumbs={['Efforts in Community']} />
+          <ProjectsList projects={getCommunityProjects()} />
+        </div>
+      </DocumentTitle>
     );
   }
 }

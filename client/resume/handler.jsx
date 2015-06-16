@@ -8,10 +8,12 @@ import { getResume } from '../data/store';
 export default class ResumeHandler extends React.Component {
   render() {
     return (
-      <div>
-        <BreadcrumbsList breadcrumbs={['Resume']} />
-        <Resume {...getResume()} />
-      </div>
+      <DocumentTitle title='Resume — Holman Gao'>
+        <div>
+          <BreadcrumbsList breadcrumbs={['Resume']} />
+          <Resume {...getResume()} />
+        </div>
+      </DocumentTitle>
     );
   }
 }

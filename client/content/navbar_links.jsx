@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { Link } from 'react-router';
+import Fragment from '../fragments/fragment';
 
 var NAVBAR_LINKS = [
   { text: 'Work', routeName: 'workProjects' },
@@ -21,10 +21,6 @@ export default class ContentNavbarLinks extends React.Component {
   }
 
   _renderNavbarLink(navbarLink, index) {
-    return (
-      <Link key={index} to={navbarLink.routeName}>
-        {navbarLink.text}
-      </Link>
-    );
+    return <Fragment key={index} {...navbarLink} />;
   }
 }

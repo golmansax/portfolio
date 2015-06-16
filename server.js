@@ -46,8 +46,11 @@ server.use(function (req, res, next) {
 
 // New experimental routes
 server.get('/work', routes.workProjects);
+server.get('/work/:projectId', routes.workProjects);
 server.get('/side-projects', routes.sideProjects);
+server.get('/side-projects/:projectId', routes.workProjects);
 server.get('/in-community', routes.communityProjects);
+server.get('/in-community/:projectId', routes.workProjects);
 server.get('/', routes.portfolio);
 server.get('/resume', routes.resume);
 

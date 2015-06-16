@@ -9,8 +9,8 @@
       "stack": "Android app in Java, Firebase",
       "images": [
         [
-          "static/circl_match.jpg",
-          "static/circl_chat.jpg"
+          "/static/circl_match.jpg",
+          "/static/circl_chat.jpg"
         ]
       ],
       "involvedWith": [

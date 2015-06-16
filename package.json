@@ -32,6 +32,7 @@
     "jeet": "latest",
     "nib": "latest",
     "react": "latest",
+    "react-document-title": "latest",
     "react-mixin": "*",
     "react-router": "latest",
     "react-sidebar": "latest",

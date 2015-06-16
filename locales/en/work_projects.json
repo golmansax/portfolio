@@ -5,7 +5,7 @@
 			"name": "Chalk Schools",
 			"url": "http://chalkschools.com",
 			"images": [
-				"/90921e0249/static/chalk.jpg"
+				"/static/chalk.jpg"
 			],
 			"description": "A digital workflow system created for K-12 schools and school districts",
 			"stack": "Rails, Backbone + ReactJS, Haml, Bootstrap + Sass, PostgreSQL",
@@ -27,7 +27,7 @@
 			"name": "Amass Media",
 			"url": "http://amassmedia.org",
 			"images": [
-				"/039296b2cf/static/amass.jpg"
+				"/static/amass.jpg"
 			],
 			"description": "Connecting socially-conscious filmmakers and organizations",
 			"stack": "Rails, AngularJS, Haml, Foundation + Sass, MongoDB",
@@ -50,8 +50,8 @@
 			"url": "https://m.room77.com",
 			"images": [
         [
-          "/a5e8d75dde/static/room-77_1.jpg",
-          "/53f7a9b79c/static/room-77_2.jpg"
+          "/static/room-77_1.jpg",
+          "/static/room-77_2.jpg"
         ]
 			],
 			"description": "Search across dozens of hotel sites to find the best price",
