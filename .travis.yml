@@ -1,6 +1,8 @@
 sudo: false
 language: node_js
 node_js: '0.10'
+before_script:
+- npm run build
 script:
 - travis-lint .travis.yml
 - make jscs
