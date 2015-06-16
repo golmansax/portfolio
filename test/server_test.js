@@ -82,4 +82,16 @@ describe('server', function () {
       });
     });
   });
+
+  it('can click to street view', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Resume', function () {
+        browser.clickLink('More');
+        browser.clickLink('Fun teams page', function () {
+          expect(browser.text('title')).to.include('Office Street View');
+          done();
+        });
+      });
+    });
+  });
 });

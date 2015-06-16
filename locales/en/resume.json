@@ -106,7 +106,8 @@
 				],
 				[
 					{
-						"url": "/office-street-view/#office",
+            "routeName": "sideProject",
+            "params": { "projectId": "office-street-view" },
 						"text": "Fun teams page"
 					},
 					" created in an internal hackathon"

@@ -11,6 +11,13 @@ require('babelify/polyfill');
 
 loadData(gon.data);
 loadImages(gon.images);
-Router.run(routes, Router.HistoryLocation, function (Handler, state) {
+
+var router = Router.create({
+  routes: routes,
+  location: Router.HistoryLocation,
+  scrollBehavior: Router.ScrollToTopBehavior
+});
+
+router.run(function (Handler, state) {
   React.render(<Handler />, global.document.getElementById('content'));
 });

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { RouteHandler } from 'react-router';
+import Fragment from '../fragments/fragment';
 
 export default class ContentFooter extends React.Component {
   render() {
@@ -10,7 +11,7 @@ export default class ContentFooter extends React.Component {
         <div className='container'>
           <a href='https://github.com/golmansax'>Github</a>
           &nbsp;|&nbsp;
-          <a href='/resume'>Resume</a>
+          <Fragment routeName='resume' text='Resume' />
           &nbsp;| holman
           <span className='hide'>crap</span>
           @
