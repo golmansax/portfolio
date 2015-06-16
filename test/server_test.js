@@ -75,7 +75,7 @@ describe('server', function () {
   it('can click to donations page', function (done) {
     browser.visit('/', function () {
       browser.clickLink('Resume', function () {
-        browser.clickLink('human-centered design', function () {
+        browser.clickLink('my donations pledge', function () {
           expect(browser.text('title')).to.include('Donations Pledge');
           done();
         });
