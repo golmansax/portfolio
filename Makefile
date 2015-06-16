@@ -4,7 +4,7 @@ build: build-css build-js
 
 build-js:
 	mkdir -p public/assets
-	./node_modules/.bin/browserify --extension=.jsx -t babelify -t reactify -t envify client/main.jsx | ./node_modules/.bin/uglifyjs -c > public/assets/main.js
+	./node_modules/.bin/browserify --extension=.jsx -t babelify -t reactify -t envify client/router/bootstrap.jsx | ./node_modules/.bin/uglifyjs -c > public/assets/router_bootsrap.js
 
 build-css:
 	mkdir -p public/assets
