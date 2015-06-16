@@ -4,6 +4,7 @@ import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
 import { toggleSidebarDocked } from './state_store';
+import { Link } from 'react-router';
 
 export default class ContentNavbar extends React.Component {
   render() {
@@ -11,10 +12,10 @@ export default class ContentNavbar extends React.Component {
       <div className='navbar'>
         <div className='container'>
           <div className='navbar-left'>
-            <a href='/'>
+            <Link to='/'>
               <img src={getImage('/static/navbar-icon.png')} />
               <h1>Holman Gao</h1>
-            </a>
+            </Link>
           </div>
           <div className='navbar-right'><ContentNavbarLinks /></div>
           <button

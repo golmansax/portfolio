@@ -1,14 +1,12 @@
 'use strict';
 
 import React from 'react';
-import reactMixin from 'react-mixin';
-import classNames from 'classnames';
-import { State } from 'react-router';
+import { Link } from 'react-router';
 
 var NAVBAR_LINKS = [
-  { text: 'Work', url: '/work' },
-  { text: 'Side Projects', url: '/side-projects' },
-  { url: '/in-community', text: 'In Community' }
+  { text: 'Work', routeName: 'workProjects' },
+  { text: 'Side Projects', routeName: 'sideProjects' },
+  { routeName: 'communityProjects', text: 'In Community' }
 ];
 var currentPath = 'garbage';
 
@@ -23,13 +21,10 @@ export default class ContentNavbarLinks extends React.Component {
   }
 
   _renderNavbarLink(navbarLink, index) {
-    var className = classNames({ active: this.isActive(navbarLink.url) });
-
     return (
-      <a key={index} href={navbarLink.url} className={className}>
+      <Link key={index} to={navbarLink.routeName}>
         {navbarLink.text}
-      </a>
+      </Link>
     );
   }
 }
-reactMixin.onClass(ContentNavbarLinks, State);

@@ -22,7 +22,7 @@ export default function RouterRoute(req, res) {
   loadImages(getImagesData());
 
   Router.run(routes, req.path, function (Handler, state) {
-    html = React.renderToStaticMarkup(<Handler/>)
+    html = '<!DOCTYPE html>' + React.renderToStaticMarkup(<Handler/>)
+    res.send(html);
   })
-  res.send(html);
 }
