@@ -1,16 +1,14 @@
 'use strict';
 
 require('babel/register');
+var RouterRoute = require('./client/router/route');
 var env = process.env.NODE_ENV || 'development';
 var express = require('express');
-var routes = require('./routes');
-var osvServer = require('./osv_server');
 var cachifyStatic = require('connect-cachify-static');
 var server = express();
+var i18n = require('i18next');
 
 server.use(cachifyStatic(__dirname + '/public'));
-server.set('view engine', 'jade');
-server.set('views', __dirname + '/client');
 
 if (env === 'development') {
   var stylus = require('stylus');
@@ -44,20 +42,29 @@ server.use(function (req, res, next) {
   next();
 });
 
-// New experimental routes
-server.get('/work', routes.workProjects);
-server.get('/work/:projectId', routes.workProjects);
-server.get('/side-projects', routes.sideProjects);
-server.get('/side-projects/:projectId', routes.workProjects);
-server.get('/in-community', routes.communityProjects);
-server.get('/in-community/:projectId', routes.workProjects);
-server.get('/', routes.portfolio);
-server.get('/resume', routes.resume);
+i18n.init({
+  lng: 'en-US',
+  ns: {
+    namespaces: [
+      'app',
+      'community_projects',
+      'work_projects',
+      'side_projects',
+      'resume'
+    ],
+    defaultNs: 'app'
+  },
+  returnObjectTrees: true
+});
 
-// Old routes
-server.get('/human-centered-design', routes.hcd);
-server.get('/donations-pledge', routes.donations);
-server.use('/office-street-view', osvServer);
+server.get('/work', RouterRoute);
+server.get('/work/:projectId', RouterRoute);
+server.get('/side-projects', RouterRoute);
+server.get('/side-projects/:projectId', RouterRoute);
+server.get('/in-community', RouterRoute);
+server.get('/in-community/:projectId', RouterRoute);
+server.get('/', RouterRoute);
+server.get('/resume', RouterRoute);
 
 if (!module.parent) { server.listen(process.env.PORT || 3000); }
 

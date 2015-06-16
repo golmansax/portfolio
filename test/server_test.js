@@ -23,6 +23,7 @@ describe('server', function () {
 
   it('routes root page to portfolio', function (done) {
     browser.visit('/', function () {
+      expect(browser.text('title')).to.equal('Holman Gao');
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
       StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
@@ -42,6 +43,7 @@ describe('server', function () {
   it('can click on a portfolio link', function (done) {
     browser.visit('/', function () {
       browser.clickLink('Chalk Schools', function () {
+        expect(browser.text('title')).to.include('Chalk Schools');
         expect(browser.text('body')).to.include('A digital workflow system');
         done();
       });
@@ -51,6 +53,7 @@ describe('server', function () {
   it('can click on a header link', function (done) {
     browser.visit('/', function () {
       browser.clickLink('Side Projects', function () {
+        expect(browser.text('title')).to.include('Side Projects');
         expect(browser.text('body')).to.include('LAUNCH Hackathon 2015');
         expect(browser.text('body')).to.include('Internal Room 77 hackathon');
         done();
@@ -58,19 +61,25 @@ describe('server', function () {
     });
   });
 
-  it('routes hcd page', function (done) {
-    browser.visit('/human-centered-design', function () {
-      expect(browser.text('h1')).to.include('Holman Gao');
-      expect(browser.text('title')).to.include('Human-Centered Design');
-      done();
+  it('can click to hcd page', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Resume', function () {
+        browser.clickLink('human-centered design', function () {
+          expect(browser.text('title')).to.include('Human-Centered Design');
+          done();
+        });
+      });
     });
   });
 
-  it('routes donations page', function (done) {
-    browser.visit('/donations-pledge', function () {
-      expect(browser.text('h1')).to.include('Holman Gao');
-      expect(browser.text('title')).to.include('Donations Pledge');
-      done();
+  it('can click to donations page', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Resume', function () {
+        browser.clickLink('human-centered design', function () {
+          expect(browser.text('title')).to.include('Donations Pledge');
+          done();
+        });
+      });
     });
   });
 

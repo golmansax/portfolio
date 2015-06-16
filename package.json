@@ -28,7 +28,6 @@
     "express": "latest",
     "flux-crud-store": "latest",
     "i18next": "latest",
-    "jade": "latest",
     "jeet": "latest",
     "nib": "latest",
     "react": "latest",
@@ -47,7 +46,7 @@
     "build": "make build",
     "postinstall": "npm run build",
     "start": "node server.js",
-    "start-dev": "nodemon -e js,jsx,jade,json,styl",
+    "start-dev": "nodemon -e js,jsx,json,styl",
     "test": "make test",
     "watch": "make watch"
   }
