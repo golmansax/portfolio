@@ -13,8 +13,6 @@ export default class LayoutHead extends React.Component {
     var routeName = currentRoutes[currentRoutes.length - 1].name;
     var metaData = i18n.t(`metaData.${routeName}`);
 
-    console.log(DocumentTitle.rewind());
-
     // jscs:disable maximumLineLength
     return (
       <head>

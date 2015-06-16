@@ -39,8 +39,6 @@ export default class ContentSidebarContainer extends React.Component {
   }
 
   _updateDocked() {
-    console.log(ContentStateStore.isSidebarDocked());
-    console.log(this.state.isDockingActive);
     this.setState({ docked: ContentStateStore.isSidebarDocked() });
   }
 

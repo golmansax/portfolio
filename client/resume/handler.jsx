@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import DocumentTitle from 'react-document-title';
 import BreadcrumbsList from '../breadcrumbs/list';
 import Resume from './resume';
 import { getResume } from '../data/store';

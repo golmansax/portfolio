@@ -21,12 +21,21 @@ describe('server', function () {
     this.server.close();
   });
 
-  it('routes root page to resume', function (done) {
+  it('routes root page to portfolio', function (done) {
     browser.visit('/', function () {
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
       StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
       done();
+    });
+  });
+
+  it('can click to resume', function (done) {
+    browser.visit('/', function () {
+      browser.clickLink('Resume', function () {
+        expect(browser.text('title')).to.include('Resume');
+        done();
+      });
     });
   });
 
