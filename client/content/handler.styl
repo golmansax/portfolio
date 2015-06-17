@@ -1,0 +1,23 @@
+.content-handler {
+  +e(top) {
+    &,
+    & > div {
+      z-index 1
+    }
+  }
+
+  +e(body) {
+    z-index 0
+    position relative
+    overflow hidden
+  }
+
+  +e(backdrop) {
+    position absolute
+    left 0
+    top 0
+    width 1000em
+    height 1000em
+    background rgba($dark-gray, 0.5)
+  }
+}

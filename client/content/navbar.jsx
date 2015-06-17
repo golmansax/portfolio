@@ -4,14 +4,24 @@ import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
 import { Link } from 'react-router';
+import { addChangeListener, removeChangeListener, isMenuShowing, toggleMenuShowing } from './state_store';
 
 export default class ContentNavbar extends React.Component {
   constructor(props) {
     super(props);
     this._renderNavbarMenu = this._renderNavbarMenu.bind(this);
     this._toggleMenu = this._toggleMenu.bind(this);
+    this._updateState = this._updateState.bind(this);
 
-    this.state = { isMenuShowing: false };
+    this.state = { isMenuShowing: isMenuShowing() };
+  }
+
+  componentDidMount() {
+    addChangeListener(this._updateState)
+  }
+
+  componentWillUnmount() {
+    removeChangeListener(this._updateState)
   }
 
   render() {
@@ -50,6 +60,10 @@ export default class ContentNavbar extends React.Component {
   }
 
   _toggleMenu() {
-    this.setState({ isMenuShowing: !this.state.isMenuShowing });
+    toggleMenuShowing();
+  }
+
+  _updateState() {
+    this.setState({ isMenuShowing: isMenuShowing() });
   }
 }

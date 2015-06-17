@@ -6,6 +6,7 @@ import routes from '../routes';
 import gon from '../gon';
 import { loadData } from '../data/store';
 import { loadImages } from '../images/store';
+import { toggleMenuShowing } from '../content/state_store';
 
 require('babelify/polyfill');
 
@@ -19,5 +20,6 @@ var router = Router.create({
 });
 
 router.run(function (Handler, state) {
+  toggleMenuShowing(false);
   React.render(<Handler />, global.document.getElementById('content'));
 });

@@ -5,10 +5,10 @@ import { EventEmitter } from 'events';
 const CHANGE_EVENT = 'change';
 var emitter = new EventEmitter();
 
-var state = { sidebarDocked: false };
+var state = { menuShowing: false };
 
-export function isSidebarDocked() {
-  return state.sidebarDocked;
+export function isMenuShowing() {
+  return state.menuShowing;
 }
 
 export function addChangeListener(callback) {
@@ -19,11 +19,11 @@ export function removeChangeListener(callback) {
   emitter.removeListener(CHANGE_EVENT, callback);
 }
 
-export function toggleSidebarDocked(docked) {
+export function toggleMenuShowing(docked) {
   if (docked === true || docked === false) {
-    state.sidebarDocked = docked;
+    state.menuShowing = docked;
   } else {
-    state.sidebarDocked = !state.sidebarDocked;
+    state.menuShowing = !state.menuShowing;
   }
 
   emitter.emit(CHANGE_EVENT);
