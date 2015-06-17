@@ -47,14 +47,17 @@ export default class ContentSidebarContainer extends React.Component {
   }
 
   render() {
-    return (
+    /*
       <Sidebar
         sidebar={<ContentSidebar />}
         open={this.state.docked && this.state.isDockingActive}
         onSetOpen={ContentStateStore.toggleSidebarDocked}
         >
+        */
+    return (
+      <div>
         {this.props.children}
-      </Sidebar>
+      </div>
     );
   }
 }
