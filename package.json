@@ -34,6 +34,7 @@
     "react-document-title": "latest",
     "react-mixin": "*",
     "react-router": "latest",
+    "react-router-historyjs-location": "latest",
     "react-sidebar": "latest",
     "react-bind-mixin": "latest",
     "reactify": "latest",

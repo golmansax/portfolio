@@ -1,9 +1,31 @@
 .navbar {
   background $my-green
   padding .75em 0 .5em
+  position relative
 
   h1 {
     color $white
+  }
+
+  +e(menu) {
+    position: absolute;
+    top: em(70px)
+    right: 0;
+    background $white
+    border-left $colored-border
+
+    min-width em(200px)
+
+    a {
+      display block
+      padding 1em
+      border-bottom $colored-border
+      text-decoration none
+
+      &.active {
+        text-decoration underline
+      }
+    }
   }
 
   +e(sidebar-trigger) {

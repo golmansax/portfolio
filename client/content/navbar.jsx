@@ -3,10 +3,17 @@
 import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
-import { toggleSidebarDocked } from './state_store';
 import { Link } from 'react-router';
 
 export default class ContentNavbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this._renderNavbarMenu = this._renderNavbarMenu.bind(this);
+    this._toggleMenu = this._toggleMenu.bind(this);
+
+    this.state = { isMenuShowing: false };
+  }
+
   render() {
     return (
       <div className='navbar'>
@@ -20,12 +27,29 @@ export default class ContentNavbar extends React.Component {
           <div className='navbar-right'><ContentNavbarLinks /></div>
           <button
             className='navbar__sidebar-trigger'
-            onClick={toggleSidebarDocked}
+            onClick={this._toggleMenu}
             >
             <i className='fa fa-bars fa-3x' />
           </button>
         </div>
+        {this._renderNavbarMenu()}
       </div>
     );
+  }
+
+  _renderNavbarMenu() {
+    if (!this.state.isMenuShowing) {
+      return null;
+    }
+
+    return (
+      <div className='navbar__menu'>
+        <ContentNavbarLinks />
+      </div>
+    );
+  }
+
+  _toggleMenu() {
+    this.setState({ isMenuShowing: !this.state.isMenuShowing });
   }
 }
