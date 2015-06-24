@@ -38,9 +38,6 @@
       "images": [
         "/static/office-street-view_1.jpg",
         "/static/office-street-view_2.jpg"
-      ],
-      "involvedWith": [
-        ["Everything from coding and design to maintenence"]
       ]
     },
     {
@@ -52,9 +49,6 @@
       "stack": "ExpressJS, ES6, ReactJS",
       "images": [
         "/static/personal-site.jpg"
-      ],
-      "involvedWith": [
-        ["Everything from coding and design to maintenence"]
       ]
     },
     {
@@ -100,6 +94,46 @@
       "stack": "Java",
       "involvedWith": [
         ["Developing and coding game strategy"]
+      ]
+    },
+    {
+      "slug": "todo-app-project",
+      "name": "Todo App Project",
+      "description": [
+        "Whenever I am interested in learning a new technology, I like to ",
+        "use it to create a simple todo app.  This lets me work out the kinks ",
+        "of the technology on a small scale app, and makes it easier to ",
+        "compare implementations directly."
+      ],
+      "custom": [
+				{
+					"klass": "FragmentsBulletList",
+					"attrs": {
+            "bullets": [
+              [
+                [
+                  "Stack used at Chalk Schools – Rails, Backbone + ReactJS, ",
+                  "Haml, Bootstrap + Sass"
+                ],
+                [{
+                  "url": "https://github.com/golmansax/todo-app-with-chk"
+                }]
+              ],
+              [
+                ["Rails, React, Flux, Bootstrap + Sass"],
+                [{
+                  "url": "https://github.com/golmansax/todo-app-in-rails-flux"
+                }]
+              ],
+              [
+                ["Django (app not finished yet)"],
+                [{
+                  "url": "https://github.com/golmansax/todo-app-in-django"
+                }]
+              ]
+            ]
+					}
+				}
       ]
     }
   ]

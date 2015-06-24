@@ -6,10 +6,12 @@ import Fragment from '../fragments/fragment';
 import Position from '../positions/position';
 import Donations from '../donations/list';
 import ResumeNotes from '../resume/notes';
+import FragmentsBulletList from '../fragments/bullet_list';
 
 var Custom = {
   Donations: Donations,
-  ResumeNotes: ResumeNotes
+  ResumeNotes: ResumeNotes,
+  FragmentsBulletList: FragmentsBulletList
 };
 
 export default class ProjectsContent extends React.Component {

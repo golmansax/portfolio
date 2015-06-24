@@ -83,9 +83,9 @@
 			"description": [
 				"After obtaining my undergraduate degree, I made a pledge to donate ",
 				"money every year on my birthday, to support organizations that I feel ",
-				"are making a positive impact in society. All of the organizations ",
-				"that I have chosen so far are ones that have helped me become who I ",
-				"am today."
+				"are making a positive impact. All of the organizations ",
+				"that I have chosen so far are ones that have impacted me directly. ",
+        "This is my way of saying thanks!"
 			],
 			"custom": [
 				{
@@ -133,9 +133,8 @@
           "url": "http://plusacumen.org/courses/hcd-for-social-innovation/",
           "text": "human-centered design course"
         },
-        " on creating effective solutions for human-centered design ",
-        "course on creating effective solutions for social change.  Our ",
-        "project brainstorm was on promoting healthy ",
+        " offered by +Acumen and IDEO on creating effective solutions for ",
+        "social change.  Our project brainstorm was on promoting healthy ",
         "eating in the Tenderloin neighborhood in San Francisco, CA.  ",
         "Check out the presentation detailing our project!"
       ],
