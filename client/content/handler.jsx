@@ -3,7 +3,11 @@ import { RouteHandler } from 'react-router';
 import DocumentTitle from 'react-document-title';
 import ContentNavbar from './navbar';
 import ContentFooter from './footer';
-import { addChangeListener, removeChangeListener, isMenuShowing } from './state_store';
+import {
+  addChangeListener,
+  removeChangeListener,
+  isMenuShowing
+} from './state_store';
 
 export default class ContentHandler extends React.Component {
   constructor(props) {

@@ -4,7 +4,12 @@ import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
 import { Link } from 'react-router';
-import { addChangeListener, removeChangeListener, isMenuShowing, toggleMenuShowing } from './state_store';
+import {
+  addChangeListener,
+  removeChangeListener,
+  isMenuShowing,
+  toggleMenuShowing
+} from './state_store';
 
 export default class ContentNavbar extends React.Component {
   constructor(props) {
