@@ -6,7 +6,8 @@ import ContentFooter from './footer';
 import {
   addChangeListener,
   removeChangeListener,
-  isMenuShowing
+  isMenuShowing,
+  toggleMenuShowing
 } from './state_store';
 
 export default class ContentHandler extends React.Component {
@@ -48,7 +49,12 @@ export default class ContentHandler extends React.Component {
       return false;
     }
 
-    return <div className='content-handler__backdrop' />;
+    return (
+      <div
+        onClick={toggleMenuShowing.bind(this, false)}
+        className='content-handler__backdrop'
+      />
+    );
   }
 
   _updateState() {
