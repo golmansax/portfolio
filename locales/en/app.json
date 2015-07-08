@@ -23,27 +23,5 @@
     "communityProjects": {
       "title": "Efforts in Community"
     }
-	},
-  "donations": [
-    {
-      "year": 2015,
-      "organization": {
-        "text": "TBD"
-      }
-    },
-    {
-      "year": 2014,
-      "organization": {
-        "url": "https://www.hopechineseschool.org/hcscp/",
-        "text": "Hope Chinese School College Park Campus"
-      }
-    },
-    {
-      "year": 2013,
-      "organization": {
-        "url": "http://www.asia.si.edu/events/imaginasia.asp",
-        "text": "Smithsonian ImaginAsia Family Program"
-      }
-    }
-  ]
+	}
 }
