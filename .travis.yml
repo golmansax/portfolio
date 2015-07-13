@@ -2,7 +2,7 @@ sudo: false
 language: node_js
 node_js: '0.12'
 install:
-- npm install --dev
+- NODE_ENV=development npm install
 before_script:
 - npm run build
 script:
