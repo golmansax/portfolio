@@ -74,6 +74,7 @@
       "slug": "chip-in",
       "name": "Chip In",
       "createdFor": "LAUNCH Hackathon 2014",
+      "images": ["/static/chip-in.jpg"],
       "description": [
         "A social, volunteering platform created to encourage users to ",
         "volunteer, and make it easier to find opportunities"
