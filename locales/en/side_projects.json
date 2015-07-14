@@ -127,9 +127,15 @@
                 }]
               ],
               [
-                ["Django (app not finished yet)"],
+                ["Django (app in progress)"],
                 [{
                   "url": "https://github.com/golmansax/todo-app-in-django"
+                }]
+              ],
+              [
+                ["React Native iOS (app in progress)"],
+                [{
+                  "url": "https://github.com/golmansax/todo-app-in-react-native"
                 }]
               ]
             ]
