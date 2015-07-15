@@ -39,7 +39,10 @@ export default class ProjectHandler extends React.Component {
       <DocumentTitle title={`${myProject.name} — Holman Gao`}>
         <div>
           <BreadcrumbsList
-            breadcrumbs={[PARENT_BREADCRUMBS[routeName], myProject.name]}
+            breadcrumbs={[
+              PARENT_BREADCRUMBS[routeName],
+              myProject.shortName || myProject.name
+            ]}
           />
           <ProjectsList projects={[myProject]} />
         </div>
