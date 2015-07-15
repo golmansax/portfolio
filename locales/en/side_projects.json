@@ -86,9 +86,11 @@
     },
     {
       "slug": "battlecode-2015",
-      "name": "Zasshu",
+      "shortName": "Battlecode 2015",
+      "name": "Battlecode 2015 (Team Zasshu)",
       "createdFor": "Battlecode 2015",
       "github": "https://github.com/y4n9squared/battlecode",
+      "images": ["/static/battlecode-2015.jpg"],
       "description": [
         "An autonomous program that plays the computer game Battlecode"
       ],

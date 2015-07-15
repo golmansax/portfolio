@@ -37,7 +37,7 @@ export default class ProjectsGrid extends React.Component {
         <h2>
           <Fragment
             routeName={project.type}
-            text={project.name}
+            text={project.shortName || project.name}
             params={{ projectId: project.slug }}
           />
         </h2>
