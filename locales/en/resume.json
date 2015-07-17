@@ -52,7 +52,7 @@
 					"Work directly with the founders on product strategy"
 				],
 				[
-					"Designed and coded the landing site (which uses Rails, Angular JS, MongoDB)"
+					"Designed and coded the landing site (which uses Rails, Angular.js, MongoDB)"
 				],
 				[
 					"Conduct product and technical interviews"
@@ -91,13 +91,13 @@
 					"Joined the team when the company had 15 employees (6 engineers)"
 				],
 				[
-					"Designed and implemented a native-like HTML5 and Angular JS single-page mobile app framework"
+					"Designed and implemented a native-like HTML5 and Angular.js single-page mobile app framework"
 				],
 				[
 					"Author and maintainer of ",
 					{
 						"url": "https://github.com/room77/angular-recompile",
-						"text": "a recompile library for Angular JS"
+						"text": "a recompile library for Angular.js"
 					},
 					" created to significantly reduce $watches on an Angular app"
 				],

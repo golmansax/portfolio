@@ -8,7 +8,7 @@
 				"/static/chalk.jpg"
 			],
 			"description": "A digital workflow system created for K-12 schools and school districts",
-			"stack": "Rails, Backbone + ReactJS, Haml, Bootstrap + Sass, PostgreSQL",
+			"stack": "Rails, Backbone + React.js, Haml, Bootstrap + Sass, PostgreSQL",
 			"positions": [
 				{
 					"title": "Software Engineer",
@@ -30,7 +30,7 @@
 				"/static/amass.jpg"
 			],
 			"description": "Connecting socially-conscious filmmakers and organizations",
-			"stack": "Rails, AngularJS, Haml, Foundation + Sass, MongoDB",
+			"stack": "Rails, Angular.js, Haml, Foundation + Sass, MongoDB",
 			"positions": [
 				{
           "title": "Product/Technical Advisor",
@@ -55,7 +55,7 @@
         ]
 			],
 			"description": "Search across dozens of hotel sites to find the best price",
-			"stack": "AngularJS, Sass, PHP",
+			"stack": "Angular.js, Sass, PHP",
 			"positions": [
 				{
 					"title": "Software Engineer",
@@ -65,7 +65,7 @@
 			],
 			"joinedWhen": "Team had 15 employees (6 engineers)",
 			"involvedWith": [
-        ["Design and implement a native-like HTML5 and Angular JS single-page mobile app framework"],
+        ["Design and implement a native-like HTML5 and Angular.js single-page mobile app framework"],
         ["Occasional forays into backend and production infrastructure projects"]
       ],
 			"press": [
