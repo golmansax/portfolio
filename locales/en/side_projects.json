@@ -5,7 +5,7 @@
       "name": "Circl Dating App",
       "createdFor": "LAUNCH Hackathon 2015",
       "description": "A social dating app designed so you can be involved with choosing your friend's dates",
-      "github": "https://github.com/stephenball1/Twinkle",
+      "github": "stephenball1/Twinkle",
       "stack": "Android app in Java, Firebase",
       "images": [
         [
@@ -34,7 +34,7 @@
       "createdFor": "Internal Room 77 hackathon",
       "description": "Navigate through an office and meet the employees!",
       "stack": "Angular.js, Sass, PHP",
-      "github": "https://github.com/golmansax/office-street-view",
+      "github": "golmansax/office-street-view",
       "images": [
         "/static/office-street-view_1.jpg",
         "/static/office-street-view_2.jpg"
@@ -44,7 +44,7 @@
       "slug": "personal-site",
       "name": "Personal Site",
       "url": "http://golmansax.com",
-      "github": "https://github.com/golmansax/my-site-in-express",
+      "github": "golmansax/my-site-in-express",
       "description": "A portfolio of projects that I have worked on",
       "stack": "Express.js, ES6, React.js",
       "images": [
@@ -59,7 +59,7 @@
         "me in line with my minimalist philosophies"
       ],
       "images": ["/static/my-gear.jpg"],
-      "github": "https://github.com/golmansax/my-gear",
+      "github": "golmansax/my-gear",
       "stack": "Rails, React.js + Immutable.js + Flux, Bootstrap + Sass, PostgreSQL"
     },
     {
@@ -74,7 +74,7 @@
         ["/static/27-percenters_profile.jpg", "/static/27-percenters_search.jpg"],
         ["/static/27-percenters_home.jpg", "/static/27-percenters_settings.jpg"]
       ],
-      "github": "https://github.com/27percenters/27percenters",
+      "github": "27percenters/27percenters",
       "stack": "Ionic, Angular.js, Sass, Firebase, Appetize",
       "involvedWith": [
         ["Front-end coding and design"],
@@ -100,7 +100,7 @@
       "shortName": "Battlecode 2015",
       "name": "Battlecode 2015 (Team Zasshu)",
       "createdFor": "Battlecode 2015",
-      "github": "https://github.com/y4n9squared/battlecode",
+      "github": "y4n9squared/battlecode",
       "images": ["/static/battlecode-2015.jpg"],
       "description": [
         "An autonomous program that plays the computer game Battlecode"
@@ -130,25 +130,25 @@
                   "Haml, Bootstrap + Sass"
                 ],
                 [{
-                  "url": "https://github.com/golmansax/todo-app-with-chk"
+                  "github": "golmansax/todo-app-with-chk"
                 }]
               ],
               [
                 ["Rails, React.js + Flux, Bootstrap + Sass"],
                 [{
-                  "url": "https://github.com/golmansax/todo-app-in-rails-flux"
+                  "github": "golmansax/todo-app-in-rails-flux"
                 }]
               ],
               [
                 ["Django (app in progress)"],
                 [{
-                  "url": "https://github.com/golmansax/todo-app-in-django"
+                  "github": "golmansax/todo-app-in-django"
                 }]
               ],
               [
                 ["React Native iOS (app in progress)"],
                 [{
-                  "url": "https://github.com/golmansax/todo-app-in-react-native"
+                  "github": "golmansax/todo-app-in-react-native"
                 }]
               ]
             ]

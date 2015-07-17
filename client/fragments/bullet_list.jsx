@@ -11,7 +11,7 @@ export default class FragmentsBulletList extends React.Component {
 
   _renderFragments(fragments, index) {
     return (
-      <div>
+      <div key={index}>
         <Fragments fragments={fragments} key={index} />
       </div>
     );

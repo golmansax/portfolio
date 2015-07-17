@@ -6,12 +6,8 @@ import Fragment from './fragment';
 export default class Fragments extends React.Component {
   render() {
     var fragments = this.props.fragments.map(function (fragment, index) {
-      if (!fragment.text) {
-        if (fragment.url) {
-          fragment = { text: fragment.url, url: fragment.url };
-        } else {
-          fragment = { text: fragment };
-        }
+      if (typeof fragment === 'string') {
+        fragment = { text: fragment };
       }
 
       return (

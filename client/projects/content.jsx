@@ -3,6 +3,7 @@
 import React from 'react';
 import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
+import GithubFragment from '../fragments/github_fragment';
 import Position from '../positions/position';
 import Donations from '../donations/list';
 import ResumeNotes from '../resume/notes';
@@ -44,13 +45,7 @@ export default class ProjectsContent extends React.Component {
       return null;
     }
 
-    return (
-      <div>
-        <a href={this.props.github}>
-          {this.props.github}
-        </a>
-      </div>
-    );
+    return <GithubFragment github={this.props.github} />
   }
 
   _renderCustom() {
