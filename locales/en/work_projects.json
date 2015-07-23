@@ -55,7 +55,7 @@
         ]
 			],
 			"description": "Search across dozens of hotel sites to find the best price",
-			"stack": "Angular.js, Sass, PHP",
+			"stack": "Angular.js, Sass, PHP, C++",
 			"positions": [
 				{
 					"title": "Software Engineer",
