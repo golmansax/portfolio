@@ -12,11 +12,18 @@ export default class ContentFooter extends React.Component {
           <a href='https://github.com/golmansax'>Github</a>
           &nbsp;|&nbsp;
           <Fragment routeName='resume' text='Resume' />
-          &nbsp;| holman
+          &nbsp;|
+          holm
+          <span className='hide'>crap</span>
+          an
           <span className='hide'>crap</span>
           @
           <span className='hide'>crap</span>
-          golmansax
+          gol
+          <span className='hide'>crap</span>
+          mans
+          <span className='hide'>crap</span>
+          ax
           <span className='hide'>crap</span>
           .com | in San Francisco, CA
         </div>
