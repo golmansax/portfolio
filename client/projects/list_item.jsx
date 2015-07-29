@@ -25,9 +25,9 @@ export default class ProjectsListItem extends React.Component {
     }
 
     if (this.props.images) {
-      return this.props.images.map(function (image, index) {
-        return <ProjectsImage image={image} key={index} />;
-      });
+      return this.props.images.map((image, index) =>
+        <ProjectsImage image={image} key={index} />
+      );
     }
   }
 

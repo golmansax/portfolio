@@ -26,9 +26,7 @@ var PARENT_BREADCRUMBS = {
 export default class ProjectHandler extends React.Component {
   render() {
     var mySlug = this.getParams().projectId;
-    var myProject = getAllProjects().find(function (project) {
-      return project.slug === mySlug;
-    });
+    var myProject = getAllProjects().find((project) => project.slug === mySlug);
 
     // TODO catch projects that don't match
 

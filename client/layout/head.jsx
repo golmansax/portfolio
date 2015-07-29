@@ -36,6 +36,7 @@ export default class LayoutHead extends React.Component {
         {this._renderMetaDescription(metaData.description)}
       </head>
     );
+
     // jscs:enable maximumLineLength
   }
 

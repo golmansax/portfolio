@@ -11,13 +11,11 @@ export default class ProjectsImage extends React.Component {
 
   _renderImage() {
     if (Array.isArray(this.props.image)) {
-      return this.props.image.map(function (image, index) {
-        return (
-          <div className='projects-image__grid' key={index}>
-            <img src={image} />
-          </div>
-        );
-      });
+      return this.props.image.map((image, index) =>
+        <div className='projects-image__grid' key={index}>
+          <img src={image} />
+        </div>
+      );
     }
 
     return <img src={this.props.image} />;

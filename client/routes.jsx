@@ -23,4 +23,5 @@ export default (
     <Route name='resume' handler={ResumeHandler} />
   </Route>
 );
+
 // jscs:enable maximumLineLength

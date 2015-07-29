@@ -17,7 +17,7 @@ export default class ResumeEntry extends React.Component {
       return false;
     }
 
-    return <ResumeNotes {...this.props} />
+    return <ResumeNotes {...this.props} />;
   }
 
   _renderContent() {

@@ -5,7 +5,7 @@ import Fragment from '../fragments/fragment';
 
 export default class BreadcrumbsList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this._renderBreadcrumb = this._renderBreadcrumb.bind(this);
   }

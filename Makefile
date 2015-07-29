@@ -20,4 +20,4 @@ jshint:
 	./node_modules/.bin/jsxhint . --babel --exclude-path .jshintignore
 
 jscs:
-	./node_modules/.bin/jscs . --esprima=esprima-fb
+	./node_modules/.bin/jscs -v .

@@ -7,22 +7,22 @@ var StinkBomb = require('stink-bomb');
 
 StinkBomb.configure({ raise: true });
 
-describe('server', function () {
+describe('server', () => {
   var browser;
   this.timeout(9000);
 
-  beforeEach(function () {
+  beforeEach(() => {
     var port = 3001;
     this.server = server.listen(port);
     browser = new Browser({ site: 'http://localhost:' + port });
   });
 
-  afterEach(function () {
+  afterEach(() => {
     this.server.close();
   });
 
-  it('routes root page to portfolio', function (done) {
-    browser.visit('/', function () {
+  it('routes root page to portfolio', (done) => {
+    browser.visit('/', () => {
       expect(browser.text('title')).to.equal('Holman Gao');
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
@@ -31,18 +31,18 @@ describe('server', function () {
     });
   });
 
-  it('can click to resume', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Resume', function () {
+  it('can click to resume', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Resume', () => {
         expect(browser.text('title')).to.include('Resume');
         done();
       });
     });
   });
 
-  it('can click on a portfolio link', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Chalk Schools', function () {
+  it('can click on a portfolio link', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Chalk Schools', () => {
         expect(browser.text('title')).to.include('Chalk Schools');
         expect(browser.text('body')).to.include('A digital workflow system');
         done();
@@ -50,9 +50,9 @@ describe('server', function () {
     });
   });
 
-  it('can click on a header link', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Side Projects', function () {
+  it('can click on a header link', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Side Projects', () => {
         expect(browser.text('title')).to.include('Side Projects');
         expect(browser.text('body')).to.include('LAUNCH Hackathon 2015');
         expect(browser.text('body')).to.include('Internal Room 77 hackathon');
@@ -61,10 +61,10 @@ describe('server', function () {
     });
   });
 
-  it('can click to hcd page', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Resume', function () {
-        browser.clickLink('human-centered design', function () {
+  it('can click to hcd page', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Resume', () => {
+        browser.clickLink('human-centered design', () => {
           expect(browser.text('title')).to.include('Human-Centered Design');
           done();
         });
@@ -72,10 +72,10 @@ describe('server', function () {
     });
   });
 
-  it('can click to donations page', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Resume', function () {
-        browser.clickLink('my donations pledge', function () {
+  it('can click to donations page', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Resume', () => {
+        browser.clickLink('my donations pledge', () => {
           expect(browser.text('title')).to.include('Donations Pledge');
           done();
         });
@@ -83,11 +83,11 @@ describe('server', function () {
     });
   });
 
-  it('can click to street view', function (done) {
-    browser.visit('/', function () {
-      browser.clickLink('Resume', function () {
+  it('can click to street view', (done) => {
+    browser.visit('/', () => {
+      browser.clickLink('Resume', () => {
         browser.clickLink('More');
-        browser.clickLink('Fun teams page', function () {
+        browser.clickLink('Fun teams page', () => {
           expect(browser.text('title')).to.include('Office Street View');
           done();
         });

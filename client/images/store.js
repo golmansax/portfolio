@@ -10,5 +10,6 @@ export function getImage(path) {
   if (!images.hasOwnProperty(path)) {
     throw `Image has not been loaded: ${path}`;
   }
+
   return images[path];
 }

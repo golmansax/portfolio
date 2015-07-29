@@ -1,22 +1,13 @@
 {
-  "preset": "google",
-  "esnext": true,
+  "preset": "airbnb",
   "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**"],
   "fileExtensions": [".js", ".jsx"],
 
-  "disallowTrailingComma": true,
+  "requireTrailingComma": null,
 
   "disallowMultipleVarDecl": "exceptUndefined",
 
-  "disallowSpacesInAnonymousFunctionExpression": null,
-
-  "disallowSpacesInsideObjectBrackets": null,
-
   "requireSpaceBeforeObjectValues": true,
 
-  "requireSpacesInsideObjectBrackets": "allButNested",
-
-  "requireSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningRoundBrace": true
-  }
+  "requireSpacesInsideObjectBrackets": "allButNested"
 }

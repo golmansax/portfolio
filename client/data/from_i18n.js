@@ -6,7 +6,7 @@ import ProjectsArray from '../projects/array';
 export default function getDataFromI18n() {
   return {
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
-      .map(function (project) {
+      .map((project) => {
         Object.assign(project, {
           projectPath: `/in-community#${project.slug}`,
           type: 'communityProject'
@@ -15,7 +15,7 @@ export default function getDataFromI18n() {
       }),
 
     sideProjects: ProjectsArray.from(i18n.t('side_projects:projects'))
-      .map(function (project) {
+      .map((project) => {
         Object.assign(project, {
           projectPath: `/side-projects#${project.slug}`,
           type: 'sideProject'
@@ -24,7 +24,7 @@ export default function getDataFromI18n() {
       }),
 
     workProjects: ProjectsArray.from(i18n.t('work_projects:projects'))
-      .map(function (project) {
+      .map((project) => {
         Object.assign(project, {
           projectPath: `/work#${project.slug}`,
           type: 'workProject'

@@ -19,7 +19,7 @@ var router = Router.create({
   scrollBehavior: Router.ScrollToTopBehavior
 });
 
-router.run(function (Handler, state) {
+router.run((Handler, state) => {
   toggleMenuShowing(false);
   React.render(<Handler />, global.document.getElementById('content'));
 });

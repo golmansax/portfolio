@@ -21,8 +21,8 @@ export default function RouterRoute(req, res) {
   loadData(getDataFromI18n());
   loadImages(getImagesData());
 
-  Router.run(routes, req.path, function (Handler, state) {
-    html = '<!DOCTYPE html>' + React.renderToStaticMarkup(<Handler/>)
+  Router.run(routes, req.path, (Handler, state) => {
+    html = '<!DOCTYPE html>' + React.renderToStaticMarkup(<Handler/>);
     res.send(html);
-  })
+  });
 }

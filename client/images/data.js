@@ -8,9 +8,7 @@ var registeredImages = [
 
 export default function getImagesData() {
   var imageData = {};
-  registeredImages.forEach(function (image) {
-    imageData[image] = cachify(image);
-  });
+  registeredImages.forEach((image) => imageData[image] = cachify(image));
 
   return imageData;
 }

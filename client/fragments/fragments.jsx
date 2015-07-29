@@ -5,7 +5,7 @@ import Fragment from './fragment';
 
 export default class Fragments extends React.Component {
   render() {
-    var fragments = this.props.fragments.map(function (fragment, index) {
+    var fragments = this.props.fragments.map((fragment, index) => {
       if (typeof fragment === 'string') {
         fragment = { text: fragment };
       }

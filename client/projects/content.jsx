@@ -45,7 +45,7 @@ export default class ProjectsContent extends React.Component {
       return null;
     }
 
-    return <GithubFragment github={this.props.github} />
+    return <GithubFragment github={this.props.github} />;
   }
 
   _renderCustom() {
@@ -53,7 +53,7 @@ export default class ProjectsContent extends React.Component {
       return null;
     }
 
-    return this.props.custom.map(function (custom, index) {
+    return this.props.custom.map((custom, index) => {
       var CustomKlass = Custom[custom.klass];
       return <CustomKlass key={index} {...custom.attrs} />;
     });

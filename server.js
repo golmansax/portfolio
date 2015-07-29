@@ -20,7 +20,7 @@ if (env === 'development') {
   server.use(stylus.middleware({
     src: __dirname + '/client',
     dest: __dirname + '/public/assets',
-    compile: function compile(str, path) {
+    compile: function(str, path) {
       return stylus(str)
         .set('filename', path)
         .use(jeet())
@@ -32,7 +32,7 @@ if (env === 'development') {
 }
 
 server.use(express.static(__dirname + '/public'));
-server.use(function (req, res, next) {
+server.use(function(req, res, next) {
   res.locals.currentPath = req.path;
   res.locals.navbarLinks = [
     { text: 'Work', url: '/work' },

@@ -22,11 +22,11 @@ export default class ContentNavbar extends React.Component {
   }
 
   componentDidMount() {
-    addChangeListener(this._updateState)
+    addChangeListener(this._updateState);
   }
 
   componentWillUnmount() {
-    removeChangeListener(this._updateState)
+    removeChangeListener(this._updateState);
   }
 
   render() {
