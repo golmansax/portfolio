@@ -5,14 +5,16 @@ var Browser = require('zombie');
 var server = require('../server');
 var StinkBomb = require('stink-bomb');
 
+import { beforeEach, afterEach, it } from 'arrow-mocha/es5';
+
 StinkBomb.configure({ raise: true });
 
-describe('server', () => {
+describe('server', function() {
   var browser;
-  this.timeout(9000);
 
   beforeEach(() => {
     var port = 3001;
+    this.timeout(9000);
     this.server = server.listen(port);
     browser = new Browser({ site: 'http://localhost:' + port });
   });

@@ -7,6 +7,7 @@
     "url" : "http://github.com/golmansax/my-site-in-express.git"
   },
   "devDependencies": {
+    "arrow-mocha": "latest",
     "chai": "latest",
     "esprima-fb": "15001.1.0-dev-harmony-fb",
     "jscs": "latest",
@@ -15,7 +16,7 @@
     "stink-bomb": "latest",
     "travis-lint": "latest",
     "watchify": "latest",
-    "zombie": "3.1.x"
+    "zombie": "< 4"
   },
   "dependencies": {
     "babel": "latest",

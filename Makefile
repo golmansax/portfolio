@@ -11,7 +11,7 @@ build-css:
 	./node_modules/.bin/stylus -u jeet -u stylus-type-utils -u rupture -u ./node_modules/nib/lib/nib -c client/main.styl -o public/assets/
 
 test:
-	./node_modules/.bin/mocha -R spec test/**/*
+	./node_modules/.bin/mocha --compilers js:babel/register -R spec test/**/*
 
 watch:
 	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
