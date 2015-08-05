@@ -16,7 +16,7 @@ loadImages(gon.images);
 var router = Router.create({
   routes: routes,
   location: Router.HistoryLocation,
-  scrollBehavior: Router.ScrollToTopBehavior
+  scrollBehavior: Router.ScrollToTopBehavior,
 });
 
 router.run((Handler, state) => {

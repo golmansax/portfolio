@@ -11,16 +11,16 @@ import { getAllProjects } from '../data/store';
 var PARENT_BREADCRUMBS = {
   workProject: {
     routeName: 'workProjects',
-    text: 'Work'
+    text: 'Work',
   },
   sideProject: {
     routeName: 'sideProjects',
-    text: 'Side Projects'
+    text: 'Side Projects',
   },
   communityProject: {
     routeName: 'communityProjects',
-    text: 'Efforts in Community'
-  }
+    text: 'Efforts in Community',
+  },
 };
 
 export default class ProjectHandler extends React.Component {
@@ -39,7 +39,7 @@ export default class ProjectHandler extends React.Component {
           <BreadcrumbsList
             breadcrumbs={[
               PARENT_BREADCRUMBS[routeName],
-              myProject.shortName || myProject.name
+              myProject.shortName || myProject.name,
             ]}
           />
           <ProjectsList projects={[myProject]} />

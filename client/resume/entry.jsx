@@ -50,5 +50,5 @@ export default class ResumeEntry extends React.Component {
 ResumeEntry.defaultProps = {
   title: [],
   notes: [],
-  numInitialNotesToShow: false
+  numInitialNotesToShow: false,
 };

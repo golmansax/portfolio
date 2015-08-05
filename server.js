@@ -27,7 +27,7 @@ if (env === 'development') {
         .use(rupture())
         .use(stylusTypeUtils())
         .use(nib());
-    }
+    },
   }));
 }
 
@@ -37,7 +37,7 @@ server.use(function(req, res, next) {
   res.locals.navbarLinks = [
     { text: 'Work', url: '/work' },
     { text: 'Side Projects', url: '/side-projects' },
-    { url: '/in-community', text: 'In Community' }
+    { url: '/in-community', text: 'In Community' },
   ];
   next();
 });
@@ -50,11 +50,11 @@ i18n.init({
       'community_projects',
       'work_projects',
       'side_projects',
-      'resume'
+      'resume',
     ],
-    defaultNs: 'app'
+    defaultNs: 'app',
   },
-  returnObjectTrees: true
+  returnObjectTrees: true,
 });
 
 server.get('/work', RouterRoute);

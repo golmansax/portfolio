@@ -7,7 +7,7 @@ var CATEGORIES = ['work', 'education', 'other'];
 var TITLES = {
   work: 'Work Experience',
   education: 'Education',
-  other: 'Other'
+  other: 'Other',
 };
 
 export default class Resume extends React.Component {

@@ -3,8 +3,6 @@
   "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**"],
   "fileExtensions": [".js", ".jsx"],
 
-  "requireTrailingComma": null,
-
   "disallowMultipleVarDecl": "exceptUndefined",
 
   "requireSpaceBeforeObjectValues": true,
