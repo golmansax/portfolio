@@ -50,7 +50,7 @@ export default class ProjectsListItem extends React.Component {
         <div className='projects-list-item__content' key='content'>
           {this._renderContent()}
         </div>
-      )
+      ),
     ];
   }
 

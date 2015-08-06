@@ -3,7 +3,7 @@
 import { cachify } from 'connect-cachify-static';
 
 var registeredImages = [
-  '/static/navbar-icon.png'
+  '/static/navbar-icon.png',
 ];
 
 export default function getImagesData() {

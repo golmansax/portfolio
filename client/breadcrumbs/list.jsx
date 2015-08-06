@@ -17,7 +17,7 @@ export default class BreadcrumbsList extends React.Component {
 
     return [
       index === 0 ? null : this._renderBreak('span-' + index),
-      <Fragment key={'fragment' + index} {...breadcrumb} />
+      <Fragment key={'fragment' + index} {...breadcrumb} />,
     ];
   }
 

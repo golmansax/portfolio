@@ -29,6 +29,6 @@ export default class ProjectsImage extends React.Component {
 ProjectsImage.propTypes = {
   image: React.PropTypes.oneOfType([
     React.PropTypes.arrayOf(React.PropTypes.string),
-    React.PropTypes.string
-  ]).isRequired
+    React.PropTypes.string,
+  ]).isRequired,
 };

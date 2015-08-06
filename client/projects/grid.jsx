@@ -56,5 +56,5 @@ export default class ProjectsGrid extends React.Component {
 }
 
 ProjectsGrid.propTypes = {
-  projects: React.PropTypes.instanceOf(Array).isRequired
+  projects: React.PropTypes.instanceOf(Array).isRequired,
 };

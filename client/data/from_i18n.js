@@ -9,7 +9,7 @@ export default function getDataFromI18n() {
       .map((project) => {
         Object.assign(project, {
           projectPath: `/in-community#${project.slug}`,
-          type: 'communityProject'
+          type: 'communityProject',
         });
         return project;
       }),
@@ -18,7 +18,7 @@ export default function getDataFromI18n() {
       .map((project) => {
         Object.assign(project, {
           projectPath: `/side-projects#${project.slug}`,
-          type: 'sideProject'
+          type: 'sideProject',
         });
         return project;
       }),
@@ -27,7 +27,7 @@ export default function getDataFromI18n() {
       .map((project) => {
         Object.assign(project, {
           projectPath: `/work#${project.slug}`,
-          type: 'workProject'
+          type: 'workProject',
         });
         return project;
       }),
@@ -35,7 +35,7 @@ export default function getDataFromI18n() {
     resume: {
       work: i18n.t('resume:work'),
       education: i18n.t('resume:education'),
-      other: i18n.t('resume:other')
-    }
+      other: i18n.t('resume:other'),
+    },
   };
 }

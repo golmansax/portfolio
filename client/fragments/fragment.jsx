@@ -25,5 +25,5 @@ Fragment.propTypes = {
   url: React.PropTypes.string,
   text: React.PropTypes.string,
   routeName: React.PropTypes.string,
-  params: React.PropTypes.object
+  params: React.PropTypes.object,
 };

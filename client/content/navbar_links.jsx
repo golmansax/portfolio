@@ -6,7 +6,7 @@ import Fragment from '../fragments/fragment';
 var NAVBAR_LINKS = [
   { text: 'Work', routeName: 'workProjects' },
   { text: 'Side Projects', routeName: 'sideProjects' },
-  { routeName: 'communityProjects', text: 'In Community' }
+  { routeName: 'communityProjects', text: 'In Community' },
 ];
 var currentPath = 'garbage';
 

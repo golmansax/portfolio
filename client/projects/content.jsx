@@ -12,7 +12,7 @@ import FragmentsBulletList from '../fragments/bullet_list';
 var Custom = {
   Donations: Donations,
   ResumeNotes: ResumeNotes,
-  FragmentsBulletList: FragmentsBulletList
+  FragmentsBulletList: FragmentsBulletList,
 };
 
 export default class ProjectsContent extends React.Component {
@@ -36,7 +36,7 @@ export default class ProjectsContent extends React.Component {
 
     return [
       <dt key='dt'>Created as part of:</dt>,
-      <dd key='dd'>{this.props.createdFor}</dd>
+      <dd key='dd'>{this.props.createdFor}</dd>,
     ];
   }
 
@@ -69,7 +69,7 @@ export default class ProjectsContent extends React.Component {
       <dd key='dd'>
         {this.props.stack}
         {this._renderGithub()}
-      </dd>
+      </dd>,
     ];
   }
 
@@ -84,7 +84,7 @@ export default class ProjectsContent extends React.Component {
         <ul className='projects-content__list'>
           {this.props.involvedWith.map(this._renderFragmentsItem)}
         </ul>
-      </dd>
+      </dd>,
     ];
   }
 
@@ -110,7 +110,7 @@ export default class ProjectsContent extends React.Component {
 
     return [
       <dt key='dt'>Position:</dt>,
-      <dd key='dd'>{this.props.positions.map(this._renderPosition)}</dd>
+      <dd key='dd'>{this.props.positions.map(this._renderPosition)}</dd>,
     ];
   }
 
@@ -125,7 +125,7 @@ export default class ProjectsContent extends React.Component {
         <ul className='projects-content__list'>
           {this.props.press.map(this._renderFragmentsItem)}
         </ul>
-      </dd>
+      </dd>,
     ];
   }
 
@@ -144,7 +144,7 @@ export default class ProjectsContent extends React.Component {
 
     return [
       <dt key='dt'>Joined when:</dt>,
-      <dd key='dd'>{this.props.joinedWhen}</dd>
+      <dd key='dd'>{this.props.joinedWhen}</dd>,
     ];
   }
 
@@ -174,12 +174,12 @@ ProjectsContent.propTypes = {
   url: React.PropTypes.string,
   description: React.PropTypes.oneOfType([
     React.PropTypes.string,
-    React.PropTypes.array
+    React.PropTypes.array,
   ]).isRequired,
   createdFor: React.PropTypes.string,
   stack: React.PropTypes.string,
   github: React.PropTypes.string,
   joinedWhen: React.PropTypes.string,
   involvedWith: React.PropTypes.array,
-  press: React.PropTypes.array
+  press: React.PropTypes.array,
 };
