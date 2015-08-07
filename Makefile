@@ -20,4 +20,4 @@ jscs:
 	./node_modules/.bin/jscs -v .
 
 eslint:
-	./node_modules/.bin/eslint .
+	./node_modules/.bin/eslint . --ext .js --ext .jsx

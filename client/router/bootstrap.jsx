@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import * as Router from 'react-router';
 import routes from '../routes';
@@ -13,13 +11,13 @@ require('babelify/polyfill');
 loadData(gon.data);
 loadImages(gon.images);
 
-var router = Router.create({
+const router = Router.create({
   routes: routes,
   location: Router.HistoryLocation,
   scrollBehavior: Router.ScrollToTopBehavior,
 });
 
-router.run((Handler, state) => {
+router.run((Handler) => {
   toggleMenuShowing(false);
   React.render(<Handler />, global.document.getElementById('content'));
 });

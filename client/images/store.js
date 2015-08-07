@@ -1,6 +1,4 @@
-'use strict';
-
-var images = {};
+const images = {};
 
 export function loadImages(newImages) {
   Object.assign(images, newImages);
@@ -8,7 +6,7 @@ export function loadImages(newImages) {
 
 export function getImage(path) {
   if (!images.hasOwnProperty(path)) {
-    throw `Image has not been loaded: ${path}`;
+    throw new Error(`Image has not been loaded: ${path}`);
   }
 
   return images[path];

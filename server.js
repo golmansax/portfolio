@@ -1,19 +1,20 @@
 require('babel/register');
-var RouterRoute = require('./client/router/route');
-var env = process.env.NODE_ENV || 'development';
-var express = require('express');
-var cachifyStatic = require('connect-cachify-static');
-var server = express();
-var i18n = require('i18next');
+import RouterRoute from './client/router/route';
+import express from 'express';
+import cachifyStatic from 'connect-cachify-static';
+import i18n from 'i18next';
+
+const server = express();
+const env = process.env.NODE_ENV || 'development';
 
 server.use(cachifyStatic(__dirname + '/public'));
 
 if (env === 'development') {
-  var stylus = require('stylus');
-  var nib = require('nib');
-  var jeet = require('jeet');
-  var rupture = require('rupture');
-  var stylusTypeUtils = require('stylus-type-utils');
+  const stylus = require('stylus');
+  const nib = require('nib');
+  const jeet = require('jeet');
+  const rupture = require('rupture');
+  const stylusTypeUtils = require('stylus-type-utils');
 
   server.use(stylus.middleware({
     src: __dirname + '/client',

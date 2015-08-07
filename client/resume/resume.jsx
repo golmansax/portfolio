@@ -1,10 +1,8 @@
-'use strict';
-
 import React from 'react';
 import ResumeEntry from './entry';
 
-var CATEGORIES = ['work', 'education', 'other'];
-var TITLES = {
+const CATEGORIES = ['work', 'education', 'other'];
+const TITLES = {
   work: 'Work Experience',
   education: 'Education',
   other: 'Other',
@@ -22,8 +20,8 @@ export default class Resume extends React.Component {
   }
 
   _renderCategory(category, index) {
-    var entries = this.props[category].map(this._renderEntry);
-    var breaks;
+    const entries = this.props[category].map(this._renderEntry);
+    let breaks;
     if (index < CATEGORIES.length - 1) { breaks = (<div><br /><hr /></div>); }
 
     return (
@@ -38,9 +36,11 @@ export default class Resume extends React.Component {
   }
 
   render() {
-    var categories = CATEGORIES.map(this._renderCategory);
-
-    return (<div className='resume'>{categories}</div>);
+    return (
+      <div className='resume'>
+        {CATEGORIES.map(this._renderCategory)}
+      </div>
+    );
   }
 }
 Resume.defaultProps = { work: [], education: [], other: [] };
