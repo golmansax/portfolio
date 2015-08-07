@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
@@ -12,15 +10,12 @@ export default class ProjectsGrid extends React.Component {
     this._renderChunk = this._renderChunk.bind(this);
   }
 
-  _getProjectChunks() {
-    var projectChunks = [];
-    var projects = this.props.projects;
-
-    while (projects.length > 0) {
-      projectChunks.push(projects.splice(0, 3));
-    }
-
-    return projectChunks;
+  render() {
+    return (
+      <div className='container'>
+        {this._getProjectChunks().map(this._renderChunk)}
+      </div>
+    );
   }
 
   _renderChunk(projectChunk, index) {
@@ -46,12 +41,15 @@ export default class ProjectsGrid extends React.Component {
     );
   }
 
-  render() {
-    return (
-      <div className='container'>
-        {this._getProjectChunks().map(this._renderChunk)}
-      </div>
-    );
+  _getProjectChunks() {
+    const projectChunks = [];
+    const projects = this.props.projects;
+
+    while (projects.length > 0) {
+      projectChunks.push(projects.splice(0, 3));
+    }
+
+    return projectChunks;
   }
 }
 

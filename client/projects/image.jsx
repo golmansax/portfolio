@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 export default class ProjectsImage extends React.Component {
@@ -7,6 +5,10 @@ export default class ProjectsImage extends React.Component {
     super(props);
 
     this._renderImage = this._renderImage.bind(this);
+  }
+
+  render() {
+    return <div className='projects-image'>{this._renderImage()}</div>;
   }
 
   _renderImage() {
@@ -19,10 +21,6 @@ export default class ProjectsImage extends React.Component {
     }
 
     return <img src={this.props.image} />;
-  }
-
-  render() {
-    return <div className='projects-image'>{this._renderImage()}</div>;
   }
 }
 

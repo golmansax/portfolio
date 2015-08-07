@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ProjectsImage from './image';
 import ProjectsContent from './content';
@@ -15,8 +13,14 @@ export default class ProjectsListItem extends React.Component {
     this._renderContent = this._renderContent.bind(this);
   }
 
-  _hasVisuals() {
-    return this.props.images || this.props.pdf;
+  render() {
+    return (
+      <div id={this.props.slug} className='projects-list-item'>
+        <div className='container'>
+          {this._renderProject()}
+        </div>
+      </div>
+    );
   }
 
   _renderVisuals() {
@@ -25,9 +29,9 @@ export default class ProjectsListItem extends React.Component {
     }
 
     if (this.props.images) {
-      return this.props.images.map((image, index) =>
-        <ProjectsImage image={image} key={index} />
-      );
+      return this.props.images.map((image, index) => {
+        return <ProjectsImage image={image} key={index} />;
+      });
     }
   }
 
@@ -41,28 +45,22 @@ export default class ProjectsListItem extends React.Component {
     }
 
     return [
-      (
-        <div className='projects-list-item__visual-container' key='image'>
-          {this._renderVisuals()}
-        </div>
-      ),
-      (
-        <div className='projects-list-item__content' key='content'>
-          {this._renderContent()}
-        </div>
-      ),
+      <div className='projects-list-item__visual-container' key='image'>
+        {this._renderVisuals()}
+      </div>,
+      <div className='projects-list-item__content' key='content'>
+        {this._renderContent()}
+      </div>,
     ];
   }
 
-  render() {
-    return (
-      <div id={this.props.slug} className='projects-list-item'>
-        <div className='container'>
-          {this._renderProject()}
-        </div>
-      </div>
-    );
+  _hasVisuals() {
+    return this.props.images || this.props.pdf;
   }
 }
 
-ProjectsListItem.propTypes = { images: React.PropTypes.array };
+ProjectsListItem.propTypes = {
+  images: React.PropTypes.array,
+  pdf: React.PropTypes.string,
+  slug: React.PropTypes.string,
+};
