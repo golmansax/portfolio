@@ -8,9 +8,11 @@
   },
   "devDependencies": {
     "arrow-mocha": "latest",
+    "babel-eslint": "latest",
     "chai": "latest",
     "eslint": "latest",
-    "eslint-plugin-react": "^3.2.0",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-react": "latest",
     "jscs": "latest",
     "mocha": "latest",
     "stink-bomb": "latest",
