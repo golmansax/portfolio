@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import reactMixin from 'react-mixin';
@@ -8,7 +6,7 @@ import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getAllProjects } from '../data/store';
 
-var PARENT_BREADCRUMBS = {
+const PARENT_BREADCRUMBS = {
   workProject: {
     routeName: 'workProjects',
     text: 'Work',
@@ -25,13 +23,14 @@ var PARENT_BREADCRUMBS = {
 
 export default class ProjectHandler extends React.Component {
   render() {
-    var mySlug = this.getParams().projectId;
-    var myProject = getAllProjects().find((project) => project.slug === mySlug);
+    const myProject = getAllProjects().find((project) => {
+      return project.slug === this.getParams().projectId;
+    });
 
     // TODO catch projects that don't match
 
-    var currentRoutes = this.getRoutes();
-    var routeName = currentRoutes[currentRoutes.length - 1].name;
+    const currentRoutes = this.getRoutes();
+    const routeName = currentRoutes[currentRoutes.length - 1].name;
 
     return (
       <DocumentTitle title={`${myProject.name} — Holman Gao`}>

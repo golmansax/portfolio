@@ -15,6 +15,14 @@ export default class Resume extends React.Component {
     this._renderCategory = this._renderCategory.bind(this);
   }
 
+  render() {
+    return (
+      <div className='resume'>
+        {CATEGORIES.map(this._renderCategory)}
+      </div>
+    );
+  }
+
   _renderEntry(entry, index) {
     return <ResumeEntry {...entry} key={index} />;
   }
@@ -31,14 +39,6 @@ export default class Resume extends React.Component {
           {entries}
         </div>
         {breaks}
-      </div>
-    );
-  }
-
-  render() {
-    return (
-      <div className='resume'>
-        {CATEGORIES.map(this._renderCategory)}
       </div>
     );
   }

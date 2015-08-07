@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import FragmentsBlock from '../fragments/block';
 
@@ -15,13 +13,28 @@ export default class ResumeNotes extends React.Component {
     this.state = { showingMore: !this.props.numInitialNotesToShow };
   }
 
-  _toggleShowMore(event) {
-    event.preventDefault();
-    this.setState({ showingMore: !this.state.showingMore });
+  render() {
+    if (!this.props.notes) { return false; }
+
+    const notes = this.props.notes.map(this._renderNote);
+    const numInitialNotesToShow = this.props.numInitialNotesToShow;
+    let showMore;
+
+    if (numInitialNotesToShow &&
+        this.props.notes.length > numInitialNotesToShow) {
+      showMore = this._renderShowMore();
+    }
+
+    return (
+      <ul className='resume-notes fa-ul'>
+        {notes}
+        {showMore}
+      </ul>
+    );
   }
 
   _renderShowMore() {
-    var iconClass = 'fa fa-caret-' + (this.state.showingMore ? 'up' : 'down');
+    const iconClass = `fa fa-caret-${this.state.showingMore ? 'up' : 'down'}`;
 
     return (
       <li>
@@ -46,25 +59,13 @@ export default class ResumeNotes extends React.Component {
     );
   }
 
-  render() {
-    if (!this.props.notes) {
-      return false;
-    }
-
-    var notes, showMore;
-    notes = this.props.notes.map(this._renderNote);
-
-    var numInitialNotesToShow = this.props.numInitialNotesToShow;
-    if (numInitialNotesToShow &&
-        this.props.notes.length > numInitialNotesToShow) {
-      showMore = this._renderShowMore();
-    }
-
-    return (
-      <ul className='resume-notes fa-ul'>
-        {notes}
-        {showMore}
-      </ul>
-    );
+  _toggleShowMore(event) {
+    event.preventDefault();
+    this.setState({ showingMore: !this.state.showingMore });
   }
 }
+
+ResumeNotes.propTypes = {
+  notes: React.PropTypes.arraw.isRequired,
+  numInitialNotesToShow: React.PropTypes.number,
+};

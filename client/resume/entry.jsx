@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ResumeNotes from './notes';
 import FragmentsBlock from '../fragments/block';
@@ -10,6 +8,15 @@ export default class ResumeEntry extends React.Component {
     super(props);
     this._renderNotes = this._renderNotes.bind(this);
     this._renderContent = this._renderContent.bind(this);
+  }
+
+  render() {
+    return (
+      <div className='resume-entry'>
+        <h3><FragmentsBlock data={this.props.title} /></h3>
+        {this._renderContent()}
+      </div>
+    );
   }
 
   _renderNotes() {
@@ -36,19 +43,17 @@ export default class ResumeEntry extends React.Component {
       </div>
     );
   }
-
-  render() {
-    return (
-      <div className='resume-entry'>
-        <h3><FragmentsBlock data={this.props.title} /></h3>
-        {this._renderContent()}
-      </div>
-    );
-  }
 }
 
 ResumeEntry.defaultProps = {
   title: [],
   notes: [],
   numInitialNotesToShow: false,
+};
+
+ResumeEntry.propTypes = {
+  title: React.PropTypes.array.isRequired,
+  notes: React.PropTypes.array.isRequired,
+  numInitialNotesToShow: React.PropTypes.bool,
+  image: React.PropTypes.array,
 };
