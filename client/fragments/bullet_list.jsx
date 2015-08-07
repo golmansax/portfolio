@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Fragments from '../fragments/fragments';
 
@@ -7,6 +5,14 @@ export default class FragmentsBulletList extends React.Component {
   constructor(props) {
     super(props);
     this._renderBullet = this._renderBullet.bind(this);
+  }
+
+  render() {
+    return (
+      <ul className='fragments-bullet-list'>
+        {this.props.bullets.map(this._renderBullet)}
+      </ul>
+    );
   }
 
   _renderFragments(fragments, index) {
@@ -22,14 +28,6 @@ export default class FragmentsBulletList extends React.Component {
       <li key={index} className='fragments-bullet-list__item'>
         {bullet.map(this._renderFragments)}
       </li>
-    );
-  }
-
-  render() {
-    return (
-      <ul className='fragments-bullet-list'>
-        {this.props.bullets.map(this._renderBullet)}
-      </ul>
     );
   }
 }

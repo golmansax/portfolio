@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { RouteHandler } from 'react-router';
 import LayoutHead from './head';
@@ -7,10 +5,6 @@ import LayoutInlineData from './inline_data';
 import { cachify } from 'connect-cachify-static';
 
 export default class LayoutHandler extends React.Component {
-  _getContent() {
-    return React.renderToString(<RouteHandler />);
-  }
-
   render() {
     return (
       <html>
@@ -29,5 +23,9 @@ export default class LayoutHandler extends React.Component {
         </body>
       </html>
     );
+  }
+
+  _getContent() {
+    return React.renderToString(<RouteHandler />);
   }
 }

@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
@@ -9,7 +7,7 @@ import Donations from '../donations/list';
 import ResumeNotes from '../resume/notes';
 import FragmentsBulletList from '../fragments/bullet_list';
 
-var Custom = {
+const Custom = {
   Donations: Donations,
   ResumeNotes: ResumeNotes,
   FragmentsBulletList: FragmentsBulletList,
@@ -27,6 +25,26 @@ export default class ProjectsContent extends React.Component {
     this._renderPositions = this._renderPositions.bind(this);
     this._renderDescription = this._renderDescription.bind(this);
     this._renderCreatedFor = this._renderCreatedFor.bind(this);
+  }
+
+  render() {
+    return (
+      <div className='projects-content'>
+        <h2>
+          <Fragment url={this.props.url} text={this.props.name} />
+        </h2>
+        {this._renderDescription()}
+        <dl>
+          {this._renderPositions()}
+          {this._renderCreatedFor()}
+          {this._renderStack()}
+          {this._renderJoinedWhen()}
+          {this._renderResponsibilities()}
+          {this._renderPress()}
+        </dl>
+        {this._renderCustom()}
+      </div>
+    );
   }
 
   _renderCreatedFor() {
@@ -54,7 +72,7 @@ export default class ProjectsContent extends React.Component {
     }
 
     return this.props.custom.map((custom, index) => {
-      var CustomKlass = Custom[custom.klass];
+      const CustomKlass = Custom[custom.klass];
       return <CustomKlass key={index} {...custom.attrs} />;
     });
   }
@@ -89,7 +107,7 @@ export default class ProjectsContent extends React.Component {
   }
 
   _renderDescription() {
-    var description;
+    let description;
     if (Array.isArray(this.props.description)) {
       description = this.props.description;
     } else {
@@ -147,26 +165,6 @@ export default class ProjectsContent extends React.Component {
       <dd key='dd'>{this.props.joinedWhen}</dd>,
     ];
   }
-
-  render() {
-    return (
-      <div className='projects-content'>
-        <h2>
-          <Fragment url={this.props.url} text={this.props.name} />
-        </h2>
-        {this._renderDescription()}
-        <dl>
-          {this._renderPositions()}
-          {this._renderCreatedFor()}
-          {this._renderStack()}
-          {this._renderJoinedWhen()}
-          {this._renderResponsibilities()}
-          {this._renderPress()}
-        </dl>
-        {this._renderCustom()}
-      </div>
-    );
-  }
 }
 
 ProjectsContent.propTypes = {
@@ -182,4 +180,6 @@ ProjectsContent.propTypes = {
   joinedWhen: React.PropTypes.string,
   involvedWith: React.PropTypes.array,
   press: React.PropTypes.array,
+  custom: React.PropTypes.object,
+  positions: React.PropTypes.array,
 };

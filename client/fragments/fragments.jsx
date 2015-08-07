@@ -1,17 +1,16 @@
-'use strict';
-
 import React from 'react';
 import Fragment from './fragment';
 
 export default class Fragments extends React.Component {
   render() {
-    var fragments = this.props.fragments.map((fragment, index) => {
+    const fragments = this.props.fragments.map((fragment, index) => {
+      let myFragment = fragment;
       if (typeof fragment === 'string') {
-        fragment = { text: fragment };
+        myFragment = { text: fragment };
       }
 
       return (
-        <Fragment {...fragment} key={index} />
+        <Fragment {...myFragment} key={index} />
       );
     });
 
@@ -20,4 +19,6 @@ export default class Fragments extends React.Component {
     );
   }
 }
+
 Fragments.defaultProps = { fragments: [] };
+Fragments.propTypes = { fragments: React.PropTypes.array };

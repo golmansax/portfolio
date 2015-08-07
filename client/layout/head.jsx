@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import i18n from 'i18next';
@@ -9,9 +7,9 @@ import { State } from 'react-router';
 
 export default class LayoutHead extends React.Component {
   render() {
-    var currentRoutes = this.getRoutes();
-    var routeName = currentRoutes[currentRoutes.length - 1].name;
-    var metaData = i18n.t(`metaData.${routeName}`);
+    const currentRoutes = this.getRoutes();
+    const routeName = currentRoutes[currentRoutes.length - 1].name;
+    const metaData = i18n.t(`metaData.${routeName}`);
 
     // jscs:disable maximumLineLength
     return (
