@@ -2,16 +2,16 @@
   "name": "my-site-in-express",
   "description": "Holman's personal website",
   "version": "0.0.1",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/golmansax/my-site-in-express.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/golmansax/my-site-in-express.git"
   },
   "devDependencies": {
     "arrow-mocha": "latest",
     "chai": "latest",
-    "esprima-fb": "15001.1.0-dev-harmony-fb",
+    "eslint": "latest",
+    "eslint-plugin-react": "^3.2.0",
     "jscs": "latest",
-    "jsxhint": "latest",
     "mocha": "latest",
     "stink-bomb": "latest",
     "travis-lint": "latest",

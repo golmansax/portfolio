@@ -1,4 +1,4 @@
-.PHONY: build build-js build-css test watch jshint
+.PHONY: build build-js build-css test watch eslint
 
 build: build-css build-js
 
@@ -16,8 +16,8 @@ test:
 watch:
 	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
 
-jshint:
-	./node_modules/.bin/jsxhint . --babel --exclude-path .jshintignore
-
 jscs:
 	./node_modules/.bin/jscs -v .
+
+eslint:
+	./node_modules/.bin/eslint .
