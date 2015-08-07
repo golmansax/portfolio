@@ -1,19 +1,17 @@
-'use strict';
-
-var expect = require('chai').expect;
-var Browser = require('zombie');
-var server = require('../server');
-var StinkBomb = require('stink-bomb');
+import { expect } from 'chai';
+import Browser from 'zombie';
+import server from '../server';
+import StinkBomb from 'stink-bomb';
 
 import { beforeEach, afterEach, it } from 'arrow-mocha/es5';
 
 StinkBomb.configure({ raise: true });
 
 describe('server', function() {
-  var browser;
+  let browser;
 
   beforeEach(() => {
-    var port = 3001;
+    const port = 3001;
     this.timeout(9000);
     this.server = server.listen(port);
     browser = new Browser({ site: 'http://localhost:' + port });

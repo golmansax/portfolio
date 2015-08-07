@@ -1,5 +1,3 @@
-'use strict';
-
 require('babel/register');
 var RouterRoute = require('./client/router/route');
 var env = process.env.NODE_ENV || 'development';

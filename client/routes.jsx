@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { DefaultRoute, Route } from 'react-router';
 import PortfolioHandler from './portfolio/handler';
