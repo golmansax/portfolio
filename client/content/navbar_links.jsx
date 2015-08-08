@@ -1,14 +1,11 @@
-'use strict';
-
 import React from 'react';
 import Fragment from '../fragments/fragment';
 
-var NAVBAR_LINKS = [
+const NAVBAR_LINKS = [
   { text: 'Work', routeName: 'workProjects' },
   { text: 'Side Projects', routeName: 'sideProjects' },
   { routeName: 'communityProjects', text: 'In Community' },
 ];
-var currentPath = 'garbage';
 
 export default class ContentNavbarLinks extends React.Component {
   constructor(props) {

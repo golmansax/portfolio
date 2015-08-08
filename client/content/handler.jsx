@@ -19,6 +19,14 @@ export default class ContentHandler extends React.Component {
     this.state = { isMenuShowing: isMenuShowing() };
   }
 
+  componentDidMount() {
+    addChangeListener(this._updateState);
+  }
+
+  componentWillUnmount() {
+    removeChangeListener(this._updateState);
+  }
+
   render() {
     return (
       <DocumentTitle title='Holman Gao'>
@@ -34,14 +42,6 @@ export default class ContentHandler extends React.Component {
         </div>
       </DocumentTitle>
     );
-  }
-
-  componentDidMount() {
-    addChangeListener(this._updateState);
-  }
-
-  componentWillUnmount() {
-    removeChangeListener(this._updateState);
   }
 
   _renderBackdrop() {

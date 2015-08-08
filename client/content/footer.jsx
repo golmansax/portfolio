@@ -1,7 +1,4 @@
-'use strict';
-
 import React from 'react';
-import { RouteHandler } from 'react-router';
 import Fragment from '../fragments/fragment';
 
 export default class ContentFooter extends React.Component {

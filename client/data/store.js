@@ -1,6 +1,4 @@
-'use strict';
-
-var data = {};
+const data = {};
 
 export function loadData(newData) {
   Object.assign(data, newData);

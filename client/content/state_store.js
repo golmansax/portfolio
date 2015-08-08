@@ -1,11 +1,8 @@
-'use strict';
-
 import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
-var emitter = new EventEmitter();
-
-var state = { menuShowing: false };
+const emitter = new EventEmitter();
+const state = { menuShowing: false };
 
 export function isMenuShowing() {
   return state.menuShowing;

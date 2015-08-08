@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Fragments from './fragments';
 
@@ -18,9 +16,11 @@ export default class FragmentsBlock extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return <Fragments fragments={this.props.data} />;
     }
+
+    return <Fragments fragments={this.props.data} />;
   }
 }
+
 FragmentsBlock.defaultProps = { data: [] };
+FragmentsBlock.propTypes = { data: React.PropTypes.object.isRequired };

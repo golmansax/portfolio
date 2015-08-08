@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
