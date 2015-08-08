@@ -2,6 +2,7 @@
   "extends": "eslint-config-airbnb",
 
   "rules": {
+    "no-console": 2,
     "react/jsx-quotes": [2, "single"],
     "react/sort-comp": [2, {
       "order": [

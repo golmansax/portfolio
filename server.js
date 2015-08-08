@@ -3,7 +3,6 @@ import express from 'express';
 import cachifyStatic from 'connect-cachify-static';
 import i18n from 'i18next';
 
-console.log('here?');
 const server = express();
 const env = process.env.NODE_ENV || 'development';
 
