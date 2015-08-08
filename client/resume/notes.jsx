@@ -66,6 +66,6 @@ export default class ResumeNotes extends React.Component {
 }
 
 ResumeNotes.propTypes = {
-  notes: React.PropTypes.arraw.isRequired,
+  notes: React.PropTypes.array.isRequired,
   numInitialNotesToShow: React.PropTypes.number,
 };

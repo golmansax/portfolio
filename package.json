@@ -47,7 +47,7 @@
   "scripts": {
     "build": "make build",
     "postinstall": "npm run build",
-    "start": "node server.js",
+    "start": "node index.js",
     "start-dev": "nodemon -e js,jsx,json,styl",
     "test": "make test",
     "watch": "make watch"

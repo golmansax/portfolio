@@ -37,4 +37,4 @@ export default class BreadcrumbsList extends React.Component {
 }
 
 BreadcrumbsList.defaultProps = { breadcrumbs: [] };
-BreadCrumbsList.propTypes = { breadcrumbs: React.PropTypes.array.isRequired };
+BreadcrumbsList.propTypes = { breadcrumbs: React.PropTypes.array.isRequired };

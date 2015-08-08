@@ -1,9 +1,9 @@
-require('babel/register');
 import RouterRoute from './client/router/route';
 import express from 'express';
 import cachifyStatic from 'connect-cachify-static';
 import i18n from 'i18next';
 
+console.log('here?');
 const server = express();
 const env = process.env.NODE_ENV || 'development';
 
@@ -19,7 +19,7 @@ if (env === 'development') {
   server.use(stylus.middleware({
     src: __dirname + '/client',
     dest: __dirname + '/public/assets',
-    compile: function(str, path) {
+    compile: (str, path) => {
       return stylus(str)
         .set('filename', path)
         .use(jeet())
@@ -31,15 +31,6 @@ if (env === 'development') {
 }
 
 server.use(express.static(__dirname + '/public'));
-server.use(function(req, res, next) {
-  res.locals.currentPath = req.path;
-  res.locals.navbarLinks = [
-    { text: 'Work', url: '/work' },
-    { text: 'Side Projects', url: '/side-projects' },
-    { url: '/in-community', text: 'In Community' },
-  ];
-  next();
-});
 
 i18n.init({
   lng: 'en-US',
@@ -65,6 +56,4 @@ server.get('/in-community/:projectId', RouterRoute);
 server.get('/', RouterRoute);
 server.get('/resume', RouterRoute);
 
-if (!module.parent) { server.listen(process.env.PORT || 3000); }
-
-module.exports = server;
+export default server;
