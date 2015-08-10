@@ -67,4 +67,5 @@ ProjectsListItem.propTypes = {
   images: React.PropTypes.array,
   pdf: React.PropTypes.string,
   slug: React.PropTypes.string,
+  gif: React.PropTypes.string,
 };
