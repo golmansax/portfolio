@@ -52,6 +52,23 @@
       ]
     },
     {
+      "slug": "battlecode-2015",
+      "shortName": "Battlecode 2015",
+      "name": "Battlecode 2015 (Team Zasshu)",
+      "createdFor": "Battlecode 2015",
+      "github": "y4n9squared/battlecode",
+      "images": ["/static/battlecode-2015.jpg"],
+      "gif": "/static/battlecode-2015.gif",
+      "description": [
+        "An autonomous program that plays the computer game Battlecode; this ",
+        "year's version had rules similar to a real-time strategy game"
+      ],
+      "stack": "Java",
+      "involvedWith": [
+        ["Developing and coding game strategy"]
+      ]
+    },
+    {
       "slug": "my-gear",
       "name": "My Gear",
       "description": [
@@ -93,21 +110,6 @@
       "stack": "Rails, Angular.js, PostgreSQL",
       "involvedWith": [
         ["Front-end coding and design"]
-      ]
-    },
-    {
-      "slug": "battlecode-2015",
-      "shortName": "Battlecode 2015",
-      "name": "Battlecode 2015 (Team Zasshu)",
-      "createdFor": "Battlecode 2015",
-      "github": "y4n9squared/battlecode",
-      "images": ["/static/battlecode-2015.jpg"],
-      "description": [
-        "An autonomous program that plays the computer game Battlecode"
-      ],
-      "stack": "Java",
-      "involvedWith": [
-        ["Developing and coding game strategy"]
       ]
     },
     {

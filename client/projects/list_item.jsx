@@ -28,6 +28,10 @@ export default class ProjectsListItem extends React.Component {
       return <Pdf url={this.props.pdf} />;
     }
 
+    if (this.props.gif) {
+      return <ProjectsImage image={this.props.gif} />;
+    }
+
     if (this.props.images) {
       return this.props.images.map((image, index) => {
         return <ProjectsImage image={image} key={index} />;
