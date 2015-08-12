@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectsImage from './image';
 import ProjectsContent from './content';
-import Pdf from '../pdfs/pdf';
+import Pdf from '../shared/pdf';
 
 export default class ProjectsListItem extends React.Component {
   constructor(props) {
