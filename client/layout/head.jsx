@@ -15,7 +15,6 @@ export default class LayoutHead extends React.Component {
     return (
       <head>
         <title>{DocumentTitle.rewind()}</title>
-        <link href={cachify('/assets/main.css')} rel='stylesheet' />
         <link
           type='text/css'
           rel='stylesheet'
@@ -25,6 +24,7 @@ export default class LayoutHead extends React.Component {
           href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
           rel='stylesheet'
         />
+        <link href={cachify('/assets/main.css')} rel='stylesheet' />
         <link
           href='http://www.gravatar.com/avatar/f14bfcfb11c5a367dc8c88bc3dd43189?s=16'
           rel='icon'

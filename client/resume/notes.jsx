@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../shared/icon';
 import FragmentsBlock from '../fragments/block';
 
 export default class ResumeNotes extends React.Component {
@@ -34,13 +35,13 @@ export default class ResumeNotes extends React.Component {
   }
 
   _renderShowMore() {
-    const iconClass = `fa fa-caret-${this.state.showingMore ? 'up' : 'down'}`;
+    const iconName = `caret-${this.state.showingMore ? 'up' : 'down'}`;
 
     return (
       <li>
         <a href='#' onClick={this._toggleShowMore}>
           {this.state.showingMore ? 'Less' : 'More'}&nbsp;
-          <i className={iconClass}></i>
+          <Icon type={iconName} />
         </a>
       </li>
     );
@@ -53,7 +54,7 @@ export default class ResumeNotes extends React.Component {
 
     return (
       <li key={index}>
-        <i className='fa-li fa fa-circle' />
+        <Icon type='circle' listItem className='resume-notes__list-item-icon' />
         <FragmentsBlock data={note} />
       </li>
     );
