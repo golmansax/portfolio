@@ -4,7 +4,7 @@ import Icon from './icon';
 
 export default class StackedIcon extends React.Component {
   render() {
-    var myClass = classNames({
+    const myClass = classNames({
       'fa-stack': true,
       [this.props.className]: !!this.props.className,
     });
