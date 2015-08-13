@@ -6,7 +6,7 @@ export default class GithubFragment extends React.Component {
     return (
       <div>
         <a href={`https://github.com/${this.props.github}`}>
-          <Icon type='github' className='github-fragment__icon' />
+          <Icon type='github-square' className='github-fragment__icon' />
           {this.props.github}
         </a>
       </div>
