@@ -15,12 +15,20 @@ export default class ContentFooter extends React.Component {
           </div>
           <div className='footer__section'>
             <Link to='resume'>
-              <StackedIcon back='circle' front='file-text' />
+              <StackedIcon
+                back='circle'
+                front='file-text'
+                className='footer__resume-icon'
+              />
               Resume
             </Link>
           </div>
           <div className='footer__section'>
-            <StackedIcon back='circle' front='envelope' />
+            <StackedIcon
+              className='footer__email-icon'
+              back='circle'
+              front='envelope'
+            />
             holm
             <span className='hide'>crap</span>
             an
