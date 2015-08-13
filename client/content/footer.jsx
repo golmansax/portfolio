@@ -1,5 +1,4 @@
 import React from 'react';
-import Fragment from '../fragments/fragment';
 import StackedIcon from '../shared/stacked_icon';
 import { Link } from 'react-router';
 
