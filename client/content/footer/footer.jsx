@@ -1,7 +1,7 @@
 import React from 'react';
-import StackedIcon from '../shared/stacked_icon';
+import StackedIcon from '../../shared/stacked_icon';
 import { Link } from 'react-router';
-import ContentFooterSection from './footer/section';
+import ContentFooterSection from './section';
 
 export default class ContentFooter extends React.Component {
   render() {
