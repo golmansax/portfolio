@@ -1,31 +1,32 @@
 import React from 'react';
 import StackedIcon from '../shared/stacked_icon';
 import { Link } from 'react-router';
+import ContentFooterSection from './footer/section';
 
 export default class ContentFooter extends React.Component {
   render() {
     return (
-      <div className='footer'>
+      <div className='content-footer'>
         <div className='container'>
-          <div className='footer__section'>
+          <ContentFooterSection>
             <a href='https://github.com/golmansax'>
               <StackedIcon back='github' front='fw' />
               golmansax
             </a>
-          </div>
-          <div className='footer__section'>
+          </ContentFooterSection>
+          <ContentFooterSection>
             <Link to='resume'>
               <StackedIcon
                 back='circle'
                 front='file-text'
-                className='footer__resume-icon'
+                className='content-footer__resume-icon'
               />
               Resume
             </Link>
-          </div>
-          <div className='footer__section'>
+          </ContentFooterSection>
+          <ContentFooterSection>
             <StackedIcon
-              className='footer__email-icon'
+              className='content-footer__email-icon'
               back='circle'
               front='envelope'
             />
@@ -42,11 +43,11 @@ export default class ContentFooter extends React.Component {
             ax
             <span className='hide'>crap</span>
             .com
-          </div>
-          <div className='footer__section'>
+          </ContentFooterSection>
+          <ContentFooterSection>
             <StackedIcon back='circle' front='map-marker' />
             in San Francisco, CA
-          </div>
+          </ContentFooterSection>
         </div>
       </div>
     );
