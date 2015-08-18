@@ -1,7 +1,8 @@
 import React from 'react';
-import StackedIcon from '../../shared/stacked_icon';
 import { Link } from 'react-router';
 import ContentFooterSection from './section';
+import MyEmail from '../../my/email';
+import StackedIcon from '../../shared/stacked_icon';
 
 export default class ContentFooter extends React.Component {
   render() {
@@ -30,19 +31,7 @@ export default class ContentFooter extends React.Component {
               back='circle'
               front='envelope'
             />
-            holm
-            <span className='hide'>crap</span>
-            an
-            <span className='hide'>crap</span>
-            @
-            <span className='hide'>crap</span>
-            gol
-            <span className='hide'>crap</span>
-            mans
-            <span className='hide'>crap</span>
-            ax
-            <span className='hide'>crap</span>
-            .com
+            <MyEmail />
           </ContentFooterSection>
           <ContentFooterSection>
             <StackedIcon back='circle' front='map-marker' />
