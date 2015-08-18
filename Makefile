@@ -1,4 +1,4 @@
-.PHONY: build build-js build-css test watch eslint
+.PHONY: build build-js build-css test watch eslint stylint
 
 build: build-css build-js
 
@@ -21,3 +21,6 @@ jscs:
 
 eslint:
 	./node_modules/.bin/eslint . --ext .js --ext .jsx
+
+stylint:
+	./node_modules/.bin/stylint client/

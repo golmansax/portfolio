@@ -4,13 +4,17 @@
 global-reset()
 
 
-e(name)
-  &__{name}
+e(name) {
+  &__{name} {
     {block}
+  }
+}
 
-m(name)
-  &--{name}
+m(name) {
+  &--{name} {
     {block}
+  }
+}
 
 // Colors
 $my-green = #198565
@@ -26,7 +30,7 @@ $muted-border = em(1px) $light-gray solid
 
 html,
 body {
-  height: 100%
+  height 100%
 }
 
 body {
@@ -46,7 +50,7 @@ h2,
 h3 {
   line-height 1.2
   padding .15em 0
-  color: $darker-gray
+  color $darker-gray
 }
 
 h1 {

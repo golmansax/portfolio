@@ -16,6 +16,7 @@
     "jscs": "*",
     "mocha": "*",
     "stink-bomb": "*",
+    "stylint": "*",
     "travis-lint": "*",
     "watchify": "*",
     "zombie": "< 4"
