@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export default class Container extends React.Component {
   render() {
-    var myClass = classNames({
+    const myClass = classNames({
       'gsax-container': true,
       [this.props.className]: !!this.props.className,
     });
@@ -20,5 +20,5 @@ Container.propTypes = {
     React.PropTypes.array,
   ]).isRequired,
 
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
 };
