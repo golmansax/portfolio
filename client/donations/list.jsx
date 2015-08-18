@@ -1,5 +1,6 @@
 import React from 'react';
 import Fragment from '../fragments/fragment';
+import Container from '../shared/container';
 
 export default class DonationsList extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class DonationsList extends React.Component {
 
   render() {
     const donations = this.props.donations.map(this._renderDonation);
-    return <div className='container'>{donations}</div>;
+    return <Container>{donations}</Container>;
   }
 
   _renderDonation(donation) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Fragment from '../fragments/fragment';
+import Container from '../shared/container';
 
 export default class BreadcrumbsList extends React.Component {
   constructor(props) {
@@ -13,9 +14,9 @@ export default class BreadcrumbsList extends React.Component {
       .concat(this.props.breadcrumbs);
 
     return (
-      <div className='breadcrumbs container'>
+      <Container className='breadcrumbs'>
         {breadcrumbs.map(this._renderBreadcrumb)}
-      </div>
+      </Container>
     );
   }
 

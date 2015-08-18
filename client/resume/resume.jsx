@@ -1,5 +1,6 @@
 import React from 'react';
 import ResumeEntry from './entry';
+import Container from '../shared/container';
 
 const CATEGORIES = ['work', 'education', 'other'];
 const TITLES = {
@@ -34,10 +35,10 @@ export default class Resume extends React.Component {
 
     return (
       <div key={category}>
-        <div className='resume-category container'>
+        <Container className='resume-category'>
           <h2>{TITLES[category]}</h2>
           {entries}
-        </div>
+        </Container>
         {breaks}
       </div>
     );

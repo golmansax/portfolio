@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectsImage from './image';
 import ProjectsContent from './content';
 import Pdf from '../shared/pdf';
+import Container from '../shared/container';
 
 export default class ProjectsListItem extends React.Component {
   constructor(props) {
@@ -16,9 +17,7 @@ export default class ProjectsListItem extends React.Component {
   render() {
     return (
       <div id={this.props.slug} className='projects-list-item'>
-        <div className='container'>
-          {this._renderProject()}
-        </div>
+        <Container>{this._renderProject()}</Container>
       </div>
     );
   }

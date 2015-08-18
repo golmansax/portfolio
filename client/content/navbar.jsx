@@ -2,6 +2,7 @@ import React from 'react';
 import { getImage } from '../images/store';
 import ContentNavbarLinks from './navbar_links';
 import { Link } from 'react-router';
+import Container from '../shared/container';
 import {
   addChangeListener,
   removeChangeListener,
@@ -30,7 +31,7 @@ export default class ContentNavbar extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        <div className='container'>
+        <Container>
           <div className='navbar-left'>
             <Link to='/'>
               <img src={getImage('/static/navbar-icon.png')} />
@@ -44,7 +45,7 @@ export default class ContentNavbar extends React.Component {
             >
             <i className='fa fa-bars fa-3x' />
           </button>
-        </div>
+        </Container>
         {this._renderNavbarMenu()}
       </div>
     );

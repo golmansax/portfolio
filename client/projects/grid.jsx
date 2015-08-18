@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
+import Container from '../shared/container';
 
 export default class ProjectsGrid extends React.Component {
   constructor(props) {
@@ -12,9 +13,9 @@ export default class ProjectsGrid extends React.Component {
 
   render() {
     return (
-      <div className='container'>
+      <Container>
         {this._getProjectChunks().map(this._renderChunk)}
-      </div>
+      </Container>
     );
   }
 

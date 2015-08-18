@@ -3,12 +3,13 @@ import { Link } from 'react-router';
 import ContentFooterSection from './section';
 import MyEmail from '../../my/email';
 import StackedIcon from '../../shared/stacked_icon';
+import Container from '../../shared/container';
 
 export default class ContentFooter extends React.Component {
   render() {
     return (
       <div className='content-footer'>
-        <div className='container'>
+        <Container>
           <ContentFooterSection>
             <a href='https://github.com/golmansax'>
               <StackedIcon back='github' front='fw' />
@@ -37,7 +38,7 @@ export default class ContentFooter extends React.Component {
             <StackedIcon back='circle' front='map-marker' />
             in San Francisco, CA
           </ContentFooterSection>
-        </div>
+        </Container>
       </div>
     );
   }

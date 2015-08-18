@@ -12,8 +12,6 @@ m(name)
   &--{name}
     {block}
 
-$container-width = em(900px)
-
 // Colors
 $my-green = #198565
 $darker-gray = #222
@@ -86,15 +84,6 @@ a {
   }
 }
 
-.container {
-  center($container-width, 1em)
-
-  +tablet() {
-    padding-left 2em
-    padding-right 2em
-  }
-}
-
 .fragment-left {
   col(3/5)
 }
@@ -133,4 +122,5 @@ a {
 @require './projects/grid'
 @require './projects/image'
 @require './projects/list_item'
+@require './shared/container'
 @require './shared/pdf'
