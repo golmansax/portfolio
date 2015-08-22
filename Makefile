@@ -23,4 +23,4 @@ eslint:
 	./node_modules/.bin/eslint . --ext .js --ext .jsx
 
 stylint:
-	./node_modules/.bin/stylint client/
+	./node_modules/.bin/stylint client/main.styl

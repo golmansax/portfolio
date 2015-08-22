@@ -1,21 +1,41 @@
+@require 'font-awesome-stylus/stylus/mixins'
+@require 'font-awesome-stylus/stylus/variables'
+
 .content-footer {
   margin-top 2em
   border-top $colored-border
-  padding .5em 0 1em
+  padding 1em 0
 
-  .fa-stack {
-    margin-right .2em
-  }
+  +e(section) {
+    margin-bottom 2em
 
-  +e(resume-icon) {
-    .fa-file-text {
-      margin: em(-1px) 0 0 em(.5px)
+    &:last-child {
+      margin-bottom 0
+    }
+
+    +above('l') {
+      col(1/2)
+      margin-bottom 0
     }
   }
 
-  +e(email-icon) {
-    .fa-envelope {
-      margin-top: em(-1px)
+  +e(main-links) {
+    a {
+      position relative
+
+      &:after {
+        fa-icon()
+
+        color $dark-gray
+        content: $fa-var-circle
+        font-size 5px
+        padding 0 1em
+        vertical-align middle
+      }
+
+      &:last-child:after {
+        content: ''
+      }
     }
   }
 }

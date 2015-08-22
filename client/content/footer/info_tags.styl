@@ -1,0 +1,27 @@
+.content-footer-info-tags {
+  +e(group) {
+    +desktop() {
+      col(1/2)
+    }
+  }
+
+  +e(tag) {
+    margin-bottom .25em
+  }
+
+  .fa-stack {
+    margin-right .2em
+  }
+
+  +e(resume-icon) {
+    .fa-file-text {
+      margin: em(-1px) 0 0 em(.5px)
+    }
+  }
+
+  +e(email-icon) {
+    .fa-envelope {
+      margin-top: em(-1px)
+    }
+  }
+}

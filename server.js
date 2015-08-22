@@ -21,6 +21,7 @@ if (env === 'development') {
     compile: (str, path) => {
       return stylus(str)
         .set('filename', path)
+        .set('paths', [__dirname + '/node_modules'])
         .use(jeet())
         .use(rupture())
         .use(stylusTypeUtils())

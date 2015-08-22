@@ -1,6 +1,6 @@
 import React from 'react';
 import { getImage } from '../images/store';
-import ContentNavbarLinks from './navbar_links';
+import ContentMainLinks from './main_links';
 import { Link } from 'react-router';
 import Container from '../shared/container';
 import {
@@ -38,7 +38,7 @@ export default class ContentNavbar extends React.Component {
               <h1>Holman Gao</h1>
             </Link>
           </div>
-          <div className='navbar-right'><ContentNavbarLinks /></div>
+          <div className='navbar-right'><ContentMainLinks /></div>
           <button
             className='navbar__sidebar-trigger'
             onClick={this._toggleMenu}
@@ -58,7 +58,7 @@ export default class ContentNavbar extends React.Component {
 
     return (
       <div className='navbar__menu'>
-        <ContentNavbarLinks />
+        <ContentMainLinks />
       </div>
     );
   }
