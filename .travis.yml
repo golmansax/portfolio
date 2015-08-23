@@ -20,6 +20,6 @@ deploy:
   provider: heroku
   strategy: git
   api_key:
-    secure: Ltd+/+uqs8KZHH7DDAPzbjcyFTXmnxSq5Q50cH+eF8VYcr+vA6jkOh60Ku5UwtJE6dpGD/3nbPUyVcbIjGHIuSCe761VOIOz2pUprQ83NL011weZOQFV51SGdm9n+nZ0Yr/XWZzaPs78LXYSjW9Q69eS+jr2eB/tHaMMfubj0TU=
+    secure: bdYCPOgURi5LgUx2L/PliWNFRTZAJjLNXR8fGZ6/J3o5sTNdHIuqmMMAxVhgN3Qp1WpZt9aFDcYeBfWwmEhfNDUafLDmjuGaya0FnQ4dONS1FGWQCSPolT7uwrAbYG933WvypgE0XlI52QHZ+2nL0vFrM7Douqla+VNBEfoO04g=
   app:
     secure: Fl1NNHj018HMaSYwzc9zpl+1jrxip4J8pYshVkPnUExhRQBKS+NU3f7Krh1lnRKZTAHAlOkZLLrU6EjYGDnNZeruGHRdR9GwNND4MoNSOf5aQJc3SyIsqfuvHYRB+dMfuGMXWPGS6ZiNEh2imWE7bFvvYc6CtgyzSBiGv4Mb+U8=
