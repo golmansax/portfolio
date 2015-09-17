@@ -9,9 +9,12 @@
   },
   "devDependencies": {
     "arrow-mocha": "*",
+    "babel-eslint": "*",
     "chai": "*",
     "eslint": "*",
+    "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
+    "eslint-plugin-react": "*",
     "jscs": "*",
     "mocha": "*",
     "stink-bomb": "*",
@@ -47,7 +50,7 @@
   },
   "scripts": {
     "build": "make build",
-    "postinstall": "npm run build",
+    "postinstall": "npm prune && npm run build",
     "start": "node index.js",
     "start-dev": "nodemon -e js,jsx,json,styl",
     "test": "make test",

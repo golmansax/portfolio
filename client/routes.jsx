@@ -8,8 +8,8 @@ import ProjectHandler from './projects/project_handler';
 import ResumeHandler from './resume/handler';
 import ContentHandler from './content/handler';
 
-// jscs:disable maximumLineLength
 export default (
+  /* eslint-disable max-len */
   <Route handler={ContentHandler}>
     <DefaultRoute name='portfolio' handler={PortfolioHandler} />
     <Route name='workProjects' path='/work' handler={WorkProjectsHandler} />
@@ -20,6 +20,5 @@ export default (
     <Route name='communityProject' path='/in-community/:projectId' handler={ProjectHandler} />
     <Route name='resume' handler={ResumeHandler} />
   </Route>
+  /* eslint-enable max-len */
 );
-
-// jscs:enable maximumLineLength

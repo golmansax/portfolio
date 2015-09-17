@@ -11,8 +11,8 @@ export default class LayoutHead extends React.Component {
     const routeName = currentRoutes[currentRoutes.length - 1].name;
     const metaData = i18n.t(`metaData.${routeName}`);
 
-    // jscs:disable maximumLineLength
     return (
+      /* eslint-disable max-len */
       <head>
         <title>{DocumentTitle.rewind()}</title>
         <link
@@ -33,9 +33,8 @@ export default class LayoutHead extends React.Component {
         <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
         {this._renderMetaDescription(metaData.description)}
       </head>
+      /* eslint-enable max-len */
     );
-
-    // jscs:enable maximumLineLength
   }
 
   _renderMetaDescription(description) {
