@@ -62,10 +62,7 @@
     "expect": "lowercase-dash",
     "error": true
   },
-  "namingConventionStrict": {
-    "expect": true,
-    "error": true
-  },
+  "namingConventionStrict": true,
   "none": {
     "expect": "never",
     "error": true
