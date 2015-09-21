@@ -5,7 +5,7 @@
       "name": "Quarry",
       "url": "http://yoquarry.club",
       "createdFor": "SF Disrupt Hackathon 2015",
-      "description": "Autocomplete as a service for e-commerce sites, used a Chrome extensions to hack the search on Walmart.com to point to our API (pre-indexed with Walmart's open data)",
+      "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's open data)",
       "github": "golmansax/funnel",
       "stack": "Express.js, ES6, React.js, CSS Modules, Chrome extension, Bash",
       "images": [
@@ -16,6 +16,15 @@
         ["Built out API skeleton"],
         ["Created frontend to interface with the API"],
         ["Styled frontend to look like Walmart's search"]
+      ],
+      "press": [
+        [
+          {
+            "url": "http://techcrunch.com/video/quarry/519093803/",
+            "text": "Video"
+          },
+          " of demo given on stage"
+        ]
       ]
     },
     {
