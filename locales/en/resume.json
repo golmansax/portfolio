@@ -1,5 +1,23 @@
 {
 	"work": [
+    {
+			"title": {
+				"left": [
+					{
+						"text": "Room 77",
+						"url": "http://www.room77.com?new=1"
+					},
+					", Software Engineer"
+				],
+				"right": [
+					"San Francisco, CA: Sept ’15 – Current"
+				]
+			},
+			"numInitialNotesToShow": 2,
+			"notes": [
+        ["Build out infrastructure to allow partners to bid for search result placement in a second-price auction (Code in C++)"]
+			]
+    },
 		{
 			"title": {
 				"left": [
@@ -10,7 +28,7 @@
 					", Software Engineer"
 				],
 				"right": [
-					"San Francisco, CA: Jan ’14 – Current"
+					"San Francisco, CA: Jan ’14 – Sept ’15"
 				]
 			},
 			"notes": [

@@ -5,7 +5,7 @@
       "name": "Quarry",
       "url": "http://yoquarry.club",
       "createdFor": "SF Disrupt Hackathon 2015",
-      "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's open data)",
+      "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's data)",
       "github": "golmansax/funnel",
       "stack": "Express.js, ES6, React.js, CSS Modules, Chrome extension, Bash",
       "images": [
@@ -154,6 +154,12 @@
 					"attrs": {
             "bullets": [
               [
+                ["React Native – one repo for iOS, Android, and web (app in progress)"],
+                [{
+                  "github": "golmansax/todo-app-in-react-native"
+                }]
+              ],
+              [
                 [
                   "Stack used at Chalk Schools – Rails, Backbone + React.js, ",
                   "Haml, Bootstrap + Sass"
@@ -172,12 +178,6 @@
                 ["Django (app in progress)"],
                 [{
                   "github": "golmansax/todo-app-in-django"
-                }]
-              ],
-              [
-                ["React Native iOS (app in progress)"],
-                [{
-                  "github": "golmansax/todo-app-in-react-native"
                 }]
               ]
             ]

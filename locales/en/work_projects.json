@@ -1,6 +1,46 @@
 {
 	"projects": [
 		{
+      "slug": "room-77",
+			"name": "Room 77",
+			"url": "https://m.room77.com",
+			"images": [
+        [
+          "/static/room-77_1.jpg",
+          "/static/room-77_2.jpg"
+        ]
+			],
+			"description": "Search across dozens of hotel sites to find the best price",
+			"stack": "Angular.js, Sass, PHP, C++",
+			"positions": [
+				{
+					"title": "Software Engineer",
+					"start": "Sept ’15",
+					"end": "Current"
+				},
+				{
+					"title": "Software Engineer",
+					"start": "Jul ’12",
+					"end": "Jan ’14"
+				}
+			],
+			"joinedWhen": "Team had 15 employees (6 engineers)",
+			"involvedWith": [
+        ["Build out infrastructure to allow partners to bid for search result placement in a second-price auction"],
+        ["Design and implement a native-like HTML5 and Angular.js single-page mobile app framework"],
+        ["Occasional forays into backend and production infrastructure projects"]
+      ],
+			"press": [
+				[
+					"Company was ",
+					{
+						"url": "http://www.bloomberg.com/news/2014-04-07/google-licenses-room-77-software-in-mobile-travel-booking-push.html",
+						"text": "acquired by Google"
+					}
+				]
+			]
+		},
+		{
       "slug": "chalk",
 			"name": "Chalk Schools",
 			"url": "http://chalkschools.com",
@@ -13,7 +53,7 @@
 				{
 					"title": "Software Engineer",
 					"start": "Jan ’14",
-					"end": "Current"
+					"end": "Sept ’15"
 				}
 			],
 			"joinedWhen": "Team had 3 employees (2 engineers)",
@@ -43,40 +83,6 @@
 				["Design and code the landing site"],
 				["Conduct product and technical interviews"]
       ]
-    },
-		{
-      "slug": "room-77",
-			"name": "Room 77",
-			"url": "https://m.room77.com",
-			"images": [
-        [
-          "/static/room-77_1.jpg",
-          "/static/room-77_2.jpg"
-        ]
-			],
-			"description": "Search across dozens of hotel sites to find the best price",
-			"stack": "Angular.js, Sass, PHP, C++",
-			"positions": [
-				{
-					"title": "Software Engineer",
-					"start": "Jul ’12",
-					"end": "Jan ’14"
-				}
-			],
-			"joinedWhen": "Team had 15 employees (6 engineers)",
-			"involvedWith": [
-        ["Design and implement a native-like HTML5 and Angular.js single-page mobile app framework"],
-        ["Occasional forays into backend and production infrastructure projects"]
-      ],
-			"press": [
-				[
-					"Company was ",
-					{
-						"url": "http://www.bloomberg.com/news/2014-04-07/google-licenses-room-77-software-in-mobile-travel-booking-push.html",
-						"text": "acquired by Google"
-					}
-				]
-			]
-		}
+    }
 	]
 }

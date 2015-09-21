@@ -126,6 +126,7 @@ export default class ProjectsContent extends React.Component {
       return null;
     }
 
+    console.log(this.props.positions);
     return [
       <dt key='dt'>Position:</dt>,
       <dd key='dd'>{this.props.positions.map(this._renderPosition)}</dd>,
@@ -151,8 +152,8 @@ export default class ProjectsContent extends React.Component {
     return <li key={index}><Fragments fragments={fragments} /></li>;
   }
 
-  _renderPosition(position) {
-    return <Position {...position} key={position.title} />;
+  _renderPosition(position, index) {
+    return <Position {...position} key={index} />;
   }
 
   _renderJoinedWhen() {
