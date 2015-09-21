@@ -1,6 +1,24 @@
 {
   "projects": [
     {
+      "slug": "quarry",
+      "name": "Quarry",
+      "url": "http://yoquarry.club",
+      "createdFor": "SF Disrupt Hackathon 2015",
+      "description": "Autocomplete as a service for e-commerce sites, used a Chrome extensions to hack the search on Walmart.com to point to our API (pre-indexed with Walmart's open data)",
+      "github": "golmansax/funnel",
+      "stack": "Express.js, ES6, React.js, CSS Modules, Chrome extension, Bash",
+      "images": [
+        "/static/quarry.jpg",
+        "/static/quarry_home.jpg"
+      ],
+      "involvedWith": [
+        ["Built out API skeleton"],
+        ["Created frontend to interface with the API"],
+        ["Styled frontend to look like Walmart's search"]
+      ]
+    },
+    {
       "slug": "circl",
       "name": "Circl Dating App",
       "createdFor": "LAUNCH Hackathon 2015",
@@ -29,6 +47,17 @@
 			]
     },
     {
+      "slug": "personal-site",
+      "name": "Personal Site",
+      "url": "http://golmansax.com",
+      "github": "golmansax/my-site-in-express",
+      "description": "A portfolio of projects that I have worked on",
+      "stack": "Express.js, ES6, React.js",
+      "images": [
+        "/static/personal-site.jpg"
+      ]
+    },
+    {
       "slug": "office-street-view",
       "name": "Office Street View",
       "createdFor": "Internal Room 77 hackathon",
@@ -38,17 +67,6 @@
       "images": [
         "/static/office-street-view_1.jpg",
         "/static/office-street-view_2.jpg"
-      ]
-    },
-    {
-      "slug": "personal-site",
-      "name": "Personal Site",
-      "url": "http://golmansax.com",
-      "github": "golmansax/my-site-in-express",
-      "description": "A portfolio of projects that I have worked on",
-      "stack": "Express.js, ES6, React.js",
-      "images": [
-        "/static/personal-site.jpg"
       ]
     },
     {
