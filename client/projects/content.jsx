@@ -126,7 +126,6 @@ export default class ProjectsContent extends React.Component {
       return null;
     }
 
-    console.log(this.props.positions);
     return [
       <dt key='dt'>Position:</dt>,
       <dd key='dd'>{this.props.positions.map(this._renderPosition)}</dd>,
