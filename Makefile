@@ -16,9 +16,6 @@ test:
 watch:
 	./node_modules/.bin/watchify --extension=.jsx -t babelify -t reactify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
 
-jscs:
-	./node_modules/.bin/jscs -v .
-
 eslint:
 	./node_modules/.bin/eslint . --ext .js --ext .jsx
 

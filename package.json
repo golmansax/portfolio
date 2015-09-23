@@ -15,7 +15,6 @@
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-react": "*",
-    "jscs": "*",
     "mocha": "*",
     "stink-bomb": "*",
     "stylint": "*",

@@ -9,7 +9,6 @@ script:
 - travis-lint .travis.yml
 - make eslint
 - make stylint
-- make jscs
 - npm test
 cache:
   directories:
