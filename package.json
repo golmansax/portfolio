@@ -23,7 +23,7 @@
     "stylint": "*",
     "travis-lint": "*",
     "watchify": "*",
-    "zombie": "< 4"
+    "zombie": "*"
   },
   "dependencies": {
     "babel": "*",
