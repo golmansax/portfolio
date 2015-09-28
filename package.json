@@ -3,6 +3,9 @@
   "description": "Holman's personal website",
   "version": "0.0.1",
   "license": "MIT",
+  "engines": {
+    "node": "4.1.x"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/golmansax/my-site-in-express.git"
