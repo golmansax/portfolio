@@ -7,7 +7,7 @@ import {
   addChangeListener,
   removeChangeListener,
   isMenuShowing,
-  toggleMenuShowing
+  toggleMenuShowing,
 } from './state_store';
 
 export default class ContentNavbar extends React.Component {
