@@ -1,10 +1,12 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import Browser from 'zombie';
 import server from '../server';
 import StinkBomb from 'stink-bomb';
+import dirtyChai from 'dirty-chai';
 
 import { beforeEach, afterEach, it } from 'arrow-mocha/es5';
 
+chai.use(dirtyChai);
 StinkBomb.configure({ raise: true });
 
 describe('server', function() {
@@ -54,14 +56,18 @@ describe('server', function() {
     });
   });
 
-  describe('when clicking to resume', function() {
+  describe('when clicking to resume', () => {
     beforeEach(() => browser.clickLink('Resume'));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Resume');
     });
 
-    describe('when clicking to hcd page', function() {
+    it('has a link to hcd page', () => {
+      expect(browser.link('human-centered design')).to.exist();
+    });
+
+    describe.skip('when clicking to hcd page', function() {
       beforeEach(() => browser.clickLink('human-centered design'));
 
       it('has the right title', () => {

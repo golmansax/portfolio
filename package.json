@@ -14,6 +14,7 @@
     "arrow-mocha": "*",
     "babel-eslint": "*",
     "chai": "*",
+    "dirty-chai": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
