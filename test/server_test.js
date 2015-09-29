@@ -29,12 +29,6 @@ describe('server', function() {
     StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
   });
 
-  it('can click to resume', (done) => {
-    browser.clickLink('Resume').then(() => {
-      expect(browser.text('title')).to.include('Resume');
-    }).then(done);
-  });
-
   it('can click on a portfolio link', (done) => {
     browser.clickLink('Chalk Schools').then(() => {
       expect(browser.text('title')).to.include('Chalk Schools');
@@ -42,36 +36,51 @@ describe('server', function() {
     }).then(done);
   });
 
-  it('can click on a header link', (done) => {
-    browser.clickLink('Side Projects', () => {
+  describe('when clicking on a header link', () => {
+    beforeEach(() => browser.clickLink('Side Projects'));
+
+    it('has the right title', () => {
       expect(browser.text('title')).to.include('Side Projects');
+    });
+
+    it('has the expected projects', () => {
       expect(browser.text('body')).to.include('LAUNCH Hackathon 2015');
       expect(browser.text('body')).to.include('Internal Room 77 hackathon');
-    }).then(done);
+    });
   });
 
-  it('can click to hcd page', (done) => {
-    browser.clickLink('Resume', () => {
-      browser.clickLink('human-centered design', () => {
+  describe('when clicking to resume', () => {
+    beforeEach(() => browser.clickLink('Resume'));
+
+    it('has the right title', () => {
+      expect(browser.text('title')).to.include('Resume');
+    });
+
+    describe('when clicking to hcd page', () => {
+      beforeEach(() => browser.clickLink('human-centered design'));
+
+      it('has the right title', () => {
         expect(browser.text('title')).to.include('Human-Centered Design');
-      }).then(done);
+      });
     });
-  });
 
-  it('can click to donations page', (done) => {
-    browser.clickLink('Resume', () => {
-      browser.clickLink('my donations pledge', () => {
+    describe('when clicking to donations page', () => {
+      beforeEach(() => browser.clickLink('my donations pledge'));
+
+      it('has the right title', () => {
         expect(browser.text('title')).to.include('Donations Pledge');
-      }).then(done);
+      });
     });
-  });
 
-  it('can click to street view', (done) => {
-    browser.clickLink('Resume', () => {
-      browser.clickLink('More');
-      browser.clickLink('Fun teams page', () => {
+    describe('when clicking to street view', () => {
+      beforeEach(() => {
+        browser.clickLink('More');
+        return browser.clickLink('Fun teams page')
+      });
+
+      it('has the right title', () => {
         expect(browser.text('title')).to.include('Office Street View');
-      }).then(done);
+      });
     });
   });
 });
