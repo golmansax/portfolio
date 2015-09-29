@@ -29,11 +29,16 @@ describe('server', function() {
     StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
   });
 
-  it('can click on a portfolio link', (done) => {
-    browser.clickLink('Chalk Schools').then(() => {
+  describe('when clicking on a portfolio link', () => {
+    beforeEach(() => browser.clickLink('Chalk Schools'));
+
+    it('has the right title', () => {
       expect(browser.text('title')).to.include('Chalk Schools');
+    });
+
+    it('has the right content', () => {
       expect(browser.text('body')).to.include('A digital workflow system');
-    }).then(done);
+    });
   });
 
   describe('when clicking on a header link', () => {
@@ -49,14 +54,14 @@ describe('server', function() {
     });
   });
 
-  describe('when clicking to resume', () => {
+  describe('when clicking to resume', function() {
     beforeEach(() => browser.clickLink('Resume'));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Resume');
     });
 
-    describe('when clicking to hcd page', () => {
+    describe('when clicking to hcd page', function() {
       beforeEach(() => browser.clickLink('human-centered design'));
 
       it('has the right title', () => {
@@ -75,7 +80,7 @@ describe('server', function() {
     describe('when clicking to street view', () => {
       beforeEach(() => {
         browser.clickLink('More');
-        return browser.clickLink('Fun teams page')
+        return browser.clickLink('Fun teams page');
       });
 
       it('has the right title', () => {
