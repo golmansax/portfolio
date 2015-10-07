@@ -74,6 +74,17 @@
       ]
     },
     {
+      "slug": "my-impact-pledge",
+      "name": "My Impact Pledge",
+      "description": "A call to have people pledge to regularly support causes they believe in",
+      "url": "http://myimpactpledge.com",
+      "github": "golmansax/my-impact-pledge",
+      "stack": "Express.js, ES6, React.js, CSS Modules",
+      "images": [
+        "/static/my-impact-pledge.jpg"
+      ]
+    },
+    {
       "slug": "office-street-view",
       "name": "Office Street View",
       "createdFor": "Internal Room 77 hackathon",
