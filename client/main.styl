@@ -16,11 +16,7 @@ m(name) {
 }
 
 px-to-em($value) {
-  $my-unit = unit($value);
-
-  if ($my-unit is 'px') {
-    return unit($value/16, 'em');
-  }
+  return unit($value/16, 'em')
 }
 
 // Colors
