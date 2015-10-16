@@ -13,7 +13,6 @@ if (env === 'development') {
   const nib = require('nib');
   const jeet = require('jeet');
   const rupture = require('rupture');
-  const stylusTypeUtils = require('stylus-type-utils');
 
   server.use(stylus.middleware({
     src: __dirname + '/client',
@@ -24,7 +23,6 @@ if (env === 'development') {
         .set('paths', [__dirname + '/node_modules'])
         .use(jeet())
         .use(rupture())
-        .use(stylusTypeUtils())
         .use(nib());
     },
   }));

@@ -41,6 +41,7 @@
     "jeet": "*",
     "nib": "*",
     "react": "*",
+    "react-dom": "*",
     "react-document-title": "*",
     "react-mixin": "*",
     "react-router": "*",
@@ -48,7 +49,6 @@
     "reactify": "*",
     "rupture": "*",
     "stylus": "*",
-    "stylus-type-utils": "*",
     "uglify-js": "*"
   },
   "scripts": {

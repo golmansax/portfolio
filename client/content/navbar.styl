@@ -1,6 +1,8 @@
+$navbar-lambda = 3 * $lambda
+
 .navbar {
   background $my-green
-  padding .75em 0 .5em
+  height unit($navbar-lambda, em)
   position relative
 
   h1 {
@@ -9,12 +11,12 @@
 
   +e(menu) {
     position absolute
-    top em(70px)
+    top px-to-em(70px)
     right 0
     background $white
     border-left $colored-border
 
-    min-width em(200px)
+    min-width px-to-em(200px)
 
     a {
       display block
@@ -43,8 +45,11 @@
 }
 
 .navbar-left {
-  clearfix()
   float left
+
+  a {
+    clearfix()
+  }
 
   img,
   h1 {
@@ -52,13 +57,18 @@
   }
 
   img {
-    margin-right .75em
+    $img-lambda = 2 * $lambda
+    $img-width = unit($img-lambda, em)
+
+    height $img-width
+    margin unit(($navbar-lambda - $img-lambda) / 2, em)
+    width $img-width
   }
 }
 
 .navbar-right {
   float right
-  line-height em(50px)
+  line-height $navbar-lambda
 
   a {
     color $white
