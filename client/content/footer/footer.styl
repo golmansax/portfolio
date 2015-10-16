@@ -1,13 +1,20 @@
 @require 'font-awesome-stylus/stylus/mixins'
 @require 'font-awesome-stylus/stylus/variables'
 
+$footer-lambda = $lambda * 3 / 2
+
 .content-footer {
-  margin-top unit($lambda, em)
+  margin-top unit(2 * $lambda, em)
   border-top $colored-border
+  line-height $footer-lambda
   padding 1em 0
 
+  h2 {
+    line-height ($footer-lambda / $h2-lambda)
+  }
+
   +e(section) {
-    margin-bottom 2em
+    margin-bottom unit($lambda, em)
 
     &:last-child {
       margin-bottom 0

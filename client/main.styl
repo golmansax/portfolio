@@ -25,13 +25,15 @@ $darker-gray = #222
 $dark-gray = #444
 $light-gray = #bbb
 $white = white
-$header-ratio = 1.25em
+$header-ratio = 1.25
 
 // Borders
 $colored-border = px-to-em(1px) $my-green solid
 $muted-border = px-to-em(1px) $light-gray solid
 
 $lambda = 1.5
+$h1-lambda = $header-ratio ** 3
+$h2-lambda = $header-ratio ** 2
 
 html,
 body {
@@ -61,26 +63,24 @@ body {
 h1,
 h2,
 h3 {
-  line-height 1.2
   color $darker-gray
 }
 
 h1 {
-  $h1-size = $header-ratio ** 3
-
-  font-size $header-ratio ** 3
+  font-size unit($h1-lambda, em)
   font-weight bold
-  line-height (($lambda * 3) / $h1-size)
+  line-height (($lambda * 3) / $h1-lambda)
 }
 
 h2 {
-  font-size $header-ratio ** 2
+  font-size unit($h2-lambda, em)
   font-weight bold
-  padding .15em 0
+  line-height (($lambda * 2) / $h2-lambda)
 }
 
 h3 {
-  font-size $header-ratio
+  font-size unit($header-ratio, em)
+  line-height 1.2
   padding .15em 0
 }
 

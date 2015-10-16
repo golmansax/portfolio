@@ -5224,7 +5224,7 @@
     },
     "react": {
       "version": "0.13.3",
-      "from": "react@*",
+      "from": "https://registry.npmjs.org/react/-/react-0.13.3.tgz",
       "resolved": "https://registry.npmjs.org/react/-/react-0.13.3.tgz"
     },
     "react-bind-mixin": {
@@ -6181,11 +6181,6 @@
           }
         }
       }
-    },
-    "stylus-type-utils": {
-      "version": "0.0.3",
-      "from": "stylus-type-utils@*",
-      "resolved": "https://registry.npmjs.org/stylus-type-utils/-/stylus-type-utils-0.0.3.tgz"
     },
     "travis-lint": {
       "version": "0.0.5",

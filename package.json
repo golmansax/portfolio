@@ -41,7 +41,6 @@
     "jeet": "*",
     "nib": "*",
     "react": "*",
-    "react-dom": "*",
     "react-document-title": "*",
     "react-mixin": "*",
     "react-router": "*",

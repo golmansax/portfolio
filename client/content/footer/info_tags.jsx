@@ -8,7 +8,7 @@ export default class ContentFooterInfoTags extends React.Component {
     return (
       <div className='content-footer-info-tags'>
         <div className='content-footer-info-tags__group'>
-          <div className='content-footer-info-tags__tag'>
+          <div>
             <a href='https://github.com/golmansax'>
               <StackedIcon back='github' front='fw' />
               golmansax
