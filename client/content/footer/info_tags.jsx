@@ -19,7 +19,7 @@ export default class ContentFooterInfoTags extends React.Component {
               <StackedIcon
                 back='circle'
                 front='file-text'
-                className='content-footer__resume-icon'
+                className='content-footer-info-tags__resume-icon'
               />
               Resume
             </Link>
@@ -28,7 +28,7 @@ export default class ContentFooterInfoTags extends React.Component {
         <div className='content-footer-info-tags__group'>
           <div className='content-footer-info-tags__tag'>
             <StackedIcon
-              className='content-footer__email-icon'
+              className='content-footer-info-tags__email-icon'
               back='circle'
               front='envelope'
             />
