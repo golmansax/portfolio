@@ -42,7 +42,9 @@ export default class ProjectsContent extends React.Component {
           {this._renderResponsibilities()}
           {this._renderPress()}
         </dl>
-        {this._renderCustom()}
+        <div className='projects-content__custom-content'>
+          {this._renderCustom()}
+        </div>
       </div>
     );
   }

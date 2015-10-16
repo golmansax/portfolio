@@ -1,7 +1,14 @@
 .resume-notes {
+  margin-left unit($lambda, em)
+
+  +e(heading) {
+    font-weight bold
+  }
+
   +e(list-item-icon) {
-    font-size .4em
-    left -3em
-    top 1.5em
+    // need to hard code because em doesn't go small enough =(
+    font-size 5px
+    left -15px
+    top 10px
   }
 }

@@ -7,6 +7,7 @@ export default class ResumeNotes extends React.Component {
     super(props);
     this._toggleShowMore = this._toggleShowMore.bind(this);
     this._renderNote = this._renderNote.bind(this);
+    this._renderHeading = this._renderHeading.bind(this);
     this._renderShowMore = this._renderShowMore.bind(this);
 
     // We start by showing all if numInitialNotesToShow is turned off, but we
@@ -27,11 +28,20 @@ export default class ResumeNotes extends React.Component {
     }
 
     return (
-      <ul className='resume-notes fa-ul'>
-        {notes}
-        {showMore}
-      </ul>
+      <div>
+        {this._renderHeading()}
+        <ul className='resume-notes fa-ul'>
+          {notes}
+          {showMore}
+        </ul>
+      </div>
     );
+  }
+
+  _renderHeading() {
+    if (!this.props.heading) { return null; }
+
+    return <div className='resume-notes__heading'>{this.props.heading}</div>;
   }
 
   _renderShowMore() {
@@ -69,4 +79,5 @@ export default class ResumeNotes extends React.Component {
 ResumeNotes.propTypes = {
   notes: React.PropTypes.array.isRequired,
   numInitialNotesToShow: React.PropTypes.number,
+  heading: React.PropTypes.string,
 };

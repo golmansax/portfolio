@@ -32,6 +32,7 @@ $muted-border = px-to-em(1px) $light-gray solid
 $lambda = 1.5
 $h1-lambda = $header-ratio ** 3
 $h2-lambda = $header-ratio ** 2
+$h3-lambda = $header-ratio
 
 html,
 body {
@@ -66,6 +67,7 @@ dl,
 dd,
 ul {
   margin 0
+  padding 0
 }
 
 h1,
@@ -87,9 +89,9 @@ h2 {
 }
 
 h3 {
-  font-size unit($header-ratio, em)
-  line-height 1.2
-  padding .15em 0
+  font-size unit($h3-lambda, em)
+  line-height ($lambda / $h3-lambda)
+  margin unit($lambda / $h3-lambda / 2, em) 0
 }
 
 hr {

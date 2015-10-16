@@ -28,18 +28,15 @@ export default class Resume extends React.Component {
     return <ResumeEntry {...entry} key={index} />;
   }
 
-  _renderCategory(category, index) {
+  _renderCategory(category) {
     const entries = this.props[category].map(this._renderEntry);
-    let breaks;
-    if (index < CATEGORIES.length - 1) { breaks = (<div><br /><hr /></div>); }
 
     return (
-      <div key={category}>
+      <div key={category} className='resume-category__container'>
         <Container className='resume-category'>
           <h2>{TITLES[category]}</h2>
           {entries}
         </Container>
-        {breaks}
       </div>
     );
   }

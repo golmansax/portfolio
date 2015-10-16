@@ -4,13 +4,13 @@
       "slug": "volunteering",
 			"name": "Volunteering",
       "description": [
-        "I try to stay involved with the community through volunteering.  ",
-        "Here is a list of the organizations that I have worked with:"
+        "I try to stay involved with the community through volunteering."
       ],
       "custom": [
 				{
 					"klass": "ResumeNotes",
 					"attrs": {
+            "heading": "Organizations I have worked with:",
             "notes": [
               {
                 "left": [
