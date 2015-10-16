@@ -1,6 +1,12 @@
 .projects-image {
   clearfix()
 
+  margin-bottom unit($lambda, em)
+
+  &:last-child {
+    margin-bottom 0
+  }
+
   img {
     width 100%
     border $muted-border
