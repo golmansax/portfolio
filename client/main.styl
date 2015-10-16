@@ -1,8 +1,6 @@
 @require 'nib'
 @require 'jeet'
 
-global-reset()
-
 e(name) {
   &__{name} {
     {block}
@@ -62,6 +60,16 @@ body {
 
 h1,
 h2,
+h3,
+p,
+dl,
+dd,
+ul {
+  margin 0
+}
+
+h1,
+h2,
 h3 {
   color $darker-gray
 }
@@ -95,10 +103,6 @@ em {
 
 img {
   vertical-align top // or else image gets added padding on bottom
-}
-
-p {
-  margin-bottom .5em
 }
 
 a {

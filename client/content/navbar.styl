@@ -36,12 +36,16 @@ $navbar-lambda = 3 * $lambda
     color $white
     float right
     height unit($navbar-lambda, em)
-    margin-right -.6em // fudge factor to get image to line up with container
-    padding 0 unit($lambda / 2, em)
+    margin-right -.9em // fudge factor to get image to line up with container
+    padding 0 unit($navbar-lambda / 4, em)
 
     +above('l') {
       display none
     }
+  }
+
+  +e(sidebar-trigger-icon) {
+    font-size unit($navbar-lambda / 2, em);
   }
 }
 

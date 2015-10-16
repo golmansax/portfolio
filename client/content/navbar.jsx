@@ -43,7 +43,7 @@ export default class ContentNavbar extends React.Component {
             className='navbar__sidebar-trigger'
             onClick={this._toggleMenu}
             >
-            <i className='fa fa-bars fa-3x' />
+            <i className='fa fa-bars navbar__sidebar-trigger-icon' />
           </button>
         </Container>
         {this._renderNavbarMenu()}

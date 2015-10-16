@@ -18,6 +18,11 @@ export default class LayoutHead extends React.Component {
         <link
           type='text/css'
           rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css'
+        />
+        <link
+          type='text/css'
+          rel='stylesheet'
           href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic'
         />
         <link

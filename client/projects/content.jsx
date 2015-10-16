@@ -115,9 +115,7 @@ export default class ProjectsContent extends React.Component {
     }
 
     return (
-      <p className='projects-list-item__description'>
-        <Fragments fragments={description} />
-      </p>
+      <p><Fragments fragments={description} /></p>
     );
   }
 
