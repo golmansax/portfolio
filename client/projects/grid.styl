@@ -21,10 +21,10 @@
     clearfix()
 
     +above('m') {
-      padding 1em 0
+      padding unit($lambda, em) 0
 
       &:first-child {
-        padding-top 2em
+        padding-top unit(2 * $lambda, em)
       }
     }
   }

@@ -35,7 +35,14 @@ $lambda = 1.5
 
 html,
 body {
+  box-sizing border-box
   height 100%
+}
+
+*, // @stylint ignore
+*:before, // @stylint ignore
+*:after { // @stylint ignore
+  box-sizing inherit
 }
 
 body {
