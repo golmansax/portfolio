@@ -11,16 +11,14 @@ $navbar-lambda = 3 * $lambda
 
   +e(menu) {
     position absolute
-    top px-to-em(70px)
+    top unit($navbar-lambda, em)
     right 0
     background $white
     border-left $colored-border
 
-    min-width px-to-em(200px)
-
     a {
       display block
-      padding 1em
+      padding unit($lambda / 2, em) unit($lambda, em)
       border-bottom $colored-border
       text-decoration none
 
