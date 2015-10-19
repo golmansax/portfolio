@@ -55,7 +55,7 @@
     "postinstall": "npm prune && npm run build",
     "start": "node index.js",
     "start-dev": "nodemon -e js,jsx,json,styl",
-    "start-forever": "forever start index.js",
+    "start-forever": "PORT=7704 forever start index.js",
     "test": "make test",
     "watch": "make watch"
   }
