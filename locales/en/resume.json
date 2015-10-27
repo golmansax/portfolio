@@ -15,7 +15,7 @@
 			},
 			"numInitialNotesToShow": 2,
 			"notes": [
-        ["Build out infrastructure to allow partners to bid for search result placement in a second-price auction (Code in C++)"]
+        ["Build out infrastructure to allow partners to bid for search result placement in a second-price auction (in C++)"]
 			]
     },
 		{

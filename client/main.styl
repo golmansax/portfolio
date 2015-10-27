@@ -1,6 +1,11 @@
 @require 'nib'
 @require 'jeet'
 
+$lambda = 1.5
+$container-scale = 40
+$container-width = unit($container-scale * $lambda, em)
+jeet['gutter'] = 100 / 40 * 2 // this is a percentage, to be 2 * $lambda
+
 e(name) {
   &__{name} {
     {block}
@@ -15,8 +20,8 @@ m(name) {
 
 // Colors
 $my-green = #198565
-$darker-gray = #222
-$dark-gray = #444
+$darker-gray = #444
+$dark-gray = #666
 $light-gray = #bbb
 $white = white
 $header-ratio = 1.25
@@ -25,7 +30,6 @@ $header-ratio = 1.25
 $colored-border = .1rem $my-green solid
 $muted-border = .1rem $light-gray solid
 
-$lambda = 1.5
 $h1-lambda = $header-ratio ** 3
 $h2-lambda = $header-ratio ** 2
 $h3-lambda = $header-ratio
