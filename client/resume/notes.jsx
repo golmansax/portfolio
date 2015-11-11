@@ -77,7 +77,7 @@ export default class ResumeNotes extends React.Component {
 }
 
 ResumeNotes.propTypes = {
+  heading: React.PropTypes.string,
   notes: React.PropTypes.array.isRequired,
   numInitialNotesToShow: React.PropTypes.number,
-  heading: React.PropTypes.string,
 };

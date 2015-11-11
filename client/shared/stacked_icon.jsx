@@ -19,7 +19,7 @@ export default class StackedIcon extends React.Component {
 }
 
 StackedIcon.propTypes = {
-  front: React.PropTypes.string.isRequired,
   back: React.PropTypes.string.isRequired,
   className: React.PropTypes.string,
+  front: React.PropTypes.string.isRequired,
 };

@@ -27,7 +27,10 @@
     "zombie": "*"
   },
   "dependencies": {
-    "babel": "*",
+    "babel-core": "*",
+    "babel-plugin-transform-object-assign": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
     "babelify": "*",
     "browserify": "*",
     "backbone-sortable-collection": "*",

@@ -11,7 +11,7 @@ export default class Position extends React.Component {
 }
 
 Position.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  start: React.PropTypes.string.isRequired,
   end: React.PropTypes.string.isRequired,
+  start: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
 };

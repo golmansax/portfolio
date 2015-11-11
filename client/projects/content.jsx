@@ -8,9 +8,9 @@ import ResumeNotes from '../resume/notes';
 import FragmentsBulletList from '../fragments/bullet_list';
 
 const Custom = {
-  Donations: Donations,
-  ResumeNotes: ResumeNotes,
-  FragmentsBulletList: FragmentsBulletList,
+  Donations,
+  ResumeNotes,
+  FragmentsBulletList,
 };
 
 export default class ProjectsContent extends React.Component {
@@ -168,18 +168,18 @@ export default class ProjectsContent extends React.Component {
 }
 
 ProjectsContent.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string,
+  createdFor: React.PropTypes.string,
+  custom: React.PropTypes.object,
   description: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.array,
   ]).isRequired,
-  createdFor: React.PropTypes.string,
-  stack: React.PropTypes.string,
   github: React.PropTypes.string,
-  joinedWhen: React.PropTypes.string,
   involvedWith: React.PropTypes.array,
-  press: React.PropTypes.array,
-  custom: React.PropTypes.object,
+  joinedWhen: React.PropTypes.string,
+  name: React.PropTypes.string.isRequired,
   positions: React.PropTypes.array,
+  press: React.PropTypes.array,
+  stack: React.PropTypes.string,
+  url: React.PropTypes.string,
 };

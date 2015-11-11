@@ -33,8 +33,8 @@ ResumeEntry.defaultProps = {
 };
 
 ResumeEntry.propTypes = {
-  title: React.PropTypes.array.isRequired,
+  image: React.PropTypes.array,
   notes: React.PropTypes.array.isRequired,
   numInitialNotesToShow: React.PropTypes.bool,
-  image: React.PropTypes.array,
+  title: React.PropTypes.array.isRequired,
 };

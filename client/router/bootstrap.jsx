@@ -6,13 +6,13 @@ import { loadData } from '../data/store';
 import { loadImages } from '../images/store';
 import { toggleMenuShowing } from '../content/state_store';
 
-require('babelify/polyfill');
+// require('babelify/polyfill');
 
 loadData(gon.data);
 loadImages(gon.images);
 
 const router = Router.create({
-  routes: routes,
+  routes,
   location: Router.HistoryLocation,
   scrollBehavior: Router.ScrollToTopBehavior,
 });

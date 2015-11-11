@@ -63,8 +63,8 @@ export default class ProjectsListItem extends React.Component {
 }
 
 ProjectsListItem.propTypes = {
+  gif: React.PropTypes.string,
   images: React.PropTypes.array,
   pdf: React.PropTypes.string,
   slug: React.PropTypes.string,
-  gif: React.PropTypes.string,
 };

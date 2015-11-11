@@ -3,15 +3,15 @@ import express from 'express';
 import path from 'path';
 import cachifyStatic from 'connect-cachify-static';
 import i18n from 'i18next';
+import { isDevelopment } from './config';
 import routes from './routes';
 
 const server = express();
-const env = process.env.NODE_ENV || 'development';
 const rootDirname = path.resolve(__dirname, '..');
 
 server.use(cachifyStatic(`${rootDirname}/public`));
 
-if (env === 'development') {
+if (isDevelopment()) {
   const stylus = require('stylus');
   const nib = require('nib');
   const jeet = require('jeet');

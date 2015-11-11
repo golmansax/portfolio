@@ -18,11 +18,11 @@ export default class Icon extends React.Component {
 }
 
 Icon.propTypes = {
-  type: React.PropTypes.string.isRequired,
-  listItem: React.PropTypes.bool,
   border: React.PropTypes.bool,
-  inverse: React.PropTypes.bool,
   className: React.PropTypes.string,
+  inverse: React.PropTypes.bool,
+  listItem: React.PropTypes.bool,
   size: React.PropTypes.string,
   stack: React.PropTypes.string,
+  type: React.PropTypes.string.isRequired,
 };

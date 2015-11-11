@@ -21,9 +21,9 @@ export default class Fragment extends React.Component {
 }
 
 Fragment.propTypes = {
-  url: React.PropTypes.string,
-  text: React.PropTypes.string,
-  routeName: React.PropTypes.string,
-  params: React.PropTypes.object,
   github: React.PropTypes.string,
+  params: React.PropTypes.object,
+  routeName: React.PropTypes.string,
+  text: React.PropTypes.string,
+  url: React.PropTypes.string,
 };

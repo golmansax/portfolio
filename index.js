@@ -1,3 +1,3 @@
-require('babel/register');
-require('./server').listen(process.env.PORT || 3000);
+require('babel-core/register');
+require('./server').listen(require('./server/config').PORT);
 
