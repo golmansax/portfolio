@@ -1,12 +1,15 @@
-import RouterRoute from './client/router/route';
+import RouterRoute from '../client/router/route';
 import express from 'express';
+import path from 'path';
 import cachifyStatic from 'connect-cachify-static';
 import i18n from 'i18next';
+import routes from './routes';
 
 const server = express();
 const env = process.env.NODE_ENV || 'development';
+const rootDirname = path.resolve(__dirname, '..');
 
-server.use(cachifyStatic(__dirname + '/public'));
+server.use(cachifyStatic(`${rootDirname}/public`));
 
 if (env === 'development') {
   const stylus = require('stylus');
@@ -15,12 +18,12 @@ if (env === 'development') {
   const rupture = require('rupture');
 
   server.use(stylus.middleware({
-    src: __dirname + '/client',
-    dest: __dirname + '/public/assets',
+    src: `${rootDirname}/client`,
+    dest: `${rootDirname}/public/assets`,
     compile: (str, path) => {
       return stylus(str)
         .set('filename', path)
-        .set('paths', [__dirname + '/node_modules'])
+        .set('paths', [`${rootDirname}/node_modules`])
         .use(jeet())
         .use(rupture())
         .use(nib());
@@ -28,7 +31,7 @@ if (env === 'development') {
   }));
 }
 
-server.use(express.static(__dirname + '/public'));
+server.use(express.static(`${rootDirname}/public`));
 
 i18n.init({
   lng: 'en-US',
@@ -45,13 +48,6 @@ i18n.init({
   returnObjectTrees: true,
 });
 
-server.get('/work', RouterRoute);
-server.get('/work/:projectId', RouterRoute);
-server.get('/side-projects', RouterRoute);
-server.get('/side-projects/:projectId', RouterRoute);
-server.get('/in-community', RouterRoute);
-server.get('/in-community/:projectId', RouterRoute);
-server.get('/', RouterRoute);
-server.get('/resume', RouterRoute);
+routes.forEach((route) => server.get(route, RouterRoute));
 
 export default server;
