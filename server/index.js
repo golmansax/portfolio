@@ -20,9 +20,9 @@ if (env === 'development') {
   server.use(stylus.middleware({
     src: `${rootDirname}/client`,
     dest: `${rootDirname}/public/assets`,
-    compile: (str, path) => {
+    compile: (str, filePath) => {
       return stylus(str)
-        .set('filename', path)
+        .set('filename', filePath)
         .set('paths', [`${rootDirname}/node_modules`])
         .use(jeet())
         .use(rupture())
