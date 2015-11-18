@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component, PropTypes } from 'react';
 import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
 
-export default class ProjectsGrid extends React.Component {
+class ProjectsGrid extends Component {
   constructor(props) {
     super(props);
     this._getProjectChunks = this._getProjectChunks.bind(this);
@@ -55,5 +55,7 @@ export default class ProjectsGrid extends React.Component {
 }
 
 ProjectsGrid.propTypes = {
-  projects: React.PropTypes.instanceOf(Array).isRequired,
+  projects: PropTypes.instanceOf(Array).isRequired,
 };
+
+export default ProjectsGrid;

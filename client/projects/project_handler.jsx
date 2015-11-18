@@ -1,7 +1,5 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-import reactMixin from 'react-mixin';
-import { State } from 'react-router';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getAllProjects } from '../data/store';
@@ -24,12 +22,12 @@ const PARENT_BREADCRUMBS = {
 export default class ProjectHandler extends React.Component {
   render() {
     const myProject = getAllProjects().find((project) => {
-      return project.slug === this.getParams().projectId;
+      return project.slug === this.props.params.projectId;
     });
 
     // TODO catch projects that don't match
 
-    const currentRoutes = this.getRoutes();
+    const currentRoutes = this.props.routes;
     const routeName = currentRoutes[currentRoutes.length - 1].name;
 
     return (
@@ -47,4 +45,3 @@ export default class ProjectHandler extends React.Component {
     );
   }
 }
-reactMixin.onClass(ProjectHandler, State);

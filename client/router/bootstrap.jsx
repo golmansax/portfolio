@@ -1,5 +1,8 @@
-import React from 'react';
-import * as Router from 'react-router';
+import { render } from 'react-dom';
+import { Router } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory'
+import useScrollToTop from 'scroll-behavior/lib/useScrollToTop'
+
 import routes from '../routes';
 import gon from '../gon';
 import { loadData } from '../data/store';
@@ -11,13 +14,12 @@ import { toggleMenuShowing } from '../content/state_store';
 loadData(gon.data);
 loadImages(gon.images);
 
-const router = Router.create({
-  routes,
-  location: Router.HistoryLocation,
-  scrollBehavior: Router.ScrollToTopBehavior,
-});
+const history = useScrollToTop(createBrowserHistory)();
 
-router.run((Handler) => {
-  toggleMenuShowing(false);
-  React.render(<Handler />, global.document.getElementById('content'));
-});
+toggleMenuShowing(false);
+render(
+  <Router history={history}>
+    {routes}
+  </Router>,
+  global.document.getElementById('content')
+);

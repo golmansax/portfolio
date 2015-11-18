@@ -1,5 +1,4 @@
-import React from 'react';
-import { RouteHandler } from 'react-router';
+import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
 import ContentNavbar from './navbar';
 import ContentFooter from './footer/footer';
@@ -10,7 +9,7 @@ import {
   toggleMenuShowing,
 } from './state_store';
 
-export default class ContentHandler extends React.Component {
+class ContentHandler extends Component {
   constructor(props) {
     super(props);
     this._renderBackdrop = this._renderBackdrop.bind(this);
@@ -36,7 +35,7 @@ export default class ContentHandler extends React.Component {
           </div>
           <div className='content-handler__body'>
             {this._renderBackdrop()}
-            <RouteHandler />
+            {this.props.children}
             <ContentFooter />
           </div>
         </div>
@@ -61,3 +60,5 @@ export default class ContentHandler extends React.Component {
     this.setState({ isMenuShowing: isMenuShowing() });
   }
 }
+
+export default ContentHandler;

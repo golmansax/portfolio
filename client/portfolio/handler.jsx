@@ -2,9 +2,10 @@ import React from 'react';
 import ProjectsGrid from '../projects/grid';
 import { getAllProjects } from '../data/store';
 
-export default class PorfolioHandler extends React.Component {
-  render() {
-    const allProjects = getAllProjects().filter((project) => project.images);
-    return <ProjectsGrid projects={allProjects} />;
-  }
-}
+const getProjects = () => getAllProjects().filter((project) => project.images);
+
+const PortfolioHandler = () => (
+  <ProjectsGrid projects={getProjects()} />
+);
+
+export default PortfolioHandler;

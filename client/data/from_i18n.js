@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import i18n from '../../server/my_i18n';
 import ProjectsArray from '../projects/array';
 
 export default function getDataFromI18n() {

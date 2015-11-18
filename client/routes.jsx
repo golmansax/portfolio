@@ -1,5 +1,5 @@
 import React from 'react';
-import { DefaultRoute, Route } from 'react-router';
+import { IndexRoute, Route } from 'react-router';
 import PortfolioHandler from './portfolio/handler';
 import WorkProjectsHandler from './work_projects/handler';
 import SideProjectsHandler from './side_projects/handler';
@@ -10,15 +10,15 @@ import ContentHandler from './content/handler';
 
 export default (
   /* eslint-disable max-len */
-  <Route handler={ContentHandler}>
-    <DefaultRoute name='portfolio' handler={PortfolioHandler} />
-    <Route name='workProjects' path='/work' handler={WorkProjectsHandler} />
-    <Route name='workProject' path='/work/:projectId' handler={ProjectHandler} />
-    <Route name='sideProjects' path='/side-projects' handler={SideProjectsHandler} />
-    <Route name='sideProject' path='/side-projects/:projectId' handler={ProjectHandler} />
-    <Route name='communityProjects' path='/in-community' handler={CommunityProjectsHandler} />
-    <Route name='communityProject' path='/in-community/:projectId' handler={ProjectHandler} />
-    <Route name='resume' handler={ResumeHandler} />
+  <Route path='/' component={ContentHandler}>
+    <IndexRoute component={PortfolioHandler} />
+    <Route path='/work' component={WorkProjectsHandler} />
+    <Route path='/work/:projectId' component={ProjectHandler} />
+    <Route path='/side-projects' component={SideProjectsHandler} />
+    <Route path='/side-projects/:projectId' component={ProjectHandler} />
+    <Route path='/in-community' component={CommunityProjectsHandler} />
+    <Route path='/in-community/:projectId' component={ProjectHandler} />
+    <Route path='/resume' component={ResumeHandler} />
   </Route>
   /* eslint-enable max-len */
 );

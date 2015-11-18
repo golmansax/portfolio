@@ -10,7 +10,7 @@ import {
   toggleMenuShowing,
 } from './state_store';
 
-export default class ContentNavbar extends React.Component {
+class ContentNavbar extends React.Component {
   constructor(props) {
     super(props);
     this._renderNavbarMenu = this._renderNavbarMenu.bind(this);
@@ -71,3 +71,5 @@ export default class ContentNavbar extends React.Component {
     this.setState({ isMenuShowing: isMenuShowing() });
   }
 }
+
+export default ContentNavbar;

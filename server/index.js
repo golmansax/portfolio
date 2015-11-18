@@ -2,9 +2,9 @@ import RouterRoute from '../client/router/route';
 import express from 'express';
 import path from 'path';
 import cachifyStatic from 'connect-cachify-static';
-import i18n from 'i18next';
 import { isDevelopment } from './config';
 import routes from './routes';
+import './my_i18n';
 
 const server = express();
 const rootDirname = path.resolve(__dirname, '..');
@@ -32,21 +32,6 @@ if (isDevelopment()) {
 }
 
 server.use(express.static(`${rootDirname}/public`));
-
-i18n.init({
-  lng: 'en-US',
-  ns: {
-    namespaces: [
-      'app',
-      'community_projects',
-      'work_projects',
-      'side_projects',
-      'resume',
-    ],
-    defaultNs: 'app',
-  },
-  returnObjectTrees: true,
-});
 
 routes.forEach((route) => server.get(route, RouterRoute));
 

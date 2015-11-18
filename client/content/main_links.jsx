@@ -1,4 +1,4 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Fragment from '../fragments/fragment';
 
 const LINKS = [
@@ -7,23 +7,16 @@ const LINKS = [
   { routeName: 'communityProjects', text: 'In Community' },
 ];
 
-export default class ContentMainLinks extends React.Component {
-  constructor(props) {
-    super(props);
-    this._renderLink = this._renderLink.bind(this);
-  }
+const renderLink = (navbarLink, index) => (
+  <Fragment key={index} {...navbarLink} />
+);
 
-  render() {
-    return (
-      <div className={this.props.className}>
-        {LINKS.map(this._renderLink)}
-      </div>
-    );
-  }
+const ContentMainLinks = ({ className }) => (
+  <div className={className}>
+    {LINKS.map(renderLink)}
+  </div>
+);
 
-  _renderLink(navbarLink, index) {
-    return <Fragment key={index} {...navbarLink} />;
-  }
-}
+ContentMainLinks.propTypes = { className: PropTypes.string };
 
-ContentMainLinks.propTypes = { className: React.PropTypes.string };
+export default ContentMainLinks;
