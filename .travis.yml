@@ -2,7 +2,6 @@ sudo: false
 language: node_js
 install:
 - NODE_ENV=development npm install
-- NODE_ENV=development npm prune
 before_script:
 - make build
 script:
@@ -10,9 +9,9 @@ script:
 - make eslint
 - make stylint
 - npm test
-cache:
-  directories:
-  - node_modules
+# cache:
+#   directories:
+#   - node_modules
 env:
 - NODE_ENV=production
 deploy:

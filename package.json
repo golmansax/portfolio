@@ -58,7 +58,7 @@
     "uglify-js": "*"
   },
   "scripts": {
-    "postinstall": "npm prune && ./scripts/npm_postinstall.sh",
+    "postinstall": "./scripts/npm_postinstall.sh",
     "start": "make start-dev",
     "test": "make test",
     "watch": "make watch"
