@@ -1,26 +1,26 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Fragments from './fragments';
 
-export default class FragmentsBlock extends React.Component {
-  render() {
-    if (this.props.data.left) {
-      return (
-        <div className='clearfix'>
-          <div className='fragment-left'>
-            <Fragments fragments={this.props.data.left} />
-          </div>
-          <div className='fragment-right'>
-            <em>
-              <Fragments fragments={this.props.data.right} />
-            </em>
-          </div>
+const FragmentsBlock = ({ data }) => {
+  if (data.left) {
+    return (
+      <div className='clearfix'>
+        <div className='fragment-left'>
+          <Fragments fragments={data.left} />
         </div>
-      );
-    }
-
-    return <Fragments fragments={this.props.data} />;
+        <div className='fragment-right'>
+          <em>
+            <Fragments fragments={data.right} />
+          </em>
+        </div>
+      </div>
+    );
   }
-}
+
+  return <Fragments fragments={data} />;
+};
 
 FragmentsBlock.defaultProps = { data: [] };
-FragmentsBlock.propTypes = { data: React.PropTypes.object.isRequired };
+FragmentsBlock.propTypes = { data: PropTypes.object.isRequired };
+
+export default FragmentsBlock;

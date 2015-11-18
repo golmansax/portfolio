@@ -1,16 +1,15 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Icon from '../shared/icon';
 
-export default class GithubFragment extends React.Component {
-  render() {
-    return (
-      <div>
-        <a href={`https://github.com/${this.props.github}`}>
-          <Icon type='github-square' className='github-fragment__icon' />
-          {this.props.github}
-        </a>
-      </div>
-    );
-  }
-}
-GithubFragment.propTypes = { github: React.PropTypes.string.isRequired };
+const GithubFragment = ({ github }) => (
+  <div>
+    <a href={`https://github.com/${github}`}>
+      <Icon type='github-square' className='github-fragment__icon' />
+      {github}
+    </a>
+  </div>
+);
+
+GithubFragment.propTypes = { github: PropTypes.string.isRequired };
+
+export default GithubFragment;

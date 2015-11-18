@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../shared/icon';
 import FragmentsBlock from '../fragments/block';
 
-export default class ResumeNotes extends React.Component {
+class ResumeNotes extends React.Component {
   constructor(props) {
     super(props);
     this._toggleShowMore = this._toggleShowMore.bind(this);
@@ -81,3 +81,5 @@ ResumeNotes.propTypes = {
   notes: React.PropTypes.array.isRequired,
   numInitialNotesToShow: React.PropTypes.number,
 };
+
+export default ResumeNotes;

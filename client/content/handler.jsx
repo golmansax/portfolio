@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component, PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
 import ContentNavbar from './navbar';
 import ContentFooter from './footer/footer';
@@ -60,5 +60,9 @@ class ContentHandler extends Component {
     this.setState({ isMenuShowing: isMenuShowing() });
   }
 }
+
+ContentHandler.propTypes = {
+  children: PropTypes.element,
+};
 
 export default ContentHandler;

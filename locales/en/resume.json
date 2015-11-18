@@ -124,8 +124,7 @@
 				],
 				[
 					{
-            "routeName": "sideProject",
-            "params": { "projectId": "office-street-view" },
+            "routeName": "/side-projects/office-street-view",
 						"text": "Fun teams page"
 					},
 					" created in an internal hackathon"
@@ -302,14 +301,12 @@
 					", ",
 					{
             "text": "human-centered design",
-            "routeName": "communityProject",
-            "params": { "projectId": "human-centered-design" }
+            "routeName": "/in-community/human-centered-design"
 					},
 					", ",
 					{
 						"text": "my donations pledge",
-            "routeName": "communityProject",
-            "params": { "projectId": "my-donations-pledge" }
+            "routeName": "/in-community/my-donations-pledge"
 					}
 				]
 			]

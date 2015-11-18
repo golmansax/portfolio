@@ -1,7 +1,7 @@
 import React from 'react';
 import Fragments from '../fragments/fragments';
 
-export default class FragmentsBulletList extends React.Component {
+class FragmentsBulletList extends React.Component {
   constructor(props) {
     super(props);
     this._renderBullet = this._renderBullet.bind(this);
@@ -32,3 +32,5 @@ export default class FragmentsBulletList extends React.Component {
   }
 }
 FragmentsBulletList.propTypes = { bullets: React.PropTypes.array.isRequired };
+
+export default FragmentsBulletList;

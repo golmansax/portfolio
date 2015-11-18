@@ -5,7 +5,7 @@ import getImagesData from '../images/data';
 const getScript = () => {
   const gon = { data: getDataFromI18n(), images: getImagesData() };
   return `window.gon = ${JSON.stringify(gon)}`;
-}
+};
 
 const LayoutInlineData = () => (
   <script

@@ -9,7 +9,7 @@ const TITLES = {
   other: 'Other',
 };
 
-export default class Resume extends React.Component {
+class Resume extends React.Component {
   constructor(props) {
     super(props);
     this._renderEntry = this._renderEntry.bind(this);
@@ -42,3 +42,5 @@ export default class Resume extends React.Component {
   }
 }
 Resume.defaultProps = { work: [], education: [], other: [] };
+
+export default Resume;

@@ -9,19 +9,14 @@ const renderMetaDescription = (description) => {
   }
 
   return <meta name='description' content={description} />;
-}
+};
 
 const getMetaData = (routes) => {
-  const routeName = currentRoutes[currentRoutes.length - 1].name;
+  const routeName = routes[routes.length - 1].name;
   return i18n.t(`metaData.${routeName}`);
 };
 
-const getTitle = (title) => {
-  return title === 'Holman Gao' ? title : `${title} — Holman Gao `;
-};
-
-// {renderMetaDescription(getMetaData(params.routes))}
-const LayoutHead = ({ params }) => (
+const LayoutHead = ({ routes }) => (
   /* eslint-disable max-len */
   <head>
     <title>{DocumentTitle.rewind()}</title>
@@ -46,6 +41,7 @@ const LayoutHead = ({ params }) => (
     />
     <meta name='viewport' content='width=device-width, user-scalable=no' />
     <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+    {renderMetaDescription(getMetaData(routes))}
   </head>
   /* eslint-enable max-len */
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component, PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
@@ -19,7 +19,7 @@ const PARENT_BREADCRUMBS = {
   },
 };
 
-class ProjectHandler extends React.Component {
+class ProjectHandler extends Component {
   render() {
     const myProject = getAllProjects().find((project) => {
       return project.slug === this.props.params.projectId;
@@ -45,5 +45,10 @@ class ProjectHandler extends React.Component {
     );
   }
 }
+
+ProjectHandler.propTypes = {
+  params: PropTypes.object.isRequired,
+  routes: PropTypes.array.isRequired,
+};
 
 export default ProjectHandler;

@@ -2,7 +2,7 @@ import React from 'react';
 import ResumeNotes from './notes';
 import FragmentsBlock from '../fragments/block';
 
-export default class ResumeEntry extends React.Component {
+class ResumeEntry extends React.Component {
   constructor(props) {
     super(props);
     this._renderNotes = this._renderNotes.bind(this);
@@ -38,3 +38,5 @@ ResumeEntry.propTypes = {
   numInitialNotesToShow: React.PropTypes.bool,
   title: React.PropTypes.array.isRequired,
 };
+
+export default ResumeEntry;

@@ -1,17 +1,15 @@
-import React, { Component }  from 'react';
-import { renderToString }  from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import LayoutHead from './head';
 import LayoutInlineData from './inline_data';
 import { cachify } from 'connect-cachify-static';
-console.log(LayoutInlineData);
 
 function getContent(children) {
   return renderToString(children);
 }
 
-const LayoutHandler = ({ children }) => (
+const LayoutHandler = ({ children, routes }) => (
   <html>
-    <LayoutHead />
+    <LayoutHead routes={routes} />
     <body>
       <div
         id='content'

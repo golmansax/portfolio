@@ -4,7 +4,6 @@ import GithubFragment from './github_fragment';
 
 const Fragment = ({ routeName, text, github, url }) => {
   if (routeName) {
-    console.log(routeName);
     return <Link to={routeName}>{text}</Link>;
   } else if (github) {
     return <GithubFragment github={github} />;

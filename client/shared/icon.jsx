@@ -2,7 +2,7 @@ import { PropTypes } from 'react';
 import classNames from 'classnames';
 
 function getClass({
-  type, listItem, className, size, border, inverse, stack
+  type, listItem, className, size, border, inverse, stack,
 }) {
   return classNames({
     [`fa fa-${type}`]: true,
