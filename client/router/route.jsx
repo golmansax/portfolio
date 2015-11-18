@@ -1,6 +1,5 @@
-import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { Router, Route, RoutingContext, match } from 'react-router';
+import { Route, RoutingContext, match } from 'react-router';
 import contentRoutes from '../routes';
 import LayoutHandler from '../layout/handler';
 import getDataFromI18n from '../data/from_i18n';
@@ -10,11 +9,9 @@ import { loadImages } from '../images/store';
 
 export default function RouterRoute(req, res) {
   const routes = (
-    <Router>
-      <Route component={LayoutHandler}>
-        {contentRoutes}
-      </Route>
-    </Router>
+    <Route component={LayoutHandler}>
+      {contentRoutes}
+    </Route>
   );
 
   loadData(getDataFromI18n());

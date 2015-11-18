@@ -1,10 +1,10 @@
-import { renderToString } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 import LayoutHead from './head';
 import LayoutInlineData from './inline_data';
 import { cachify } from 'connect-cachify-static';
 
 function getContent(children) {
-  return renderToString(children);
+  return renderToStaticMarkup(children);
 }
 
 const LayoutHandler = ({ children, routes }) => (

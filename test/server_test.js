@@ -1,16 +1,22 @@
 import chai, { expect } from 'chai';
 import Browser from 'zombie';
 import server from '../server';
+import { initI18n } from '../server/my_i18n';
 import StinkBomb from 'stink-bomb';
 import dirtyChai from 'dirty-chai';
 
-import { beforeEach, afterEach, it } from 'arrow-mocha/es5';
+import { before, beforeEach, afterEach, it } from 'arrow-mocha/es5';
+
+// Expose React so we don't need to import it for JSX
+global.React = require('react');
 
 chai.use(dirtyChai);
 StinkBomb.configure({ raise: true });
 
 describe('server', function() {
   let browser;
+
+  before(() => initI18n());
 
   beforeEach(() => {
     const port = 3001;
