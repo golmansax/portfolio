@@ -20,7 +20,8 @@ export default function RouterRoute(req, res) {
   loadData(getDataFromI18n());
   loadImages(getImagesData());
 
-  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+  const options = { routes, location: req.url };
+  match(options, (error, redirectLocation, renderProps) => {
     const html = '<!DOCTYPE html>' + renderToStaticMarkup(
       <RoutingContext {...renderProps} />
     );

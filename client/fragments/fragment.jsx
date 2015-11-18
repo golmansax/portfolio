@@ -2,9 +2,10 @@ import { PropTypes } from 'react';
 import { Link } from 'react-router';
 import GithubFragment from './github_fragment';
 
-const Fragment = ({ routeName, params, text, github, url }) => {
+const Fragment = ({ routeName, text, github, url }) => {
   if (routeName) {
-    return <Link to={routeName} params={params}>{text}</Link>;
+    console.log(routeName);
+    return <Link to={routeName}>{text}</Link>;
   } else if (github) {
     return <GithubFragment github={github} />;
   } else if (url) {
@@ -16,7 +17,6 @@ const Fragment = ({ routeName, params, text, github, url }) => {
 
 Fragment.propTypes = {
   github: PropTypes.string,
-  params: PropTypes.object,
   routeName: PropTypes.string,
   text: PropTypes.string,
   url: PropTypes.string,

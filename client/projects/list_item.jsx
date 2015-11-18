@@ -4,7 +4,7 @@ import ProjectsContent from './content';
 import Pdf from '../shared/pdf';
 import Container from '../shared/container';
 
-export default class ProjectsListItem extends React.Component {
+class ProjectsListItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,3 +68,5 @@ ProjectsListItem.propTypes = {
   pdf: React.PropTypes.string,
   slug: React.PropTypes.string,
 };
+
+export default ProjectsListItem;

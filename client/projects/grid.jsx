@@ -3,6 +3,13 @@ import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
 
+const PROJECT_ROUTE_MAPPING = {
+  workProject: 'work',
+  sideProject: 'side-projects',
+  communityProject: 'in-community',
+};
+const getProjectRoute = (projectType) => PROJECT_ROUTE_MAPPING[projectType];
+
 class ProjectsGrid extends Component {
   constructor(props) {
     super(props);
@@ -32,9 +39,8 @@ class ProjectsGrid extends Component {
       <div className='projects-grid__item' key={index}>
         <h2>
           <Fragment
-            routeName={project.type}
+            routeName={`/${getProjectRoute(project.type)}/${project.slug}`}
             text={project.shortName || project.name}
-            params={{ projectId: project.slug }}
           />
         </h2>
         <ProjectsImage image={project.images[0]} />

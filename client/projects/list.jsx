@@ -1,18 +1,14 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import ProjectsListItem from './list_item';
 
-export default class ProjectsList extends React.Component {
-  constructor(props) {
-    super(props);
-    this._renderProject = this._renderProject.bind(this);
-  }
+const renderProject = (entry, index) => (
+  <ProjectsListItem {...entry} key={index} />
+);
 
-  render() {
-    return <div>{this.props.projects.map(this._renderProject)}</div>;
-  }
+const ProjectsList = ({ projects }) => (
+  <div>{projects.map(renderProject)}</div>
+);
 
-  _renderProject(entry, index) {
-    return <ProjectsListItem {...entry} key={index} />;
-  }
-}
-ProjectsList.propTypes = { projects: React.PropTypes.array.isRequired };
+ProjectsList.propTypes = { projects: PropTypes.array.isRequired };
+
+export default ProjectsList;

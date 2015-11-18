@@ -1,24 +1,22 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Fragment from './fragment';
 
-export default class Fragments extends React.Component {
-  render() {
-    const fragments = this.props.fragments.map((fragment, index) => {
-      let myFragment = fragment;
-      if (typeof fragment === 'string') {
-        myFragment = { text: fragment };
-      }
-
-      return (
-        <Fragment {...myFragment} key={index} />
-      );
-    });
+function getFragments(fragments) {
+  return fragments.map((fragment, index) => {
+    let myfragment = fragment;
+    if (typeof fragment === 'string') {
+      myfragment = { text: fragment };
+    }
 
     return (
-      <span>{fragments}</span>
+      <fragment {...myfragment} key={index} />
     );
-  }
+  });
 }
 
+const Fragments = ({ fragments }) => <span>{getFragments(fragments)}</span>;
+
 Fragments.defaultProps = { fragments: [] };
-Fragments.propTypes = { fragments: React.PropTypes.array };
+Fragments.propTypes = { fragments: PropTypes.array };
+
+export default Fragments;

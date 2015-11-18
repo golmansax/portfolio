@@ -2,7 +2,7 @@ import React from 'react';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
 
-export default class BreadcrumbsList extends React.Component {
+class BreadcrumbsList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -39,3 +39,5 @@ export default class BreadcrumbsList extends React.Component {
 
 BreadcrumbsList.defaultProps = { breadcrumbs: [] };
 BreadcrumbsList.propTypes = { breadcrumbs: React.PropTypes.array.isRequired };
+
+export default BreadcrumbsList;

@@ -1,28 +1,30 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import classNames from 'classnames';
 
-export default class Icon extends React.Component {
-  render() {
-    const myClass = classNames({
-      [`fa fa-${this.props.type}`]: true,
-      'fa-li': this.props.listItem,
-      [this.props.className]: !!this.props.className,
-      [`fa-${this.props.size}`]: !!this.props.size,
-      'fa-border': this.props.border,
-      'fa-inverse': this.props.inverse,
-      [`fa-stack-${this.props.stack}`]: !!this.props.stack,
-    });
-
-    return <i className={myClass} />;
-  }
+function getClass({
+  type, listItem, className, size, border, inverse, stack
+}) {
+  return classNames({
+    [`fa fa-${type}`]: true,
+    'fa-li': listItem,
+    [className]: !!className,
+    [`fa-${size}`]: !!size,
+    'fa-border': border,
+    'fa-inverse': inverse,
+    [`fa-stack-${stack}`]: !!stack,
+  });
 }
 
+const Icon = (props) => <i className={getClass(props)} />;
+
 Icon.propTypes = {
-  border: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  inverse: React.PropTypes.bool,
-  listItem: React.PropTypes.bool,
-  size: React.PropTypes.string,
-  stack: React.PropTypes.string,
-  type: React.PropTypes.string.isRequired,
+  border: PropTypes.bool,
+  className: PropTypes.string,
+  inverse: PropTypes.bool,
+  listItem: PropTypes.bool,
+  size: PropTypes.string,
+  stack: PropTypes.string,
+  type: PropTypes.string.isRequired,
 };
+
+export default Icon;

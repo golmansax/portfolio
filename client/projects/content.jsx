@@ -13,7 +13,7 @@ const Custom = {
   FragmentsBulletList,
 };
 
-export default class ProjectsContent extends React.Component {
+class ProjectsContent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -183,3 +183,5 @@ ProjectsContent.propTypes = {
   stack: React.PropTypes.string,
   url: React.PropTypes.string,
 };
+
+export default ProjectsContent;

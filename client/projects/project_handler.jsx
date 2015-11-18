@@ -19,7 +19,7 @@ const PARENT_BREADCRUMBS = {
   },
 };
 
-export default class ProjectHandler extends React.Component {
+class ProjectHandler extends React.Component {
   render() {
     const myProject = getAllProjects().find((project) => {
       return project.slug === this.props.params.projectId;
@@ -45,3 +45,5 @@ export default class ProjectHandler extends React.Component {
     );
   }
 }
+
+export default ProjectHandler;

@@ -1,17 +1,13 @@
-import React from 'react';
+import { PropTypes } from 'react';
 
-export default class Position extends React.Component {
-  render() {
-    return (
-      <div>
-        {this.props.title} ({this.props.start} – {this.props.end})
-      </div>
-    );
-  }
-}
+const Position = ({ title, start, end }) => (
+  <div>{title} ({start} – {end})</div>
+);
 
 Position.propTypes = {
-  end: React.PropTypes.string.isRequired,
-  start: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  start: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
+
+export default Position;
