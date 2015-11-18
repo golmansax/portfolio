@@ -4,7 +4,7 @@ install:
 - NODE_ENV=development npm install
 - NODE_ENV=development npm prune
 before_script:
-- npm run build
+- make build
 script:
 - travis-lint .travis.yml
 - make eslint
