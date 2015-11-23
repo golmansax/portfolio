@@ -1,11 +1,14 @@
-import React from 'react';
+import Helmet from 'react-helmet';
 import ProjectsGrid from '../projects/grid';
-import { getAllProjects } from '../data/store';
+import { getAllProjects, getMetaData } from '../data/store';
 
 const getProjects = () => getAllProjects().filter((project) => project.images);
 
 const PortfolioHandler = () => (
-  <ProjectsGrid projects={getProjects()} />
+  <div>
+    <Helmet {...getMetaData().portfolio} />
+    <ProjectsGrid projects={getProjects()} />
+  </div>
 );
 
 export default PortfolioHandler;

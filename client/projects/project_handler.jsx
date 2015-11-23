@@ -1,5 +1,5 @@
 import { Component, PropTypes } from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getAllProjects } from '../data/store';
@@ -31,17 +31,16 @@ class ProjectHandler extends Component {
     const routeName = currentRoutes[currentRoutes.length - 1].name;
 
     return (
-      <DocumentTitle title={`${myProject.name} — Holman Gao`}>
-        <div>
-          <BreadcrumbsList
-            breadcrumbs={[
-              PARENT_BREADCRUMBS[routeName],
-              myProject.shortName || myProject.name,
-            ]}
-          />
-          <ProjectsList projects={[myProject]} />
-        </div>
-      </DocumentTitle>
+      <div>
+        <Helmet title={myProject.name} />
+        <BreadcrumbsList
+          breadcrumbs={[
+            PARENT_BREADCRUMBS[routeName],
+            myProject.shortName || myProject.name,
+          ]}
+        />
+        <ProjectsList projects={[myProject]} />
+      </div>
     );
   }
 }

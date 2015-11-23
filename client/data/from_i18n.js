@@ -3,6 +3,8 @@ import ProjectsArray from '../projects/array';
 
 export default function getDataFromI18n() {
   return {
+    metaData: i18n.t('metaData'),
+
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map((project) => {
         Object.assign(project, {

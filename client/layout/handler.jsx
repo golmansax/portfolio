@@ -7,9 +7,9 @@ function getContent(children) {
   return renderToStaticMarkup(children);
 }
 
-const LayoutHandler = ({ children, routes }) => (
+const LayoutHandler = ({ children }) => (
   <html>
-    <LayoutHead routes={routes} />
+    <LayoutHead />
     <body>
       <div
         id='content'

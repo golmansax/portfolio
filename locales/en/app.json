@@ -1,11 +1,20 @@
 {
 	"metaData": {
+    "root": {
+      "titleTemplate": "%s — Holman Gao"
+    },
 		"resume": {
 			"title": "Resume"
 		},
 		"portfolio": {
-			"description": "Personal site of Holman Gao, programmer and product person at various startups, University of Maryland and Blair Magnet alum, living in San Francisco",
-			"title": "Holman Gao"
+			"meta": [
+        {
+          "name": "description",
+          "content": "Personal site of Holman Gao, programmer and product person at various startups, University of Maryland and Blair Magnet alum, living in San Francisco"
+        }
+      ],
+			"title": "Holman Gao",
+			"titleTemplate": "%s"
 		},
 		"hcd": {
 			"title": "Human-Centered Design"

@@ -1,5 +1,5 @@
 import { Component, PropTypes } from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import ContentNavbar from './navbar';
 import ContentFooter from './footer/footer';
 import {
@@ -8,6 +8,7 @@ import {
   isMenuShowing,
   toggleMenuShowing,
 } from './state_store';
+import { getMetaData } from '../data/store';
 
 class ContentHandler extends Component {
   constructor(props) {
@@ -28,18 +29,17 @@ class ContentHandler extends Component {
 
   render() {
     return (
-      <DocumentTitle title='Holman Gao'>
-        <div>
-          <div className='content-handler__top'>
-            <ContentNavbar />
-          </div>
-          <div className='content-handler__body'>
-            {this._renderBackdrop()}
-            {this.props.children}
-            <ContentFooter />
-          </div>
+      <div>
+        <Helmet {...getMetaData().root} />
+        <div className='content-handler__top'>
+          <ContentNavbar />
         </div>
-      </DocumentTitle>
+        <div className='content-handler__body'>
+          {this._renderBackdrop()}
+          {this.props.children}
+          <ContentFooter />
+        </div>
+      </div>
     );
   }
 

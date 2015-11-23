@@ -1,15 +1,14 @@
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import BreadcrumbsList from '../breadcrumbs/list';
 import Resume from './resume';
-import { getResume } from '../data/store';
+import { getResume, getMetaData } from '../data/store';
 
 const ResumeHandler = () => (
-  <DocumentTitle title='Resume — Holman Gao'>
-    <div>
-      <BreadcrumbsList breadcrumbs={['Resume']} />
-      <Resume {...getResume()} />
-    </div>
-  </DocumentTitle>
+  <div>
+    <Helmet {...getMetaData().resume} />
+    <BreadcrumbsList breadcrumbs={['Resume']} />
+    <Resume {...getResume()} />
+  </div>
 );
 
 export default ResumeHandler;

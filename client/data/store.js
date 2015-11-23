@@ -25,3 +25,7 @@ export function getAllProjects() {
 export function getResume() {
   return data.resume;
 }
+
+export function getMetaData() {
+  return data.metaData;
+}

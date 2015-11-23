@@ -48,7 +48,7 @@
     "nib": "*",
     "react": "*",
     "react-dom": "*",
-    "react-document-title": "*",
+    "react-helmet": "*",
     "react-mixin": "*",
     "react-router": "*",
     "react-bind-mixin": "*",
