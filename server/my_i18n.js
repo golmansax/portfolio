@@ -8,13 +8,12 @@ export const initI18n = () => {
       lng: 'en-US',
       ns: {
         namespaces: [
-          'app',
+          'meta_data',
           'community_projects',
           'work_projects',
           'side_projects',
           'resume',
         ],
-        defaultNs: 'app',
       },
       returnObjectTrees: true,
     }, resolve);
