@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import i18n from '../../server/my_i18n';
 import { cachify } from 'connect-cachify-static';
 
 const LayoutHead = () => {
@@ -10,6 +9,7 @@ const LayoutHead = () => {
     /* eslint-disable max-len */
     <head>
       {helmet.title.toComponent()}
+      {helmet.meta.toComponent()}
       <link
         type='text/css'
         rel='stylesheet'
@@ -31,7 +31,6 @@ const LayoutHead = () => {
       />
       <meta name='viewport' content='width=device-width, user-scalable=no' />
       <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
-      {helmet.meta.toComponent()}
     </head>
     /* eslint-enable max-len */
   );
