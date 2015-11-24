@@ -20,7 +20,6 @@ describe('server', function() {
 
   beforeEach(() => {
     const port = 3001;
-    this.timeout(9000);
     this.server = server.listen(port);
     browser = new Browser({ site: 'http://localhost:' + port });
   });
@@ -76,7 +75,10 @@ describe('server', function() {
       });
 
       describe.skip('when clicking to hcd page', function() {
-        beforeEach(() => browser.clickLink('human-centered design'));
+        beforeEach(() => {
+          this.timeout(9000);
+          return browser.clickLink('human-centered design')
+        });
 
         it('has the right title', () => {
           expect(browser.text('title')).to.include('Human-Centered Design');
@@ -104,7 +106,7 @@ describe('server', function() {
     });
   });
 
-  describe('when starting from community page', function() {
+  describe('when starting from side projects page', function() {
     beforeEach(() => browser.visit('/side-projects'));
 
     it('has the right title', () => {
@@ -113,6 +115,57 @@ describe('server', function() {
 
     it('has the right content', () => {
       expect(browser.text('body')).to.include('Navigate through an office');
+    });
+  });
+
+  describe('when starting from community page', function() {
+    beforeEach(() => {
+      this.timeout(20000);
+      return browser.visit('/in-community');
+    });
+
+    it('has the right title', () => {
+      expect(browser.text('title')).to.include('Efforts in Community');
+    });
+
+    it('has the right content', () => {
+      expect(browser.text('body')).to.include('donate money every year');
+    });
+  });
+
+  describe('when starting from work page', function() {
+    beforeEach(() => browser.visit('/work'));
+
+    it('has the right title', () => {
+      expect(browser.text('title')).to.include('Work');
+    });
+
+    it('has the right content', () => {
+      expect(browser.text('body')).to.include('Spearheaded a database redesign');
+    });
+  });
+
+  describe('when starting from a project page', function() {
+    beforeEach(() => browser.visit('/side-projects/quarry'));
+
+    it('has the right title', () => {
+      expect(browser.text('title')).to.include('Quarry');
+    });
+
+    it('has the right content', () => {
+      expect(browser.text('body')).to.include('Autocomplete as a service');
+    });
+  });
+
+  describe('when starting from resume page', function() {
+    beforeEach(() => browser.visit('/resume'));
+
+    it('has the right title', () => {
+      expect(browser.text('title')).to.include('Resume');
+    });
+
+    it('has the right content', () => {
+      expect(browser.text('body')).to.include('2011 ACM-ICPC World Finals');
     });
   });
 });
