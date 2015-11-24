@@ -2,7 +2,7 @@ import React from 'react';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
 
-export default class DonationsList extends React.Component {
+class DonationsList extends React.Component {
   constructor(props) {
     super(props);
     this._renderDonation = this._renderDonation.bind(this);
@@ -25,3 +25,5 @@ export default class DonationsList extends React.Component {
 
 DonationsList.defaultProps = { donations: [] };
 DonationsList.propTypes = { donations: React.PropTypes.array };
+
+export default DonationsList;
