@@ -11,4 +11,4 @@ require('./server/my_i18n').initI18n().then(() => {
   require('./server').default.listen(require('./server/config').PORT, () => {
     console.log(`golmansax/my-site-in-express listening on port ${PORT}`);
   });
-});
+}).catch((error) => console.error(error.stack));
