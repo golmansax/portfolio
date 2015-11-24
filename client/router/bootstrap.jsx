@@ -3,7 +3,7 @@ import { Router } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import useScrollToTop from 'scroll-behavior/lib/useScrollToTop';
 
-import routes from '../routes';
+import { routesComponent } from '../routes';
 import gon from '../gon';
 import { loadData } from '../data/store';
 import { loadImages } from '../images/store';
@@ -22,7 +22,7 @@ const history = useScrollToTop(createBrowserHistory)();
 toggleMenuShowing(false);
 render(
   <Router history={history}>
-    {routes}
+    {routesComponent}
   </Router>,
   global.document.getElementById('content')
 );

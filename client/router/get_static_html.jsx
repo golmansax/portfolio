@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Route, RoutingContext, match } from 'react-router';
-import contentRoutes from '../routes';
+import { routesComponent } from '../routes';
 import LayoutHandler from '../layout/handler';
 import getDataFromI18n from '../data/from_i18n';
 import { loadData } from '../data/store';
@@ -18,7 +18,7 @@ export default function getStaticHtml(url) {
 
   const routes = (
     <Route component={LayoutHandler}>
-      {contentRoutes}
+      {routesComponent}
     </Route>
   );
 

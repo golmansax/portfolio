@@ -1,12 +1,12 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
-import PortfolioHandler from './portfolio/handler';
-import WorkProjectsHandler from './work_projects/handler';
-import SideProjectsHandler from './side_projects/handler';
-import CommunityProjectsHandler from './community_projects/handler';
-import ProjectHandler from './projects/project_handler';
-import ResumeHandler from './resume/handler';
-import ContentHandler from './content/handler';
+import PortfolioHandler from '../portfolio/handler';
+import WorkProjectsHandler from '../work_projects/handler';
+import SideProjectsHandler from '../side_projects/handler';
+import CommunityProjectsHandler from '../community_projects/handler';
+import ProjectHandler from '../projects/project_handler';
+import ResumeHandler from '../resume/handler';
+import ContentHandler from '../content/handler';
 
 export default (
   /* eslint-disable max-len */
