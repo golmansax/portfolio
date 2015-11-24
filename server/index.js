@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import cachifyStatic from 'connect-cachify-static';
 import { isDevelopment } from './config';
-import routes from './routes';
+import { routesData } from '../client/routes';
 import './my_i18n';
 
 const server = express();
@@ -33,6 +33,6 @@ if (isDevelopment()) {
 
 server.use(express.static(`${rootDirname}/public`));
 
-routes.forEach((route) => server.get(route, RouterRoute));
+routesData.forEach((route) => server.get(route.path, RouterRoute));
 
 export default server;

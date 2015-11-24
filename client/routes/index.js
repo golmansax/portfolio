@@ -1,3 +1,4 @@
 import routesComponent from './component';
+import routesData from './data';
 
-export { routesComponent };
+export { routesComponent, routesData };
