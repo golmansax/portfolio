@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "arrow-mocha": "*",
+    "babel-cli": "*",
     "babel-eslint": "*",
     "chai": "*",
     "dirty-chai": "*",
@@ -19,6 +20,7 @@
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-react": "*",
+    "mkdirp": "*",
     "mocha": "*",
     "stink-bomb": "*",
     "stylint": "< 1.3",

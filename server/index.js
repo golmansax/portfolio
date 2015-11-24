@@ -1,9 +1,9 @@
-import RouterRoute from '../client/router/route';
 import express from 'express';
 import path from 'path';
 import cachifyStatic from 'connect-cachify-static';
-import { isDevelopment } from './config';
+import { isDevelopment, isProduction } from './config';
 import { routesData } from '../client/routes';
+import { getStaticHtmlPath } from '../server/static_html_utils';
 import './my_i18n';
 
 const server = express();
@@ -33,6 +33,17 @@ if (isDevelopment()) {
 
 server.use(express.static(`${rootDirname}/public`));
 
-routesData.forEach((route) => server.get(route.path, RouterRoute));
+routesData.forEach((route) => {
+  let routeHandler;
+  if (isProduction()) {
+    routeHandler = (req, res) => {
+      res.sendFile(getStaticHtmlPath(req.url));
+    };
+  } else {
+    routeHandler = require('../client/router/route').default;
+  }
+
+  server.get(route.path, routeHandler);
+});
 
 export default server;

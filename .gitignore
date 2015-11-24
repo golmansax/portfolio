@@ -29,3 +29,4 @@ node_modules
 
 # Generated assets
 public/assets
+public/html

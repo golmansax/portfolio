@@ -12,7 +12,7 @@ const ContentFooterInfoTags = () => (
         </a>
       </div>
       <div className='content-footer-info-tags__tag'>
-        <Link to='resume'>
+        <Link to='/resume'>
           <StackedIcon
             back='circle'
             front='file-text'

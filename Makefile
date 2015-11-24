@@ -1,6 +1,6 @@
 .PHONY: build build-js build-css test watch eslint stylint start-dev start-prod
 
-build: build-css build-js
+build: build-css build-js build-html
 
 build-js:
 	mkdir -p public/assets
@@ -9,6 +9,9 @@ build-js:
 build-css:
 	mkdir -p public/assets
 	./node_modules/.bin/stylus -I node_modules/ -u jeet -u rupture -u ./node_modules/nib/lib/nib -c client/main.styl -o public/assets/
+
+build-html:
+	./node_modules/.bin/babel-node scripts/build_html.js
 
 test:
 	./node_modules/.bin/mocha --compilers js:babel-core/register -R spec test/**/*
@@ -23,7 +26,7 @@ stylint:
 	./node_modules/.bin/stylint client
 
 start-dev:
-	nodemon -e js,jsx,json,styl
+	nodemon -e js,jsx,json,styl --watch client --watch locales --watch server
 
 start-prod:
 	node index.js
