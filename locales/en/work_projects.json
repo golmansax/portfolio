@@ -66,7 +66,7 @@
 		{
       "slug": "amass",
 			"name": "Amass Media",
-			"url": "http://amassmedia.org",
+			"url": "https://amassmedia.org",
 			"images": [
 				"/static/amass.jpg"
 			],
