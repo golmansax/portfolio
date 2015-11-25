@@ -65,7 +65,7 @@
     {
       "slug": "personal-site",
       "name": "Personal Site",
-      "url": "http://golmansax.com",
+      "url": "https://golmansax.com",
       "github": "golmansax/my-site-in-express",
       "description": "A portfolio of projects that I have worked on",
       "stack": "Express.js, ES6, React.js",
@@ -77,7 +77,7 @@
       "slug": "my-impact-pledge",
       "name": "My Impact Pledge",
       "description": "A call to have people pledge to regularly support causes they believe in",
-      "url": "http://myimpactpledge.com",
+      "url": "https://myimpactpledge.com",
       "github": "golmansax/my-impact-pledge",
       "stack": "Express.js, ES6, React.js, CSS Modules",
       "images": [
