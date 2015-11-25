@@ -24,6 +24,7 @@ const LayoutHead = () => {
         href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
         rel='stylesheet'
       />
+      <link rel='apple-touch-icon' href={getAsset('/static/apple-touch-icon-precomposed.png')} />
       <link href={getAsset('/assets/main.css')} rel='stylesheet' />
       <link
         href='http://www.gravatar.com/avatar/f14bfcfb11c5a367dc8c88bc3dd43189?s=16'
