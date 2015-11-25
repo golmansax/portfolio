@@ -117,26 +117,6 @@ a {
   }
 }
 
-.fragment-left {
-  col(3/5)
-}
-
-.fragment-right {
-  col(2/5)
-  text-align right
-}
-
-+below('m') {
-  .fragment-left,
-  .fragment-right {
-    stack()
-  }
-
-  .fragment-right {
-    text-align left
-  }
-}
-
 .clearfix {
   clearfix()
 }
@@ -146,6 +126,7 @@ a {
 @require './content/footer/info_tags'
 @require './content/handler'
 @require './content/navbar'
+@require './fragments/block'
 @require './fragments/bullet_list'
 @require './fragments/github_fragment'
 @require './my/email'

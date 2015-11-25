@@ -5,10 +5,10 @@ const FragmentsBlock = ({ data }) => {
   if (data.left) {
     return (
       <div className='clearfix'>
-        <div className='fragment-left'>
+        <div className='fragment-block__left'>
           <Fragments fragments={data.left} />
         </div>
-        <div className='fragment-right'>
+        <div className='fragment-block__right'>
           <em>
             <Fragments fragments={data.right} />
           </em>

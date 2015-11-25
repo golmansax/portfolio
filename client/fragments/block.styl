@@ -1,0 +1,25 @@
+.fragment-block {
+  +e(left) {
+    col(3/5)
+  }
+
+  +e(right) {
+    col(2/5)
+    text-align right
+    font-weight 400
+  }
+
+  +below('m') {
+    +e(left) {
+      stack()
+    }
+
+    +e(right) {
+      stack()
+    }
+
+    +e(right) {
+      text-align left
+    }
+  }
+}
