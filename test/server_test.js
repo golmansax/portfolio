@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai';
 import Browser from 'zombie';
-import server from '../server';
+import { isProduction } from '../server/config';
 import { initI18n } from '../server/my_i18n';
 import StinkBomb from 'stink-bomb';
 import dirtyChai from 'dirty-chai';
@@ -15,18 +15,26 @@ StinkBomb.configure({ raise: true });
 const MY_PORT = 3001;
 Browser.localhost('golmansax.com', MY_PORT);
 
+let server;
+if (isProduction()) {
+  server = require('../server/prod_server').default;
+} else {
+  server = require('../server/dev_server').default;
+}
+
 describe('server', function() {
   let browser;
+  let serverInstance;
 
   before(() => initI18n());
 
   beforeEach(() => {
-    this.server = server.listen(MY_PORT);
+    serverInstance = server.listen(MY_PORT);
     browser = new Browser();
   });
 
   afterEach(() => {
-    this.server.close();
+    serverInstance.close();
   });
 
   describe('when starting from index', function() {

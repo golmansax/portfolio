@@ -20,6 +20,7 @@
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-react": "*",
+    "fs-extra": "*",
     "mkdirp": "*",
     "mocha": "*",
     "stink-bomb": "*",
@@ -61,8 +62,7 @@
   },
   "scripts": {
     "postinstall": "./scripts/npm_postinstall.sh",
-    "start": "make start-dev",
-    "test": "make test",
-    "watch": "make watch"
+    "start": "make start",
+    "test": "make test"
   }
 }

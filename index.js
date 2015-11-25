@@ -6,9 +6,16 @@ require('babel-core/register');
 global.React = require('react');
 
 require('./server/my_i18n').initI18n().then(() => {
-  const PORT = require('./server/config').PORT;
+  var PORT = require('./server/config').PORT;
 
-  require('./server').default.listen(require('./server/config').PORT, () => {
+  var server;
+  if (require('./server/config').isProduction()) {
+    server = require('./server/prod_server').default;
+  } else {
+    server = require('./server/dev_server').default;
+  }
+
+  server.listen(PORT, () => {
     console.log(`golmansax/my-site-in-express listening on port ${PORT}`);
   });
 }).catch((error) => console.error(error.stack));

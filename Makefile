@@ -1,6 +1,6 @@
-.PHONY: build build-js build-css test watch eslint stylint start-dev start-prod
+.PHONY: build build-js build-css test watch eslint stylint start build-html cachify-assets
 
-build: build-css build-js build-html
+build: build-css build-js build-html cachify-assets
 
 build-js:
 	mkdir -p public/assets
@@ -13,10 +13,14 @@ build-css:
 build-html:
 	./node_modules/.bin/babel-node scripts/build_html.js
 
+cachify-assets:
+	./node_modules/.bin/babel-node scripts/cachify_assets.js
+
 test:
 	./node_modules/.bin/mocha --compilers js:babel-core/register -R spec test/**/*
 
 watch:
+	mkdir -p public/assets
 	./node_modules/.bin/watchify --extension=.jsx -t babelify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
 
 eslint:
@@ -25,8 +29,5 @@ eslint:
 stylint:
 	./node_modules/.bin/stylint client
 
-start-dev:
+start:
 	nodemon -e js,jsx,json,styl --watch client --watch locales --watch server
-
-start-prod:
-	node index.js
