@@ -4,6 +4,12 @@
       "titleTemplate": "%s — Holman Gao"
     },
 		"resume": {
+			"meta": [
+        {
+          "name": "description",
+          "content": "Up-to-date curriculum vitae/resume. Includes work, education, side projects, volunteering, hobbies."
+        }
+      ],
 			"title": "Resume"
 		},
 		"portfolio": {
@@ -16,19 +22,31 @@
 			"title": "Holman Gao",
 			"titleTemplate": "%s"
 		},
-		"hcd": {
-			"title": "Human-Centered Design"
-		},
-		"donations": {
-			"title": "Donations Pledge"
-		},
 		"workProjects": {
+			"meta": [
+        {
+          "name": "description",
+          "content": "Timeline of where I have worked"
+        }
+      ],
 			"title": "Work"
 		},
 		"sideProjects": {
+			"meta": [
+        {
+          "name": "description",
+          "content": "Collection of side and hackathon projects, which altogether use technologies like React.js, CSS Modules, Travis CI, Node.js, React Native, Rails, Django, Angular.js."
+        }
+      ],
 			"title": "Side Projects"
 		},
     "communityProjects": {
+			"meta": [
+        {
+          "name": "description",
+          "content": "Details on how I try to contribute to the community. Includes volunteering, list of donations, and various projects in the community."
+        }
+      ],
       "title": "Efforts in Community"
     }
 	}
