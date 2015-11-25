@@ -4,14 +4,12 @@ import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 import React from 'react';
-import cachifyStatic from 'connect-cachify-static';
+import '../server/asset_utils';
 import { stringBulkReplace } from '../utils';
 import { routesData } from '../client/routes';
 import getStaticHtml from '../client/router/get_static_html';
 import { initI18n } from '../server/my_i18n';
 import { getStaticHtmlPath } from '../server/static_html_utils';
-
-cachifyStatic(path.resolve(__dirname, '..', 'public'));
 
 // Expose React so we don't need to import it for JSX
 global.React = React;

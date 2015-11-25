@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { cachify } from 'connect-cachify-static';
+import { getAsset } from '../../server/asset_utils';
 
 const LayoutHead = () => {
   const helmet = Helmet.rewind();
@@ -24,7 +24,7 @@ const LayoutHead = () => {
         href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
         rel='stylesheet'
       />
-      <link href={cachify('/assets/main.css')} rel='stylesheet' />
+      <link href={getAsset('/assets/main.css')} rel='stylesheet' />
       <link
         href='http://www.gravatar.com/avatar/f14bfcfb11c5a367dc8c88bc3dd43189?s=16'
         rel='icon'

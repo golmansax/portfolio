@@ -1,4 +1,4 @@
-import { cachify } from 'connect-cachify-static';
+import { getAsset } from '../../server/asset_utils';
 
 export default {
   from(projects) {
@@ -6,10 +6,10 @@ export default {
       if (project.images) {
         project.images = project.images.map((image) => {
           if (Array.isArray(image)) {
-            return image.map(cachify);
+            return image.map(getAsset);
           }
 
-          return cachify(image);
+          return getAsset(image);
         });
       }
 

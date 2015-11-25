@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import cachifyStatic from 'connect-cachify-static';
+import { assetMiddleware } from './asset_utils';
 import { isDevelopment, isProduction } from './config';
 import { routesData } from '../client/routes';
 import { getStaticHtmlPath } from '../server/static_html_utils';
@@ -9,7 +9,7 @@ import './my_i18n';
 const server = express();
 const rootDirname = path.resolve(__dirname, '..');
 
-server.use(cachifyStatic(`${rootDirname}/public`));
+server.use(assetMiddleware);
 
 if (isDevelopment()) {
   const stylus = require('stylus');

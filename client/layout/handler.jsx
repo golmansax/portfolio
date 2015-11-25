@@ -1,7 +1,7 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import LayoutHead from './head';
 import LayoutInlineData from './inline_data';
-import { cachify } from 'connect-cachify-static';
+import { getAsset } from '../../server/asset_utils';
 
 function getContent(children) {
   return renderToStaticMarkup(children);
@@ -19,7 +19,7 @@ const LayoutHandler = ({ children }) => (
       <LayoutInlineData />
       <script
         type='text/javascript'
-        src={cachify('/assets/router_bootstrap.js')}
+        src={getAsset('/assets/router_bootstrap.js')}
       />
     </body>
   </html>
