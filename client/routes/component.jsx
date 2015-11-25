@@ -7,6 +7,7 @@ import CommunityProjectsHandler from '../community_projects/handler';
 import ProjectHandler from '../projects/project_handler';
 import ResumeHandler from '../resume/handler';
 import ContentHandler from '../content/handler';
+import NotFoundHandler from './not_found_handler';
 
 export default (
   /* eslint-disable max-len */
@@ -19,6 +20,7 @@ export default (
     <Route path='/in-community' component={CommunityProjectsHandler} />
     <Route path='/in-community/:projectId' component={ProjectHandler} />
     <Route path='/resume' component={ResumeHandler} />
+    <Route path='*' component={NotFoundHandler} />
   </Route>
   /* eslint-enable max-len */
 );

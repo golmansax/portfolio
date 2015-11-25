@@ -1,7 +1,6 @@
 import express from 'express';
 import path from 'path';
 import { assetMiddleware } from './asset_utils';
-import { routesData } from '../client/routes';
 import routeHandler from '../client/router/route';
 
 const server = express();
@@ -28,7 +27,6 @@ server.use(stylus.middleware({
 }));
 
 server.use(express.static(`${rootDirname}/public`));
-
-routesData.forEach((route) => server.get(route.path, routeHandler));
+server.get('*', routeHandler);
 
 export default server;

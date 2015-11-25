@@ -16,18 +16,26 @@ export default function getStaticHtml(url) {
     dataLoaded = true;
   }
 
-  const routes = (
+  const ROUTES = (
     <Route component={LayoutHandler}>
       {routesComponent}
     </Route>
   );
 
-  let html;
-  match({ routes, location: url }, (error, redirectLocation, renderProps) => {
-    html = '<!DOCTYPE html>' + renderToStaticMarkup(
-      <RoutingContext {...renderProps} />
-    );
+  return new Promise((resolve, reject) => {
+    const options = { routes: ROUTES, location: url };
+    match(options, (error, redirectLocation, renderProps) => {
+      if (error) {
+        reject(error);
+      } else if (redirectLocation) {
+        resolve({ redirectLocation });
+      } else {
+        resolve({
+          html: '<!DOCTYPE html>' + renderToStaticMarkup(
+            <RoutingContext {...renderProps} />
+          ),
+        });
+      }
+    });
   });
-
-  return html;
 }

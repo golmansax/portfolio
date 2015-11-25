@@ -15,14 +15,15 @@ import { getStaticHtmlPath } from '../server/static_html_utils';
 global.React = React;
 
 function writeHtmlForPath(myPath) {
-  const html = getStaticHtml(myPath);
-  const outputPath = getStaticHtmlPath(myPath);
-  mkdirp(path.dirname(outputPath), (mkdirpError) => {
-    if (mkdirpError) { throw mkdirpError; }
+  getStaticHtml(myPath).then(({ html }) => {
+    const outputPath = getStaticHtmlPath(myPath);
+    mkdirp(path.dirname(outputPath), (mkdirpError) => {
+      if (mkdirpError) { throw mkdirpError; }
 
-    fs.writeFile(outputPath, html, (error) => {
-      if (error) { throw error; }
-      console.log(`Successfully wrote to ${outputPath}`);
+      fs.writeFile(outputPath, html, (error) => {
+        if (error) { throw error; }
+        console.log(`Successfully wrote to ${outputPath}`);
+      });
     });
   });
 }
