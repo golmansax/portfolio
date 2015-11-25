@@ -9,9 +9,9 @@ script:
 - make eslint
 - make stylint
 - npm test
-# cache:
-#   directories:
-#   - node_modules
+cache:
+  directories:
+  - node_modules
 env:
 - NODE_ENV=production
 deploy:
