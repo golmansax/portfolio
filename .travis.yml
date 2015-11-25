@@ -17,12 +17,5 @@ env:
   - NODE_ENV=production
   - secure: PoJ9o3UKTfrc74MabLmZRXnmqEHEa+uY2nbW2nUUrwE215jOaL2qmDnFSGytSXaqxU8hxPmnSbSo11lp7623Kfu4LfWiT+o4xTqLEXk9Mgqt1pjrrtLWAxOcswzOKCwDNeMmVhSIuBsrfoeOcMs0WuZ2mqcEnbF+TZhcfkB6mvk=
   - secure: OHKm2B9RoiJ+QpOx6tBbW4+HJbqkT9rk+kp/UisSXGqAeB0c6c5AEBOwmzRUIIKPhuZN7KauFo8HF/O33+079JxvuaXyc0LCF+4NSCvNxeIgmgxDou855VmvettCdnwRERAZxACwmXtoir3k6fZmfKI1dszhyknQPHKU6VtYcS8=
-deploy:
-  provider: heroku
-  strategy: git
-  api_key:
-    secure: bdYCPOgURi5LgUx2L/PliWNFRTZAJjLNXR8fGZ6/J3o5sTNdHIuqmMMAxVhgN3Qp1WpZt9aFDcYeBfWwmEhfNDUafLDmjuGaya0FnQ4dONS1FGWQCSPolT7uwrAbYG933WvypgE0XlI52QHZ+2nL0vFrM7Douqla+VNBEfoO04g=
-  app:
-    secure: Fl1NNHj018HMaSYwzc9zpl+1jrxip4J8pYshVkPnUExhRQBKS+NU3f7Krh1lnRKZTAHAlOkZLLrU6EjYGDnNZeruGHRdR9GwNND4MoNSOf5aQJc3SyIsqfuvHYRB+dMfuGMXWPGS6ZiNEh2imWE7bFvvYc6CtgyzSBiGv4Mb+U8=
 after_success:
 - ./scripts/deploy_gh_pages.sh
