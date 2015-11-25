@@ -13,7 +13,7 @@ global.React = require('react');
 chai.use(dirtyChai);
 StinkBomb.configure({ raise: true });
 const MY_PORT = 3001;
-Browser.localhost('golmansax.com', MY_PORT)
+Browser.localhost('golmansax.com', MY_PORT);
 
 describe('server', function() {
   let browser;
