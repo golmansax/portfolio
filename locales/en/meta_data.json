@@ -13,6 +13,7 @@
           "content": "Personal site of Holman Gao, programmer and product person at various startups, University of Maryland and Blair Magnet alum, living in San Francisco"
         }
       ],
+      "base": { "href": "https://golmansax.com/" },
 			"title": "Holman Gao",
 			"titleTemplate": "%s"
 		},
