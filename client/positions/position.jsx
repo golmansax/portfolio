@@ -1,7 +1,8 @@
 import { PropTypes } from 'react';
+import { getPositionText } from './utils';
 
 const Position = ({ title, start, end }) => (
-  <div>{title} ({start} – {end})</div>
+  <div>{getPositionText({ title, start, end })}</div>
 );
 
 Position.propTypes = {

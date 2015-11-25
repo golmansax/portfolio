@@ -10,7 +10,7 @@
           "/static/room-77_2.jpg"
         ]
 			],
-			"description": "Search across dozens of hotel sites to find the best price",
+			"description": "Search across dozens of hotel sites to find the best price.",
 			"stack": "Angular.js, Sass, PHP, C++",
 			"positions": [
 				{
@@ -47,7 +47,7 @@
 			"images": [
 				"/static/chalk.jpg"
 			],
-			"description": "A digital workflow system created for K-12 schools and school districts",
+			"description": "A digital workflow system created for K-12 schools and school districts.",
 			"stack": "Rails, Backbone + React.js, Haml, Bootstrap + Sass, PostgreSQL",
 			"positions": [
 				{
@@ -70,7 +70,7 @@
 			"images": [
 				"/static/amass.jpg"
 			],
-			"description": "Connecting socially-conscious filmmakers and organizations",
+			"description": "Connecting socially-conscious filmmakers and organizations.",
 			"stack": "Rails, Angular.js, Haml, Foundation + Sass, MongoDB",
 			"positions": [
 				{

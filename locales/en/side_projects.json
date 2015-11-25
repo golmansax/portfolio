@@ -5,7 +5,7 @@
       "name": "Quarry",
       "url": "http://yoquarry.club",
       "createdFor": "SF Disrupt Hackathon 2015",
-      "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's data)",
+      "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's data).",
       "github": "golmansax/funnel",
       "stack": "Express.js, ES6, React.js, CSS Modules, Chrome extension, Bash",
       "images": [
@@ -38,7 +38,7 @@
       "slug": "circl",
       "name": "Circl Dating App",
       "createdFor": "LAUNCH Hackathon 2015",
-      "description": "A social dating app designed so you can be involved with choosing your friend's dates",
+      "description": "A social dating app designed so you can be involved with choosing your friend's dates.",
       "github": "stephenball1/Twinkle",
       "stack": "Android app in Java, Firebase",
       "images": [
@@ -67,7 +67,7 @@
       "name": "Personal Site",
       "url": "https://golmansax.com",
       "github": "golmansax/my-site-in-express",
-      "description": "A portfolio of projects that I have worked on",
+      "description": "A portfolio of projects that I have worked on.",
       "stack": "Express.js, ES6, React.js",
       "images": [
         "/static/personal-site.jpg"
@@ -76,7 +76,7 @@
     {
       "slug": "my-impact-pledge",
       "name": "My Impact Pledge",
-      "description": "A call to have people pledge to regularly support causes they believe in",
+      "description": "A call to have people pledge to regularly support causes they believe in.",
       "url": "https://myimpactpledge.com",
       "github": "golmansax/my-impact-pledge",
       "stack": "Express.js, ES6, React.js, CSS Modules",
@@ -106,7 +106,7 @@
       "gif": "/static/battlecode-2015.gif",
       "description": [
         "An autonomous program that plays the computer game Battlecode; this ",
-        "year's version had rules similar to a real-time strategy game"
+        "year's version had rules similar to a real-time strategy game."
       ],
       "stack": "Java",
       "involvedWith": [
@@ -118,7 +118,7 @@
       "name": "My Gear",
       "description": [
         "A simple site used to track my clothing purchases and to help keep ",
-        "me in line with my minimalist philosophies"
+        "me in line with my minimalist philosophies."
       ],
       "images": ["/static/my-gear.jpg"],
       "github": "golmansax/my-gear",
@@ -130,7 +130,7 @@
       "createdFor": "National Day of Civic Hacking – San Francisco 2015",
       "description": [
         "Help reduce the poverty gap in San Francisco by sending ",
-        "micro-donations to kids in need"
+        "micro-donations to kids in need."
       ],
       "images": [
         ["/static/27-percenters_profile.jpg", "/static/27-percenters_search.jpg"],
@@ -150,7 +150,7 @@
       "images": ["/static/chip-in.jpg"],
       "description": [
         "A social, volunteering platform created to encourage users to ",
-        "volunteer, and make it easier to find opportunities"
+        "volunteer, and make it easier to find opportunities."
       ],
       "stack": "Rails, Angular.js, PostgreSQL",
       "involvedWith": [
