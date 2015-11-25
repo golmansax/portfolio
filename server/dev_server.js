@@ -2,7 +2,6 @@ import express from 'express';
 import path from 'path';
 import { assetMiddleware } from './asset_utils';
 import { routesData } from '../client/routes';
-import { getStaticHtmlPath } from '../server/static_html_utils';
 import routeHandler from '../client/router/route';
 
 const server = express();

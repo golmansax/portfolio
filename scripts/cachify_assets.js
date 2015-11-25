@@ -2,7 +2,6 @@
 
 import fs from 'fs-extra';
 import path from 'path';
-import mkdirp from 'mkdirp';
 import { getAsset, PUBLIC_DIR } from '../server/asset_utils';
 
 ['assets', 'static'].forEach((dir) => {
