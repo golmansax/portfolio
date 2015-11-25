@@ -1,3 +1,0 @@
-[submodule "vendor/office-street-view"]
-	path = vendor/office-street-view
-	url = https://github.com/golmansax/office-street-view.git

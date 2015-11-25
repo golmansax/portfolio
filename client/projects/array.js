@@ -13,6 +13,10 @@ export default {
         });
       }
 
+      if (project.gif) {
+        project.gif = getAsset(project.gif);
+      }
+
       return project;
     });
   },
