@@ -35,4 +35,3 @@ export default [
   { path: '/resume' },
   { path: '/404.html' },
 ];
-
