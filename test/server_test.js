@@ -23,7 +23,7 @@ if (isProduction()) {
   server = require('../server/dev_server').default;
 }
 
-describe('server', function() {
+describe('server', function () {
   let browser;
   let serverInstance;
 
@@ -38,7 +38,7 @@ describe('server', function() {
     serverInstance.close();
   });
 
-  describe('when starting from index', function() {
+  describe('when starting from index', function () {
     beforeEach(() => browser.visit('/'));
 
     it('routes root page to portfolio', () => {
@@ -84,7 +84,7 @@ describe('server', function() {
         expect(browser.link('human-centered design')).to.exist();
       });
 
-      describe.skip('when clicking to hcd page', function() {
+      describe.skip('when clicking to hcd page', function () {
         beforeEach(() => {
           this.timeout(9000);
           return browser.clickLink('human-centered design');
@@ -116,7 +116,7 @@ describe('server', function() {
     });
   });
 
-  describe('when starting from side projects page', function() {
+  describe('when starting from side projects page', function () {
     beforeEach(() => browser.visit('/side-projects'));
 
     it('has the right title', () => {
@@ -128,7 +128,7 @@ describe('server', function() {
     });
   });
 
-  describe.skip('when starting from community page', function() {
+  describe.skip('when starting from community page', function () {
     beforeEach(() => {
       this.timeout(20000);
       return browser.visit('/in-community');
@@ -143,7 +143,7 @@ describe('server', function() {
     });
   });
 
-  describe('when starting from work page', function() {
+  describe('when starting from work page', function () {
     beforeEach(() => browser.visit('/work'));
 
     it('has the right title', () => {
@@ -155,7 +155,7 @@ describe('server', function() {
     });
   });
 
-  describe('when starting from a project page', function() {
+  describe('when starting from a project page', function () {
     beforeEach(() => browser.visit('/side-projects/quarry'));
 
     it('has the right title', () => {
@@ -167,7 +167,7 @@ describe('server', function() {
     });
   });
 
-  describe('when starting from resume page', function() {
+  describe('when starting from resume page', function () {
     beforeEach(() => browser.visit('/resume'));
 
     it('has the right title', () => {
