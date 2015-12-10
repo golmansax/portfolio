@@ -1,6 +1,29 @@
 {
 	"projects": [
 		{
+      "slug": "chalk",
+			"name": "Chalk Schools",
+			"url": "http://chalkschools.com",
+			"images": [
+				"/static/chalk.jpg"
+			],
+			"description": "A digital workflow system created for K-12 schools and school districts.",
+			"stack": "Rails, Backbone + React.js, Haml, Bootstrap + Sass, PostgreSQL",
+			"positions": [
+				{
+					"title": "Software Engineer",
+					"start": "Jan ’14",
+					"end": "Sept ’15"
+				}
+			],
+			"joinedWhen": "Team had 3 employees (2 engineers)",
+			"involvedWith": [
+				["Full stack of website development, from code architecting to frontend UI/UX"],
+				["Spearheaded a database redesign that significantly opened up sales opportunities"],
+				["Help create an engineering culture that values collaboration and a strong testing suite"]
+			]
+		},
+		{
       "slug": "room-77",
 			"name": "Room 77",
 			"url": "https://m.room77.com",
@@ -38,29 +61,6 @@
 						"text": "acquired by Google"
 					}
 				]
-			]
-		},
-		{
-      "slug": "chalk",
-			"name": "Chalk Schools",
-			"url": "http://chalkschools.com",
-			"images": [
-				"/static/chalk.jpg"
-			],
-			"description": "A digital workflow system created for K-12 schools and school districts.",
-			"stack": "Rails, Backbone + React.js, Haml, Bootstrap + Sass, PostgreSQL",
-			"positions": [
-				{
-					"title": "Software Engineer",
-					"start": "Jan ’14",
-					"end": "Sept ’15"
-				}
-			],
-			"joinedWhen": "Team had 3 employees (2 engineers)",
-			"involvedWith": [
-				["Full stack of website development, from code architecting to frontend UI/UX"],
-				["Spearheaded a database redesign that significantly opened up sales opportunities"],
-				["Help create an engineering culture that values collaboration and a strong testing suite"]
 			]
 		},
 		{
