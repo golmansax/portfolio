@@ -95,8 +95,8 @@ describe('server', function () {
         });
       });
 
-      describe('when clicking to donations page', () => {
-        beforeEach(() => browser.clickLink('my donations pledge'));
+      describe('when clicking to impact pledge page', () => {
+        beforeEach(() => browser.clickLink('my impact pledge'));
 
         it('has the right title', () => {
           expect(browser.text('title')).to.include('Impact Pledge');
