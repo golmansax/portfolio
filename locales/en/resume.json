@@ -303,8 +303,8 @@
 					},
 					", ",
 					{
-						"text": "my donations pledge",
-            "routeName": "/in-community/my-donations-pledge"
+						"text": "my impact pledge",
+            "routeName": "/in-community/my-impact-pledge"
 					}
 				]
 			]

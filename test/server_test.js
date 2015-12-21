@@ -99,7 +99,7 @@ describe('server', function () {
         beforeEach(() => browser.clickLink('my donations pledge'));
 
         it('has the right title', () => {
-          expect(browser.text('title')).to.include('Donations Pledge');
+          expect(browser.text('title')).to.include('Impact Pledge');
         });
       });
 
