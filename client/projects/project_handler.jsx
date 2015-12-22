@@ -21,6 +21,11 @@ const PARENT_BREADCRUMBS = {
   },
 };
 
+const PROJECT_TYPE_LOOKUP = {};
+Object.keys(PARENT_BREADCRUMBS).forEach((type) => {
+  PROJECT_TYPE_LOOKUP[PARENT_BREADCRUMBS[type].routeName] = type;
+});
+
 const getFragmentText = (fragment) => fragment.text ? fragment.text : fragment;
 
 function getProjectDescriptionText(description) {
@@ -63,11 +68,13 @@ function getMetaData(project) {
 
 class ProjectHandler extends Component {
   render() {
+    const myType = PROJECT_TYPE_LOOKUP[`/${this.props.params.projectType}`];
     const myProject = getAllProjects().find((project) => {
-      return project.slug === this.props.params.projectId;
+      return project.slug === this.props.params.projectId &&
+        project.type === myType;
     });
 
-    if (!myProject) {
+    if (!myType || !myProject) {
       return <NotFoundHandler />;
     }
 

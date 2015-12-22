@@ -14,12 +14,10 @@ export default (
   <Route path='/' component={ContentHandler}>
     <IndexRoute component={PortfolioHandler} />
     <Route path='/work' component={WorkProjectsHandler} />
-    <Route path='/work/:projectId' component={ProjectHandler} />
     <Route path='/side-projects' component={SideProjectsHandler} />
-    <Route path='/side-projects/:projectId' component={ProjectHandler} />
     <Route path='/in-community' component={CommunityProjectsHandler} />
-    <Route path='/in-community/:projectId' component={ProjectHandler} />
     <Route path='/resume' component={ResumeHandler} />
+    <Route path='/:projectType/:projectId' component={ProjectHandler} />
     <Route path='*' component={NotFoundHandler} />
   </Route>
   /* eslint-enable max-len */
