@@ -1,5 +1,6 @@
 import { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
+import NotFoundHandler from '../routes/not_found_handler';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getAllProjects } from '../data/store';
@@ -66,7 +67,9 @@ class ProjectHandler extends Component {
       return project.slug === this.props.params.projectId;
     });
 
-    // TODO catch projects that don't match
+    if (!myProject) {
+      return <NotFoundHandler />;
+    }
 
     return (
       <div>

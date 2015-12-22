@@ -8,6 +8,6 @@ export default function RouterRoute(req, res) {
       res.status(200).send(html);
     }
   }).catch((error) => {
-    res.status(500).send(error.message);
+    res.status(500).send(error.stack.replace(/\n/g, '<br>'));
   });
 }
