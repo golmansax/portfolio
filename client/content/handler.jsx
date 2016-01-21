@@ -50,7 +50,7 @@ class ContentHandler extends Component {
 
     return (
       <div
-        onClick={toggleMenuShowing.bind(this, false)}
+        onClick={this._hideMenu}
         className='content-handler__backdrop'
       />
     );
@@ -59,6 +59,8 @@ class ContentHandler extends Component {
   _updateState() {
     this.setState({ isMenuShowing: isMenuShowing() });
   }
+
+  _hideMenu = () => toggleMenuShowing(false);
 }
 
 ContentHandler.propTypes = {

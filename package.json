@@ -39,7 +39,7 @@
     "fs-extra": "*",
     "global-mocha": "*",
     "history": "*",
-    "i18next": "*",
+    "i18next": "< 2",
     "jeet": "*",
     "mkdirp": "*",
     "mocha": "*",

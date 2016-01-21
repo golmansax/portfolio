@@ -1199,6 +1199,11 @@
       "from": "cookie-signature@1.0.6",
       "resolved": "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz"
     },
+    "cookies": {
+      "version": "0.5.1",
+      "from": "cookies@>=0.2.2",
+      "resolved": "https://registry.npmjs.org/cookies/-/cookies-0.5.1.tgz"
+    },
     "core-js": {
       "version": "1.2.6",
       "from": "core-js@>=1.0.0 <2.0.0",
@@ -2536,9 +2541,20 @@
       "resolved": "https://registry.npmjs.org/https-browserify/-/https-browserify-0.0.1.tgz"
     },
     "i18next": {
-      "version": "2.0.22",
-      "from": "i18next@2.0.22",
-      "resolved": "https://registry.npmjs.org/i18next/-/i18next-2.0.22.tgz"
+      "version": "1.10.6",
+      "from": "i18next@1.10.6",
+      "resolved": "https://registry.npmjs.org/i18next/-/i18next-1.10.6.tgz",
+      "dependencies": {
+        "json5": {
+          "version": "0.2.0",
+          "from": "json5@>=0.2.0 <0.3.0"
+        }
+      }
+    },
+    "i18next-client": {
+      "version": "1.10.3",
+      "from": "i18next-client@1.10.3",
+      "resolved": "https://registry.npmjs.org/i18next-client/-/i18next-client-1.10.3.tgz"
     },
     "iconv-lite": {
       "version": "0.4.13",
@@ -2869,6 +2885,11 @@
           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.1.31.tgz"
         }
       }
+    },
+    "keygrip": {
+      "version": "1.0.1",
+      "from": "keygrip@>=1.0.0 <1.1.0",
+      "resolved": "https://registry.npmjs.org/keygrip/-/keygrip-1.0.1.tgz"
     },
     "kind-of": {
       "version": "2.0.1",
