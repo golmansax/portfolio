@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow-callback */
+
 import chai, { expect } from 'chai';
 import Browser from 'zombie';
 import { isProduction } from '../server/config';

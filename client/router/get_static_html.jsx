@@ -30,11 +30,8 @@ export default function getStaticHtml(url) {
       } else if (redirectLocation) {
         resolve({ redirectLocation });
       } else {
-        resolve({
-          html: '<!DOCTYPE html>' + renderToStaticMarkup(
-            <RoutingContext {...renderProps} />
-          ),
-        });
+        const html = renderToStaticMarkup(<RoutingContext {...renderProps} />);
+        resolve({ html: `<!DOCTYPE html>${html}` });
       }
     });
   });

@@ -16,14 +16,14 @@ const rupture = require('rupture');
 server.use(stylus.middleware({
   src: `${rootDirname}/client`,
   dest: `${rootDirname}/public/assets`,
-  compile: (str, filePath) => {
-    return stylus(str)
+  compile: (str, filePath) => (
+    stylus(str)
       .set('filename', filePath)
       .set('paths', [`${rootDirname}/node_modules`])
       .use(jeet())
       .use(rupture())
-      .use(nib());
-  },
+      .use(nib())
+  ),
 }));
 
 server.use(express.static(`${rootDirname}/public`));

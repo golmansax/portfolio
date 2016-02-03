@@ -69,10 +69,9 @@ function getMetaData(project) {
 class ProjectHandler extends Component {
   render() {
     const myType = PROJECT_TYPE_LOOKUP[`/${this.props.params.projectType}`];
-    const myProject = getAllProjects().find((project) => {
-      return project.slug === this.props.params.projectId &&
-        project.type === myType;
-    });
+    const myProject = getAllProjects().find((project) => (
+      project.slug === this.props.params.projectId && project.type === myType
+    ));
 
     if (!myType || !myProject) {
       return <NotFoundHandler />;

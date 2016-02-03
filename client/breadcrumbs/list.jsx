@@ -27,8 +27,8 @@ class BreadcrumbsList extends React.Component {
     }
 
     return [
-      index === 0 ? null : this._renderBreak('span-' + index),
-      <Fragment key={'fragment' + index} {...myBreadcrumb} />,
+      index === 0 ? null : this._renderBreak(`span-${index}`),
+      <Fragment key={`fragment${index}`} {...myBreadcrumb} />,
     ];
   }
 
