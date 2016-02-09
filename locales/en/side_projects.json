@@ -147,17 +147,6 @@
       ]
     },
     {
-      "slug": "boost-my-club",
-      "name": "Boost My Club",
-      "images": ["/static/boost-my-club.jpg"],
-      "url": "https://www.boostmyclub.com",
-      "description": [
-        "A crowdfunding platform designed to increase donations for school ",
-        "clubs"
-      ],
-      "stack": "Express.js, ES6, React.js, CSS Modules"
-    },
-    {
       "slug": "todo-app-project",
       "name": "Todo App Project",
       "description": [
