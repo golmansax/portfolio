@@ -24,6 +24,29 @@
 			]
 		},
 		{
+      "slug": "zenysis",
+			"name": "Zenysis",
+			"url": "http://www.zenysis.com",
+			"images": [
+				"/static/zenysis.jpg"
+			],
+			"description": [
+        "A data analytics platform used by governments and international ",
+        "organizations to tackle global health issues"
+      ],
+			"stack": "Flask, React.js, Bootstrap + Sass, MongoDB",
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Feb ’16",
+					"end": "Feb ’16"
+				}
+			],
+			"involvedWith": [
+				["Build out and test new features"]
+			]
+		},
+		{
       "slug": "room-77",
 			"name": "Room 77",
 			"url": "https://m.room77.com",
