@@ -1,6 +1,6 @@
 import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
-import useScrollToTop from 'scroll-behavior/lib/useScrollToTop'
+import useScrollToTop from 'scroll-behavior/lib/useScrollToTop';
 
 import { routesComponent } from '../routes';
 import gon from '../gon';

@@ -9,7 +9,7 @@ const Fragment = ({ routeName, text, github, url }) => {
     return <GithubFragment github={github} />;
   } else if (url) {
     return (
-      <a href={url} target={url.match(/https?:/) ? '_blank': null}>
+      <a href={url} target={url.match(/https?:/) ? '_blank' : null}>
         {text || url}
       </a>
     );

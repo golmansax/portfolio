@@ -28,12 +28,12 @@ class ProjectsListItem extends React.Component {
     }
 
     if (this.props.gif) {
-      return <ProjectsImage image={this.props.gif} />;
+      return <ProjectsImage image={this.props.gif} url={this.props.url} />;
     }
 
     if (this.props.images) {
       return this.props.images.map((image, index) => (
-        <ProjectsImage image={image} key={index} />
+        <ProjectsImage image={image} key={index} url={this.props.url} />
       ));
     }
 
@@ -68,6 +68,7 @@ ProjectsListItem.propTypes = {
   gif: React.PropTypes.string,
   images: React.PropTypes.array,
   pdf: React.PropTypes.string,
+  url: React.PropTypes.string,
   slug: React.PropTypes.string,
 };
 

@@ -35,15 +35,16 @@ class ProjectsGrid extends Component {
   }
 
   _renderProject(project, index) {
+    const routeName = `/${getProjectRoute(project.type)}/${project.slug}`;
     return (
       <div className='projects-grid__item' key={index}>
         <h2>
           <Fragment
-            routeName={`/${getProjectRoute(project.type)}/${project.slug}`}
+            routeName={routeName}
             text={project.shortName || project.name}
           />
         </h2>
-        <ProjectsImage image={project.images[0]} />
+        <ProjectsImage image={project.images[0]} routeName={routeName} />
       </div>
     );
   }
