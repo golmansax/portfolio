@@ -68,8 +68,8 @@ ProjectsListItem.propTypes = {
   gif: React.PropTypes.string,
   images: React.PropTypes.array,
   pdf: React.PropTypes.string,
-  url: React.PropTypes.string,
   slug: React.PropTypes.string,
+  url: React.PropTypes.string,
 };
 
 export default ProjectsListItem;
