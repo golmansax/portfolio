@@ -1,3 +1,4 @@
+import { PropTypes } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import LayoutHead from './head';
 import LayoutInlineData from './inline_data';
@@ -24,5 +25,9 @@ const LayoutHandler = ({ children }) => (
     </body>
   </html>
 );
+
+LayoutHandler.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default LayoutHandler;

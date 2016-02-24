@@ -36,6 +36,8 @@ class ProjectsListItem extends React.Component {
         <ProjectsImage image={image} key={index} />
       ));
     }
+
+    return null;
   }
 
   _renderContent() {
