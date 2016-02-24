@@ -1326,6 +1326,11 @@
         }
       }
     },
+    "dom-helpers": {
+      "version": "2.4.0",
+      "from": "dom-helpers@>=2.4.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/dom-helpers/-/dom-helpers-2.4.0.tgz"
+    },
     "dom-serializer": {
       "version": "0.1.0",
       "from": "dom-serializer@>=0.0.0 <1.0.0",
@@ -2467,6 +2472,11 @@
       "version": "3.1.2",
       "from": "hawk@>=3.1.0 <3.2.0",
       "resolved": "https://registry.npmjs.org/hawk/-/hawk-3.1.2.tgz"
+    },
+    "history": {
+      "version": "2.0.0",
+      "from": "history@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/history/-/history-2.0.0.tgz"
     },
     "hoek": {
       "version": "2.16.3",
@@ -3804,6 +3814,11 @@
       "version": "0.5.8",
       "from": "sax@>=0.5.0 <0.6.0",
       "resolved": "https://registry.npmjs.org/sax/-/sax-0.5.8.tgz"
+    },
+    "scroll-behavior": {
+      "version": "0.3.2",
+      "from": "scroll-behavior@*",
+      "resolved": "https://registry.npmjs.org/scroll-behavior/-/scroll-behavior-0.3.2.tgz"
     },
     "semver": {
       "version": "4.3.6",

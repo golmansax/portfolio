@@ -1,6 +1,6 @@
 import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
-// TODO(holman): consider putting back in useScrollToTop
+import useScrollToTop from 'scroll-behavior/lib/useScrollToTop'
 
 import { routesComponent } from '../routes';
 import gon from '../gon';
@@ -17,9 +17,9 @@ loadData(gon.data);
 loadImages(gon.images);
 
 toggleMenuShowing(false);
+
+const scrollHistory = (useScrollToTop(() => browserHistory))();
 render(
-  <Router history={browserHistory}>
-    {routesComponent}
-  </Router>,
+  <Router history={scrollHistory}>{routesComponent}</Router>,
   global.document.getElementById('content')
 );
