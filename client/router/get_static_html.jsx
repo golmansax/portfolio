@@ -1,5 +1,5 @@
 import { renderToStaticMarkup } from 'react-dom/server';
-import { Route, RoutingContext, match } from 'react-router';
+import { Route, RouterContext, match } from 'react-router';
 import { routesComponent } from '../routes';
 import LayoutHandler from '../layout/handler';
 import getDataFromI18n from '../data/from_i18n';
@@ -30,7 +30,7 @@ export default function getStaticHtml(url) {
       } else if (redirectLocation) {
         resolve({ redirectLocation });
       } else {
-        const html = renderToStaticMarkup(<RoutingContext {...renderProps} />);
+        const html = renderToStaticMarkup(<RouterContext {...renderProps} />);
         resolve({ html: `<!DOCTYPE html>${html}` });
       }
     });

@@ -1326,11 +1326,6 @@
         }
       }
     },
-    "dom-helpers": {
-      "version": "2.4.0",
-      "from": "dom-helpers@>=2.4.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/dom-helpers/-/dom-helpers-2.4.0.tgz"
-    },
     "dom-serializer": {
       "version": "0.1.0",
       "from": "dom-serializer@>=0.0.0 <1.0.0",
@@ -2473,11 +2468,6 @@
       "from": "hawk@>=3.1.0 <3.2.0",
       "resolved": "https://registry.npmjs.org/hawk/-/hawk-3.1.2.tgz"
     },
-    "history": {
-      "version": "1.17.0",
-      "from": "history@1.17.0",
-      "resolved": "https://registry.npmjs.org/history/-/history-1.17.0.tgz"
-    },
     "hoek": {
       "version": "2.16.3",
       "from": "hoek@>=2.0.0 <3.0.0",
@@ -3605,15 +3595,16 @@
         }
       }
     },
-    "react-mixin": {
-      "version": "3.0.3",
-      "from": "react-mixin@*",
-      "resolved": "https://registry.npmjs.org/react-mixin/-/react-mixin-3.0.3.tgz"
-    },
     "react-router": {
-      "version": "1.0.3",
-      "from": "react-router@1.0.3",
-      "resolved": "https://registry.npmjs.org/react-router/-/react-router-1.0.3.tgz"
+      "version": "2.0.0",
+      "from": "react-router@2.0.0",
+      "resolved": "https://registry.npmjs.org/react-router/-/react-router-2.0.0.tgz",
+      "dependencies": {
+        "history": {
+          "version": "2.0.0",
+          "from": "history@>=2.0.0 <3.0.0"
+        }
+      }
     },
     "react-side-effect": {
       "version": "1.0.2",
@@ -3814,11 +3805,6 @@
       "from": "sax@>=0.5.0 <0.6.0",
       "resolved": "https://registry.npmjs.org/sax/-/sax-0.5.8.tgz"
     },
-    "scroll-behavior": {
-      "version": "0.3.1",
-      "from": "scroll-behavior@0.3.1",
-      "resolved": "https://registry.npmjs.org/scroll-behavior/-/scroll-behavior-0.3.1.tgz"
-    },
     "semver": {
       "version": "4.3.6",
       "from": "semver@>=4.0.3 <5.0.0",
@@ -3900,11 +3886,6 @@
       "version": "0.0.4",
       "from": "slice-ansi@0.0.4",
       "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-0.0.4.tgz"
-    },
-    "smart-mixin": {
-      "version": "1.2.1",
-      "from": "smart-mixin@>=1.2.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/smart-mixin/-/smart-mixin-1.2.1.tgz"
     },
     "sntp": {
       "version": "1.0.9",
