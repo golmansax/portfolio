@@ -30,4 +30,4 @@ stylint:
 	./node_modules/.bin/stylint client
 
 start:
-	nodemon -e js,jsx,json,styl --watch client --watch locales --watch server
+	./node_modules/.bin/nodemon -e js,jsx,json,styl --watch client --watch locales --watch server

@@ -7,7 +7,7 @@
 						"text": "Room 77",
 						"url": "http://www.room77.com?new=1"
 					},
-					", Software Engineer"
+					", Software Contractor"
 				],
 				"right": [
 					"San Francisco, CA: Sept ’15 – Current"
@@ -16,6 +16,24 @@
 			"numInitialNotesToShow": 2,
 			"notes": [
         ["Build out infrastructure to allow partners to bid for search result placement in a second-price auction (in C++)"]
+			]
+    },
+    {
+			"title": {
+				"left": [
+					{
+						"text": "Zenysis",
+						"url": "http://www.zenysis.com"
+					},
+					", Software Contractor"
+				],
+				"right": [
+					"San Francisco, CA: Feb ’16"
+				]
+			},
+			"numInitialNotesToShow": 2,
+			"notes": [
+				["Build and test new features on a data analytics platform used to tackle global health issues"]
 			]
     },
 		{

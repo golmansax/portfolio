@@ -23,6 +23,7 @@
     "flux-crud-store": "*",
     "global-mocha": "*",
     "mocha": "*",
+    "nodemon": "*",
     "react-bind-mixin": "*",
     "stink-bomb": "*",
     "stylint": "< 1.3",

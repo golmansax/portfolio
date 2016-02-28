@@ -43,7 +43,7 @@
 				}
 			],
 			"involvedWith": [
-				["Build out and test new features"]
+				["Build and test new features"]
 			]
 		},
 		{
@@ -60,7 +60,7 @@
 			"stack": "Angular.js, Sass, PHP, C++",
 			"positions": [
 				{
-					"title": "Software Engineer",
+					"title": "Software Contractor",
 					"start": "Sept ’15",
 					"end": "Current"
 				},
