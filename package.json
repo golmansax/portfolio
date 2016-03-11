@@ -16,7 +16,7 @@
     "backbone-sortable-collection": "*",
     "chai": "*",
     "dirty-chai": "*",
-    "eslint": "^2.0.0",
+    "eslint": "~2.2.0",
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-react": "*",
