@@ -7,7 +7,11 @@ export default {
       if (project.images) {
         project.images = project.images.map((image) => {
           if (Array.isArray(image)) {
-            return image.map(getAsset);
+            // Not sure exactly why, but need to manually call getAsset instead
+            // of using Array.prototype.map
+            const result = [];
+            image.forEach((myImage) => result.push(getAsset(myImage)));
+            return result;
           }
 
           return getAsset(image);
