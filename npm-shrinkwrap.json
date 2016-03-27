@@ -175,14 +175,14 @@
       "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.5.0.tgz"
     },
     "babel-core": {
-      "version": "6.7.2",
-      "from": "babel-core@6.7.2",
-      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.7.2.tgz",
+      "version": "6.7.4",
+      "from": "babel-core@6.7.4",
+      "resolved": "https://registry.npmjs.org/babel-core/-/babel-core-6.7.4.tgz",
       "dependencies": {
         "babel-code-frame": {
-          "version": "6.7.2",
-          "from": "babel-code-frame@>=6.7.2 <7.0.0",
-          "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.7.2.tgz"
+          "version": "6.7.4",
+          "from": "babel-code-frame@>=6.7.4 <7.0.0",
+          "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.7.4.tgz"
         },
         "babel-messages": {
           "version": "6.7.2",
@@ -195,9 +195,9 @@
           "resolved": "https://registry.npmjs.org/babel-template/-/babel-template-6.7.0.tgz"
         },
         "babel-traverse": {
-          "version": "6.7.3",
-          "from": "babel-traverse@>=6.7.2 <7.0.0",
-          "resolved": "https://registry.npmjs.org/babel-traverse/-/babel-traverse-6.7.3.tgz"
+          "version": "6.7.4",
+          "from": "babel-traverse@>=6.7.4 <7.0.0",
+          "resolved": "https://registry.npmjs.org/babel-traverse/-/babel-traverse-6.7.4.tgz"
         },
         "babel-types": {
           "version": "6.7.2",
@@ -217,15 +217,15 @@
       "resolved": "https://registry.npmjs.org/babel-generator/-/babel-generator-6.7.2.tgz",
       "dependencies": {
         "babel-code-frame": {
-          "version": "6.7.2",
-          "from": "babel-code-frame@>=6.7.2 <7.0.0"
+          "version": "6.7.4",
+          "from": "babel-code-frame@>=6.7.4 <7.0.0"
         },
         "babel-messages": {
           "version": "6.7.2",
           "from": "babel-messages@>=6.7.2 <7.0.0"
         },
         "babel-traverse": {
-          "version": "6.7.3",
+          "version": "6.7.4",
           "from": "babel-traverse@>=6.7.2 <7.0.0"
         },
         "babel-types": {
@@ -428,8 +428,8 @@
       "resolved": "https://registry.npmjs.org/babel-helpers/-/babel-helpers-6.6.0.tgz",
       "dependencies": {
         "babel-code-frame": {
-          "version": "6.7.2",
-          "from": "babel-code-frame@>=6.7.2 <7.0.0"
+          "version": "6.7.4",
+          "from": "babel-code-frame@>=6.7.4 <7.0.0"
         },
         "babel-messages": {
           "version": "6.7.2",
@@ -440,7 +440,7 @@
           "from": "babel-template@>=6.6.0 <7.0.0"
         },
         "babel-traverse": {
-          "version": "6.7.3",
+          "version": "6.7.4",
           "from": "babel-traverse@>=6.7.0 <7.0.0"
         },
         "babel-types": {
@@ -3551,16 +3551,9 @@
       "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-0.14.7.tgz"
     },
     "react-helmet": {
-      "version": "2.3.1",
-      "from": "react-helmet@*",
-      "resolved": "https://registry.npmjs.org/react-helmet/-/react-helmet-2.3.1.tgz",
-      "dependencies": {
-        "core-js": {
-          "version": "2.0.3",
-          "from": "core-js@2.0.3",
-          "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.0.3.tgz"
-        }
-      }
+      "version": "3.0.0",
+      "from": "react-helmet@3.0.0",
+      "resolved": "https://registry.npmjs.org/react-helmet/-/react-helmet-3.0.0.tgz"
     },
     "react-router": {
       "version": "2.0.1",
