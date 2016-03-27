@@ -26,7 +26,9 @@ Object.keys(PARENT_BREADCRUMBS).forEach((type) => {
   PROJECT_TYPE_LOOKUP[PARENT_BREADCRUMBS[type].routeName] = type;
 });
 
-const getFragmentText = (fragment) => fragment.text ? fragment.text : fragment;
+const getFragmentText = (fragment) => (
+  fragment.text ? fragment.text : fragment
+);
 
 function getProjectDescriptionText(description) {
   return Array.isArray(description) ?
