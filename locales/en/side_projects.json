@@ -114,39 +114,6 @@
       "stack": "Rails, React.js + Immutable.js + Flux, Bootstrap + Sass, GraphQL, PostgreSQL"
     },
     {
-      "slug": "27-percenters",
-      "name": "27 Percenters",
-      "createdFor": "National Day of Civic Hacking – San Francisco 2015",
-      "description": [
-        "Help reduce the poverty gap in San Francisco by sending ",
-        "micro-donations to kids in need."
-      ],
-      "images": [
-        ["/static/27-percenters_profile.jpg", "/static/27-percenters_search.jpg"],
-        ["/static/27-percenters_home.jpg", "/static/27-percenters_settings.jpg"]
-      ],
-      "github": "27percenters/27percenters",
-      "stack": "Ionic, Angular.js, Sass, Firebase, Appetize",
-      "involvedWith": [
-        ["Front-end coding and design"],
-        ["Use AngularFire to bind Firebase to the frontend"]
-      ]
-    },
-    {
-      "slug": "chip-in",
-      "name": "Chip In",
-      "createdFor": "LAUNCH Hackathon 2014",
-      "images": ["/static/chip-in.jpg"],
-      "description": [
-        "A social, volunteering platform created to encourage users to ",
-        "volunteer, and make it easier to find opportunities."
-      ],
-      "stack": "Rails, Angular.js, PostgreSQL",
-      "involvedWith": [
-        ["Front-end coding and design"]
-      ]
-    },
-    {
       "slug": "todo-app-project",
       "name": "Todo App Project",
       "description": [
