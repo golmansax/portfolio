@@ -23,6 +23,23 @@
 				["Help create an engineering culture that values collaboration and a strong testing suite"]
 			]
 		},
+    {
+      "slug": "boost-my-club",
+      "name": "Boost My Club",
+      "images": ["/static/boost-my-club.jpg"],
+      "url": "https://www.boostmyclub.com",
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "Nov ’15",
+					"end": "Current"
+				}
+			],
+      "description": [
+        "A fundraising platform for school clubs"
+      ],
+      "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules"
+    },
 		{
       "slug": "zenysis",
 			"name": "Zenysis",
@@ -107,23 +124,6 @@
 				["Design and code the landing site"],
 				["Conduct product and technical interviews"]
       ]
-    },
-    {
-      "slug": "boost-my-club",
-      "name": "Boost My Club",
-      "images": ["/static/boost-my-club.jpg"],
-      "url": "https://www.boostmyclub.com",
-			"positions": [
-				{
-					"title": "Co-founder",
-					"start": "Nov ’15",
-					"end": "Current"
-				}
-			],
-      "description": [
-        "A fundraising platform for school clubs"
-      ],
-      "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules"
     }
 	]
 }
