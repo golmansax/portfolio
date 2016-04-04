@@ -4,6 +4,25 @@
 			"title": {
 				"left": [
 					{
+						"text": "Boost My Club",
+						"url": "https://www.boostmyclub.com"
+					},
+					", Founder"
+				],
+				"right": [
+					"San Francisco, CA: Nov ’15 – Current"
+				]
+			},
+			"numInitialNotesToShow": 2,
+			"notes": [
+        ["Develop prototype by working directly with the board of a high school's foundation"],
+        ["Stack uses Rails, ES6, React.js, GraphQL, Relay, CSS Modules"]
+			]
+    },
+    {
+			"title": {
+				"left": [
+					{
 						"text": "Room 77",
 						"url": "http://www.room77.com?new=1"
 					},
@@ -78,7 +97,7 @@
           ", Product/Technical Advisor"
 				],
 				"right": [
-					"San Francisco, CA: Mar ’15 – Current"
+					"San Francisco, CA: Mar ’15 – Jan ’16"
 				]
 			},
 			"notes": [
