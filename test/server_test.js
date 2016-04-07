@@ -82,10 +82,6 @@ describe('server', function () {
         expect(browser.text('title')).to.include('Resume');
       });
 
-      it('has a link to hcd page', () => {
-        expect(browser.link('human-centered design')).to.exist();
-      });
-
       describe.skip('when clicking to hcd page', function () {
         beforeEach(() => {
           this.timeout(9000);
@@ -98,7 +94,7 @@ describe('server', function () {
       });
 
       describe('when clicking to impact pledge page', () => {
-        beforeEach(() => browser.clickLink('my impact pledge'));
+        beforeEach(() => browser.clickLink('My Impact Pledge'));
 
         it('has the right title', () => {
           expect(browser.text('title')).to.include('Impact Pledge');
