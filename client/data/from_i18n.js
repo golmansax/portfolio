@@ -31,11 +31,5 @@ export default function getDataFromI18n() {
         });
         return project;
       }),
-
-    resume: {
-      work: i18n.t('resume:work'),
-      education: i18n.t('resume:education'),
-      other: i18n.t('resume:other'),
-    },
   };
 }
