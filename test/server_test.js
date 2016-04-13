@@ -82,34 +82,8 @@ describe('server', function () {
         expect(browser.text('title')).to.include('Resume');
       });
 
-      describe.skip('when clicking to hcd page', function () {
-        beforeEach(() => {
-          this.timeout(9000);
-          return browser.clickLink('human-centered design');
-        });
-
-        it('has the right title', () => {
-          expect(browser.text('title')).to.include('Human-Centered Design');
-        });
-      });
-
-      describe('when clicking to impact pledge page', () => {
-        beforeEach(() => browser.clickLink('My Impact Pledge'));
-
-        it('has the right title', () => {
-          expect(browser.text('title')).to.include('Impact Pledge');
-        });
-      });
-
-      describe('when clicking to street view', () => {
-        beforeEach(() => {
-          browser.clickLink('More');
-          return browser.clickLink('Fun teams page');
-        });
-
-        it('has the right title', () => {
-          expect(browser.text('title')).to.include('Office Street View');
-        });
+      it('has Resume in the body', () => {
+        expect(browser.text('body')).to.include('Resume');
       });
     });
   });
@@ -162,18 +136,6 @@ describe('server', function () {
 
     it('has the right content', () => {
       expect(browser.text('body')).to.include('Autocomplete as a service');
-    });
-  });
-
-  describe('when starting from resume page', function () {
-    beforeEach(() => browser.visit('/resume'));
-
-    it('has the right title', () => {
-      expect(browser.text('title')).to.include('Resume');
-    });
-
-    it('has the right content', () => {
-      expect(browser.text('body')).to.include('2011 ACM-ICPC World Finals');
     });
   });
 });
