@@ -15,7 +15,7 @@ export default class Image extends React.Component {
   }
 
   _renderImage() {
-    return <img src={this.props.src} />;
+    return <img role='presentation' src={this.props.src} />;
   }
 }
 

@@ -34,7 +34,10 @@ class ContentNavbar extends React.Component {
         <Container>
           <div className='navbar-left'>
             <Link to='/'>
-              <img src={getImage('/static/navbar-icon.png')} />
+              <img
+                role='presentation'
+                src={getImage('/static/navbar-icon.png')}
+              />
               <h1>Holman Gao</h1>
             </Link>
           </div>
