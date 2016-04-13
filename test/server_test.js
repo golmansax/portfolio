@@ -1,6 +1,7 @@
 /* eslint-disable prefer-arrow-callback */
 
 import chai, { expect } from 'chai';
+import nock from 'nock';
 import Browser from 'zombie';
 import { isProduction } from '../server/config';
 import { initI18n } from '../server/my_i18n';
@@ -34,10 +35,13 @@ describe('server', function () {
   beforeEach(() => {
     serverInstance = server.listen(MY_PORT);
     browser = new Browser();
+    nock.disableNetConnect();
+    nock.enableNetConnect(`golmansax.com:80`);
   });
 
   afterEach(() => {
     serverInstance.close();
+    nock.cleanAll();
   });
 
   describe('when starting from index', function () {
@@ -76,7 +80,10 @@ describe('server', function () {
     });
 
     describe('when clicking to resume', () => {
-      beforeEach(() => browser.clickLink('Resume'));
+      beforeEach(() => {
+        nock('https://docs.google.com').get(/viewer/).reply(200);
+        return browser.clickLink('Resume')
+      });
 
       it('has the right title', () => {
         expect(browser.text('title')).to.include('Resume');
@@ -84,6 +91,21 @@ describe('server', function () {
 
       it('has Resume in the body', () => {
         expect(browser.text('body')).to.include('Resume');
+      });
+    });
+
+    describe('when clicking to community page', function () {
+      beforeEach(() => {
+        nock('https://docs.google.com').get(/viewer/).reply(200);
+        return browser.clickLink('In Community');
+      });
+
+      it('has the right title', () => {
+        expect(browser.text('title')).to.include('Efforts in Community');
+      });
+
+      it('has the right content', () => {
+        expect(browser.text('body')).to.include('significant donation');
       });
     });
   });
@@ -97,21 +119,6 @@ describe('server', function () {
 
     it('has the right content', () => {
       expect(browser.text('body')).to.include('Navigate through an office');
-    });
-  });
-
-  describe.skip('when starting from community page', function () {
-    beforeEach(() => {
-      this.timeout(20000);
-      return browser.visit('/in-community');
-    });
-
-    it('has the right title', () => {
-      expect(browser.text('title')).to.include('Efforts in Community');
-    });
-
-    it('has the right content', () => {
-      expect(browser.text('body')).to.include('donate money every year');
     });
   });
 
