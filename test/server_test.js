@@ -36,7 +36,7 @@ describe('server', function () {
     serverInstance = server.listen(MY_PORT);
     browser = new Browser();
     nock.disableNetConnect();
-    nock.enableNetConnect(`golmansax.com:80`);
+    nock.enableNetConnect('golmansax.com:80');
   });
 
   afterEach(() => {
@@ -82,7 +82,7 @@ describe('server', function () {
     describe('when clicking to resume', () => {
       beforeEach(() => {
         nock('https://docs.google.com').get(/viewer/).reply(200);
-        return browser.clickLink('Resume')
+        return browser.clickLink('Resume');
       });
 
       it('has the right title', () => {
