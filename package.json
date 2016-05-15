@@ -20,6 +20,7 @@
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
+    "eslint-plugin-import": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "flux-crud-store": "*",
