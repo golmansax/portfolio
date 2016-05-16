@@ -1,7 +1,0 @@
-{
-  "extends": "golmansax",
-
-  "rules": {
-    "react/prefer-stateless-function": [1]
-  }
-}
