@@ -24,10 +24,10 @@
 			]
 		},
     {
-      "slug": "boost-my-club",
-      "name": "Boost My Club",
-      "images": ["/static/boost-my-club.jpg"],
-      "url": "https://www.boostmyclub.com",
+      "slug": "boost-my-school",
+      "name": "Boost My School",
+      "images": ["/static/boost-my-school.jpg"],
+      "url": "https://www.boostmyschool.com",
 			"positions": [
 				{
 					"title": "Founder",
@@ -36,7 +36,7 @@
 				}
 			],
       "description": [
-        "A fundraising platform for school clubs"
+        "A fundraising platform for school programs"
       ],
       "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules"
     },
