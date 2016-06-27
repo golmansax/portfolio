@@ -1,4 +1,6 @@
-/* eslint-disable no-console, no-var */
+/* eslint-disable no-console, no-var, no-process-env */
+
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config(); }
 
 require('babel-core/register');
 

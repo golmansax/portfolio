@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { getAsset } from '../../server/asset_utils';
+import HeapAnalyticsScript from './heap_analytics_script';
 
 const LayoutHead = () => {
   const helmet = Helmet.rewind();
@@ -32,6 +33,7 @@ const LayoutHead = () => {
       />
       <meta name='viewport' content='width=device-width, user-scalable=no' />
       <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+      <HeapAnalyticsScript />
     </head>
     /* eslint-enable max-len */
   );

@@ -21,7 +21,7 @@ test:
 
 watch:
 	mkdir -p public/assets
-	./node_modules/.bin/watchify --extension=.jsx -t babelify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
+	./node_modules/.bin/watchify --extension=.jsx -t babelify -t envlocalify client/router/bootstrap.jsx -o public/assets/router_bootstrap.js -v
 
 eslint:
 	./node_modules/.bin/eslint . --ext .js --ext .jsx

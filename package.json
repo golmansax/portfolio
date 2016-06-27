@@ -17,6 +17,8 @@
     "backbone-sortable-collection": "*",
     "chai": "*",
     "dirty-chai": "*",
+    "dotenv": "*",
+    "envlocalify": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
