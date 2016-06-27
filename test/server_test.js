@@ -51,7 +51,7 @@ describe('server', function () {
       expect(browser.text('title')).to.equal('Holman Gao');
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
-      StinkBomb.create('2016-06-01', { message: 'Sample stink bomb' });
+      StinkBomb.create('2017-06-01', { message: 'Sample stink bomb' });
     });
 
     describe('when clicking on a portfolio link', () => {
