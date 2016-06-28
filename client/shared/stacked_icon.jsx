@@ -9,17 +9,21 @@ function getClass({ className }) {
   });
 }
 
-const StackedIcon = ({ className, back, front }) => (
+const StackedIcon = ({
+  className, back, front, backClassName, frontClassName,
+}) => (
   <span className={getClass({ className })}>
-    <Icon type={back} stack='2x' />
-    <Icon type={front} stack='1x' inverse />
+    <Icon type={back} stack='2x' className={frontClassName} />
+    <Icon type={front} stack='1x' className={backClassName} />
   </span>
 );
 
 StackedIcon.propTypes = {
   back: PropTypes.string.isRequired,
+  backClassName: PropTypes.string,
   className: PropTypes.string,
   front: PropTypes.string.isRequired,
+  frontClassName: PropTypes.string,
 };
 
 export default StackedIcon;

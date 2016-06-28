@@ -17,6 +17,7 @@ const ContentFooterInfoTags = () => (
             back='circle'
             front='file-text'
             className='content-footer-info-tags__resume-icon'
+            backClassName='content-footer-info-tags__back-icon'
           />
           Resume
         </Link>
@@ -28,11 +29,16 @@ const ContentFooterInfoTags = () => (
           className='content-footer-info-tags__email-icon'
           back='circle'
           front='envelope'
+          backClassName='content-footer-info-tags__back-icon'
         />
         <MyEmail />
       </div>
       <div className='content-footer-info-tags__tag'>
-        <StackedIcon back='circle' front='map-marker' />
+        <StackedIcon
+          back='circle'
+          front='map-marker'
+          backClassName='content-footer-info-tags__back-icon'
+        />
         in San Francisco, CA
       </div>
     </div>

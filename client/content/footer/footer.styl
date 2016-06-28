@@ -4,13 +4,26 @@
 $footer-lambda = $lambda * 3 / 2
 
 .content-footer {
-  margin-top unit(2 * $lambda, em)
-  border-top $colored-border
-  line-height $footer-lambda
-  padding 1em 0
+  +e(top) {
+    border-top $colored-border
+    margin-top unit(2 * $lambda, em)
+    padding 3em 0
+  }
 
-  h2 {
-    line-height ($footer-lambda / $h2-lambda)
+  +e(bottom) {
+    background-color $my-green
+    color $white
+    line-height $footer-lambda
+    padding 2em 0
+
+    h2 {
+      line-height ($footer-lambda / $h2-lambda)
+    }
+
+    h2,
+    a {
+      color $white
+    }
   }
 
   +e(section) {
@@ -33,7 +46,6 @@ $footer-lambda = $lambda * 3 / 2
       &:after {
         fa-icon()
 
-        color $dark-gray
         content: $fa-var-circle
         font-size 5px
         padding 0 1em

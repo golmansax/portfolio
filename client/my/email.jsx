@@ -1,4 +1,6 @@
-const MyEmail = () => (
+import { PropTypes } from 'react';
+
+const MyEmailContent = () => (
   <span>
     holm
     <span className='my-email__crap'>crap</span>
@@ -15,5 +17,22 @@ const MyEmail = () => (
     .com
   </span>
 );
+
+
+const MyEmail = ({ link }) => {
+  if (link) {
+    return <a href='mailto:holman@golmansax.com'><MyEmailContent /></a>;
+  }
+
+  return <MyEmailContent />;
+};
+
+MyEmail.defaultProps = {
+  link: false,
+};
+
+MyEmail.propTypes = {
+  link: PropTypes.bool.isRequired,
+};
 
 export default MyEmail;
