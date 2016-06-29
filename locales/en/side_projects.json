@@ -169,6 +169,12 @@
                 [{
                   "github": "golmansax/todo-app-in-django"
                 }]
+              ],
+              [
+                ["Scalatra (Scala), MongoDB"],
+                [{
+                  "github": "golmansax/todo-app-in-scalatra"
+                }]
               ]
             ]
 					}
