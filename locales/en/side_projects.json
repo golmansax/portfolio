@@ -175,6 +175,12 @@
                 [{
                   "github": "golmansax/todo-app-in-scalatra"
                 }]
+              ],
+              [
+                ["Beego (Go), SQLite (app in progress)"],
+                [{
+                  "github": "golmansax/todo-app-in-beego"
+                }]
               ]
             ]
 					}
