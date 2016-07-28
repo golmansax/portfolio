@@ -29,23 +29,26 @@ export function getAllProjects() {
     5: 'personal-site',
   };
 
-  const allProjects = Object.keys(ORDER_OVERRIDES).reduce((prevProjects, newIndex) => {
-    const slug = ORDER_OVERRIDES[newIndex];
+  const allProjects = Object.keys(ORDER_OVERRIDES)
+    .reduce((prevProjects, newIndex) => {
+      const slug = ORDER_OVERRIDES[newIndex];
 
-    const newProjects = [...prevProjects];
+      const newProjects = [...prevProjects];
 
-    // Remove project from array
-    const project = newProjects.find((project) => project.slug === slug);
-    const indexToRemove = newProjects.indexOf(project);
+      // Remove project from array
+      const myProject = newProjects.find((project) => project.slug === slug);
+      const indexToRemove = newProjects.indexOf(myProject);
 
-    if (indexToRemove < 0) { throw "Index should not be negative..."; }
-    newProjects.splice(indexToRemove, 1);
+      if (indexToRemove < 0) {
+        throw new Error('Index should not be negative...');
+      }
+      newProjects.splice(indexToRemove, 1);
 
-    // Add it back at proper index
-    newProjects.splice(newIndex, 0, project);
+      // Add it back at proper index
+      newProjects.splice(newIndex, 0, myProject);
 
-    return newProjects;
-  }, projects);
+      return newProjects;
+    }, projects);
 
   data.allProjects = allProjects;
   return allProjects;
