@@ -1,5 +1,18 @@
 {
 	"projects": [
+    {
+      "slug": "book-booster",
+      "name": "BookBooster",
+      "description": [
+        "An initiative for the 2016-17 school year to ",
+        "provide books to 20 Bay Area schools serving low-income students."
+      ],
+      "url": "https://bayarea.bookbooster.org",
+      "stack": "Typescript, Express.js, Sequelize, React.js, Sass",
+      "images": [
+        "/static/book-booster.jpg"
+      ]
+    },
 		{
       "slug": "volunteering",
 			"name": "Volunteering",
@@ -104,7 +117,6 @@
     {
       "slug": "my-impact-pledge",
       "name": "My Impact Pledge",
-      "description": "A call to have people pledge to regularly support causes they believe in.",
 			"description": [
 				"I created this site to document an impact pledge I made after ",
         "obtaining my undergraduate degree.  Instead of splurging on my ",

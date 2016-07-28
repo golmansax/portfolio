@@ -17,9 +17,38 @@ export function getCommunityProjects() {
 }
 
 export function getAllProjects() {
-  return data.workProjects
+  if (data.allProjects) { return data.allProjects; }
+
+  const projects = data.workProjects
     .concat(data.sideProjects)
     .concat(data.communityProjects);
+
+  const ORDER_OVERRIDES = {
+    2: 'book-booster',
+    4: 'my-impact-pledge',
+    5: 'personal-site',
+  };
+
+  const allProjects = Object.keys(ORDER_OVERRIDES).reduce((prevProjects, newIndex) => {
+    const slug = ORDER_OVERRIDES[newIndex];
+
+    const newProjects = [...prevProjects];
+
+    // Remove project from array
+    const project = newProjects.find((project) => project.slug === slug);
+    const indexToRemove = newProjects.indexOf(project);
+
+    if (indexToRemove < 0) { throw "Index should not be negative..."; }
+    newProjects.splice(indexToRemove, 1);
+
+    // Add it back at proper index
+    newProjects.splice(newIndex, 0, project);
+
+    return newProjects;
+  }, projects);
+
+  data.allProjects = allProjects;
+  return allProjects;
 }
 
 export function getResume() {
