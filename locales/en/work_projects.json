@@ -25,7 +25,7 @@
 		},
     {
       "slug": "boost-my-school",
-      "name": "Boost My School",
+      "name": "BoostMySchool",
       "images": ["/static/boost-my-school.jpg"],
       "url": "https://www.boostmyschool.com",
 			"positions": [
@@ -38,7 +38,15 @@
       "description": [
         "A fundraising platform for school programs"
       ],
-      "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules"
+      "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules",
+      "press": [
+        [
+          {
+            "url": "http://www.mbhsmagnet.org/news/summer16/gao",
+            "text": "Interview with my high school"
+          }
+        ]
+      ]
     },
 		{
       "slug": "zenysis",
