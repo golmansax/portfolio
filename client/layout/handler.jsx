@@ -9,7 +9,7 @@ function getContent(children) {
 }
 
 const LayoutHandler = ({ children }) => (
-  <html>
+  <html lang='en-US'>
     <LayoutHead />
     <body>
       <div

@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { getImage } from '../images/store';
 import ContentMainLinks from './main_links';
-import { Link } from 'react-router';
 import Container from '../shared/container';
 import {
   addChangeListener,

@@ -5,7 +5,7 @@ export function loadImages(newImages) {
 }
 
 export function getImage(path) {
-  if (!images.hasOwnProperty(path)) {
+  if (!(path in images)) {
     throw new Error(`Image has not been loaded: ${path}`);
   }
 

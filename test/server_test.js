@@ -3,13 +3,12 @@
 import chai, { expect } from 'chai';
 import nock from 'nock';
 import Browser from 'zombie';
-import { isProduction } from '../server/config';
-import { initI18n } from '../server/my_i18n';
 import StinkBomb from 'stink-bomb';
 import dirtyChai from 'dirty-chai';
-
 import { describe } from 'global-mocha';
 import { before, beforeEach, afterEach, it } from 'arrow-mocha/es5';
+import { isProduction } from '../server/config';
+import { initI18n } from '../server/my_i18n';
 
 // Expose React so we don't need to import it for JSX
 global.React = require('react');

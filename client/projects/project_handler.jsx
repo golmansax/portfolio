@@ -1,4 +1,4 @@
-import { Component, PropTypes } from 'react';
+import { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import NotFoundHandler from '../routes/not_found_handler';
 import ProjectsList from '../projects/list';
@@ -68,35 +68,32 @@ function getMetaData(project) {
   };
 }
 
-class ProjectHandler extends Component {
-  render() {
-    const myType = PROJECT_TYPE_LOOKUP[`/${this.props.params.projectType}`];
-    const myProject = getAllProjects().find((project) => (
-      project.slug === this.props.params.projectId && project.type === myType
-    ));
+const ProjectHandler = ({ params }) => {
+  const myType = PROJECT_TYPE_LOOKUP[`/${params.projectType}`];
+  const myProject = getAllProjects().find((project) => (
+    project.slug === params.projectId && project.type === myType
+  ));
 
-    if (!myType || !myProject) {
-      return <NotFoundHandler />;
-    }
-
-    return (
-      <div>
-        <Helmet {...(getMetaData(myProject))} />
-        <BreadcrumbsList
-          breadcrumbs={[
-            PARENT_BREADCRUMBS[myProject.type],
-            myProject.shortName || myProject.name,
-          ]}
-        />
-        <ProjectsList projects={[myProject]} />
-      </div>
-    );
+  if (!myType || !myProject) {
+    return <NotFoundHandler />;
   }
-}
+
+  return (
+    <div>
+      <Helmet {...(getMetaData(myProject))} />
+      <BreadcrumbsList
+        breadcrumbs={[
+          PARENT_BREADCRUMBS[myProject.type],
+          myProject.shortName || myProject.name,
+        ]}
+      />
+      <ProjectsList projects={[myProject]} />
+    </div>
+  );
+};
 
 ProjectHandler.propTypes = {
   params: PropTypes.object.isRequired,
-  routes: PropTypes.array.isRequired,
 };
 
 export default ProjectHandler;

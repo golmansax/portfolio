@@ -12,6 +12,8 @@ module.exports = {
   rules: {
     'global-require': [1],
     'no-underscore-dangle': [2, { allowAfterThis: true }],
-    'react/prefer-stateless-function': [1],
+    'import/prefer-default-export': [0],
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    'jsx-a11y/href-no-hash': [1],
   },
 };
