@@ -3,6 +3,7 @@
     {
       "slug": "book-booster",
       "name": "BookBooster",
+      "current": true,
       "description": [
         "An initiative for the 2016-17 school year to ",
         "provide books to 20 Bay Area schools serving low-income students. ",

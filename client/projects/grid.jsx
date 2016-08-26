@@ -20,8 +20,11 @@ class ProjectsGrid extends Component {
 
   render() {
     return (
-      <Container>
-        {this._getProjectChunks().map(this._renderChunk)}
+      <Container className={this.props.className}>
+        <h2>{this.props.title}</h2>
+        <div>
+          {this._getProjectChunks().map(this._renderChunk)}
+        </div>
       </Container>
     );
   }
@@ -62,7 +65,9 @@ class ProjectsGrid extends Component {
 }
 
 ProjectsGrid.propTypes = {
+  className: PropTypes.string,
   projects: PropTypes.instanceOf(Array).isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default ProjectsGrid;

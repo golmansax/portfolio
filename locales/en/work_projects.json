@@ -27,6 +27,7 @@
       "slug": "boost-my-school",
       "name": "BoostMySchool",
       "images": ["/static/boost-my-school.jpg"],
+      "current": true,
       "url": "https://www.boostmyschool.com",
 			"positions": [
 				{
@@ -74,6 +75,7 @@
 		{
       "slug": "room-77",
 			"name": "Room 77",
+      "current": true,
 			"url": "https://m.room77.com",
 			"images": [
         [
