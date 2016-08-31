@@ -1,5 +1,9 @@
 import express from 'express';
 import path from 'path';
+import stylus from 'stylus';
+import nib from 'nib';
+import jeet from 'jeet';
+import rupture from 'rupture';
 import { assetMiddleware } from './asset_utils';
 import routeHandler from '../client/router/route';
 
@@ -7,11 +11,6 @@ const server = express();
 const rootDirname = path.resolve(__dirname, '..');
 
 server.use(assetMiddleware);
-
-const stylus = require('stylus');
-const nib = require('nib');
-const jeet = require('jeet');
-const rupture = require('rupture');
 
 server.use(stylus.middleware({
   src: `${rootDirname}/client`,
@@ -23,6 +22,7 @@ server.use(stylus.middleware({
       .use(jeet())
       .use(rupture())
       .use(nib())
+      .import('jeet')
   ),
 }));
 

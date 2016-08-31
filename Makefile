@@ -1,4 +1,4 @@
-.PHONY: build build-js build-css test watch eslint stylint start build-html cachify-assets
+.PHONY: build build-js build-css test watch eslint stylint start build-html cachify-assets shrinkwrap
 
 build: build-css build-js build-html cachify-assets
 
@@ -25,6 +25,9 @@ watch:
 
 eslint:
 	./node_modules/.bin/eslint . --ext .js --ext .jsx
+
+shrinkwrap:
+	./node_modules/.bin/npm-shrinkwrap
 
 stylint:
 	./node_modules/.bin/stylint client
