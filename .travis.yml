@@ -1,5 +1,6 @@
 sudo: false
 language: node_js
+node_js: 6.1
 install:
 - npm install
 - NODE_ENV=development npm install --dev-only
