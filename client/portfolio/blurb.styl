@@ -1,0 +1,44 @@
+.blurb {
+  +e(paragraph) {
+    margin-bottom unit($lambda, em)
+  }
+
+  +e(portrait) {
+    background url('/static/portrait_2016-04-30.jpg') no-repeat
+    background-size cover
+    padding-bottom 100%
+  }
+
+  +e(portrait-container) {
+    col(1/3)
+
+    +below('s') {
+      stack()
+    }
+  }
+
+  +e(text-container) {
+    col(2/3)
+
+    +below('s') {
+      stack()
+      margin-top unit($lambda, em)
+    }
+  }
+
+  +e(mobile-heading) {
+    display none
+
+    +below('s') {
+      display block
+    }
+  }
+
+  +e(large-heading) {
+    display block
+
+    +below('s') {
+      display none
+    }
+  }
+}

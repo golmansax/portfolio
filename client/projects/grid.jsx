@@ -13,9 +13,7 @@ const getProjectRoute = (projectType) => PROJECT_ROUTE_MAPPING[projectType];
 class ProjectsGrid extends Component {
   constructor(props) {
     super(props);
-    this._getProjectChunks = this._getProjectChunks.bind(this);
     this._renderProject = this._renderProject.bind(this);
-    this._renderChunk = this._renderChunk.bind(this);
   }
 
   render() {
@@ -23,17 +21,9 @@ class ProjectsGrid extends Component {
       <Container className={this.props.className}>
         <h2>{this.props.title}</h2>
         <div>
-          {this._getProjectChunks().map(this._renderChunk)}
+          {this.props.projects.map(this._renderProject)}
         </div>
       </Container>
-    );
-  }
-
-  _renderChunk(projectChunk, index) {
-    return (
-      <div className='projects-grid__chunk' key={index}>
-        {projectChunk.map(this._renderProject)}
-      </div>
     );
   }
 
@@ -50,17 +40,6 @@ class ProjectsGrid extends Component {
         <ProjectsImage image={project.images[0]} routeName={routeName} />
       </div>
     );
-  }
-
-  _getProjectChunks() {
-    const projectChunks = [];
-    const projects = this.props.projects;
-
-    while (projects.length > 0) {
-      projectChunks.push(projects.splice(0, 3));
-    }
-
-    return projectChunks;
   }
 }
 
