@@ -1,4 +1,4 @@
-import { Component, PropTypes } from 'react';
+import { PropTypes } from 'react';
 import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
@@ -10,38 +10,29 @@ const PROJECT_ROUTE_MAPPING = {
 };
 const getProjectRoute = (projectType) => PROJECT_ROUTE_MAPPING[projectType];
 
-class ProjectsGrid extends Component {
-  constructor(props) {
-    super(props);
-    this._renderProject = this._renderProject.bind(this);
-  }
+const renderProject = (project, index) => {
+  const routeName = `/${getProjectRoute(project.type)}/${project.slug}`;
+  return (
+    <div className='projects-grid__item' key={index}>
+      <h2>
+        <Fragment
+          routeName={routeName}
+          text={project.shortName || project.name}
+        />
+      </h2>
+      <ProjectsImage image={project.images[0]} routeName={routeName} />
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <Container className={this.props.className}>
-        <h2>{this.props.title}</h2>
-        <div>
-          {this.props.projects.map(this._renderProject)}
-        </div>
-      </Container>
-    );
-  }
-
-  _renderProject(project, index) {
-    const routeName = `/${getProjectRoute(project.type)}/${project.slug}`;
-    return (
-      <div className='projects-grid__item' key={index}>
-        <h2>
-          <Fragment
-            routeName={routeName}
-            text={project.shortName || project.name}
-          />
-        </h2>
-        <ProjectsImage image={project.images[0]} routeName={routeName} />
-      </div>
-    );
-  }
-}
+const ProjectsGrid = ({ className, title, projects }) => (
+  <Container className={className}>
+    <h2>{title}</h2>
+    <div>
+      {projects.map(renderProject)}
+    </div>
+  </Container>
+);
 
 ProjectsGrid.propTypes = {
   className: PropTypes.string,

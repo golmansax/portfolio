@@ -1,43 +1,33 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
 
-class BreadcrumbsList extends React.Component {
-  constructor(props) {
-    super(props);
+const renderBreak = (key) => <span key={key}>&nbsp;&rsaquo;&nbsp;</span>;
 
-    this._renderBreadcrumb = this._renderBreadcrumb.bind(this);
+const renderBreadcrumb = (breadcrumb, index) => {
+  let myBreadcrumb = breadcrumb;
+  if (typeof breadcrumb === 'string') {
+    myBreadcrumb = { text: breadcrumb };
   }
 
-  render() {
-    const breadcrumbs = [{ text: 'Home', routeName: '/' }]
-      .concat(this.props.breadcrumbs);
+  return [
+    index === 0 ? null : renderBreak(`span-${index}`),
+    <Fragment key={`fragment${index}`} {...myBreadcrumb} />,
+  ];
+};
 
-    return (
-      <Container className='breadcrumbs'>
-        {breadcrumbs.map(this._renderBreadcrumb)}
-      </Container>
-    );
-  }
+const BreadcrumbsList = ({ breadcrumbs }) => {
+  const fullBreadcrumbs = [{ text: 'Home', routeName: '/' }]
+    .concat(breadcrumbs);
 
-  _renderBreadcrumb(breadcrumb, index) {
-    let myBreadcrumb = breadcrumb;
-    if (typeof breadcrumb === 'string') {
-      myBreadcrumb = { text: breadcrumb };
-    }
-
-    return [
-      index === 0 ? null : this._renderBreak(`span-${index}`),
-      <Fragment key={`fragment${index}`} {...myBreadcrumb} />,
-    ];
-  }
-
-  _renderBreak(key) {
-    return <span key={key}>&nbsp;&rsaquo;&nbsp;</span>;
-  }
-}
+  return (
+    <Container className='breadcrumbs'>
+      {fullBreadcrumbs.map(renderBreadcrumb)}
+    </Container>
+  );
+};
 
 BreadcrumbsList.defaultProps = { breadcrumbs: [] };
-BreadcrumbsList.propTypes = { breadcrumbs: React.PropTypes.array.isRequired };
+BreadcrumbsList.propTypes = { breadcrumbs: PropTypes.array.isRequired };
 
 export default BreadcrumbsList;

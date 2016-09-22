@@ -3,15 +3,21 @@ import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
 import GithubFragment from '../fragments/github_fragment';
 import Position from '../positions/position';
-import Donations from '../donations/list';
 import ResumeNotes from '../resume/notes';
 import FragmentsBulletList from '../fragments/bullet_list';
 
 const Custom = {
-  Donations,
   ResumeNotes,
   FragmentsBulletList,
 };
+
+const renderFragmentsItem = (fragments, index) => (
+  <li key={index}><Fragments fragments={fragments} /></li>
+);
+
+const renderPosition = (position, index) => (
+  <Position {...position} key={index} />
+);
 
 class ProjectsContent extends React.Component {
   constructor(props) {
@@ -102,7 +108,7 @@ class ProjectsContent extends React.Component {
       <dt key='dt'>Responsibilities:</dt>,
       <dd key='dd'>
         <ul className='projects-content__list'>
-          {this.props.involvedWith.map(this._renderFragmentsItem)}
+          {this.props.involvedWith.map(renderFragmentsItem)}
         </ul>
       </dd>,
     ];
@@ -128,7 +134,7 @@ class ProjectsContent extends React.Component {
 
     return [
       <dt key='dt'>Position:</dt>,
-      <dd key='dd'>{this.props.positions.map(this._renderPosition)}</dd>,
+      <dd key='dd'>{this.props.positions.map(renderPosition)}</dd>,
     ];
   }
 
@@ -141,18 +147,10 @@ class ProjectsContent extends React.Component {
       <dt key='dt'>Press:</dt>,
       <dd key='dd'>
         <ul className='projects-content__list'>
-          {this.props.press.map(this._renderFragmentsItem)}
+          {this.props.press.map(renderFragmentsItem)}
         </ul>
       </dd>,
     ];
-  }
-
-  _renderFragmentsItem(fragments, index) {
-    return <li key={index}><Fragments fragments={fragments} /></li>;
-  }
-
-  _renderPosition(position, index) {
-    return <Position {...position} key={index} />;
   }
 
   _renderJoinedWhen() {

@@ -1,36 +1,24 @@
-import React from 'react';
+import { PropTypes } from 'react';
 import Fragments from '../fragments/fragments';
 
-class FragmentsBulletList extends React.Component {
-  constructor(props) {
-    super(props);
-    this._renderBullet = this._renderBullet.bind(this);
-  }
+const renderFragments = (fragments, index) => (
+  <div key={index}>
+    <Fragments fragments={fragments} key={index} />
+  </div>
+);
 
-  render() {
-    return (
-      <ul className='fragments-bullet-list'>
-        {this.props.bullets.map(this._renderBullet)}
-      </ul>
-    );
-  }
+const renderBullet = (bullet, index) => (
+  <li key={index} className='fragments-bullet-list__item'>
+    {bullet.map(renderFragments)}
+  </li>
+);
 
-  _renderFragments(fragments, index) {
-    return (
-      <div key={index}>
-        <Fragments fragments={fragments} key={index} />
-      </div>
-    );
-  }
+const FragmentsBulletList = ({ bullets }) => (
+  <ul className='fragments-bullet-list'>
+    {bullets.map(renderBullet)}
+  </ul>
+);
 
-  _renderBullet(bullet, index) {
-    return (
-      <li key={index} className='fragments-bullet-list__item'>
-        {bullet.map(this._renderFragments)}
-      </li>
-    );
-  }
-}
-FragmentsBulletList.propTypes = { bullets: React.PropTypes.array.isRequired };
+FragmentsBulletList.propTypes = { bullets: PropTypes.array.isRequired };
 
 export default FragmentsBulletList;

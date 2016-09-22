@@ -14,7 +14,6 @@ class ContentNavbar extends React.Component {
   constructor(props) {
     super(props);
     this._renderNavbarMenu = this._renderNavbarMenu.bind(this);
-    this._toggleMenu = this._toggleMenu.bind(this);
     this._updateState = this._updateState.bind(this);
 
     this.state = { isMenuShowing: isMenuShowing() };
@@ -44,7 +43,7 @@ class ContentNavbar extends React.Component {
           <div className='navbar-right'><ContentMainLinks /></div>
           <button
             className='navbar__sidebar-trigger'
-            onClick={this._toggleMenu}
+            onClick={toggleMenuShowing}
             >
             <i className='fa fa-bars navbar__sidebar-trigger-icon' />
           </button>
@@ -64,10 +63,6 @@ class ContentNavbar extends React.Component {
         <ContentMainLinks />
       </div>
     );
-  }
-
-  _toggleMenu() {
-    toggleMenuShowing();
   }
 
   _updateState() {
