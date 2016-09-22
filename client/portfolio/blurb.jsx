@@ -23,7 +23,7 @@ const PortfolioBlurb = ({ className }) => (
     <div className='blurb__text-container'>
       <h2 className='blurb__large-heading'>About me</h2>
       <p className='blurb__paragraph'>
-        Hi! My name is Holman, I am an entrepreneur and freelance programmer
+        Hi! My name is Holman, I am an entrepreneur and freelance developer
         with a love for education.  In my free time, I like to sing and play
         guitar, tutor math, and sometimes even{' '}
         <a
