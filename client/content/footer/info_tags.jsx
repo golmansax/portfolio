@@ -39,7 +39,7 @@ const ContentFooterInfoTags = () => (
           front='map-marker'
           backClassName='content-footer-info-tags__back-icon'
         />
-        in San Francisco, CA
+        in New York, NY
       </div>
     </div>
   </div>
