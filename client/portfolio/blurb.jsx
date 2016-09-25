@@ -24,8 +24,9 @@ const PortfolioBlurb = ({ className }) => (
       <h2 className='blurb__large-heading'>About me</h2>
       <p className='blurb__paragraph'>
         Hi! My name is Holman, I am an entrepreneur and freelance developer
-        with a love for education.  In my free time, I like to sing and play
-        guitar, tutor math, and sometimes even{' '}
+        with a love for education.  I speak English and Mandarin natively,
+        and Spanish at an intermediate level. In my free time, I like to sing
+        and play guitar, tutor math, and sometimes even{' '}
         <a
           href={ACROYOGA_LINK}
           target='_blank'
