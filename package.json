@@ -30,7 +30,7 @@
     "mocha": "*",
     "nock": "*",
     "nodemon": "*",
-    "npm-shrinkwrap": "^6.0.1",
+    "npm-shrinkwrap": "*",
     "react-bind-mixin": "*",
     "stink-bomb": "*",
     "stylint": "< 1.3",

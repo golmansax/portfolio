@@ -8,10 +8,10 @@ const ContentFooter = () => (
     <div className='content-footer__top'>
       <Container>
         <h2>Interested in working together?</h2>
-        I'm available for any type of software engineering contracting work
-        (can do pro-bono depending on the idea and time commitment), and I'm
-        especially interested in cool education projects.  Shoot me an email
-        at <MyEmail link />!
+        I&rsquo;m available for any type of software engineering contracting
+        work (can do pro-bono depending on the idea and time commitment), and
+        I&rsquo;m especially interested in cool education projects.  Shoot me an
+        email at <MyEmail link />!
       </Container>
     </div>
     <div className='content-footer__bottom'>
