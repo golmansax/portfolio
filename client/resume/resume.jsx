@@ -2,9 +2,9 @@ import React from 'react';
 import Container from '../shared/container';
 import Pdf from '../shared/pdf';
 
+const DOC_ID = '0BzLh8cg8kVzCa093RmtkYkFoZG8';
 const URL = 'https://docs.google.com/viewer?' +
-  'srcid=0BzLh8cg8kVzCV1U4dU9hTVRYSVU&pid=explorer&efh=false' +
-  '&a=v&chrome=false&embedded=true';
+  `srcid=${DOC_ID}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
 
 const Resume = () => (
   <Container>
