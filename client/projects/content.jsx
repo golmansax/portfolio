@@ -111,13 +111,11 @@ class ProjectsContent extends React.Component {
       <dt key='dt'>Worked with:</dt>,
       <dd key='dd'>
         <ul className='projects-content__list'>
-          {this.props.colleagues.map((colleague) => {
-            return (
-              <li key={colleague.personId}>
-                <Colleague {...colleague} />
-              </li>
-            );
-          })}
+          {this.props.colleagues.map((colleague) => (
+            <li key={colleague.personId}>
+              <Colleague {...colleague} />
+            </li>
+          ))}
         </ul>
       </dd>,
     ];
@@ -194,8 +192,8 @@ class ProjectsContent extends React.Component {
 }
 
 ProjectsContent.propTypes = {
-  createdFor: React.PropTypes.string,
   colleagues: React.PropTypes.arrayOf(React.PropTypes.object),
+  createdFor: React.PropTypes.string,
   custom: React.PropTypes.arrayOf(React.PropTypes.object),
   description: React.PropTypes.oneOfType([
     React.PropTypes.string,
