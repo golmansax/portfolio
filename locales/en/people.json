@@ -2,6 +2,45 @@
   "people": {
     "at": {
       "name": "A.T. McWilliams"
+    },
+    "hannah": {
+      "name": "Hannah Yang"
+    },
+    "ian": {
+      "name": "Ian Webster"
+    },
+    "roger": {
+      "name": "Roger Wong"
+    },
+    "stephen": {
+      "name": "Stephen Ball"
+    },
+    "judy": {
+      "name": "Judy Mou"
+    },
+    "yang": {
+      "name": "Yang Yang"
+    },
+    "jefferson": {
+      "name": "Jefferson Teng"
+    },
+    "melanie": {
+      "name": "Melanie Gin"
+    },
+    "julee": {
+      "name": "JuLee Burdekin"
+    },
+    "qian": {
+      "name": "Qian Wang"
+    },
+    "rob": {
+      "name": "Robert Fletcher"
+    },
+    "jt": {
+      "name": "JT Bowler"
+    },
+    "breyer": {
+      "name": "Andrew Breyer"
     }
   }
 }

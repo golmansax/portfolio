@@ -2,13 +2,13 @@ import { PropTypes } from 'react';
 import Fragment from '../fragments/fragment';
 import { getPerson } from '../data/store';
 
-const Teammate = ({ personId }) => {
+const Colleague = ({ personId }) => {
   const person = getPerson(personId);
   return <Fragment text={person.name} />;
 }
 
-Teammate.propTypes = {
+Colleague.propTypes = {
   personId: PropTypes.string.isRequired,
 };
 
-export default Teammate;
+export default Colleague;

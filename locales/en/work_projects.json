@@ -60,6 +60,7 @@
         "A data analytics platform used by governments and international ",
         "organizations to tackle global health issues"
       ],
+      "colleagues": [{ "personId": "ian", "position": "Co-Founder, CTO" }],
 			"stack": "Flask, React.js, Bootstrap + Sass, MongoDB",
 			"positions": [
 				{
@@ -120,6 +121,7 @@
 			"images": [
 				"/static/amass.jpg"
 			],
+      "colleagues": [{ "personId": "hannah", "position": "Co-Founder, CEO" }],
 			"description": "Connecting socially-conscious filmmakers and organizations.",
 			"stack": "Rails, Angular.js, Haml, Foundation + Sass, MongoDB",
 			"positions": [

@@ -9,7 +9,7 @@
         "provide books to 20 Bay Area schools serving low-income students. ",
         "As of August 2016, BookBooster has raised 4,104 books (over $12,500)!"
       ],
-      "teammates": [{ "personId": "at" }],
+      "colleagues": [{ "personId": "at" }],
       "url": "https://bayarea.bookbooster.org",
       "stack": "Typescript, Express.js, Sequelize, React.js, Sass",
       "images": [
@@ -136,6 +136,7 @@
 		{
       "slug": "human-centered-design",
 			"name": "Human-Centered Design",
+      "colleagues": [{ "personId": "hannah" }, { "personId": "melanie" }],
 			"description": [
         "A few friends and I took a ",
         {
@@ -165,6 +166,9 @@
         "Help reduce the poverty gap in San Francisco by sending ",
         "micro-donations to kids in need."
       ],
+      "colleagues": [
+        { "personId": "julee" }
+      ],
       "images": [
         ["/static/27-percenters_profile.jpg", "/static/27-percenters_search.jpg"],
         ["/static/27-percenters_home.jpg", "/static/27-percenters_settings.jpg"]
@@ -184,6 +188,11 @@
       "description": [
         "A social, volunteering platform created to encourage users to ",
         "volunteer, and make it easier to find opportunities."
+      ],
+      "colleagues": [
+        { "personId": "jt" },
+        { "personId": "rob" },
+        { "personId": "qian" }
       ],
       "stack": "Rails, Angular.js, PostgreSQL",
       "involvedWith": [
