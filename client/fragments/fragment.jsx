@@ -8,8 +8,14 @@ const Fragment = ({ routeName, text, github, url }) => {
   } else if (github) {
     return <GithubFragment github={github} />;
   } else if (url) {
+    const isExternalUrl = !!url.match(/https?:/);
+
     return (
-      <a href={url} target={url.match(/https?:/) ? '_blank' : null}>
+      <a
+        href={url}
+        target={isExternalUrl ? '_blank' : null}
+        rel={isExternalUrl ? 'noopener noreferrer' : null}
+        >
         {text || url}
       </a>
     );
