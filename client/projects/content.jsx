@@ -74,7 +74,7 @@ class ProjectsContent extends React.Component {
       return null;
     }
 
-    return <GithubFragment github={this.props.github} />;
+    return <div><GithubFragment github={this.props.github} /></div>;
   }
 
   _renderCustom() {
