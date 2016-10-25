@@ -13,7 +13,9 @@
       ],
       "colleagues": [
         { "personId": "breyer" },
-        { "personId": "jefferson" }
+        { "personId": "cheryl" },
+        { "personId": "jefferson" },
+        { "personId": "kala" }
       ],
       "involvedWith": [
         ["Use Google Maps API to plot every house that installed solar in Bakersfield, CA"],

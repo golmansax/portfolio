@@ -170,7 +170,10 @@
         "micro-donations to kids in need."
       ],
       "colleagues": [
-        { "personId": "julee" }
+        { "personId": "julee" },
+        { "personId": "caroline-orsi" },
+        { "personId": "jason-xu" },
+        { "personId": "peter-skipper" }
       ],
       "images": [
         ["/static/27-percenters_profile.jpg", "/static/27-percenters_search.jpg"],
