@@ -8,6 +8,7 @@
     },
     "ian": {
       "name": "Ian Webster",
+			"url": "http://www.ianww.com",
       "github": "typpo"
     },
     "roger": {
@@ -26,7 +27,8 @@
       "github": "y4n9squared"
     },
     "abi": {
-      "name": "Abi Raja"
+      "name": "Abi Raja",
+			"url": "http://abiraja.com"
     },
     "jefferson": {
       "name": "Jefferson Teng",

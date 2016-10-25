@@ -13,7 +13,10 @@ const getPositionFragments = (position) => {
 };
 
 const getFragments = ({ person, position }) => {
-  const nameFragments = [person.name];
+  const nameFragments = [{
+    text: person.name,
+    url: person.url,
+  }];
   const githubFragments = getGithubFragments(person);
   const positionFragments = getPositionFragments(position);
 
