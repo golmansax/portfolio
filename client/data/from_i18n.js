@@ -5,6 +5,8 @@ export default function getDataFromI18n() {
   return {
     metaData: i18n.t('meta_data:metaData'),
 
+    people: i18n.t('people:people'),
+
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map((project) => {
         Object.assign(project, {

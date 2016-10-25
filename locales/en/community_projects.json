@@ -9,6 +9,7 @@
         "provide books to 20 Bay Area schools serving low-income students. ",
         "As of August 2016, BookBooster has raised 4,104 books (over $12,500)!"
       ],
+      "teammates": [{ "personId": "at" }],
       "url": "https://bayarea.bookbooster.org",
       "stack": "Typescript, Express.js, Sequelize, React.js, Sass",
       "images": [

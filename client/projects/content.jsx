@@ -3,6 +3,7 @@ import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
 import GithubFragment from '../fragments/github_fragment';
 import Position from '../positions/position';
+import Teammate from '../teammates/teammate';
 import ResumeNotes from '../resume/notes';
 import FragmentsBulletList from '../fragments/bullet_list';
 
@@ -27,6 +28,7 @@ class ProjectsContent extends React.Component {
     this._renderPress = this._renderPress.bind(this);
     this._renderCustom = this._renderCustom.bind(this);
     this._renderStack = this._renderStack.bind(this);
+    this._renderTeam = this._renderTeam.bind(this);
     this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
     this._renderPositions = this._renderPositions.bind(this);
     this._renderDescription = this._renderDescription.bind(this);
@@ -44,6 +46,7 @@ class ProjectsContent extends React.Component {
           {this._renderPositions()}
           {this._renderCreatedFor()}
           {this._renderStack()}
+          {this._renderTeam()}
           {this._renderJoinedWhen()}
           {this._renderResponsibilities()}
           {this._renderPress()}
@@ -95,6 +98,27 @@ class ProjectsContent extends React.Component {
       <dd key='dd'>
         {this.props.stack}
         {this._renderGithub()}
+      </dd>,
+    ];
+  }
+
+  _renderTeam() {
+    if (!this.props.teammates) {
+      return null;
+    }
+
+    return [
+      <dt key='dt'>Worked with:</dt>,
+      <dd key='dd'>
+        <ul className='projects-content__list'>
+          {this.props.teammates.map((teammate) => {
+            return (
+              <li key={teammate.personId}>
+                <Teammate {...teammate} />
+              </li>
+            );
+          })}
+        </ul>
       </dd>,
     ];
   }

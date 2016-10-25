@@ -7,11 +7,11 @@ export const initI18n = () => new Promise((resolve) => {
     lng: 'en-US',
     ns: {
       namespaces: [
+        'people',
         'meta_data',
         'community_projects',
         'work_projects',
         'side_projects',
-        'resume',
       ],
     },
     returnObjectTrees: true,

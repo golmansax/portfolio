@@ -54,10 +54,14 @@ export function getAllProjects() {
   return allProjects;
 }
 
-export function getResume() {
-  return data.resume;
-}
-
 export function getMetaData() {
   return data.metaData;
+}
+
+export function getPerson(id) {
+  if (!data.people[id]) {
+    throw new Error(`Cannot find person with ID: ${id}`);
+  }
+
+  return data.people[id];
 }
