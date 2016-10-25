@@ -139,6 +139,10 @@ class ProjectsContent extends React.Component {
   }
 
   _renderDescription() {
+    if (!this.props.description) {
+      return null;
+    }
+
     let description;
     if (Array.isArray(this.props.description)) {
       description = this.props.description;
@@ -191,11 +195,12 @@ class ProjectsContent extends React.Component {
 
 ProjectsContent.propTypes = {
   createdFor: React.PropTypes.string,
-  custom: React.PropTypes.object,
+  colleagues: React.PropTypes.arrayOf(React.PropTypes.object),
+  custom: React.PropTypes.arrayOf(React.PropTypes.object),
   description: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.array,
-  ]).isRequired,
+  ]),
   github: React.PropTypes.string,
   involvedWith: React.PropTypes.array,
   joinedWhen: React.PropTypes.string,
