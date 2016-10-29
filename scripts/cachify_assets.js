@@ -6,6 +6,7 @@ import { getAsset, PUBLIC_DIR } from '../server/asset_utils';
 
 const IGNORED_ASSETS = new Set([
   '/static/gravitar.jpeg',
+  '/static/gravitar.png',
 ]);
 
 ['assets', 'static'].forEach((dir) => {
