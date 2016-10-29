@@ -4,12 +4,19 @@ import fs from 'fs-extra';
 import path from 'path';
 import { getAsset, PUBLIC_DIR } from '../server/asset_utils';
 
+const IGNORED_ASSETS = new Set([
+  '/static/gravitar.jpeg',
+]);
+
 ['assets', 'static'].forEach((dir) => {
   const files = fs.readdirSync(path.resolve(PUBLIC_DIR, dir));
   files.forEach((file) => {
     const oldPath = `/${dir}/${file}`;
-    const cachedPath = getAsset(oldPath);
+    if (IGNORED_ASSETS.has(oldPath)) {
+      return;
+    }
 
+    const cachedPath = getAsset(oldPath);
     const oldFile = `${PUBLIC_DIR}${oldPath}`;
     const newFile = `${PUBLIC_DIR}${cachedPath}`;
 
