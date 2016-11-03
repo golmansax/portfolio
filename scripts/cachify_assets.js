@@ -4,10 +4,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import { getAsset, PUBLIC_DIR } from '../server/asset_utils';
 
-const IGNORED_ASSETS = new Set([
-  '/static/gravitar.jpeg',
-  '/static/gravitar.png',
-]);
+const IGNORED_ASSETS = new Set();
 
 ['assets', 'static'].forEach((dir) => {
   const files = fs.readdirSync(path.resolve(PUBLIC_DIR, dir));
