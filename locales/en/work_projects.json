@@ -49,6 +49,17 @@
         ]
       ]
     },
+    {
+      "slug": "thum-io",
+      "name": "Thum.io",
+      "images": ["//image.thum.io/get/https://www.thum.io"],
+      "current": true,
+      "url": "https://www.thum.io",
+      "description": [
+        "Real-time thumbnails of websites."
+      ],
+      "stack": "Express.js, Sequelize, React.js, Bootstrap + Sass"
+    },
 		{
       "slug": "zenysis",
 			"name": "Zenysis",
@@ -76,7 +87,6 @@
 		{
       "slug": "room-77",
 			"name": "Room 77",
-      "current": true,
 			"url": "https://m.room77.com",
 			"images": [
         [
@@ -90,7 +100,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "Sept ’15",
-					"end": "Current"
+					"end": "Oct ’16"
 				},
 				{
 					"title": "Software Engineer",
