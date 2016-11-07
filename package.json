@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "arrow-mocha": "*",
-    "babel-eslint": "^6.0.0-beta",
+    "babel-eslint": "*",
     "backbone-sortable-collection": "*",
     "chai": "*",
     "dirty-chai": "*",
@@ -22,7 +22,7 @@
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-golmansax": "*",
-    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-mocha": "^4.7.0",
     "eslint-plugin-react": "*",

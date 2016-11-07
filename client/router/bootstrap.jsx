@@ -25,5 +25,5 @@ render(
     >
     {routesComponent}
   </Router>,
-  global.document.getElementById('content')
+  global.document.getElementById('content'),
 );

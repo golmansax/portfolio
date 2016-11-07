@@ -3,11 +3,11 @@ import Image from '../images/image';
 
 const renderImage = (images, url, routeName) => {
   if (Array.isArray(images)) {
-    return images.map((image, index) =>
+    return images.map((image, index) => (
       <div className='projects-image__grid' key={index}>
         <Image src={image} href={url} routeName={routeName} />
       </div>
-    );
+    ));
   }
 
   return <Image src={images} href={url} routeName={routeName} />;
