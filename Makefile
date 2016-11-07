@@ -28,6 +28,7 @@ eslint:
 
 shrinkwrap:
 	./node_modules/.bin/npm-shrinkwrap
+	./node_modules/.bin/prune-shrinkwrap fsevents
 
 stylint:
 	./node_modules/.bin/stylint client

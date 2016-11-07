@@ -32,6 +32,7 @@
     "nock": "*",
     "nodemon": "*",
     "npm-shrinkwrap": "*",
+    "prune-shrinkwrap": "^0.0.2",
     "react-bind-mixin": "*",
     "stink-bomb": "*",
     "stylint": "< 1.3",
