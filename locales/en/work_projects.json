@@ -56,8 +56,9 @@
       "current": true,
       "url": "https://www.thum.io",
       "description": [
-        "Real-time thumbnails of websites."
+        "Creating the fastest real-time website thumbnails.  The only thumbnail generator to stream thumbnails as soon as they are requested."
       ],
+      "colleagues": [{ "personId": "zeki" }],
       "stack": "Express.js, Sequelize, React.js, Bootstrap + Sass"
     },
 		{
