@@ -19,7 +19,6 @@
     {
       "slug": "grid-option",
       "name": "Grid Option",
-      "url": "http://grid-option.herokuapp.com",
       "createdFor": "Powerhouse SunCode Solar Hackathon 2016",
       "description": "An analytics platform built for utility companies to display and visualize current solar adoption rates in a particular region.",
       "github": "golmansax/grid-option",
