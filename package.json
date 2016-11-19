@@ -1,5 +1,5 @@
 {
-  "name": "my-site-in-express",
+  "name": "portfolio",
   "description": "Holman's personal website",
   "private": true,
   "version": "0.0.1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/golmansax/my-site-in-express.git"
+    "url": "http://github.com/golmansax/portfolio.git"
   },
   "devDependencies": {
     "arrow-mocha": "*",

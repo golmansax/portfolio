@@ -112,7 +112,7 @@
       "slug": "personal-site",
       "name": "Personal Site",
       "url": "https://golmansax.com",
-      "github": "golmansax/my-site-in-express",
+      "github": "golmansax/portfolio",
       "description": "A portfolio of projects that I have worked on.",
       "stack": "Express.js, ES6, React.js",
       "images": [
