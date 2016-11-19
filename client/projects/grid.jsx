@@ -2,6 +2,7 @@ import { PropTypes } from 'react';
 import ProjectsImage from './image';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
+import { getPortfolioPath } from '../url_utils';
 
 const PROJECT_ROUTE_MAPPING = {
   workProject: 'work',
@@ -11,7 +12,10 @@ const PROJECT_ROUTE_MAPPING = {
 const getProjectRoute = (projectType) => PROJECT_ROUTE_MAPPING[projectType];
 
 const renderProject = (project, index) => {
-  const routeName = `/${getProjectRoute(project.type)}/${project.slug}`;
+  const routeName = getPortfolioPath(
+    `/${getProjectRoute(project.type)}/${project.slug}`
+  );
+
   return (
     <div className='projects-grid__item' key={index}>
       <h2>

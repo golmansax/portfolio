@@ -1,10 +1,11 @@
 import { PropTypes } from 'react';
 import Fragment from '../fragments/fragment';
+import { getPortfolioPath } from '../url_utils';
 
 const LINKS = [
-  { text: 'Work', routeName: '/work' },
-  { text: 'Side Projects', routeName: '/side-projects' },
-  { routeName: '/in-community', text: 'In Community' },
+  { text: 'Work', routeName: getPortfolioPath('/work') },
+  { text: 'Side Projects', routeName: getPortfolioPath('/side-projects') },
+  { text: 'In Community', routeName: getPortfolioPath('/in-community') },
 ];
 
 const renderLink = (navbarLink, index) => (

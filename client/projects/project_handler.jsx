@@ -5,18 +5,19 @@ import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getAllProjects } from '../data/store';
 import { getPositionText } from '../positions/utils';
+import { getPortfolioPath } from '../url_utils';
 
 const PARENT_BREADCRUMBS = {
   workProject: {
-    routeName: '/work',
+    routeName: getPortfolioPath('/work'),
     text: 'Work',
   },
   sideProject: {
-    routeName: '/side-projects',
+    routeName: getPortfolioPath('/side-projects'),
     text: 'Side Projects',
   },
   communityProject: {
-    routeName: '/in-community',
+    routeName: getPortfolioPath('/in-community'),
     text: 'Efforts in Community',
   },
 };
