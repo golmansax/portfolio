@@ -13,7 +13,7 @@ const getProjectRoute = (projectType) => PROJECT_ROUTE_MAPPING[projectType];
 
 const renderProject = (project, index) => {
   const routeName = getPortfolioPath(
-    `/${getProjectRoute(project.type)}/${project.slug}`
+    `/${getProjectRoute(project.type)}/${project.slug}`,
   );
 
   return (
