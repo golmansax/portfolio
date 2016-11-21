@@ -122,7 +122,7 @@ describe('server', function () {
   });
 
   describe('when starting from work page', function () {
-    beforeEach(() => browser.visit('/work'));
+    beforeEach(() => browser.visit('/portfolio/work'));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Work');
