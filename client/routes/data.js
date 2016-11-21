@@ -7,7 +7,7 @@ import {
 const SLUG_REPLACE = (project) => ({ projectId: project.slug });
 
 export default [
-  { path: '/work' },
+  { path: '/portfolio/work' },
   {
     path: '/portfolio/work/:projectId',
     data: {
