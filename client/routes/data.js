@@ -9,7 +9,7 @@ const SLUG_REPLACE = (project) => ({ projectId: project.slug });
 export default [
   { path: '/work' },
   {
-    path: '/work/:projectId',
+    path: '/portfolio/work/:projectId',
     data: {
       getter: getWorkProjects,
       replaceInPath: SLUG_REPLACE,

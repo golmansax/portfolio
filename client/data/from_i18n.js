@@ -28,7 +28,7 @@ export default function getDataFromI18n() {
     workProjects: ProjectsArray.from(i18n.t('work_projects:projects'))
       .map((project) => {
         Object.assign(project, {
-          projectPath: `/work#${project.slug}`,
+          projectPath: `/portfolio/work#${project.slug}`,
           type: 'workProject',
         });
         return project;

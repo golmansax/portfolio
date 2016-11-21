@@ -9,7 +9,7 @@ import { getPortfolioPath } from '../url_utils';
 
 const PARENT_BREADCRUMBS = {
   workProject: {
-    routeName: getPortfolioPath('/work'),
+    routeName: getPortfolioPath('/portfolio/work'),
     text: 'Work',
   },
   sideProject: {
@@ -70,7 +70,10 @@ function getMetaData(project) {
 }
 
 const ProjectHandler = ({ params }) => {
-  const myType = PROJECT_TYPE_LOOKUP[`/${params.projectType}`];
+  // TODO: remove extra lookup
+  const myType = PROJECT_TYPE_LOOKUP[`/${params.projectType}`] ||
+    PROJECT_TYPE_LOOKUP[`/portfolio/${params.projectType}`];
+
   const myProject = getAllProjects().find((project) => (
     project.slug === params.projectId && project.type === myType
   ));

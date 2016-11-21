@@ -5,7 +5,7 @@ import Container from '../shared/container';
 import { getPortfolioPath } from '../url_utils';
 
 const PROJECT_ROUTE_MAPPING = {
-  workProject: 'work',
+  workProject: 'portfolio/work',
   sideProject: 'side-projects',
   communityProject: 'in-community',
 };

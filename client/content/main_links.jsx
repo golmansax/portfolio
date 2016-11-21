@@ -3,7 +3,7 @@ import Fragment from '../fragments/fragment';
 import { getPortfolioPath } from '../url_utils';
 
 const LINKS = [
-  { text: 'Work', routeName: getPortfolioPath('/work') },
+  { text: 'Work', routeName: getPortfolioPath('/portfolio/work') },
   { text: 'Side Projects', routeName: getPortfolioPath('/side-projects') },
   { text: 'In Community', routeName: getPortfolioPath('/in-community') },
 ];
