@@ -6,7 +6,7 @@ const ContentFooterInfoTags = () => (
   <div className='content-footer-info-tags'>
     <div className='content-footer-info-tags__group'>
       <div>
-        <a href='https://github.com/golmansax'>
+        <a href='https://github.com/golmansax' target='_blank'>
           <StackedIcon back='github' front='fw' />
           golmansax
         </a>
@@ -25,13 +25,15 @@ const ContentFooterInfoTags = () => (
     </div>
     <div className='content-footer-info-tags__group'>
       <div className='content-footer-info-tags__tag'>
-        <StackedIcon
-          className='content-footer-info-tags__email-icon'
-          back='circle'
-          front='envelope'
-          backClassName='content-footer-info-tags__back-icon'
-        />
-        <MyEmail />
+        <a href='https://golmansax.com/blog'>
+          <StackedIcon
+            back='circle'
+            front='pencil'
+            className='content-footer-info-tags__blog-icon'
+            backClassName='content-footer-info-tags__back-icon'
+          />
+          Blog
+        </a>
       </div>
       <div className='content-footer-info-tags__tag'>
         <StackedIcon
