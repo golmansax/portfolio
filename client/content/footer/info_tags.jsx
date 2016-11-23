@@ -1,12 +1,15 @@
 import { Link } from 'react-router';
-import MyEmail from '../../my/email';
 import StackedIcon from '../../shared/stacked_icon';
 
 const ContentFooterInfoTags = () => (
   <div className='content-footer-info-tags'>
     <div className='content-footer-info-tags__group'>
       <div>
-        <a href='https://github.com/golmansax' target='_blank'>
+        <a
+          href='https://github.com/golmansax'
+          target='_blank'
+          rel='noopener noreferrer'
+          >
           <StackedIcon back='github' front='fw' />
           golmansax
         </a>
