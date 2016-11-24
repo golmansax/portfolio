@@ -17,6 +17,15 @@
       "stack": "Typescript, Express.js, Sequelize, React.js, Sass",
       "images": [
         "/static/book-booster.jpg"
+      ],
+      "press": [
+        [
+          "MissionLocal – ",
+          {
+            "url": "http://missionlocal.org/2016/11/startup-crowdfunds-books-for-schools/",
+            "text": "Startup Crowdfunds Books for Schools"
+          }
+        ]
       ]
     },
 		{
