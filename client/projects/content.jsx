@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import Fragments from '../fragments/fragments';
 import Fragment from '../fragments/fragment';
 import GithubFragment from '../fragments/github_fragment';
@@ -21,14 +21,14 @@ const renderPosition = (position, index) => (
   <Position {...position} key={index} />
 );
 
-class ProjectsContent extends React.Component {
+class ProjectsContent extends Component {
   constructor(props) {
     super(props);
 
     this._renderResponsibilities = this._renderResponsibilities.bind(this);
     this._renderPress = this._renderPress.bind(this);
     this._renderCustom = this._renderCustom.bind(this);
-    this._renderStack = this._renderStack.bind(this);
+    this._renderTechnologies = this._renderTechnologies.bind(this);
     this._renderColleagues = this._renderColleagues.bind(this);
     this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
     this._renderPositions = this._renderPositions.bind(this);
@@ -46,7 +46,7 @@ class ProjectsContent extends React.Component {
         <dl>
           {this._renderPositions()}
           {this._renderCreatedFor()}
-          {this._renderStack()}
+          {this._renderTechnologies()}
           {this._renderColleagues()}
           {this._renderJoinedWhen()}
           {this._renderResponsibilities()}
@@ -89,25 +89,15 @@ class ProjectsContent extends React.Component {
     });
   }
 
-  _renderStack() {
-    if (this.props.technologies) {
-      return [
-        <dt key='dt'>Technologies:</dt>,
-        <dd key='dd'>
-          {this.props.technologies.map((id) => getTechnology(id)).join(', ')}
-        </dd>,
-      ];
-    }
-
-    if (!this.props.stack) {
+  _renderTechnologies() {
+    if (!this.props.technologies) {
       return null;
     }
 
     return [
-      <dt key='dt'>Stack:</dt>,
+      <dt key='dt'>Technologies:</dt>,
       <dd key='dd'>
-        {this.props.stack}
-        {this._renderGithub()}
+        {this.props.technologies.map((id) => getTechnology(id)).join(', ')}
       </dd>,
     ];
   }
@@ -202,21 +192,21 @@ class ProjectsContent extends React.Component {
 }
 
 ProjectsContent.propTypes = {
-  colleagues: React.PropTypes.arrayOf(React.PropTypes.object),
-  createdFor: React.PropTypes.string,
-  custom: React.PropTypes.arrayOf(React.PropTypes.object),
-  description: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.array,
+  colleagues: PropTypes.arrayOf(PropTypes.object),
+  createdFor: PropTypes.string,
+  custom: PropTypes.arrayOf(PropTypes.object),
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
   ]),
-  github: React.PropTypes.string,
-  involvedWith: React.PropTypes.array,
-  joinedWhen: React.PropTypes.string,
-  name: React.PropTypes.string.isRequired,
-  positions: React.PropTypes.array,
-  press: React.PropTypes.array,
-  stack: React.PropTypes.string,
-  url: React.PropTypes.string,
+  github: PropTypes.string,
+  involvedWith: PropTypes.array,
+  joinedWhen: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  positions: PropTypes.array,
+  press: PropTypes.array,
+  technologies: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  url: PropTypes.string,
 };
 
 export default ProjectsContent;

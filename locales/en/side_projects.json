@@ -5,7 +5,7 @@
       "name": "ODResponse",
       "createdFor": "The 2016 FDA Naloxone App Competition",
       "description": "Deliver naloxone to people experiencing an overdose, by partnering with driver-based services (e.g. taxis, food delivery) and having their drivers deliver naloxone in emergency situations.",
-      "stack": "React Native, ExponentJS",
+      "technologies": ["react-native", "exponentjs", "js-latest", "firebase"],
       "images": [
         ["/static/od-response_1.jpg", "/static/od-response_2.jpg"]
       ],
@@ -22,7 +22,7 @@
       "createdFor": "Powerhouse SunCode Solar Hackathon 2016",
       "description": "An analytics platform built for utility companies to display and visualize current solar adoption rates in a particular region.",
       "github": "golmansax/grid-option",
-      "stack": "Express.js, Google Maps API, MongoDB",
+      "technologies": ["expressjs", "google-maps", "javascript", "mongo"],
       "images": [
         "/static/grid-option.jpg"
       ],
@@ -44,7 +44,7 @@
       "createdFor": "SF Disrupt Hackathon 2015",
       "description": "Autocomplete as a service for e-commerce sites. For the demo, we used a Chrome extensions to hack the search on Walmart.com to point to our API (indexed with Walmart's data).",
       "github": "golmansax/funnel",
-      "stack": "Express.js, ES6, React.js, CSS Modules, Chrome extension, Bash",
+      "technologies": ["chrome-extension", "expressjs", "reactjs", "css-modules", "js-latest", "bash"],
       "images": [
         "/static/quarry.jpg",
         "/static/quarry_home.jpg"
@@ -81,7 +81,7 @@
       "createdFor": "LAUNCH Hackathon 2015",
       "description": "A social dating app designed so you can be involved with choosing your friend's dates.",
       "github": "stephenball1/Twinkle",
-      "stack": "Android app in Java, Firebase",
+      "technologies": ["android", "java", "firebase"],
       "colleagues": [
         { "personId": "judy" },
         { "personId": "roger" },
@@ -114,7 +114,7 @@
       "url": "https://golmansax.com",
       "github": "golmansax/portfolio",
       "description": "A portfolio of projects that I have worked on.",
-      "stack": "Express.js, ES6, React.js",
+      "technologies": ["expressjs", "reactjs", "js-latest", "stylus"],
       "images": [
         "/static/personal-site.jpg"
       ]
@@ -124,7 +124,7 @@
       "name": "Office Street View",
       "createdFor": "Internal Room 77 hackathon",
       "description": "Navigate through an office and meet the employees!",
-      "stack": "Angular.js, Sass, PHP",
+      "technologies": ["angular1", "javascript", "scss", "php"],
       "github": "golmansax/office-street-view",
       "images": [
         "/static/office-street-view_1.jpg",
@@ -144,7 +144,7 @@
         "An autonomous program that plays the computer game Battlecode; this ",
         "year's version had rules similar to a real-time strategy game."
       ],
-      "stack": "Java",
+      "technologies": ["java"],
       "involvedWith": [
         ["Developing and coding game strategy"]
       ]
@@ -158,7 +158,7 @@
       ],
       "images": ["/static/my-gear.jpg"],
       "github": "golmansax/my-gear",
-      "stack": "Rails, React.js + Immutable.js + Flux, Bootstrap + Sass, GraphQL, PostgreSQL"
+      "technologies": ["rails", "reactjs", "immutablejs", "graphql", "bootstrap", "ruby", "javascript", "scss", "heroku", "postgres"]
     },
     {
       "slug": "todo-app-project",

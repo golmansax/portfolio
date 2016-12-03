@@ -2,34 +2,45 @@
   "languages": {
     "ruby": "Ruby",
     "javascript": "JavaScript",
-    "jsLatest": "ES6",
+    "js-latest": "ES6",
     "typescript": "TypeScript",
     "python": "Python",
     "php": "PHP",
     "cplusplus": "C++",
+    "bash": "Bash",
     "java": "Java",
     "scss": "SCSS",
+    "stylus": "Stylus",
     "haml": "HAML"
   },
 
   "codeLibraries": {
     "rails": "Rails",
     "reactjs": "React.js",
+    "react-native": "React Native",
+    "redux": "Redux",
     "angular1": "AngularJS 1",
     "expressjs": "Express.js",
     "backbonejs": "Backbone.js",
+    "immutablejs": "Immutable.js",
     "graphql": "GraphQL",
     "relay": "Relay",
+    "exponentjs": "ExponentJS",
+    "google-maps": "Google Maps API",
     "sequelize": "Sequelize",
     "bootstrap": "Bootstrap",
     "foundation": "Foundation",
-    "cssModules": "CSS Modules",
+    "css-modules": "CSS Modules",
+    "chrome-extension": "Chrome extension",
+    "android": "Android",
+    "ionic": "Ionic",
     "flask": "Flask"
   },
 
   "infrastructures": {
     "postgres": "PostgreSQL",
     "mongo": "MongoDB",
+    "firebase": "Firebase",
     "mysql": "MySQL",
     "heroku": "Heroku"
   }

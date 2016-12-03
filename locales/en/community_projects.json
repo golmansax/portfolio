@@ -14,7 +14,7 @@
         { "personId": "abi" }
       ],
       "url": "https://bayarea.bookbooster.org",
-      "stack": "Typescript, Express.js, Sequelize, React.js, Sass",
+      "technologies": ["expressjs", "reactjs", "sequelize", "typescript", "scss", "heroku", "postgres"],
       "images": [
         "/static/book-booster.jpg"
       ],
@@ -140,7 +140,7 @@
 			],
       "url": "https://www.myimpactpledge.com/pledgers/golmansax",
       "github": "golmansax/my-impact-pledge",
-      "stack": "Express.js, ES6, React.js, CSS Modules",
+      "technologies": ["expressjs", "reactjs", "css-modules", "js-latest", "heroku"],
       "images": [
         "/static/my-impact-pledge.jpg"
       ]
@@ -189,7 +189,7 @@
         ["/static/27-percenters_home.jpg", "/static/27-percenters_settings.jpg"]
       ],
       "github": "27percenters/27percenters",
-      "stack": "Ionic, Angular.js, Sass, Firebase, Appetize",
+      "technologies": ["ionic", "angular1", "javascript", "scss", "firebase"],
       "involvedWith": [
         ["Front-end coding and design"],
         ["Use AngularFire to bind Firebase to the frontend"]
@@ -209,7 +209,7 @@
         { "personId": "rob" },
         { "personId": "qian" }
       ],
-      "stack": "Rails, Angular.js, PostgreSQL",
+      "technologies": ["rails", "angular1", "ruby", "javascript", "scss", "heroku", "postgres"],
       "involvedWith": [
         ["Front-end coding and design"]
       ]

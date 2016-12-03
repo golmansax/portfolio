@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Container from '../shared/container';
 import {
   getLanguagesWithProjects, getCodeLibrariesWithProjects,
@@ -26,6 +26,10 @@ const Technology = ({ technology }) => (
     <br />
   </div>
 );
+
+Technology.propTypes = {
+  technology: PropTypes.object.isRequired,
+};
 
 const TechnologiesHandler = () => (
   <Container>

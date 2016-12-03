@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import NotFoundHandler from '../routes/not_found_handler';
 import ProjectsList from '../projects/list';
 import BreadcrumbsList from '../breadcrumbs/list';
-import { getAllProjects } from '../data/store';
+import { getAllProjects, getTechnology } from '../data/store';
 import { getPositionText } from '../positions/utils';
 import { getPortfolioPath } from '../url_utils';
 
@@ -38,7 +38,7 @@ function getProjectDescriptionText(description) {
 }
 
 function getMetaDescription({
-  createdFor, name, positions, description, stack,
+  createdFor, name, positions, description, technologies,
 }) {
   const points = [];
 
@@ -52,8 +52,10 @@ function getMetaDescription({
 
   points.push(`${name} — ${getProjectDescriptionText(description)}`);
 
-  if (stack) {
-    points.push(`Uses ${stack}.`);
+  if (technologies) {
+    const technologiesString = technologies.map((id) => getTechnology(id))
+      .join(', ');
+    points.push(`Uses ${technologiesString}.`);
   }
 
   return points.join(' ');
