@@ -42,7 +42,6 @@ class ListItem extends Component {
               const project = getProjectBySlug(slug);
 
               return [[
-                `${project.type === 'workProject' ? 'work' : 'project'} / `,
                 {
                   routeName: getProjectPath(project),
                   text: project.name,
