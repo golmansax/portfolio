@@ -6,6 +6,7 @@ const LINKS = [
   { text: 'Work', routeName: getPortfolioPath('/portfolio/work') },
   { text: 'Side Projects', routeName: getPortfolioPath('/side-projects') },
   { text: 'In Community', routeName: getPortfolioPath('/in-community') },
+  { text: 'Technologies', routeName: getPortfolioPath('/technologies') },
 ];
 
 const renderLink = (navbarLink, index) => (
