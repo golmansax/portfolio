@@ -3,6 +3,15 @@
     "root": {
       "titleTemplate": "%s — Holman Gao"
     },
+    "technologies": {
+      "title": "Technologies",
+      "meta": [
+        {
+          "name": "description",
+          "content": "A list of the technologies, programming langagues, and infrastructures I have used at work and on my projects."
+        }
+      ]
+    },
 		"resume": {
 			"meta": [
         {

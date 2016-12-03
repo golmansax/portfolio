@@ -1,13 +1,15 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Container from '../shared/container';
 import {
   getLanguagesWithProjects, getCodeLibrariesWithProjects,
-  getInfrastructuresWithProjects,
+  getInfrastructuresWithProjects, getMetaData,
 } from '../data/store';
 import TechnologiesList from './list';
 
 const TechnologiesHandler = () => (
   <Container>
+    <Helmet {...getMetaData().technologies} />
     <div className='technologies-handler__section'>
       <h2>Technologies</h2>
       <TechnologiesList technologies={getCodeLibrariesWithProjects()} />
