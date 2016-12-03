@@ -1,0 +1,36 @@
+{
+  "languages": {
+    "ruby": "Ruby",
+    "javascript": "JavaScript",
+    "jsLatest": "ES6",
+    "typescript": "TypeScript",
+    "python": "Python",
+    "php": "PHP",
+    "cplusplus": "C++",
+    "java": "Java",
+    "scss": "SCSS",
+    "haml": "HAML"
+  },
+
+  "codeLibraries": {
+    "rails": "Rails",
+    "reactjs": "React.js",
+    "angular1": "AngularJS 1",
+    "expressjs": "Express.js",
+    "backbonejs": "Backbone.js",
+    "graphql": "GraphQL",
+    "relay": "Relay",
+    "sequelize": "Sequelize",
+    "bootstrap": "Bootstrap",
+    "foundation": "Foundation",
+    "cssModules": "CSS Modules",
+    "flask": "Flask"
+  },
+
+  "infrastructures": {
+    "postgres": "PostgreSQL",
+    "mongo": "MongoDB",
+    "mysql": "MySQL",
+    "heroku": "Heroku"
+  }
+}

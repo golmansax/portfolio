@@ -1,3 +1,5 @@
+import { projectUsesTechnology } from '../projects/utils';
+
 const data = {};
 
 export function loadData(newData) {
@@ -54,6 +56,23 @@ export function getAllProjects() {
   return allProjects;
 }
 
+export function getProjectBySlug(slug) {
+  if (!data.projectsBySlug) {
+    const lookup = new Map();
+    getAllProjects().forEach((project) => {
+      lookup.set(project.slug, project);
+    });
+
+    data.projectsBySlug = lookup;
+  }
+
+  if (!data.projectsBySlug.has(slug)) {
+    throw new Error(`Cannot find slug in projects: ${slug}`);
+  }
+
+  return data.projectsBySlug.get(slug);
+}
+
 export function getMetaData() {
   return data.metaData;
 }
@@ -64,4 +83,92 @@ export function getPerson(id) {
   }
 
   return data.people[id];
+}
+
+export function getLanguage(id) {
+  if (!data.languages[id]) {
+    throw new Error(`Cannot find language with ID: ${id}`);
+  }
+
+  return data.languages[id];
+}
+
+export function getLanguagesWithProjects() {
+  if (data.languagesWithProjects) { return data.languagesWithProjects; }
+
+  const projects = getAllProjects();
+
+  const languages = [];
+  Object.keys(data.languages).forEach((id) => {
+    languages.push({
+      id,
+      name: data.languages[id],
+      projects: [],
+    });
+  });
+
+  projects.forEach((project) => {
+    languages.forEach((language) => {
+      if (projectUsesTechnology(project, language.id)) {
+        language.projects.push(project.slug);
+      }
+    });
+  });
+
+  data.languagesWithProjects = languages;
+  return data.languagesWithProjects;
+}
+
+export function getInfrastructuresWithProjects() {
+  if (data.infrastructuresWithProjects) {
+    return data.infrastructuresWithProjects;
+  }
+
+  const projects = getAllProjects();
+
+  const infrastructures = [];
+  Object.keys(data.infrastructures).forEach((id) => {
+    infrastructures.push({
+      id,
+      name: data.infrastructures[id],
+      projects: [],
+    });
+  });
+
+  projects.forEach((project) => {
+    infrastructures.forEach((infrastructure) => {
+      if (projectUsesTechnology(project, infrastructure.id)) {
+        infrastructure.projects.push(project.slug);
+      }
+    });
+  });
+
+  data.infrastructuresWithProjects = infrastructures;
+  return data.infrastructuresWithProjects;
+}
+
+export function getCodeLibrariesWithProjects() {
+  if (data.codeLibrariesWithProjects) { return data.codeLibrariesWithProjects; }
+
+  const projects = getAllProjects();
+
+  const codeLibraries = [];
+  Object.keys(data.codeLibraries).forEach((id) => {
+    codeLibraries.push({
+      id,
+      name: data.codeLibraries[id],
+      projects: [],
+    });
+  });
+
+  projects.forEach((project) => {
+    codeLibraries.forEach((codeLibrary) => {
+      if (projectUsesTechnology(project, codeLibrary.id)) {
+        codeLibrary.projects.push(project.slug);
+      }
+    });
+  });
+
+  data.codeLibrariesWithProjects = codeLibraries;
+  return data.codeLibrariesWithProjects;
 }

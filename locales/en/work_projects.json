@@ -9,6 +9,7 @@
 			],
 			"description": "A digital workflow system created for K-12 schools and school districts.",
 			"stack": "Rails, Backbone + React.js, Haml, Bootstrap + Sass, PostgreSQL",
+      "technologies": ["rails", "reactjs", "backbonejs", "bootstrap", "ruby", "javascript", "scss", "haml", "heroku", "postgres"],
 			"positions": [
 				{
 					"title": "Software Engineer",
@@ -40,6 +41,7 @@
         "A fundraising platform for school programs"
       ],
       "stack": "Rails, Express.js, ES6, React.js, GraphQL, Relay, CSS Modules",
+      "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "cssModules", "jsLatest", "heroku", "postgres"],
       "press": [
         [
           {
@@ -59,7 +61,8 @@
         "Creating the fastest real-time website thumbnails.  The only thumbnail generator to stream thumbnails as soon as they are requested."
       ],
       "colleagues": [{ "personId": "zeki" }],
-      "stack": "Express.js, Sequelize, React.js, Bootstrap + Sass"
+      "stack": "Express.js, Sequelize, React.js, Bootstrap + Sass",
+      "technologies": ["expressjs", "sequelize", "reactjs", "bootstrap", "javascript", "scss", "heroku", "postgres"]
     },
 		{
       "slug": "zenysis",
@@ -74,6 +77,7 @@
       ],
       "colleagues": [{ "personId": "ian", "position": "Co-Founder, CTO" }],
 			"stack": "Flask, React.js, Bootstrap + Sass, MongoDB",
+      "technologies": ["flask", "reactjs", "bootstrap", "python", "javascript", "scss", "mongo"],
 			"positions": [
 				{
 					"title": "Software Contractor",
@@ -97,6 +101,7 @@
 			],
 			"description": "Search across dozens of hotel sites to find the best price.",
 			"stack": "Angular.js, Sass, PHP, C++",
+      "technologies": ["angular1", "javascript", "scss", "php", "python", "cplusplus", "mysql"],
 			"positions": [
 				{
 					"title": "Software Contractor",
@@ -135,6 +140,7 @@
       "colleagues": [{ "personId": "hannah", "position": "Co-Founder, CEO" }],
 			"description": "Connecting socially-conscious filmmakers and organizations.",
 			"stack": "Rails, Angular.js, Haml, Foundation + Sass, MongoDB",
+      "technologies": ["rails", "angular1", "foundation", "ruby", "javascript", "haml", "scss", "heroku", "mongo"],
 			"positions": [
 				{
           "title": "Product/Technical Advisor",

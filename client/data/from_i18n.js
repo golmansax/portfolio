@@ -7,6 +7,10 @@ export default function getDataFromI18n() {
 
     people: i18n.t('people:people'),
 
+    languages: i18n.t('technologies:languages'),
+    codeLibraries: i18n.t('technologies:codeLibraries'),
+    infrastructures: i18n.t('technologies:infrastructures'),
+
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map((project) => {
         Object.assign(project, {
