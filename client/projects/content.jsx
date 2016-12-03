@@ -6,6 +6,7 @@ import Position from '../positions/position';
 import Colleague from '../colleagues/colleague';
 import ResumeNotes from '../resume/notes';
 import FragmentsBulletList from '../fragments/bullet_list';
+import { getTechnology } from '../data/store';
 
 const Custom = {
   ResumeNotes,
@@ -89,6 +90,15 @@ class ProjectsContent extends React.Component {
   }
 
   _renderStack() {
+    if (this.props.technologies) {
+      return [
+        <dt key='dt'>Technologies:</dt>,
+        <dd key='dd'>
+          {this.props.technologies.map((id) => getTechnology(id)).join(', ')}
+        </dd>,
+      ];
+    }
+
     if (!this.props.stack) {
       return null;
     }

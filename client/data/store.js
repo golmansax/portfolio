@@ -85,12 +85,12 @@ export function getPerson(id) {
   return data.people[id];
 }
 
-export function getLanguage(id) {
-  if (!data.languages[id]) {
-    throw new Error(`Cannot find language with ID: ${id}`);
-  }
+export function getTechnology(id) {
+  if (data.languages[id]) { return data.languages[id]; }
+  if (data.codeLibraries[id]) { return data.codeLibraries[id]; }
+  if (data.infrastructures[id]) { return data.infrastructures[id]; }
 
-  return data.languages[id];
+  throw new Error(`Cannot find technology with ID: ${id}`);
 }
 
 export function getLanguagesWithProjects() {
