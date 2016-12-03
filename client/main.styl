@@ -89,10 +89,14 @@ h2 {
   margin unit($lambda / $h2-lambda / 2, em) 0
 }
 
-h3 {
+h3() {
   font-size unit($h3-lambda, em)
   line-height ($lambda / $h3-lambda)
   margin unit($lambda / $h3-lambda / 2, em) 0
+}
+
+h3 {
+  h3()
 }
 
 hr {
@@ -141,3 +145,5 @@ a {
 @require './projects/list_item'
 @require './shared/container'
 @require './shared/pdf'
+@require './technologies/handler'
+@require './technologies/list'

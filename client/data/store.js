@@ -1,4 +1,4 @@
-import { projectUsesTechnology } from '../projects/utils';
+import { addProjectData } from '../technologies/utils';
 
 const data = {};
 
@@ -26,7 +26,6 @@ export function getAllProjects() {
     .concat(data.communityProjects);
 
   const ORDER_OVERRIDES = {
-    2: 'book-booster',
     4: 'my-impact-pledge',
     5: 'personal-site',
   };
@@ -96,26 +95,19 @@ export function getTechnology(id) {
 export function getLanguagesWithProjects() {
   if (data.languagesWithProjects) { return data.languagesWithProjects; }
 
-  const projects = getAllProjects();
-
   const languages = [];
   Object.keys(data.languages).forEach((id) => {
     languages.push({
       id,
       name: data.languages[id],
-      projects: [],
     });
   });
 
-  projects.forEach((project) => {
-    languages.forEach((language) => {
-      if (projectUsesTechnology(project, language.id)) {
-        language.projects.push(project.slug);
-      }
-    });
-  });
+  data.languagesWithProjects = addProjectData(
+    languages,
+    getAllProjects(),
+  );
 
-  data.languagesWithProjects = languages;
   return data.languagesWithProjects;
 }
 
@@ -124,51 +116,37 @@ export function getInfrastructuresWithProjects() {
     return data.infrastructuresWithProjects;
   }
 
-  const projects = getAllProjects();
-
   const infrastructures = [];
   Object.keys(data.infrastructures).forEach((id) => {
     infrastructures.push({
       id,
       name: data.infrastructures[id],
-      projects: [],
     });
   });
 
-  projects.forEach((project) => {
-    infrastructures.forEach((infrastructure) => {
-      if (projectUsesTechnology(project, infrastructure.id)) {
-        infrastructure.projects.push(project.slug);
-      }
-    });
-  });
+  data.infrastructuresWithProjects = addProjectData(
+    infrastructures,
+    getAllProjects(),
+  );
 
-  data.infrastructuresWithProjects = infrastructures;
   return data.infrastructuresWithProjects;
 }
 
 export function getCodeLibrariesWithProjects() {
   if (data.codeLibrariesWithProjects) { return data.codeLibrariesWithProjects; }
 
-  const projects = getAllProjects();
-
   const codeLibraries = [];
   Object.keys(data.codeLibraries).forEach((id) => {
     codeLibraries.push({
       id,
       name: data.codeLibraries[id],
-      projects: [],
     });
   });
 
-  projects.forEach((project) => {
-    codeLibraries.forEach((codeLibrary) => {
-      if (projectUsesTechnology(project, codeLibrary.id)) {
-        codeLibrary.projects.push(project.slug);
-      }
-    });
-  });
+  data.codeLibrariesWithProjects = addProjectData(
+    codeLibraries,
+    getAllProjects(),
+  );
 
-  data.codeLibrariesWithProjects = codeLibraries;
   return data.codeLibrariesWithProjects;
 }

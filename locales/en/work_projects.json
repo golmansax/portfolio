@@ -50,6 +50,41 @@
       ]
     },
     {
+      "slug": "book-booster",
+      "name": "BookBooster",
+      "current": true,
+      "description": [
+        "An initiative for the 2016-17 school year to ",
+        "provide books to 20 Bay Area schools serving low-income students. ",
+        "As of August 2016, BookBooster has raised 4,104 books (over $12,500)!"
+      ],
+      "colleagues": [
+        { "personId": "at" },
+        { "personId": "abi" }
+      ],
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "Jan ’16",
+					"end": "Current"
+				}
+			],
+      "url": "https://bayarea.bookbooster.org",
+      "technologies": ["expressjs", "reactjs", "sequelize", "typescript", "scss", "heroku", "postgres"],
+      "images": [
+        "/static/book-booster.jpg"
+      ],
+      "press": [
+        [
+          "MissionLocal – ",
+          {
+            "url": "http://missionlocal.org/2016/11/startup-crowdfunds-books-for-schools/",
+            "text": "Startup Crowdfunds Books for Schools"
+          }
+        ]
+      ]
+    },
+    {
       "slug": "thum-io",
       "name": "Thum.io",
       "images": ["//image.thum.io/get/https://www.thum.io"],
@@ -60,6 +95,13 @@
       ],
       "colleagues": [{ "personId": "zeki" }],
       "technologies": ["expressjs", "sequelize", "reactjs", "redux", "bootstrap", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "Oct ’16",
+					"end": "Current"
+				}
+			],
       "press": [
         [
           "Featured on ",
