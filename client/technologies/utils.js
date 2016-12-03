@@ -26,3 +26,15 @@ export function addProjectData(technologies, projects) {
 
   return technologies;
 }
+
+export function sortTechnologies(technologies) {
+  technologies.sort((a, b) => {
+    if (a.workCount !== b.workCount) {
+      return b.workCount - a.workCount;
+    }
+
+    return b.otherCount - a.otherCount;
+  });
+
+  return technologies;
+}

@@ -1,4 +1,4 @@
-import { addProjectData } from '../technologies/utils';
+import { addProjectData, sortTechnologies } from '../technologies/utils';
 
 const data = {};
 
@@ -103,10 +103,10 @@ export function getLanguagesWithProjects() {
     });
   });
 
-  data.languagesWithProjects = addProjectData(
+  data.languagesWithProjects = sortTechnologies(addProjectData(
     languages,
     getAllProjects(),
-  );
+  ));
 
   return data.languagesWithProjects;
 }
@@ -124,10 +124,10 @@ export function getInfrastructuresWithProjects() {
     });
   });
 
-  data.infrastructuresWithProjects = addProjectData(
+  data.infrastructuresWithProjects = sortTechnologies(addProjectData(
     infrastructures,
     getAllProjects(),
-  );
+  ));
 
   return data.infrastructuresWithProjects;
 }
@@ -143,10 +143,10 @@ export function getCodeLibrariesWithProjects() {
     });
   });
 
-  data.codeLibrariesWithProjects = addProjectData(
+  data.codeLibrariesWithProjects = sortTechnologies(addProjectData(
     codeLibraries,
     getAllProjects(),
-  );
+  ));
 
   return data.codeLibrariesWithProjects;
 }

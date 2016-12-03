@@ -42,6 +42,7 @@
     "mongo": "MongoDB",
     "firebase": "Firebase",
     "mysql": "MySQL",
+    "ec2": "Amazon EC2",
     "heroku": "Heroku"
   }
 }

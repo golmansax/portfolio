@@ -70,7 +70,7 @@
 				}
 			],
       "url": "https://bayarea.bookbooster.org",
-      "technologies": ["expressjs", "reactjs", "sequelize", "typescript", "scss", "heroku", "postgres"],
+      "technologies": ["expressjs", "reactjs", "sequelize", "foundation", "typescript", "scss", "heroku", "postgres"],
       "images": [
         "/static/book-booster.jpg"
       ],
@@ -147,7 +147,7 @@
         ]
 			],
 			"description": "Search across dozens of hotel sites to find the best price.",
-      "technologies": ["angular1", "javascript", "scss", "php", "cplusplus", "python", "bash", "mysql"],
+      "technologies": ["angular1", "javascript", "scss", "php", "cplusplus", "python", "bash", "ec2", "mysql"],
 			"positions": [
 				{
 					"title": "Software Contractor",
