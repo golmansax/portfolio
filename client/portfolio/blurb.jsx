@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import { getImage } from '../images/store';
+import { getAsset } from '../assets/store';
 import Container from '../shared/container';
 import MyEmail from '../my/email';
 
@@ -13,7 +13,7 @@ const PortfolioBlurb = ({ className }) => (
       <div
         className='blurb__portrait'
         style={(() => {
-          const portraitImage = getImage('/static/portrait_2016-04-30.jpg');
+          const portraitImage = getAsset('/static/portrait_2016-04-30.jpg');
           return {
             backgroundImage: `url('${portraitImage}')`,
           };

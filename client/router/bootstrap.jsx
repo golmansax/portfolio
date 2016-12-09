@@ -5,7 +5,7 @@ import { useScroll } from 'react-router-scroll';
 import { routesComponent } from '../routes';
 import gon from '../gon';
 import { loadData } from '../data/store';
-import { loadImages } from '../images/store';
+import { loadAssets } from '../assets/store';
 import { toggleMenuShowing } from '../content/state_store';
 
 // require('babelify/polyfill');
@@ -14,7 +14,7 @@ import { toggleMenuShowing } from '../content/state_store';
 global.React = require('react');
 
 loadData(gon.data);
-loadImages(gon.images);
+loadAssets(gon.assets);
 
 toggleMenuShowing(false);
 

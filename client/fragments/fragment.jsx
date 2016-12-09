@@ -1,7 +1,7 @@
 import { PropTypes } from 'react';
 import { Link } from 'react-router';
 import GithubFragment from './github_fragment';
-import { getAsset } from '../../server/asset_utils';
+import { getAsset } from '../assets/store';
 
 const Fragment = ({ routeName, text, github, url, assetUrl }) => {
   if (routeName) {

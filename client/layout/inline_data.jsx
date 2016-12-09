@@ -1,9 +1,9 @@
 import React from 'react';
 import getDataFromI18n from '../data/from_i18n';
-import getImagesData from '../images/data';
+import getAssetsData from '../assets/data';
 
 const getScript = () => {
-  const gon = { data: getDataFromI18n(), images: getImagesData() };
+  const gon = { data: getDataFromI18n(), assets: getAssetsData() };
   return `window.gon = ${JSON.stringify(gon)}`;
 };
 

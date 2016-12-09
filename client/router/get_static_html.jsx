@@ -4,15 +4,15 @@ import { routesComponent } from '../routes';
 import LayoutHandler from '../layout/handler';
 import getDataFromI18n from '../data/from_i18n';
 import { loadData } from '../data/store';
-import getImagesData from '../images/data';
-import { loadImages } from '../images/store';
+import getAssetsData from '../assets/data';
+import { loadAssets } from '../assets/store';
 
 let dataLoaded = false;
 
 export default function getStaticHtml(url) {
   if (!dataLoaded) {
     loadData(getDataFromI18n());
-    loadImages(getImagesData());
+    loadAssets(getAssetsData());
     dataLoaded = true;
   }
 

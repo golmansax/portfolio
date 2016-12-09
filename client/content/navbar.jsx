@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { getImage } from '../images/store';
+import { getAsset } from '../assets/store';
 import ContentMainLinks from './main_links';
 import Container from '../shared/container';
 import {
@@ -35,7 +35,7 @@ class ContentNavbar extends React.Component {
             <Link to='/'>
               <img
                 role='presentation'
-                src={getImage('/static/navbar-icon.png')}
+                src={getAsset('/static/navbar-icon.png')}
               />
               <h1>Holman Gao</h1>
             </Link>
