@@ -1,8 +1,9 @@
 import { PropTypes } from 'react';
 import { Link } from 'react-router';
 import GithubFragment from './github_fragment';
+import { getAsset } from '../../server/asset_utils';
 
-const Fragment = ({ routeName, text, github, url }) => {
+const Fragment = ({ routeName, text, github, url, assetUrl }) => {
   if (routeName) {
     return <Link to={routeName}>{text}</Link>;
   } else if (github) {
@@ -19,12 +20,19 @@ const Fragment = ({ routeName, text, github, url }) => {
         {text || url}
       </a>
     );
+  } else if (assetUrl) {
+    return (
+      <a href={getAsset(assetUrl)}>
+        {text || url}
+      </a>
+    );
   }
 
   return <span>{text}</span>;
 };
 
 Fragment.propTypes = {
+  assetUrl: PropTypes.string,
   github: PropTypes.string,
   routeName: PropTypes.string,
   text: PropTypes.string,
