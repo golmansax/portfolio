@@ -31,9 +31,13 @@ export default [
       replaceInPath: SLUG_REPLACE,
     },
   },
-  { path: '/in-community' },
   {
-    path: '/in-community/:projectId',
+    path: '/portfolio/in-community',
+    redirectFrom: '/in-community',
+  },
+  {
+    path: '/portfolio/in-community/:projectId',
+    redirectFrom: '/in-community/:projectId',
     data: {
       getter: getCommunityProjects,
       replaceInPath: SLUG_REPLACE,

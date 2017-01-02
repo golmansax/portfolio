@@ -3,7 +3,7 @@ import { getPortfolioPath } from '../url_utils';
 const PROJECT_ROUTE_MAPPING = {
   workProject: 'portfolio/work',
   sideProject: 'portfolio/side-projects',
-  communityProject: 'in-community',
+  communityProject: 'portfolio/in-community',
 };
 
 const projectTechLookup = new Map();

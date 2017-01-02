@@ -14,7 +14,7 @@ export default function getDataFromI18n() {
     communityProjects: ProjectsArray.from(i18n.t('community_projects:projects'))
       .map((project) => {
         Object.assign(project, {
-          projectPath: `/in-community#${project.slug}`,
+          projectPath: `/portfolio/in-community#${project.slug}`,
           type: 'communityProject',
         });
         return project;

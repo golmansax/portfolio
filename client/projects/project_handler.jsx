@@ -17,7 +17,7 @@ const PARENT_BREADCRUMBS = {
     text: 'Side Projects',
   },
   communityProject: {
-    routeName: getPortfolioPath('/in-community'),
+    routeName: getPortfolioPath('/portfolio/in-community'),
     text: 'Efforts in Community',
   },
 };
