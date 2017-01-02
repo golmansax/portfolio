@@ -6,7 +6,7 @@ const Redirect = ({ redirectUrl }) => (
     <head>
       <meta httpEquiv='content-type' content='text/html; charset=utf-8' />
       <meta httpEquiv='refresh' content={`0;url=${redirectUrl}`} />
-      <link rel="canonical" href={redirectUrl} />
+      <link rel='canonical' href={redirectUrl} />
     </head>
   </html>
 );
