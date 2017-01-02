@@ -7,13 +7,17 @@ import {
 const SLUG_REPLACE = (project) => ({ projectId: project.slug });
 
 export default [
-  { path: '/portfolio/work' },
+  {
+    path: '/portfolio/work',
+    redirectFrom: '/work',
+  },
   {
     path: '/portfolio/work/:projectId',
     data: {
       getter: getWorkProjects,
       replaceInPath: SLUG_REPLACE,
     },
+    redirectFrom: '/work/:projectId',
   },
   { path: '/side-projects' },
   {
