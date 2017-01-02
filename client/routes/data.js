@@ -19,9 +19,13 @@ export default [
     },
     redirectFrom: '/work/:projectId',
   },
-  { path: '/side-projects' },
   {
-    path: '/side-projects/:projectId',
+    path: '/portfolio/side-projects',
+    redirectFrom: '/side-projects',
+  },
+  {
+    path: '/portfolio/side-projects/:projectId',
+    redirectFrom: '/side-projects/:projectId',
     data: {
       getter: getSideProjects,
       replaceInPath: SLUG_REPLACE,

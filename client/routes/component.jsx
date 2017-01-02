@@ -18,8 +18,8 @@ export default (
       <Route path='work' component={WorkProjectsHandler} />
       <Route path=':projectType/:projectId' component={ProjectHandler} />
       <Route path='technologies' component={TechnologiesHandler} />
+      <Route path='side-projects' component={SideProjectsHandler} />
     </Route>
-    <Route path='side-projects' component={SideProjectsHandler} />
     <Route path='in-community' component={CommunityProjectsHandler} />
     <Route path='resume' component={ResumeHandler} />
     <Route path=':projectType/:projectId' component={ProjectHandler} />

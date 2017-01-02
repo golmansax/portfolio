@@ -13,7 +13,7 @@ const PARENT_BREADCRUMBS = {
     text: 'Work',
   },
   sideProject: {
-    routeName: getPortfolioPath('/side-projects'),
+    routeName: getPortfolioPath('/portfolio/side-projects'),
     text: 'Side Projects',
   },
   communityProject: {

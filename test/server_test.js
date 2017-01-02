@@ -110,7 +110,7 @@ describe('server', function () {
   });
 
   describe('when starting from side projects page', function () {
-    beforeEach(() => browser.visit('/side-projects'));
+    beforeEach(() => browser.visit('/portfolio/side-projects'));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Side Projects');
@@ -134,7 +134,7 @@ describe('server', function () {
   });
 
   describe('when starting from a project page', function () {
-    beforeEach(() => browser.visit('/side-projects/quarry'));
+    beforeEach(() => browser.visit('/portfolio/side-projects/quarry'));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Quarry');

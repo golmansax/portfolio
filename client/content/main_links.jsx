@@ -4,7 +4,10 @@ import { getPortfolioPath } from '../url_utils';
 
 const LINKS = [
   { text: 'Work', routeName: getPortfolioPath('/portfolio/work') },
-  { text: 'Side Projects', routeName: getPortfolioPath('/side-projects') },
+  {
+    text: 'Side Projects',
+    routeName: getPortfolioPath('/portfolio/side-projects'),
+  },
   { text: 'In Community', routeName: getPortfolioPath('/in-community') },
   { text:
     'Technologies',

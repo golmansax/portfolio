@@ -2,7 +2,7 @@ import { getPortfolioPath } from '../url_utils';
 
 const PROJECT_ROUTE_MAPPING = {
   workProject: 'portfolio/work',
-  sideProject: 'side-projects',
+  sideProject: 'portfolio/side-projects',
   communityProject: 'in-community',
 };
 

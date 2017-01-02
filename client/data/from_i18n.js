@@ -23,7 +23,7 @@ export default function getDataFromI18n() {
     sideProjects: ProjectsArray.from(i18n.t('side_projects:projects'))
       .map((project) => {
         Object.assign(project, {
-          projectPath: `/side-projects#${project.slug}`,
+          projectPath: `/portfolio/side-projects#${project.slug}`,
           type: 'sideProject',
         });
         return project;
