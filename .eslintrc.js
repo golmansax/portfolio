@@ -17,5 +17,7 @@ module.exports = {
     'jsx-a11y/href-no-hash': [1],
     'jsx-a11y/no-static-element-interactions': [1],
     'react/forbid-prop-types': [0],
+    'react/no-array-index-key': 1,
+    'react/require-default-props': 0,
   },
 };
