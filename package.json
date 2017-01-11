@@ -21,6 +21,7 @@
     "envlocalify": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
+    "eslint-config-airbnb-base": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
