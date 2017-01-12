@@ -47,7 +47,7 @@ describe('server', function () {
     beforeEach(() => browser.visit('/'));
 
     it('routes root page to portfolio', () => {
-      expect(browser.text('title')).to.equal('Holman Gao');
+      expect(browser.text('title')).to.include('Holman Gao');
       expect(browser.text('h1')).to.equal('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
       StinkBomb.create('2017-06-01', { message: 'Sample stink bomb' });
