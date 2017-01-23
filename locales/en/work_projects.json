@@ -154,6 +154,11 @@
 			],
 			"description": "A digital workflow system created for K-12 schools and school districts.",
       "technologies": ["rails", "reactjs", "backbonejs", "bootstrap", "ruby", "javascript", "scss", "haml", "heroku", "postgres"],
+      "colleagues": [
+        { "personId": "qian", "position": "Co-founder, CTO" },
+        { "personId": "rob", "position": "Software Engineer" },
+        { "personId": "jt", "position": "Software Engineer" }
+      ],
 			"positions": [
 				{
 					"title": "Software Engineer",
@@ -178,6 +183,13 @@
           "/static/room-77_2.jpg"
         ]
 			],
+      "colleagues": [
+        { "personId": "stephen", "position": "Software Engineer" },
+        { "personId": "roger", "position": "VP of Product"  },
+        { "personId": "ian", "position": "Software Engineer" },
+        { "personId": "akearney", "position": "Software Engineer" },
+        { "personId": "jelinson", "position": "Software Engineer" }
+      ],
 			"description": "Search across dozens of hotel sites to find the best price.",
       "technologies": ["angular1", "javascript", "scss", "php", "cplusplus", "python", "bash", "ec2", "mysql"],
 			"positions": [
