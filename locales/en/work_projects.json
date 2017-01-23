@@ -14,7 +14,7 @@
 				}
 			],
       "description": [
-        "A fundraising platform for school programs"
+        "A crowdfunding platform for schools and school-affiliated organizations."
       ],
       "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
       "press": [
@@ -33,7 +33,7 @@
       "description": [
         "An initiative for the 2016-17 school year to ",
         "provide books to 20 Bay Area schools serving low-income students. ",
-        "As of August 2016, BookBooster has raised 4,104 books (over $12,500)!"
+        "As of January 2017, BookBooster has raised 8,071 books (over $24,000)!"
       ],
       "colleagues": [
         { "personId": "at" },
