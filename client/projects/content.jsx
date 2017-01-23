@@ -108,7 +108,7 @@ class ProjectsContent extends Component {
     }
 
     return [
-      <dt key='dt'>Worked with:</dt>,
+      <dt key='dt'>{this.props.current ? 'Working' : 'Worked'} with:</dt>,
       <dd key='dd'>
         <ul className='projects-content__list'>
           {this.props.colleagues.map((colleague) => (
@@ -194,6 +194,7 @@ class ProjectsContent extends Component {
 ProjectsContent.propTypes = {
   colleagues: PropTypes.arrayOf(PropTypes.object),
   createdFor: PropTypes.string,
+  current: PropTypes.bool.isRequired,
   custom: PropTypes.arrayOf(PropTypes.object),
   description: PropTypes.oneOfType([
     PropTypes.string,
@@ -207,6 +208,10 @@ ProjectsContent.propTypes = {
   press: PropTypes.array,
   technologies: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   url: PropTypes.string,
+};
+
+ProjectsContent.defaultProps = {
+  current: false,
 };
 
 export default ProjectsContent;
