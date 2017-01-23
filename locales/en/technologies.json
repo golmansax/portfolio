@@ -34,7 +34,8 @@
     "chrome-extension": "Chrome extension",
     "android": "Android",
     "ionic": "Ionic",
-    "flask": "Flask"
+    "flask": "Flask",
+    "django": "Django"
   },
 
   "infrastructures": {
