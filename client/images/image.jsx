@@ -15,6 +15,10 @@ export default class Image extends React.Component {
     return this._renderImage();
   }
 
+  _renderImage() {
+    return <img alt='' src={this._getSource()} />;
+  }
+
   _getSource() {
     if (this.props.url) {
       return getThumURL({
@@ -25,10 +29,6 @@ export default class Image extends React.Component {
     }
 
     return this.props.src;
-  }
-
-  _renderImage() {
-    return <img alt='' src={this._getSource()} />;
   }
 }
 
