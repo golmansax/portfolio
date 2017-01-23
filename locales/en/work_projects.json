@@ -100,7 +100,7 @@
     {
       "slug": "thum-io",
       "name": "Thum.io",
-      "images": ["//image.thum.io/get/https://www.thum.io"],
+      "images": [{ "url": "https://www.thum.io" }],
       "current": true,
       "url": "https://www.thum.io",
       "description": [
