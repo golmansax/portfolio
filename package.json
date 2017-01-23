@@ -69,7 +69,7 @@
     "react-router-scroll": "*",
     "rupture": "*",
     "stylus": "*",
-    "thum.io": "^1.0.0",
+    "thum.io": "^1.0.5",
     "uglify-js": "*"
   },
   "scripts": {
