@@ -28,6 +28,7 @@ class ProjectsContent extends Component {
     this._renderResponsibilities = this._renderResponsibilities.bind(this);
     this._renderPress = this._renderPress.bind(this);
     this._renderCustom = this._renderCustom.bind(this);
+    this._renderGithub = this._renderGithub.bind(this);
     this._renderTechnologies = this._renderTechnologies.bind(this);
     this._renderColleagues = this._renderColleagues.bind(this);
     this._renderJoinedWhen = this._renderJoinedWhen.bind(this);
@@ -98,6 +99,7 @@ class ProjectsContent extends Component {
       <dt key='dt'>Technologies:</dt>,
       <dd key='dd'>
         {this.props.technologies.map((id) => getTechnology(id)).join(', ')}
+        {this._renderGithub()}
       </dd>,
     ];
   }
