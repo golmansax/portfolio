@@ -208,7 +208,7 @@ ProjectsContent.propTypes = {
   name: PropTypes.string.isRequired,
   positions: PropTypes.array,
   press: PropTypes.array,
-  technologies: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string.isRequired),
   url: PropTypes.string,
 };
 
