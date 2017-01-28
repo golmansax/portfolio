@@ -38,6 +38,8 @@ class ProjectsContent extends Component {
   }
 
   render() {
+    const hide = this.props.hide || {};
+
     return (
       <div className='projects-content'>
         <h2>
@@ -47,7 +49,7 @@ class ProjectsContent extends Component {
         <dl>
           {this._renderPositions()}
           {this._renderCreatedFor()}
-          {this._renderTechnologies()}
+          {hide.technologies ? null : this._renderTechnologies()}
           {this._renderColleagues()}
           {this._renderJoinedWhen()}
           {this._renderResponsibilities()}
@@ -203,6 +205,7 @@ ProjectsContent.propTypes = {
     PropTypes.array,
   ]),
   github: PropTypes.string,
+  hide: PropTypes.object,
   involvedWith: PropTypes.array,
   joinedWhen: PropTypes.string,
   name: PropTypes.string.isRequired,

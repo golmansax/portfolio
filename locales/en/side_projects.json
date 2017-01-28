@@ -178,12 +178,16 @@
     {
       "slug": "todo-app-project",
       "name": "Todo App Project",
+      "technologies": ["react-native", "js-latest", "rails", "reactjs", "backbonejs", "bootstrap", "ruby", "javascript", "scss", "haml", "django", "python", "scalatra", "scala", "mongo", "beego", "go", "sqlite"],
       "description": [
         "Whenever I am interested in learning a new technology, I like to ",
         "use it to create a simple todo app.  This lets me work out the kinks ",
         "of the technology on a small scale app, and makes it easier to ",
         "compare implementations directly."
       ],
+      "hide": {
+        "technologies": true
+      },
       "custom": [
 				{
 					"klass": "FragmentsBulletList",

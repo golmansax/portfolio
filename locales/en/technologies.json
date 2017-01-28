@@ -11,7 +11,9 @@
     "java": "Java",
     "scss": "SCSS",
     "stylus": "Stylus",
-    "haml": "HAML"
+    "haml": "HAML",
+    "go": "Go",
+    "scala": "Scala"
   },
 
   "codeLibraries": {
@@ -35,7 +37,9 @@
     "android": "Android",
     "ionic": "Ionic",
     "flask": "Flask",
-    "django": "Django"
+    "django": "Django",
+    "scalatra": "Scalatra",
+    "beego": "Beego"
   },
 
   "infrastructures": {
@@ -44,6 +48,7 @@
     "firebase": "Firebase",
     "mysql": "MySQL",
     "ec2": "Amazon EC2",
-    "heroku": "Heroku"
+    "heroku": "Heroku",
+    "sqlite": "SQLite"
   }
 }
