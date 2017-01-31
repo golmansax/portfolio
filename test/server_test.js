@@ -9,6 +9,7 @@ import { describe } from 'global-mocha';
 import { before, beforeEach, afterEach, it } from 'arrow-mocha/es5';
 import { isProduction } from '../server/config';
 import { initI18n } from '../server/my_i18n';
+import { getPortfolioPath } from '../client/url_utils';
 
 // Expose React so we don't need to import it for JSX
 global.React = require('react');
@@ -44,7 +45,7 @@ describe('server', function () {
   });
 
   describe('when starting from index', function () {
-    beforeEach(() => browser.visit('/'));
+    beforeEach(() => browser.visit(getPortfolioPath('/')));
 
     it('routes root page to portfolio', () => {
       expect(browser.text('title')).to.include('Holman Gao');
@@ -112,7 +113,7 @@ describe('server', function () {
   });
 
   describe('when starting from side projects page', function () {
-    beforeEach(() => browser.visit('/portfolio/side-projects'));
+    beforeEach(() => browser.visit(getPortfolioPath('/side-projects')));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Side Projects');
@@ -124,7 +125,7 @@ describe('server', function () {
   });
 
   describe('when starting from work page', function () {
-    beforeEach(() => browser.visit('/portfolio/work'));
+    beforeEach(() => browser.visit(getPortfolioPath('/work')));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Work');
@@ -136,7 +137,7 @@ describe('server', function () {
   });
 
   describe('when starting from a project page', function () {
-    beforeEach(() => browser.visit('/portfolio/side-projects/quarry'));
+    beforeEach(() => browser.visit(getPortfolioPath('/side-projects/quarry')));
 
     it('has the right title', () => {
       expect(browser.text('title')).to.include('Quarry');
