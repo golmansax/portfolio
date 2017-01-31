@@ -11,6 +11,7 @@ import getStaticHtml from '../client/router/get_static_html';
 import getRedirectHtml from '../client/router/get_redirect_html';
 import { initI18n } from '../server/my_i18n';
 import { getStaticHtmlPath } from '../server/static_html_utils';
+import { getPortfolioPath } from '../client/url_utils';
 
 // Expose React so we don't need to import it for JSX
 global.React = React;
@@ -28,7 +29,7 @@ function writeHtmlToPath(html, myPath) {
 }
 
 function writeHtmlForPath(myPath, redirectFrom) {
-  getStaticHtml(myPath).then(({ html }) => writeHtmlToPath(html, myPath));
+  getStaticHtml(getPortfolioPath(myPath)).then(({ html }) => writeHtmlToPath(html, myPath));
 
   if (redirectFrom) {
     writeHtmlToPath(getRedirectHtml(myPath), redirectFrom);

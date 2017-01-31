@@ -9,6 +9,7 @@ import {
   isMenuShowing,
   toggleMenuShowing,
 } from './state_store';
+import { getPortfolioPath } from '../url_utils';
 
 class ContentNavbar extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class ContentNavbar extends React.Component {
       <div className='navbar'>
         <Container>
           <div className='navbar-left'>
-            <Link to='/'>
+            <Link to={getPortfolioPath('/')}>
               <img alt='' src={getAsset('/static/navbar-icon.png')} />
               <h1>Holman Gao</h1>
             </Link>
