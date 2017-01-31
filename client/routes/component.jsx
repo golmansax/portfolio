@@ -9,18 +9,23 @@ import ResumeHandler from '../resume/handler';
 import ContentHandler from '../content/handler';
 import TechnologiesHandler from '../technologies/handler';
 import NotFoundHandler from './not_found_handler';
+import { getPortfolioPath } from '../url_utils';
+
+const ROOT_PATH = (() => {
+  const path = getPortfolioPath('');
+  if (!path) { return '/'; }
+  return path;
+})();
 
 export default (
   /* eslint-disable max-len */
-  <Route path='/' component={ContentHandler}>
+  <Route path={ROOT_PATH} component={ContentHandler}>
     <IndexRoute component={PortfolioHandler} />
-    <Route path='portfolio'>
-      <Route path='work' component={WorkProjectsHandler} />
-      <Route path=':projectType/:projectId' component={ProjectHandler} />
-      <Route path='technologies' component={TechnologiesHandler} />
-      <Route path='side-projects' component={SideProjectsHandler} />
-      <Route path='in-community' component={CommunityProjectsHandler} />
-    </Route>
+    <Route path='work' component={WorkProjectsHandler} />
+    <Route path=':projectType/:projectId' component={ProjectHandler} />
+    <Route path='technologies' component={TechnologiesHandler} />
+    <Route path='side-projects' component={SideProjectsHandler} />
+    <Route path='in-community' component={CommunityProjectsHandler} />
     <Route path='resume' component={ResumeHandler} />
     <Route path='*' component={NotFoundHandler} />
   </Route>

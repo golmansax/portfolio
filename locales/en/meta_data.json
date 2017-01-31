@@ -1,7 +1,7 @@
 {
 	"metaData": {
     "root": {
-      "titleTemplate": "%s | Holman Gao’s portfolio"
+      "titleTemplate": "%s | Holman Gao’s Portfolio"
     },
     "technologies": {
       "title": "Technologies",
@@ -25,10 +25,10 @@
 			"meta": [
         {
           "name": "description",
-          "content": "Personal site of Holman Gao, entrepreneur and freelance developer with a love for education, University of Maryland and Blair Magnet alum, living in New York"
+          "content": "Collection of professional and hobby websites worked on by Holman Gao, entrepreneur and freelance developer."
         }
       ],
-			"title": "Holman Gao – entrepreneur and web developer in New York",
+			"title": "Portfolio | Holman Gao",
 			"titleTemplate": "%s"
 		},
 		"workProjects": {

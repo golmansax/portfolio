@@ -9,15 +9,15 @@ import { getPortfolioPath } from '../url_utils';
 
 const PARENT_BREADCRUMBS = {
   workProject: {
-    routeName: getPortfolioPath('/portfolio/work'),
+    routeName: getPortfolioPath('/work'),
     text: 'Work',
   },
   sideProject: {
-    routeName: getPortfolioPath('/portfolio/side-projects'),
+    routeName: getPortfolioPath('/side-projects'),
     text: 'Side Projects',
   },
   communityProject: {
-    routeName: getPortfolioPath('/portfolio/in-community'),
+    routeName: getPortfolioPath('/in-community'),
     text: 'Efforts in Community',
   },
 };
@@ -72,10 +72,7 @@ function getMetaData(project) {
 }
 
 const ProjectHandler = ({ params }) => {
-  // TODO: remove extra lookup
-  const myType = PROJECT_TYPE_LOOKUP[`/${params.projectType}`] ||
-    PROJECT_TYPE_LOOKUP[`/portfolio/${params.projectType}`];
-
+  const myType = PROJECT_TYPE_LOOKUP[getPortfolioPath(`/${params.projectType}`)];
   const myProject = getAllProjects().find((project) => (
     project.slug === params.projectId && project.type === myType
   ));
