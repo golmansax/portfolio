@@ -78,6 +78,7 @@ describe('server', function () {
       });
     });
 
+    /* TODO: transfer this to the other repo
     describe('when clicking to resume', () => {
       beforeEach(() => {
         nock('https://docs.google.com').get(/viewer/).reply(200);
@@ -92,6 +93,7 @@ describe('server', function () {
         expect(browser.text('body')).to.include('Resume');
       });
     });
+    */
 
     describe('when clicking to community page', function () {
       beforeEach(() => {
