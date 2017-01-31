@@ -1,5 +1,13 @@
 import { getAsset } from '../../server/asset_utils';
 
+function getAssetHelper(asset) {
+  if (typeof asset === 'string') {
+    return getAsset(asset);
+  }
+
+  return asset;
+}
+
 export default {
   from(projects) {
     return projects.map((project) => {
@@ -10,16 +18,16 @@ export default {
             // Not sure exactly why, but need to manually call getAsset instead
             // of using Array.prototype.map
             const result = [];
-            image.forEach((myImage) => result.push(getAsset(myImage)));
+            image.forEach((myImage) => result.push(getAssetHelper(myImage)));
             return result;
           }
 
-          return getAsset(image);
+          return getAssetHelper(image);
         });
       }
 
       if (project.gif) {
-        project.gif = getAsset(project.gif);
+        project.gif = getAssetHelper(project.gif);
       }
       /* eslint-enable no-param-reassign */
 
