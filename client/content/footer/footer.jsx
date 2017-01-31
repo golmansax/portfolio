@@ -32,8 +32,12 @@ const ContentFooter = () => (
             <a href='/'>Home</a>
             <a href='/blog'>Blog</a>
             <a href='/resume'>Resume</a>
-            <a href='https://github.com/golmansax'>GitHub</a>
-            <a href='https://twitter.com/golmansax'>Twitter</a>
+            <a href='https://github.com/golmansax' target='_blank' rel='noopener noreferrer'>
+              GitHub
+            </a>
+            <a href='https://twitter.com/golmansax' target='_blank' rel='noopener noreferrer'>
+              Twitter
+            </a>
           </div>
         </div>
       </Container>
