@@ -15,6 +15,8 @@ build-html:
 
 cachify-assets:
 	./node_modules/.bin/babel-node scripts/cachify_assets.js
+	mv public/portfolio/* public/
+	rm -rf public/portfolio
 
 test:
 	./node_modules/.bin/mocha --compilers js:babel-core/register -R spec test/**/*
