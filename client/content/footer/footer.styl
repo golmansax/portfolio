@@ -1,8 +1,6 @@
 @require 'font-awesome-stylus/stylus/mixins'
 @require 'font-awesome-stylus/stylus/variables'
 
-$footer-lambda = $lambda * 3 / 2
-
 .content-footer {
   +e(top) {
     margin-top unit(2 * $lambda, em)
@@ -12,11 +10,9 @@ $footer-lambda = $lambda * 3 / 2
   +e(bottom) {
     background-color $my-green
     color $white
-    line-height $footer-lambda
     padding 2em 0
 
     h2 {
-      line-height ($footer-lambda / $h2-lambda)
       margin 0
     }
 
@@ -26,35 +22,34 @@ $footer-lambda = $lambda * 3 / 2
     }
   }
 
-  +e(section) {
-    margin-bottom unit($lambda, em)
-
-    &:last-child {
-      margin-bottom 0
-    }
-
+  +e(large-section) {
     +above('l') {
       span(1/2)
-      margin-bottom 0
     }
+
+    small {
+      display: inline-block;
+      font-weight: normal;
+      font-size: 65%;
+    }
+  }
+
+  +e(section) {
+    margin-top unit($lambda, em)
+
+    +above('l') {
+      span(1/4)
+      margin-top 0
+    }
+  }
+
+  +e(section-heading) {
+    font-weight: bold;
   }
 
   +e(main-links) {
     a {
-      position relative
-
-      &:after {
-        fa-icon()
-
-        content: $fa-var-circle
-        font-size 5px
-        padding 0 1em
-        vertical-align middle
-      }
-
-      &:last-child:after {
-        content: ''
-      }
+      display: block;
     }
   }
 }
