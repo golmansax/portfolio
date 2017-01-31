@@ -8,7 +8,7 @@
       "url": "https://www.boostmyschool.com",
 			"positions": [
 				{
-					"title": "Founder",
+					"title": "Co-founder",
 					"start": "Nov ’15",
 					"end": "Current"
 				}
@@ -132,7 +132,7 @@
         "A data analytics platform used by governments and international ",
         "organizations to tackle global health issues"
       ],
-      "colleagues": [{ "personId": "ian", "position": "Co-Founder, CTO" }],
+      "colleagues": [{ "personId": "ian", "position": "Co-founder, CTO" }],
       "technologies": ["flask", "reactjs", "bootstrap", "python", "javascript", "scss", "mongo"],
 			"positions": [
 				{
@@ -227,7 +227,7 @@
 			"images": [
 				"/static/amass.jpg"
 			],
-      "colleagues": [{ "personId": "hannah", "position": "Co-Founder, CEO" }],
+      "colleagues": [{ "personId": "hannah", "position": "Co-founder, CEO" }],
 			"description": "Connecting socially-conscious filmmakers and organizations.",
       "technologies": ["rails", "angular1", "foundation", "ruby", "javascript", "haml", "scss", "heroku", "mongo"],
 			"positions": [
