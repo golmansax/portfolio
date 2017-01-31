@@ -13,7 +13,7 @@ const PortfolioBlurb = ({ className }) => (
       <div
         className='blurb__portrait'
         style={(() => {
-          const portraitImage = getAsset('/static/portrait_2016-04-30.jpg');
+          const portraitImage = getAsset('/static/portrait_2017-01-27.jpg');
           return {
             backgroundImage: `url('${portraitImage}')`,
           };
