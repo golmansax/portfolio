@@ -1,6 +1,7 @@
 import { PropTypes } from 'react';
 import Fragment from '../fragments/fragment';
 import Container from '../shared/container';
+import { getPortfolioPath } from '../url_utils';
 
 const renderBreak = (key) => <span key={key}>&nbsp;&rsaquo;&nbsp;</span>;
 
@@ -17,7 +18,7 @@ const renderBreadcrumb = (breadcrumb, index) => {
 };
 
 const BreadcrumbsList = ({ breadcrumbs }) => {
-  const fullBreadcrumbs = [{ text: 'Home', routeName: '/' }]
+  const fullBreadcrumbs = [{ text: 'Portfolio', routeName: getPortfolioPath('/') }]
     .concat(breadcrumbs);
 
   return (
