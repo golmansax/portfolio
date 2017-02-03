@@ -139,7 +139,7 @@
       "name": "Office Street View",
       "createdFor": "Internal Room 77 hackathon",
       "description": "Navigate through an office and meet the employees!",
-      "technologies": ["angular1", "javascript", "scss", "php"],
+      "technologies": ["angular1", "jquery", "javascript", "scss", "php"],
       "github": "golmansax/office-street-view",
       "images": [
         "/static/office-street-view_1.jpg",

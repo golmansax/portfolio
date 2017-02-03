@@ -25,6 +25,7 @@
     "expressjs": "Express.js",
     "backbonejs": "Backbone.js",
     "immutablejs": "Immutable.js",
+    "jquery": "jQuery",
     "graphql": "GraphQL",
     "relay": "Relay",
     "exponentjs": "ExponentJS",

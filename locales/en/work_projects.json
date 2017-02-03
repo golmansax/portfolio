@@ -191,7 +191,7 @@
         { "personId": "jelinson", "position": "Software Engineer" }
       ],
 			"description": "Search across dozens of hotel sites to find the best price.",
-      "technologies": ["angular1", "javascript", "scss", "php", "cplusplus", "python", "bash", "ec2", "mysql"],
+      "technologies": ["angular1", "jquery", "javascript", "scss", "php", "cplusplus", "python", "bash", "ec2", "mysql"],
 			"positions": [
 				{
 					"title": "Software Contractor",
@@ -229,7 +229,7 @@
 			],
       "colleagues": [{ "personId": "hannah", "position": "Co-founder, CEO" }],
 			"description": "Connecting socially-conscious filmmakers and organizations.",
-      "technologies": ["rails", "angular1", "foundation", "ruby", "javascript", "haml", "scss", "heroku", "mongo"],
+      "technologies": ["rails", "angular1", "jquery", "foundation", "ruby", "javascript", "haml", "scss", "heroku", "mongo"],
 			"positions": [
 				{
           "title": "Product/Technical Advisor",
