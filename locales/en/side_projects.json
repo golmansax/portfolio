@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "slug": "stay-responsive",
+      "name": "StayReponsive",
+      "url": "https://www.stayresponsive.com",
+      "description": [
+        "Responsive site tester. Check how your website looks on desktop, ",
+        "tablet, and smartphone."
+      ],
+      "technologies": ["expressjs", "reactjs", "bootstrap", "js-latest", "scss", "heroku"],
+      "images": ["/static/stay-responsive.jpg"]
+    },
+    {
       "slug": "thumlapse",
       "name": "Thumlapse",
       "url": "https://www.thumlapse.com",
