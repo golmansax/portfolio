@@ -29,6 +29,7 @@
     {
       "slug": "od-response",
       "name": "ODResponse",
+      "github": "golmansax/naloxnow",
       "createdFor": "The 2016 FDA Naloxone App Competition",
       "description": "Deliver naloxone to people experiencing an overdose, by partnering with driver-based services (e.g. taxis, food delivery) and having their drivers deliver naloxone in emergency situations.",
       "technologies": ["react-native", "exponentjs", "js-latest", "firebase"],
