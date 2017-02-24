@@ -1,7 +1,7 @@
 {
 	"metaData": {
     "root": {
-      "titleTemplate": "%s | Holman Gao’s Portfolio"
+      "titleTemplate": "%s | Holman’s Portfolio"
     },
     "technologies": {
       "title": "Technologies",
@@ -28,7 +28,7 @@
           "content": "Collection of professional and hobby websites and mobile apps worked on by Holman Gao, entrepreneur and freelance developer."
         }
       ],
-			"title": "Portfolio | Holman Gao",
+			"title": "Holman’s Portfolio",
 			"titleTemplate": "%s"
 		},
 		"workProjects": {
