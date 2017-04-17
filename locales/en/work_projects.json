@@ -223,7 +223,6 @@
 		{
       "slug": "amass",
 			"name": "Amass Media",
-			"url": "https://amassmedia.org",
 			"images": [
 				"/static/amass.jpg"
 			],
