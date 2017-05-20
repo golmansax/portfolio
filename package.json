@@ -20,7 +20,7 @@
     "dotenv": "*",
     "envlocalify": "*",
     "eslint": "*",
-    "eslint-config-airbnb": "*",
+    "eslint-config-airbnb": "^14.0.0",
     "eslint-config-airbnb-base": "*",
     "eslint-config-golmansax": "*",
     "eslint-plugin-import": "^2.1.0",
