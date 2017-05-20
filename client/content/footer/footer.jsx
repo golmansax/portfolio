@@ -30,6 +30,7 @@ const ContentFooter = () => (
           <div className='content-footer__section-heading'>Other links</div>
           <div className='content-footer__main-links'>
             <a href='/'>Home</a>
+            <a href='/about-me'>About Me</a>
             <a href='/blog'>Blog</a>
             <a href='/resume'>Resume</a>
             <a href='https://github.com/golmansax' target='_blank' rel='noopener noreferrer'>
