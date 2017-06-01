@@ -23,7 +23,7 @@ const PortfolioBlurb = ({ className }) => (
       <p className='blurb__paragraph'>
         Here you will find a collection of my{' '}
         <Fragment
-          routeName={getPortfolioPath('/work-projects')}
+          routeName={getPortfolioPath('/work')}
           text='work'
         />,{' '}
         <Fragment
