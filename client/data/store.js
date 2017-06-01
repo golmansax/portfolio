@@ -11,11 +11,11 @@ export function getWorkProjects() {
 }
 
 export function getSideProjects() {
-  return data.sideProjects;
+  return data.sideProjects.concat(data.communityProjects);
 }
 
 export function getCommunityProjects() {
-  return data.communityProjects;
+  return [];
 }
 
 export function getAllProjects() {

@@ -27,16 +27,6 @@ export default [
       replaceInPath: SLUG_REPLACE,
     },
   },
-  {
-    path: '/in-community',
-  },
-  {
-    path: '/in-community/:projectId',
-    data: {
-      getter: getCommunityProjects,
-      replaceInPath: SLUG_REPLACE,
-    },
-  },
   { path: '/' },
   { path: '/404.html' },
 ];

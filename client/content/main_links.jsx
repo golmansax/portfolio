@@ -8,10 +8,12 @@ const LINKS = [
     text: 'Side Projects',
     routeName: getPortfolioPath('/side-projects'),
   },
+  /*
   {
     text: 'In Community',
     routeName: getPortfolioPath('/in-community'),
   },
+  */
   { text:
     'Technologies',
     routeName: getPortfolioPath('/technologies'),
