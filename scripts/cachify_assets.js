@@ -6,7 +6,7 @@ import { getAsset, PUBLIC_DIR } from '../server/asset_utils';
 
 const IGNORED_ASSETS = new Set();
 
-['assets', 'static'].forEach((dir) => {
+['assets', 'static', 'static/people'].forEach((dir) => {
   const files = fs.readdirSync(path.resolve(PUBLIC_DIR, dir));
   files.forEach((file) => {
     const oldPath = `/${dir}/${file}`;
