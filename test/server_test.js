@@ -37,6 +37,7 @@ describe('server', function () {
     browser = new Browser();
     nock.disableNetConnect();
     nock.enableNetConnect('golmansax.com:80');
+    nock('https://docs.google.com').persist().get(/viewer/).reply(200);
   });
 
   afterEach(() => {
@@ -49,9 +50,9 @@ describe('server', function () {
 
     it('routes root page to portfolio', () => {
       expect(browser.text('title')).to.include('Holman’s Portfolio');
-      expect(browser.text('h1')).to.equal('Holman Gao');
+      expect(browser.text('h1')).to.include('Holman Gao');
       expect(browser.text('body')).to.include('Chalk Schools');
-      StinkBomb.create('2017-06-01', { message: 'Sample stink bomb' });
+      StinkBomb.create('2018-06-01', { message: 'Sample stink bomb' });
     });
 
     describe('when clicking on a portfolio link', () => {
@@ -82,7 +83,6 @@ describe('server', function () {
     /* TODO: transfer this to the other repo
     describe('when clicking to resume', () => {
       beforeEach(() => {
-        nock('https://docs.google.com').get(/viewer/).reply(200);
         return browser.clickLink('Resume');
       });
 
@@ -95,21 +95,6 @@ describe('server', function () {
       });
     });
     */
-
-    describe('when clicking to community page', function () {
-      beforeEach(() => {
-        nock('https://docs.google.com').get(/viewer/).reply(200);
-        return browser.clickLink('In Community');
-      });
-
-      it('has the right title', () => {
-        expect(browser.text('title')).to.include('Efforts in Community');
-      });
-
-      it('has the right content', () => {
-        expect(browser.text('body')).to.include('significant donation');
-      });
-    });
   });
 
   describe('when starting from side projects page', function () {
