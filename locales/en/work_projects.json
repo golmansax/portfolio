@@ -106,7 +106,6 @@
       "slug": "verse",
       "name": "Verse",
       "images": [{ "url": "https://verse.press" }],
-      "current": true,
       "url": "https://verse.press",
       "description": [
         "Verse lets you find new poems and create poetry playlists."
@@ -117,7 +116,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "Dec ’16",
-					"end": "Current"
+					"end": "Apr ’17"
 				}
 			]
     },
