@@ -1,0 +1,39 @@
+.testimonials-list {
+  +e(item) {
+    center()
+    margin-bottom unit(2 * $lambda, em)
+  }
+
+  +e(item-person) {
+    col(1/4)
+    text-align center
+
+    +below('s') {
+      stack()
+      padding 0 unit(1 * $lambda, em)
+    }
+  }
+
+  +e(item-portrait) {
+    background-position center
+    background-size cover
+    border-radius 50%
+    margin-bottom unit(.5 * $lambda, em)
+    padding-bottom 100%
+    width 100%
+  }
+
+  +e(item-quote) {
+    col(3/4)
+    font-style italic
+
+    +below('s') {
+      stack()
+      margin-top unit($lambda, em)
+    }
+  }
+
+  +e(item-quote-icon) {
+    margin-right 10px
+  }
+}

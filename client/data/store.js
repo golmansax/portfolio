@@ -14,6 +14,10 @@ export function getSideProjects() {
   return data.sideProjects.concat(data.communityProjects);
 }
 
+export function getTestimonials() {
+  return data.testimonials;
+}
+
 export function getCommunityProjects() {
   return [];
 }

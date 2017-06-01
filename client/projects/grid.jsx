@@ -22,7 +22,7 @@ const renderProject = (project, index) => {
 
 const ProjectsGrid = ({ className, title, projects }) => (
   <Container className={className}>
-    <h2>{title}</h2>
+    <h2 className='projects-grid__heading'>{title}</h2>
     <div>
       {projects.map(renderProject)}
     </div>

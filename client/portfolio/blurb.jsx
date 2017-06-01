@@ -1,14 +1,12 @@
 import { PropTypes } from 'react';
 import { getAsset } from '../assets/store';
 import Container from '../shared/container';
-import MyEmail from '../my/email';
-
-const ACROYOGA_LINK = 'http://www.sfgate.com/music/slideshow/' +
-  'Outside-Lands-2014-91325.php';
+import Fragment from '../fragments/fragment';
+import { getPortfolioPath } from '../url_utils';
 
 const PortfolioBlurb = ({ className }) => (
   <Container className={className}>
-    <h2 className='blurb__mobile-heading'>About me</h2>
+    <h2 className='blurb__mobile-heading'>Welcome to my portfolio!</h2>
     <div className='blurb__portrait-container'>
       <div
         className='blurb__portrait'
@@ -21,23 +19,25 @@ const PortfolioBlurb = ({ className }) => (
       />
     </div>
     <div className='blurb__text-container'>
-      <h2 className='blurb__large-heading'>About me</h2>
+      <h1 className='blurb__large-heading'>Welcome to my portfolio!</h1>
       <p className='blurb__paragraph'>
-        Hi! My name is Holman, I am an entrepreneur and freelance developer
-        with a love for education.  I speak English and Mandarin natively,
-        and Spanish at an intermediate level. In my free time, I like to sing
-        and play guitar, tutor math, and sometimes even{' '}
-        <a
-          href={ACROYOGA_LINK}
-          target='_blank'
-          rel='noopener noreferrer'
-          >
-          do acroyoga
-        </a>.
-      </p>
-      <p className='blurb__paragraph'>
-        Want to say hello? Feel free to reach out at <MyEmail link />.  I read
-        every email, I promise!
+        Here you will find a collection of my{' '}
+        <Fragment
+          routeName={getPortfolioPath('/work-projects')}
+          text='work'
+        />,{' '}
+        <Fragment
+          routeName={getPortfolioPath('/side-projects')}
+          text='side projects'
+        />, and{' '}
+        <Fragment
+          routeName={getPortfolioPath('/technologies')}
+          text='technologies'
+        /> that I&rsquo;ve used.  Feel free to reach out if you want to{' '}
+        <Fragment
+          routeName={getPortfolioPath('/work-together')}
+          text='work together'
+        />!
       </p>
     </div>
   </Container>

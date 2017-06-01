@@ -8,6 +8,7 @@ export const initI18n = () => new Promise((resolve) => {
     ns: {
       namespaces: [
         'people',
+        'testimonials',
         'technologies',
         'meta_data',
         'community_projects',

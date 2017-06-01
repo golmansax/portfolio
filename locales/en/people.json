@@ -9,6 +9,7 @@
     "ian": {
       "name": "Ian Webster",
 			"url": "http://www.ianww.com",
+      "image": "/static/people/ian.jpg",
       "github": "typpo"
     },
     "roger": {
@@ -78,6 +79,7 @@
     "andrew-badr": {
       "name": "Andrew Badr",
       "url": "http://www.andrewbadr.com/",
+      "image": "/static/people/andrew-badr.jpg",
       "github": "reverie"
     },
     "akearney": {

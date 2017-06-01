@@ -1,0 +1,15 @@
+{
+  "testimonials": [
+    {
+      "personId": "ian",
+      "position": "Co-founder, CTO",
+      "projectSlug": "zenysis",
+      "quote": "I’ve known Holman for years and have recently had the pleasure of hiring him as a freelance developer.  Holman ramped up on an existing code base with ease and quickly executed on core features of my web app.  He is my go-to person for complex, on-demand projects, proving himself to be versatile at all levels of the stack from CSS tweaks to debugging database calls.  The best part is that I trust Holman with senior engineering decisions - he is genuinely thoughtful when it comes to architecting applications and understands the “big picture.”  For these reasons hiring Holman has without a doubt been my best experience with a freelance developer."
+    },
+    {
+      "personId": "andrew-badr",
+      "position": "Founder",
+      "projectSlug": "verse"
+    }
+  ]
+}

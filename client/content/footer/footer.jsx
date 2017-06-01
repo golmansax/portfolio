@@ -1,18 +1,11 @@
 import ContentMainLinks from '../main_links';
 import Container from '../../shared/container';
 import MyEmail from '../../my/email';
+import Fragment from '../../fragments/fragment';
+import { getPortfolioPath } from '../../url_utils';
 
 const ContentFooter = () => (
   <div>
-    <div className='content-footer__top'>
-      <Container>
-        <h2>Interested in working together?</h2>
-        I&rsquo;m available for any type of software engineering contracting
-        work (can do pro-bono depending on the idea and time commitment), and
-        I&rsquo;m especially interested in cool education projects.  Shoot me an
-        email at <MyEmail link />!
-      </Container>
-    </div>
     <div className='content-footer__bottom'>
       <Container>
         <div className='content-footer__large-section'>
@@ -23,13 +16,21 @@ const ContentFooter = () => (
           <div>in New York, NY</div>
         </div>
         <div className='content-footer__section'>
+          <div className='content-footer__section-heading'>
+            <Fragment
+              routeName={getPortfolioPath('/work-together')}
+              text='Want to Work Together?'
+            />
+          </div>
+          <br />
           <div className='content-footer__section-heading'>Portfolio</div>
+          <Fragment routeName={getPortfolioPath('/')} text='Home' />
           <ContentMainLinks className='content-footer__main-links' />
         </div>
         <div className='content-footer__section'>
           <div className='content-footer__section-heading'>Other links</div>
           <div className='content-footer__main-links'>
-            <a href='/'>Home</a>
+            <a href='/'>Personal Site</a>
             <a href='/about-me'>About Me</a>
             <a href='/blog'>Blog</a>
             <a href='/resume'>Resume</a>

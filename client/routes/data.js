@@ -1,7 +1,6 @@
 import {
   getWorkProjects,
   getSideProjects,
-  getCommunityProjects,
 } from '../data/store';
 
 const SLUG_REPLACE = (project) => ({ projectId: project.slug });
@@ -27,6 +26,7 @@ export default [
       replaceInPath: SLUG_REPLACE,
     },
   },
+  { path: '/work-together' },
   { path: '/' },
   { path: '/404.html' },
 ];

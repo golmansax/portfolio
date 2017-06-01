@@ -3,6 +3,15 @@
     "root": {
       "titleTemplate": "%s | Holman’s Portfolio"
     },
+    "workTogether": {
+      "title": "Let’s Work Together!",
+      "meta": [
+        {
+          "name": "description",
+          "content": "I'm available for freelance, contract, or consulting work. The core of my experience has been full-stack web development at early-stage companies."
+        }
+      ]
+    },
     "technologies": {
       "title": "Technologies",
       "meta": [
