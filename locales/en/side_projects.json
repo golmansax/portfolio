@@ -1,6 +1,16 @@
 {
   "projects": [
     {
+      "slug": "my-blog",
+      "name": "My Blog",
+      "url": "https://golmansax.com/blog",
+      "description": [
+        "My personal blog about self-improvement, freelancing, and startups."
+      ],
+      "technologies": ["roots", "reactjs", "foundation", "js-latest", "scss"],
+      "images": ["/static/my-blog.jpg"]
+    },
+    {
       "slug": "stay-responsive",
       "name": "StayReponsive",
       "url": "https://www.stayresponsive.com",

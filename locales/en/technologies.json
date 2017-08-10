@@ -40,7 +40,8 @@
     "flask": "Flask",
     "django": "Django",
     "scalatra": "Scalatra",
-    "beego": "Beego"
+    "beego": "Beego",
+    "roots": "Roots"
   },
 
   "infrastructures": {
