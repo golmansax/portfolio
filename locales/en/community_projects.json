@@ -122,7 +122,6 @@
         "birthday, I give a personally significant donation to organizations ",
         "that I feel are making a positive impact in youth education."
 			],
-      "url": "https://www.myimpactpledge.com/pledgers/golmansax",
       "github": "golmansax/my-impact-pledge",
       "technologies": ["expressjs", "reactjs", "css-modules", "js-latest", "heroku"],
       "images": [
