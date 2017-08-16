@@ -149,11 +149,23 @@
       "slug": "personal-site",
       "name": "Personal Site",
       "url": "https://golmansax.com",
+      "github": "golmansax/personal-site",
+      "description": [
+        "Collection of pages including my homepage, my giving pledge, and",
+        "the languages that I know"
+      ],
+      "technologies": ["phenomic", "reactjs", "js-latest", "css-modules"],
+      "images": [{ "url": "https://golmansax.com" }]
+    },
+    {
+      "slug": "my-portfolio",
+      "name": "My Portfolio",
+      "url": "https://golmansax.com/portfolio",
       "github": "golmansax/portfolio",
       "description": "A portfolio of projects that I have worked on.",
       "technologies": ["expressjs", "reactjs", "js-latest", "stylus"],
       "images": [
-        "/static/personal-site.jpg"
+        "/static/portfolio.jpg"
       ]
     },
     {

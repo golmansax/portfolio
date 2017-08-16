@@ -41,7 +41,8 @@
     "django": "Django",
     "scalatra": "Scalatra",
     "beego": "Beego",
-    "roots": "Roots"
+    "roots": "Roots",
+    "phenomic": "Phenomic"
   },
 
   "infrastructures": {

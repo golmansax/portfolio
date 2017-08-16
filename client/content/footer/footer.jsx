@@ -33,6 +33,7 @@ const ContentFooter = () => (
             <a href='/'>Personal Site</a>
             <a href='/about-me'>About Me</a>
             <a href='/blog'>Blog</a>
+            <a href='/giving'>Giving</a>
             <a href='/resume'>Resume</a>
             <a href='https://github.com/golmansax' target='_blank' rel='noopener noreferrer'>
               GitHub

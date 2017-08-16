@@ -30,7 +30,7 @@ export function getAllProjects() {
     .concat(data.communityProjects);
 
   const ORDER_OVERRIDES = {
-    5: 'personal-site',
+    5: 'my-portfolio',
     6: 'my-blog',
   };
 
