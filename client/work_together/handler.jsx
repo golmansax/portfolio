@@ -5,6 +5,9 @@ import TestimonialsList from '../testimonials/list';
 import { getMetaData, getTestimonials } from '../data/store';
 import MyEmail from '../my/email';
 
+const BLOG_POST_LINK = '/blog/posts/2017/05/17' +
+  '/creating-a-positive-freelancer-client-relationship/';
+
 const WorkTogetherHandler = () => (
   <div>
     <Helmet {...getMetaData().workTogether} />
@@ -14,9 +17,11 @@ const WorkTogetherHandler = () => (
         <h1>Let&rsquo;s work together!</h1>
         <p>
           I’m available for freelance, contract, or consulting work.  The core
-          of my experience has been full-stack web development at early-stage
-          companies.  To read about my past work, click around my portfolio
-          and <a href='#testimonials'>read testimonials below</a>.
+          of my experience is in full-stack web development at early-stage
+          companies.  To get a sense of what it&rsquo;s like to work with me,
+          read about <a href={BLOG_POST_LINK} target='_blank' rel='noopener noreferrer'>
+            my freelancing values
+          </a> and check out <a href='#testimonials'>my client testimonials</a>.
         </p>
         <br />
         <p>
