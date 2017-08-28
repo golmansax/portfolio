@@ -66,11 +66,16 @@
           }
         ],
         [
+          "Blog posts by A.T. on ",
           {
             "url": "https://medium.com/@albertmcwilliams3/book-deserts-and-the-widening-literacy-gap-a8ce2e83ceb6",
-            "text": "Blog post"
+            "text": "book deserts"
           },
-          " about book deserts"
+          " and ",
+          {
+            "url": "https://medium.com/@albertmcwilliams3/bookbooster-and-the-fight-for-public-schools-4dff5b71383b",
+            "text": "the fight for public schools"
+          }
         ]
       ]
     },
