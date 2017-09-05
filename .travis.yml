@@ -1,14 +1,12 @@
 sudo: false
 language: node_js
 node_js: 7.1
+group: edge
 
 cache:
   yarn: true
   directories:
     - node_modules # NPM packages
-
-before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash
 
 install:
 - yarn install --production=false
