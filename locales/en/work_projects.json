@@ -111,6 +111,7 @@
       "slug": "verse",
       "name": "Verse",
       "images": [{ "url": "https://verse.press" }],
+      "current": true,
       "url": "https://verse.press",
       "description": [
         "Verse lets you find new poems and create poetry playlists."
@@ -121,7 +122,25 @@
 				{
 					"title": "Software Contractor",
 					"start": "Dec ’16",
-					"end": "Jul ’17"
+					"end": "Current"
+				}
+			]
+    },
+    {
+      "slug": "naturalize-us",
+      "name": "NaturalizeUs",
+      "images": [
+        "/static/naturalize-us.jpg"
+      ],
+      "description": [
+        "Empowering immigrants to become US citizens."
+      ],
+      "technologies": ["django", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Aug ’17",
+					"end": "Aug ’17"
 				}
 			]
     },
