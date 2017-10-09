@@ -6,9 +6,22 @@ import HeapAnalyticsScript from './heap_analytics_script';
 const LayoutHead = () => {
   const helmet = Helmet.rewind();
 
+  const { GOOGLE_ANALYTICS_ID } = process.env;
+
   return (
     /* eslint-disable max-len */
     <head>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`} />
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${GOOGLE_ANALYTICS_ID}');
+        `}
+      </script>
+
       {helmet.title.toComponent()}
       {helmet.meta.toComponent()}
       <link
