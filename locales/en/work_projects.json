@@ -1,6 +1,25 @@
 {
 	"projects": [
     {
+      "slug": "naturalize-us",
+      "name": "NaturalizeUs",
+      "images": [
+        "/static/naturalize-us.jpg"
+      ],
+      "current": true,
+      "description": [
+        "Empowering immigrants to become US citizens."
+      ],
+      "technologies": ["django", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "Aug ’17",
+					"end": "Current"
+				}
+			]
+    },
+    {
       "slug": "boost-my-school",
       "name": "BoostMySchool",
       "images": ["/static/boost-my-school.jpg"],
@@ -123,24 +142,6 @@
 					"title": "Software Contractor",
 					"start": "Dec ’16",
 					"end": "Current"
-				}
-			]
-    },
-    {
-      "slug": "naturalize-us",
-      "name": "NaturalizeUs",
-      "images": [
-        "/static/naturalize-us.jpg"
-      ],
-      "description": [
-        "Empowering immigrants to become US citizens."
-      ],
-      "technologies": ["django", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
-			"positions": [
-				{
-					"title": "Software Contractor",
-					"start": "Aug ’17",
-					"end": "Aug ’17"
 				}
 			]
     },
