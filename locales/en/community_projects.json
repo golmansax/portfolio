@@ -4,7 +4,7 @@
       "slug": "volunteering",
 			"name": "Volunteering",
       "description": [
-        "I try to stay involved with the community through volunteering."
+        "I try to stay involved with the community through volunteering. My main volunteering focus is in helping underserved communities with math/science education."
       ],
       "custom": [
 				{
@@ -15,13 +15,25 @@
               {
                 "left": [
                   {
+                    "text": "Bridge to Enter Mathematics",
+                    "url": "https://www.beammath.org/"
+                  },
+                  ", Mentor"
+                ],
+                "right": [
+                  "New York, NY: Oct ’17 – Current"
+                ]
+              },
+              {
+                "left": [
+                  {
                     "text": "Queens Xperience Social Hackathon",
                     "url": "http://cs4all.nyc/2017/01/24/queens-xperience-social-hackathon/"
                   },
                   ", Mentor"
                 ],
                 "right": [
-                  "New York, NY: Dec ’16"
+                  "Queens, NY: Dec ’16"
                 ]
               },
               {
@@ -69,7 +81,7 @@
                   ", Academic Coach"
                 ],
                 "right": [
-                  "San Francisco, CA: Nov ’14 – Oct ’16"
+                  "San Francisco, CA: Nov ’14 – Oct ’15"
                 ]
               },
               {

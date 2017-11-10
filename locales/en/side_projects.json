@@ -11,6 +11,21 @@
       "images": ["/static/my-blog.jpg"]
     },
     {
+      "slug": "persona",
+      "name": "Persona",
+      "createdFor": "Money 20/20 Hackathon 2017",
+      "description": [
+        "Help businesses gain a deep understanding of their customers by ",
+        "marrying their payments data and customer database with social data from around the web."
+      ],
+      "colleagues": [
+        { "personId": "abi" },
+        { "personId": "bonnie" }
+      ],
+      "technologies": ["react-native", "exponentjs", "js-latest"],
+      "images": ["/static/persona.jpg"]
+    },
+    {
       "slug": "stay-responsive",
       "name": "StayReponsive",
       "url": "https://www.stayresponsive.com",

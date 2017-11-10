@@ -28,7 +28,7 @@
     "jquery": "jQuery",
     "graphql": "GraphQL",
     "relay": "Relay",
-    "exponentjs": "ExponentJS",
+    "exponentjs": "Expo",
     "google-maps": "Google Maps API",
     "sequelize": "Sequelize",
     "bootstrap": "Bootstrap",
