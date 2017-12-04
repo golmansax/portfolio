@@ -10,7 +10,7 @@
       "description": [
         "Empowering immigrants to become US citizens."
       ],
-      "technologies": ["django", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
 			"positions": [
 				{
 					"title": "Co-founder",
@@ -35,7 +35,7 @@
       "description": [
         "A crowdfunding platform for schools and school-affiliated organizations."
       ],
-      "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
+      "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "redux", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
       "press": [
         [
           {
@@ -136,7 +136,7 @@
         "Verse lets you find new poems and create poetry playlists."
       ],
       "colleagues": [{ "personId": "andrew-badr" }],
-      "technologies": ["django", "graphql", "reactjs", "python", "typescript", "scss", "heroku", "postgres"],
+      "technologies": ["django", "graphql", "reactjs", "redux", "python", "typescript", "scss", "heroku", "postgres"],
 			"positions": [
 				{
 					"title": "Software Contractor",
