@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Fragment from '../fragments/fragment';
 import { getProjectBySlug, getPerson } from '../data/store';
 
 const ListItem = ({ testimonial }) => {
@@ -13,7 +14,8 @@ const ListItem = ({ testimonial }) => {
           style={{ backgroundImage: `url(${person.image})` }}
         />
         <div>{person.name}</div>
-        <div>{testimonial.position}, {project.name}</div>
+        <div>{testimonial.position}</div>
+        <div><Fragment text={project.name} url={project.url} /></div>
       </div>
       <div className='testimonials-list__item-quote'>
         <i className='fa fa-quote-left testimonials-list__item-quote-icon' />
