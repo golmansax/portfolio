@@ -5706,9 +5706,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-zombie@*:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/zombie/-/zombie-5.0.5.tgz#69da3fa34959ec0f066746267803197a828485c3"
+zombie@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/zombie/-/zombie-5.0.7.tgz#215ba90b4b97f75b796c935affcc63d68cbac772"
   dependencies:
     babel-runtime "5.8.29"
     bluebird "^3.0"

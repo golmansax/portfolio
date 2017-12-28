@@ -56,10 +56,21 @@ describe('server', function () {
     });
 
     describe('when clicking on a portfolio link', () => {
-      beforeEach(() => browser.clickLink('Chalk Schools'));
+      beforeEach(() => {
+        // See this Github issue on how to access window
+        // https://github.com/assaf/zombie/issues/1098
+        const window = browser.document.defaultView;
+
+        // jsdom doesn't have an implementation for this because they don't do layout.
+        // https://github.com/tmpvar/jsdom/issues/1706
+        window.HTMLElement.prototype.scrollIntoView = () => null;
+
+        return browser.clickLink('Chalk Schools');
+      });
 
       it('has the right title', () => {
-        expect(browser.text('title')).to.include('Chalk Schools');
+        // We now are redirecting to the project category page
+        expect(browser.text('title')).to.include('Work');
       });
 
       it('has the right content', () => {
