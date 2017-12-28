@@ -18,5 +18,5 @@ export function projectUsesTechnology(project, technology) {
 
 export function getProjectPath(project) {
   const prefix = PROJECT_ROUTE_MAPPING[project.type];
-  return getPortfolioPath(`/${prefix}/${project.slug}`);
+  return getPortfolioPath(`/${prefix}#${project.slug}`);
 }

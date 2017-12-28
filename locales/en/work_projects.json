@@ -20,7 +20,7 @@
 			]
     },
     {
-      "slug": "boost-my-school",
+      "slug": "boostmyschool",
       "name": "BoostMySchool",
       "images": ["/static/boost-my-school.jpg"],
       "current": true,
