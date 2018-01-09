@@ -3,7 +3,9 @@ import Container from '../shared/container';
 import BreadcrumbsList from '../breadcrumbs/list';
 import TestimonialsList from '../testimonials/list';
 import { getMetaData, getTestimonials } from '../data/store';
+import Fragment from '../fragments/fragment';
 import MyEmail from '../my/email';
+import { getPortfolioPath } from '../url_utils';
 
 const BLOG_POST_LINK = '/blog/posts/2017/05/17' +
   '/creating-a-positive-freelancer-client-relationship/';
@@ -25,8 +27,18 @@ const WorkTogetherHandler = () => (
         </p>
         <br />
         <p>
-          I will also consider pro-bono work depending on the idea and time
-          commitment, and I’m especially interested in cool education projects.
+          I live in Manhattan and can take any projects in the New York City
+          area.  Remote work is also okay.
+        </p>
+        <br />
+        <p>
+          I pride myself in being language and framework agnostic.  I have the
+          most experience with Django, Rails, Node.js on the backend, and
+          React.js, Webpack, GraphQL on the frontend.{' '}
+          <Fragment
+            text='See a full list of the technologies I’ve used professionally.'
+            url={getPortfolioPath('/technologies')}
+          />
         </p>
         <br />
         <p>
