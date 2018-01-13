@@ -1,25 +1,6 @@
 {
 	"projects": [
     {
-      "slug": "naturalize-us",
-      "name": "NaturalizeUs",
-      "images": [
-        "/static/naturalize-us.jpg"
-      ],
-      "current": true,
-      "description": [
-        "Empowering immigrants to become US citizens."
-      ],
-      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
-			"positions": [
-				{
-					"title": "Co-founder",
-					"start": "Aug ’17",
-					"end": "Current"
-				}
-			]
-    },
-    {
       "slug": "boostmyschool",
       "name": "BoostMySchool",
       "images": ["/static/boost-my-school.jpg"],
@@ -44,6 +25,25 @@
           }
         ]
       ]
+    },
+    {
+      "slug": "naturalize-us",
+      "name": "NaturalizeUs",
+      "images": [
+        "/static/naturalize-us.jpg"
+      ],
+      "current": true,
+      "description": [
+        "Empowering immigrants to become US citizens."
+      ],
+      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "Aug ’17",
+					"end": "Current"
+				}
+			]
     },
     {
       "slug": "book-booster",
