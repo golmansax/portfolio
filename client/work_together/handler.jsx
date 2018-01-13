@@ -33,7 +33,7 @@ const WorkTogetherHandler = () => (
         <br />
         <p>
           I pride myself in being language and framework agnostic.  I have the
-          most experience with Django, Rails, Node.js on the backend, and
+          most experience with Django, Rails, Node.js, PostgreSQL, AWS on the backend, and
           React.js, Webpack, GraphQL on the frontend.{' '}
           <Fragment
             text='See a full list of the technologies I’ve used professionally.'
