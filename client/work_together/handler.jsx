@@ -19,7 +19,7 @@ const WorkTogetherHandler = () => (
         <h1>Let&rsquo;s work together!</h1>
         <p>
           I’m available for freelance, contract, or consulting work.  The core
-          of my experience is in full-stack web development at early-stage
+          of my experience is in full-stack software development at early-stage
           companies.  To get a sense of what it&rsquo;s like to work with me,
           read about <a href={BLOG_POST_LINK} target='_blank' rel='noopener noreferrer'>
             my freelancing values
