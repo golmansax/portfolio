@@ -27,7 +27,7 @@ const WorkTogetherHandler = () => (
         </p>
         <br />
         <p>
-          I live in Manhattan and can take any projects in the New York City
+          I live in Manhattan and can take projects in the New York City
           area.  Remote work is also okay.
         </p>
         <br />
