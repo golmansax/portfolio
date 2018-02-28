@@ -35,6 +35,7 @@
     "foundation": "Foundation",
     "css-modules": "CSS Modules",
     "chrome-extension": "Chrome extension",
+    "slack-bot": "Slack bot",
     "android": "Android",
     "ionic": "Ionic",
     "flask": "Flask",
@@ -52,6 +53,7 @@
     "mysql": "MySQL",
     "ec2": "Amazon EC2",
     "heroku": "Heroku",
+    "docker": "Docker",
     "sqlite": "SQLite"
   }
 }

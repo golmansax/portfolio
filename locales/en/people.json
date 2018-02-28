@@ -90,6 +90,14 @@
     },
     "jelinson": {
       "name": "Julius Elinson"
+    },
+    "hongvan": {
+      "name": "Hong Van Pham",
+      "url": "http://hvpham.com/",
+      "image": "/static/people/hongvan.jpg"
+    },
+    "annie": {
+      "name": "Annie Khoa"
     }
   }
 }

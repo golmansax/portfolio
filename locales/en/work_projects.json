@@ -27,12 +27,30 @@
       ]
     },
     {
+      "slug": "towerview-health",
+      "name": "TowerView Health",
+      "images": [{ "url": "http://towerviewhealth.com/" }],
+      "current": true,
+      "url": "http://towerviewhealth.com/",
+      "description": [
+        "TowerView Health is an end-to-end solution helps patients manage ",
+        "complex medication schedules with ease."
+      ],
+      "technologies": ["typescript", "python", "postgres", "docker", "slack-bot"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Jan ’18",
+					"end": "Current"
+				}
+			]
+    },
+    {
       "slug": "naturalize-us",
       "name": "NaturalizeUs",
       "images": [
         "/static/naturalize-us.jpg"
       ],
-      "current": true,
       "description": [
         "Empowering immigrants to become US citizens."
       ],
@@ -41,9 +59,16 @@
 				{
 					"title": "Software Contractor",
 					"start": "Aug ’17",
-					"end": "Current"
+					"end": "Dec ’17"
 				}
-			]
+			],
+      "colleagues": [
+        { "personId": "hongvan" },
+        { "personId": "annie" }
+      ],
+			"involvedWith": [
+        ["Designed and built out an MVP version of the naturalization application system"]
+      ]
     },
     {
       "slug": "book-booster",
