@@ -27,10 +27,27 @@
       ]
     },
     {
+      "slug": "mira",
+      "name": "Mira Financial",
+      "images": [{ "url": "https://www.mirafinancial.com/" }],
+      "current": true,
+      "url": "https://www.mirafinancial.com/",
+      "description": [
+        "Get personalized life insurance quotes for people with diabetes."
+      ],
+      "technologies": ["reactjs", "graphql", "typescript", "js-latest", "python", "postgres", "docker"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Feb ’18",
+					"end": "Current"
+				}
+			]
+    },
+    {
       "slug": "towerview-health",
       "name": "TowerView Health",
       "images": [{ "url": "http://towerviewhealth.com/" }],
-      "current": true,
       "url": "http://towerviewhealth.com/",
       "description": [
         "TowerView Health is an end-to-end solution helps patients manage ",
@@ -41,7 +58,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "Jan ’18",
-					"end": "Current"
+					"end": "Mar ’18"
 				}
 			]
     },
