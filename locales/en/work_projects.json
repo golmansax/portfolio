@@ -29,6 +29,7 @@
     {
       "slug": "mira",
       "name": "Mira Financial",
+      "accelerator": "500 Startups",
       "images": [{ "url": "https://www.mirafinancial.com/" }],
       "url": "https://www.mirafinancial.com/",
       "description": [
@@ -53,6 +54,10 @@
         "complex medication schedules with ease."
       ],
       "technologies": ["typescript", "python", "postgres", "docker", "slack-bot"],
+      "colleagues": [
+        { "personId": "oz", "position": "Software Engineer" },
+        { "personId": "hareesh", "position": "Co-founder, COO" }
+      ],
 			"positions": [
 				{
 					"title": "Software Contractor",
