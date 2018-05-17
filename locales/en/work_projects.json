@@ -3,7 +3,7 @@
     {
       "slug": "boostmyschool",
       "name": "BoostMySchool",
-      "images": ["/static/boost-my-school.jpg"],
+      "images": [{ "url": "https://www.boostmyschool.com" }],
       "current": true,
       "url": "https://www.boostmyschool.com",
 			"positions": [
