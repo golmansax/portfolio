@@ -30,7 +30,6 @@
       "slug": "mira",
       "name": "Mira Financial",
       "images": [{ "url": "https://www.mirafinancial.com/" }],
-      "current": true,
       "url": "https://www.mirafinancial.com/",
       "description": [
         "Get personalized life insurance quotes for people with diabetes."
@@ -40,7 +39,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "Feb ’18",
-					"end": "Current"
+					"end": "May ’18"
 				}
 			]
     },
