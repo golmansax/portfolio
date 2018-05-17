@@ -15,7 +15,10 @@ const ListItem = ({ testimonial }) => {
         />
         <div>{person.name}</div>
         <div>{testimonial.position}</div>
-        <div><Fragment text={project.name} url={project.url} /></div>
+        <div>
+          <Fragment text={project.name} url={project.url} />
+          {project.accelerator && ` (${project.accelerator})`}
+        </div>
       </div>
       <div className='testimonials-list__item-quote'>
         <i className='fa fa-quote-left testimonials-list__item-quote-icon' />

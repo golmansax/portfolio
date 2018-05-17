@@ -188,7 +188,8 @@
     },
 		{
       "slug": "zenysis",
-			"name": "Zenysis (YC W16)",
+			"name": "Zenysis",
+			"accelerator": "YC W16",
 			"url": "http://www.zenysis.com",
 			"images": [
 				"/static/zenysis.jpg"

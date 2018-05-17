@@ -39,11 +39,13 @@ class ProjectsContent extends Component {
 
   render() {
     const hide = this.props.hide || {};
+    const { accelerator } = this.props;
 
     return (
       <div className='projects-content'>
         <h2>
           <Fragment url={this.props.url} text={this.props.name} />
+          {accelerator && ` (${accelerator})`}
         </h2>
         {this._renderDescription()}
         <dl>
@@ -196,6 +198,7 @@ class ProjectsContent extends Component {
 }
 
 ProjectsContent.propTypes = {
+  accelerator: PropTypes.string,
   colleagues: PropTypes.arrayOf(PropTypes.object),
   createdFor: PropTypes.string,
   current: PropTypes.bool.isRequired,
