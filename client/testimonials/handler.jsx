@@ -2,7 +2,6 @@ import Helmet from 'react-helmet';
 import Container from '../shared/container';
 import BreadcrumbsList from '../breadcrumbs/list';
 import { getMetaData, getTestimonials } from '../data/store';
-import Fragment from '../fragments/fragment';
 import MyEmail from '../my/email';
 import { getPortfolioPath } from '../url_utils';
 import TestimonialsList from './list';

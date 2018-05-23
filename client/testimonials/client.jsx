@@ -12,7 +12,7 @@ const TestimonialsClientImage = ({ image, routeName }) => {
   );
 
   if (routeName) {
-    return <Link to={routeName}>{content}</Link>
+    return <Link to={routeName}>{content}</Link>;
   }
 
   return content;
