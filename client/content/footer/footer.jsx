@@ -27,7 +27,7 @@ const ContentFooter = () => (
           <Fragment routeName={getPortfolioPath('/')} text='Home' />
           <ContentMainLinks className='content-footer__main-links' />
           <Fragment
-            routeName={getPortfolioPath('/work-together#testimonials')}
+            routeName={getPortfolioPath('/work-together/testimonials')}
             text='Testimonials'
           />
         </div>

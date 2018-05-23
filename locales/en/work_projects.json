@@ -36,6 +36,9 @@
         "Get personalized life insurance quotes for people with diabetes."
       ],
       "technologies": ["reactjs", "graphql", "typescript", "js-latest", "python", "postgres", "docker"],
+      "colleagues": [
+        { "personId": "walter", "position": "Co-founder, CTO" }
+      ],
 			"positions": [
 				{
 					"title": "Software Contractor",

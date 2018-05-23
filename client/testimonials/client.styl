@@ -1,0 +1,19 @@
+.testimonials-client {
+  +e(container) {
+    text-align center
+  }
+
+  +e(portrait-container) {
+    max-width unit($lambda * 10, em)
+    width 100%
+    margin 0 auto unit(.5 * $lambda, em)
+  }
+
+  +e(portrait) {
+    background-position center
+    background-size cover
+    border-radius 50%
+    padding-bottom 100%
+    width 100%
+  }
+}

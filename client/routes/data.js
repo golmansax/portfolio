@@ -27,6 +27,7 @@ export default [
     },
   },
   { path: '/work-together' },
+  { path: '/work-together/testimonials' },
   { path: '/' },
   { path: '/404.html' },
 ];

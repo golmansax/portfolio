@@ -1,7 +1,8 @@
 import Helmet from 'react-helmet';
+import { Link } from 'react-router';
 import Container from '../shared/container';
 import BreadcrumbsList from '../breadcrumbs/list';
-import TestimonialsList from '../testimonials/list';
+import TestimonialsClient from '../testimonials/client';
 import { getMetaData, getTestimonials } from '../data/store';
 import Fragment from '../fragments/fragment';
 import MyEmail from '../my/email';
@@ -23,7 +24,9 @@ const WorkTogetherHandler = () => (
           companies.  To get a sense of what it&rsquo;s like to work with me,
           read about <a href={BLOG_POST_LINK} target='_blank' rel='noopener noreferrer'>
             my freelancing values
-          </a> and check out <a href='#testimonials'>my client testimonials</a>.
+          </a> and check out <Link to={getPortfolioPath('/work-together/testimonials')}>
+            my client testimonials
+          </Link>.
         </p>
         <br />
         <p>
@@ -47,9 +50,24 @@ const WorkTogetherHandler = () => (
       </div>
       <div className='work-together-handler__section'>
         <h2 id='testimonials' className='work-together-handler__secondary-heading'>
-          Testimonials
+          <Link to={getPortfolioPath('/work-together/testimonials')}>
+            Read testimonials from previous clients
+          </Link>
         </h2>
-        <TestimonialsList testimonials={getTestimonials()} />
+        <div>
+          {getTestimonials().map((testimonial) => {
+            const { projectSlug } = testimonial;
+
+            return (
+              <div key={projectSlug} className='work-together-handler__client'>
+                <TestimonialsClient
+                  testimonial={testimonial}
+                  routeName={`${getPortfolioPath('/work-together/testimonials')}#${projectSlug}`}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Container>
   </div>
