@@ -62,7 +62,7 @@ const WorkTogetherHandler = () => (
               <div key={projectSlug} className='work-together-handler__client'>
                 <TestimonialsClient
                   testimonial={testimonial}
-                  routeName={`${getPortfolioPath('/work-together/testimonials')}#${projectSlug}`}
+                  routeName={`${getPortfolioPath('/work-together/testimonials/')}#${projectSlug}`}
                 />
               </div>
             );
