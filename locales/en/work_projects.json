@@ -27,6 +27,28 @@
       ]
     },
     {
+      "slug": "captivateiq",
+      "name": "CaptivateIQ",
+      "current": true,
+      "accelerator": "YC W18",
+      "images": [{ "url": "https://www.captivateiq.com/" }],
+      "url": "https://www.captivateiq.com/",
+      "description": [
+        "The easiest way to calculate and pay sales commissions."
+      ],
+      "technologies": ["django", "reactjs", "python", "js-latest"],
+      "colleagues": [
+        { "personId": "hubert", "position": "Co-founder, CTO" }
+      ],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "June ’18",
+					"end": "Current"
+				}
+			]
+    },
+    {
       "slug": "mira",
       "name": "Mira Financial",
       "accelerator": "500 Startups",
@@ -179,7 +201,6 @@
       "slug": "verse",
       "name": "Verse",
       "images": [{ "url": "https://verse.press" }],
-      "current": true,
       "url": "https://verse.press",
       "description": [
         "Verse lets you find new poems and create poetry playlists."
@@ -190,7 +211,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "Dec ’16",
-					"end": "Current"
+					"end": "June ’18"
 				}
 			]
     },

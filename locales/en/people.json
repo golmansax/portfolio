@@ -111,6 +111,10 @@
       "name": "Walter Woodall",
       "github": "walter-woodall",
       "image": "/static/people/walter.jpg"
+    },
+    "hubert": {
+      "name": "Hubert Wong",
+      "github": "hwong"
     }
   }
 }
