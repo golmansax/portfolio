@@ -92,34 +92,8 @@
 			]
     },
     {
-      "slug": "naturalize-us",
-      "name": "NaturalizeUs",
-      "images": [
-        "/static/naturalize-us.jpg"
-      ],
-      "description": [
-        "Empowering immigrants to become US citizens."
-      ],
-      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
-			"positions": [
-				{
-					"title": "Software Contractor",
-					"start": "Aug ’17",
-					"end": "Dec ’17"
-				}
-			],
-      "colleagues": [
-        { "personId": "hongvan" },
-        { "personId": "annie" }
-      ],
-			"involvedWith": [
-        ["Designed and built out an MVP version of the naturalization application system"]
-      ]
-    },
-    {
       "slug": "book-booster",
       "name": "BookBooster",
-      "current": true,
       "description": [
         "An initiative for the 2016-17 school year to ",
         "provide books to 20 Bay Area schools serving low-income students. ",
@@ -133,7 +107,7 @@
 				{
 					"title": "Co-founder",
 					"start": "May ’16",
-					"end": "Current"
+					"end": "Aug ’18",
 				}
 			],
       "url": "https://www.bookbooster.us",
@@ -214,6 +188,31 @@
 					"end": "June ’18"
 				}
 			]
+    },
+    {
+      "slug": "naturalize-us",
+      "name": "NaturalizeUs",
+      "images": [
+        "/static/naturalize-us.jpg"
+      ],
+      "description": [
+        "Empowering immigrants to become US citizens."
+      ],
+      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Aug ’17",
+					"end": "Dec ’17"
+				}
+			],
+      "colleagues": [
+        { "personId": "hongvan" },
+        { "personId": "annie" }
+      ],
+			"involvedWith": [
+        ["Designed and built out an MVP version of the naturalization application system"]
+      ]
     },
 		{
       "slug": "zenysis",
