@@ -72,7 +72,7 @@
     {
       "slug": "towerview-health",
       "name": "TowerView Health",
-      "images": [{ "url": "http://towerviewhealth.com/" }],
+      "images": ["/static/towerview.jpg"],
       "url": "http://towerviewhealth.com/",
       "description": [
         "TowerView Health is an end-to-end solution helps patients manage ",
