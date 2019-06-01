@@ -13,6 +13,16 @@
         }
       ]
     },
+    "testimonials": {
+      "title": "Freelance Engineer Testimonials",
+      "titleTemplate": "%s | Holman Gao",
+      "meta": [
+        {
+          "name": "description",
+          "content": "Read what other clients have said about what it's like to work with me!"
+        }
+      ]
+    },
     "technologies": {
       "title": "Technologies",
       "meta": [
