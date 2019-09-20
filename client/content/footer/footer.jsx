@@ -19,7 +19,7 @@ const ContentFooter = () => (
           <div className='content-footer__section-heading'>
             <Fragment
               routeName={getPortfolioPath('/work-together')}
-              text='Need a Freelancer?'
+              text='Need Help With Early-Stage Tech Decisions?'
             />
           </div>
           <br />
