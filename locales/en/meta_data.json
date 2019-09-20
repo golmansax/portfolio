@@ -4,12 +4,12 @@
       "titleTemplate": "%s | Portfolio | Holman Gao"
     },
     "workTogether": {
-      "title": "Need a Freelance Software Developer?",
+      "title": "Need Help With Early-Stage Tech Decisions?",
       "titleTemplate": "%s | Holman Gao",
       "meta": [
         {
           "name": "description",
-          "content": "I'm available for freelance, contract, or consulting work. In New York or remote. The core of my experience has been full-stack web and mobile development at early-stage companies."
+          "content": "I'm available for high-level, early-stage tech consulting work. In New York or remote. The core of my experience has been full-stack web and mobile development at early-stage companies."
         }
       ]
     },
@@ -45,7 +45,7 @@
 			"meta": [
         {
           "name": "description",
-          "content": "Collection of professional and hobby websites and mobile apps worked on by Holman Gao, entrepreneur and freelance developer living in New York."
+          "content": "Collection of professional and hobby websites and mobile apps worked on by Holman Gao, software engineer turned entrepreneur living in New York."
         }
       ],
 			"title": "Software Developer Portfolio | Holman Gao",
