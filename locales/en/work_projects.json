@@ -110,7 +110,6 @@
 					"end": "Aug ’18"
 				}
 			],
-      "url": "https://www.bookbooster.us",
       "technologies": ["expressjs", "reactjs", "sequelize", "foundation", "typescript", "scss", "heroku", "postgres"],
       "images": [
         "/static/book-booster.jpg"
