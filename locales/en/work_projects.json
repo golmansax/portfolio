@@ -8,13 +8,13 @@
       "url": "https://www.boostmyschool.com",
 			"positions": [
 				{
-					"title": "Founder",
+					"title": "Founder & CEO",
 					"start": "Feb ’16",
 					"end": "Current"
 				}
 			],
       "description": [
-        "A crowdfunding platform for schools and school-affiliated organizations."
+        "The premier all-in-one fundraising platform for schools"
       ],
       "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "redux", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
       "press": [
@@ -22,7 +22,9 @@
           {
             "url": "https://ideamensch.com/holman-gao/",
             "text": "Interview with Idea Mensch"
-          },
+          }
+        ],
+        [
           {
             "url": "http://www.mbhsmagnet.org/news/summer16/gao",
             "text": "Interview with my high school"
@@ -56,7 +58,7 @@
       "slug": "mira",
       "name": "Mira Financial",
       "accelerator": "500 Startups",
-      "images": [{ "url": "https://www.mirafinancial.com/" }],
+      "images": ["/static/mira.png"],
       "url": "https://www.mirafinancial.com/",
       "description": [
         "Get personalized life insurance quotes for people with diabetes."
