@@ -5,7 +5,7 @@ import WorkProjectsHandler from '../work_projects/handler';
 import SideProjectsHandler from '../side_projects/handler';
 import CommunityProjectsHandler from '../community_projects/handler';
 import ProjectHandler from '../projects/project_handler';
-import ResumeHandler from '../resume/handler';
+// import ResumeHandler from '../resume/handler';
 import WorkTogetherHandler from '../work_together/handler';
 import TestimonialsHandler from '../testimonials/handler';
 import ContentHandler from '../content/handler';
@@ -23,7 +23,7 @@ export default (
   /* eslint-disable max-len */
   <Route path={ROOT_PATH} component={ContentHandler}>
     <IndexRoute component={PortfolioHandler} />
-    <Route path='resume' component={ResumeHandler} />
+    {/* <Route path='resume' component={ResumeHandler} /> */}
     <Route path='work-together'>
       <IndexRoute component={WorkTogetherHandler} />
       <Route path='testimonials' component={TestimonialsHandler} />
