@@ -14,7 +14,7 @@
 				}
 			],
       "description": [
-        "The premier all-in-one fundraising platform for schools"
+        "The premier giving and engagement platform for K-12 schools and higher-ed"
       ],
       "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "redux", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
       "press": [
@@ -50,7 +50,7 @@
 				{
 					"title": "Software Contractor",
 					"start": "June ’18",
-					"end": "Current"
+					"end": "July ’20"
 				}
 			]
     },
