@@ -19,19 +19,22 @@ const WorkTogetherHandler = () => (
       <div className='work-together-handler__section'>
         <h1>Let&rsquo;s work together!</h1>
         <p>
-          I’m available for high-level, early-stage tech consulting work.  The core
-          of my experience is in full-stack software development at early-stage
-          companies.  To get a sense of what it&rsquo;s like to work with me,
-          read about <a href={BLOG_POST_LINK} target='_blank' rel='noopener noreferrer'>
-            my freelancing values
-          </a> and check out <Link to={getPortfolioPath('/work-together/testimonials')}>
-            my client testimonials
-          </Link>.
+          I’m available for tech strategy consulting for early-stage tech
+          companies.  The companies I work with generally have 0-2 full-time engineers
+          and are missing CTO-type experience on the team.
+          I live in Manhattan and can take projects in the New York City
+          area.  Remote work is also okay.
         </p>
         <br />
         <p>
-          I live in Manhattan and can take projects in the New York City
-          area.  Remote work is also okay.
+          My background is in full-stack software development at multiple
+          early-stage companies, helping them grow from $0 to $Xm in annual revenue.
+          To get a sense of what it&rsquo;s like to work with me,
+          read about <a href={BLOG_POST_LINK} target='_blank' rel='noopener noreferrer'>
+            my contracting values
+          </a> and check out <Link to={getPortfolioPath('/work-together/testimonials')}>
+            my client testimonials
+          </Link>.
         </p>
         <br />
         <p>
