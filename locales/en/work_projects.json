@@ -35,9 +35,8 @@
     {
       "slug": "captivateiq",
       "name": "CaptivateIQ",
-      "current": true,
       "accelerator": "YC W18",
-      "images": [{ "url": "https://www.captivateiq.com/" }],
+      "images": ["/static/captivateiq.png"],
       "url": "https://www.captivateiq.com/",
       "description": [
         "The easiest way to calculate and pay sales commissions."
@@ -94,6 +93,49 @@
 					"title": "Software Contractor",
 					"start": "Jan ’18",
 					"end": "Mar ’18"
+				}
+			]
+    },
+		{
+      "slug": "zenysis",
+			"name": "Zenysis",
+			"accelerator": "YC W16",
+			"url": "http://www.zenysis.com",
+			"images": [
+				"/static/zenysis.jpg"
+			],
+			"description": [
+        "A data analytics platform used by governments and international ",
+        "organizations to tackle global health issues"
+      ],
+      "colleagues": [{ "personId": "ian", "position": "Co-founder, CTO" }],
+      "technologies": ["flask", "reactjs", "bootstrap", "python", "javascript", "scss", "mongo"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Feb ’16",
+					"end": "Feb ’16"
+				}
+			],
+			"involvedWith": [
+				["Build and test new features"]
+			]
+		},
+    {
+      "slug": "verse",
+      "name": "Verse",
+      "images": [{ "url": "https://verse.press" }],
+      "url": "https://verse.press",
+      "description": [
+        "Verse lets you find new poems and create poetry playlists."
+      ],
+      "colleagues": [{ "personId": "andrew-badr" }],
+      "technologies": ["django", "graphql", "reactjs", "redux", "python", "typescript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Dec ’16",
+					"end": "June ’18"
 				}
 			]
     },
@@ -177,24 +219,6 @@
       ]
     },
     {
-      "slug": "verse",
-      "name": "Verse",
-      "images": [{ "url": "https://verse.press" }],
-      "url": "https://verse.press",
-      "description": [
-        "Verse lets you find new poems and create poetry playlists."
-      ],
-      "colleagues": [{ "personId": "andrew-badr" }],
-      "technologies": ["django", "graphql", "reactjs", "redux", "python", "typescript", "scss", "heroku", "postgres"],
-			"positions": [
-				{
-					"title": "Software Contractor",
-					"start": "Dec ’16",
-					"end": "June ’18"
-				}
-			]
-    },
-    {
       "slug": "naturalize-us",
       "name": "NaturalizeUs",
       "images": [
@@ -219,31 +243,6 @@
         ["Designed and built out an MVP version of the naturalization application system"]
       ]
     },
-		{
-      "slug": "zenysis",
-			"name": "Zenysis",
-			"accelerator": "YC W16",
-			"url": "http://www.zenysis.com",
-			"images": [
-				"/static/zenysis.jpg"
-			],
-			"description": [
-        "A data analytics platform used by governments and international ",
-        "organizations to tackle global health issues"
-      ],
-      "colleagues": [{ "personId": "ian", "position": "Co-founder, CTO" }],
-      "technologies": ["flask", "reactjs", "bootstrap", "python", "javascript", "scss", "mongo"],
-			"positions": [
-				{
-					"title": "Software Contractor",
-					"start": "Feb ’16",
-					"end": "Feb ’16"
-				}
-			],
-			"involvedWith": [
-				["Build and test new features"]
-			]
-		},
 		{
       "slug": "chalk",
 			"name": "Chalk Schools",
