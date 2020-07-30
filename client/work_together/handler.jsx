@@ -20,10 +20,9 @@ const WorkTogetherHandler = () => (
         <h1>Let&rsquo;s work together!</h1>
         <p>
           I’m available for tech strategy consulting for early-stage tech
-          companies.  The companies I work with generally have 0-2 full-time engineers
-          and are missing CTO-type experience on the team.
-          I live in Manhattan and can take projects in the New York City
-          area.  Remote work is also okay.
+          companies.  I generally work with the founders (CEO or CTO) and help with
+          CTO-type challenges like hiring and code architecture.
+          I can take New York City and remote projects.
         </p>
         <br />
         <p>
