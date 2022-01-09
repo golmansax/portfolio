@@ -9,12 +9,13 @@
 			"positions": [
 				{
 					"title": "Founder & CEO",
-					"start": "Feb ’17",
+					"start": "Jan ’19",
 					"end": "Current"
 				}
 			],
       "description": [
-        "The premier giving and engagement platform for K-12 schools and higher-ed"
+        "The easiest way for school administrators to raise money and engage their donors. ",
+        "Started as a side project to help my own high school math team raise money."
       ],
       "technologies": ["rails", "expressjs", "reactjs", "graphql", "relay", "redux", "css-modules", "ruby", "js-latest", "heroku", "postgres"],
       "press": [
