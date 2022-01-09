@@ -13,7 +13,7 @@ const ContentFooter = () => (
             Holman Gao <small>© {new Date().getFullYear()}</small>
           </h2>
           <MyEmail link />
-          <div>in New York, NY</div>
+          <div>in NYC</div>
         </div>
         <div className='content-footer__section'>
           <div className='content-footer__section-heading'>
