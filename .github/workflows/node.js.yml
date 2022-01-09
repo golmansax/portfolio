@@ -29,10 +29,10 @@ jobs:
             ${{ runner.os }}-pip-
             ${{ runner.os }}-
 
-      - yarn install --production=false
-      - make eslint
-      - make stylint
-      - npm test
+      - run: yarn install --production=false
+      - run: make eslint
+      - run: make stylint
+      - run: npm test
 
   deploy:
     needs: build
@@ -47,4 +47,4 @@ jobs:
         with:
           node-version: 9
 
-      - "./scripts/deploy_gh_pages.sh"
+      - run: ./scripts/deploy_gh_pages.sh
