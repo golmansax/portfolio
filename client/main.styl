@@ -19,15 +19,16 @@ m(name) {
 }
 
 // Colors
-$my-green = #198565
+$main-color = #001C3C // Prussian
+$secondary-color = #EA0029 // Ruby
 $darker-gray = #555
 $dark-gray = lighten($darker-gray, 30%)
 $light-gray = #bbb
-$white = white
+$white = #F2F2F2 // Titanium
 $header-ratio = 1.25
 
 // Borders
-$colored-border = 1px $my-green solid
+$colored-border = 1px $main-color solid
 $muted-border = 1px $light-gray solid
 
 $h1-lambda = $header-ratio ** 3
@@ -47,11 +48,11 @@ body {
 }
 
 body {
-  font-family 'PT Sans', sans-serif
+  font-family 'Outfit', sans-serif
   font-size 100%
   line-height $lambda
   color $dark-gray
-  background-color $my-green
+  background-color $main-color
 }
 
 .content {
@@ -100,7 +101,7 @@ h3 {
 }
 
 hr {
-  border-color $my-green
+  border-color $main-color
   border-top 0
 }
 
@@ -113,12 +114,12 @@ img {
 }
 
 a {
-  color $my-green
+  color $main-color
   cursor pointer
   text-decoration underline
 
   &:hover {
-    color darken($my-green, 30%)
+    color darken($main-color, 30%)
   }
 }
 

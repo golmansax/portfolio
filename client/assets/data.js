@@ -1,7 +1,7 @@
 import { getAsset } from '../../server/asset_utils';
 
 const registeredAssets = [
-  '/static/navbar-icon.png',
+  '/static/navbar-logo.png',
   '/static/portrait_2018-06-13.jpg',
   '/static/book-booster_kcbs.mp3',
 ];

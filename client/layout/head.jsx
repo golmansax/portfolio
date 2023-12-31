@@ -35,7 +35,7 @@ const LayoutHead = () => {
       <link
         type='text/css'
         rel='stylesheet'
-        href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic'
+        href='https://fonts.googleapis.com/css?family=Outfit:400,700,400italic'
       />
       <link
         href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
@@ -44,7 +44,7 @@ const LayoutHead = () => {
       <link rel='apple-touch-icon' href={getAsset('/static/apple-touch-icon-precomposed.png')} />
       <link href={getAsset('/assets/main.css')} rel='stylesheet' />
       <link
-        href='https://www.gravatar.com/avatar/f14bfcfb11c5a367dc8c88bc3dd43189?s=16'
+        href={getAsset('/static/favicon.png')}
         rel='icon'
       />
       <meta name='viewport' content='width=device-width, user-scalable=no' />

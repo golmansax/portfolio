@@ -1,19 +1,13 @@
 $navbar-lambda = 3 * $lambda
 
 .navbar {
-  background $my-green
   height unit($navbar-lambda, em)
   position relative
-
-  h1 {
-    color $white
-  }
 
   +e(menu) {
     position absolute
     top unit($navbar-lambda, em)
     right 0
-    background $white
     border-left $colored-border
 
     a {
@@ -31,7 +25,6 @@ $navbar-lambda = 3 * $lambda
   +e(sidebar-trigger) {
     background inherit
     border 0
-    color $white
     float right
     height unit($navbar-lambda, em)
     margin-right -.9em // fudge factor to get image to line up with container
@@ -75,7 +68,6 @@ $navbar-lambda = 3 * $lambda
   line-height $navbar-lambda
 
   a {
-    color $white
     margin 0 unit($lambda, em)
     text-transform uppercase
     text-decoration none

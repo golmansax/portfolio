@@ -2,13 +2,13 @@
 	"projects": [
     {
       "slug": "boostmyschool",
-      "name": "BoostMySchool",
+      "name": "Boost My School",
       "images": [{ "url": "https://www.boostmyschool.com" }],
       "current": true,
       "url": "https://www.boostmyschool.com",
 			"positions": [
 				{
-					"title": "Founder & CEO",
+					"title": "CEO & Founder",
 					"start": "Jan ’19",
 					"end": "Current"
 				}
