@@ -35,7 +35,7 @@ const LayoutHead = () => {
       <link
         type='text/css'
         rel='stylesheet'
-        href='https://fonts.googleapis.com/css?family=Outfit:400,700,400italic'
+        href='https://fonts.googleapis.com/css?family=Outfit:400,600,400italic'
       />
       <link
         href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
