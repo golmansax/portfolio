@@ -9,6 +9,7 @@ $navbar-lambda = 3 * $lambda
     top unit($navbar-lambda, em)
     right 0
     border-left $colored-border
+    background: $white
 
     a {
       display block
@@ -27,8 +28,8 @@ $navbar-lambda = 3 * $lambda
     border 0
     float right
     height unit($navbar-lambda, em)
-    margin-right -.9em // fudge factor to get image to line up with container
     padding 0 unit($navbar-lambda / 4, em)
+    margin-right -1 * unit($navbar-lambda / 4, em)
 
     +above('l') {
       display none
@@ -36,7 +37,7 @@ $navbar-lambda = 3 * $lambda
   }
 
   +e(sidebar-trigger-icon) {
-    font-size unit($navbar-lambda / 2, em)
+    font-size unit($navbar-lambda / 3, em)
   }
 }
 
@@ -58,7 +59,7 @@ $navbar-lambda = 3 * $lambda
 
     height $img-width
     margin unit(($navbar-lambda - $img-lambda) / 2, em)
-    margin-left -.7em // fudge factor to get image to line up with container
+    margin-left 0
     width $img-width
   }
 }
