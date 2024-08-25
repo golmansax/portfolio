@@ -23,13 +23,8 @@ const PortfolioHandler = () => {
       <PortfolioBlurb className='portfolio-handler__section' />
       <ProjectsGrid
         className='portfolio-handler__section'
-        title='Current work/projects'
-        projects={currentProjects}
-      />
-      <ProjectsGrid
-        className='portfolio-handler__section'
-        title='Past work/projects'
-        projects={pastProjects}
+        title='My work & projects'
+        projects={currentProjects.concat(pastProjects)}
       />
     </div>
   );

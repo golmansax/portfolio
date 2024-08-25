@@ -11,7 +11,7 @@ const PortfolioBlurb = ({ className }) => (
       <div
         className='blurb__portrait'
         style={(() => {
-          const portraitImage = getAsset('/static/portrait_2018-06-13.jpg');
+          const portraitImage = getAsset('/static/portrait_2024-08-21.jpg');
           return {
             backgroundImage: `url('${portraitImage}')`,
           };
@@ -33,11 +33,11 @@ const PortfolioBlurb = ({ className }) => (
         <Fragment
           routeName={getPortfolioPath('/technologies')}
           text='technologies'
-        /> that I&rsquo;ve used.  Feel free to reach out if you want to{' '}
+        /> that I&rsquo;ve used.  Feel free to reach out if you need help with{' '}
         <Fragment
           routeName={getPortfolioPath('/work-together')}
-          text='work together'
-        />!
+          text='early-stage technical decisions'
+        />.
       </p>
     </div>
   </Container>

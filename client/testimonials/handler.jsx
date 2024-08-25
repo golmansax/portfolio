@@ -22,7 +22,7 @@ const TestimonialsHandler = () => (
       <div className='work-together-handler__section'>
         <h1>Testimonials</h1>
         <p>
-          Below are testimonials from previous freelance and contracting clients.
+          Below are testimonials from previous contracting clients.
           If you&rsquo;re interested in working together,
           please reach out to <MyEmail link />!
         </p>

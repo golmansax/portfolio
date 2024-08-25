@@ -30,8 +30,8 @@ export function getAllProjects() {
     .concat(data.communityProjects);
 
   const ORDER_OVERRIDES = {
-    6: 'my-portfolio',
-    10: 'my-blog',
+    // 6: 'my-portfolio',
+    // 10: 'my-blog',
   };
 
   const allProjects = Object.keys(ORDER_OVERRIDES)

@@ -2,7 +2,7 @@ import { getAsset } from '../../server/asset_utils';
 
 const registeredAssets = [
   '/static/navbar-logo.png',
-  '/static/portrait_2018-06-13.jpg',
+  '/static/portrait_2024-08-21.jpg',
   '/static/book-booster_kcbs.mp3',
 ];
 

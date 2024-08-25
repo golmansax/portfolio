@@ -123,79 +123,9 @@
 			]
 		},
     {
-      "slug": "verse",
-      "name": "Verse",
-      "images": [{ "url": "https://verse.press" }],
-      "url": "https://verse.press",
-      "description": [
-        "Verse lets you find new poems and create poetry playlists."
-      ],
-      "colleagues": [{ "personId": "andrew-badr" }],
-      "technologies": ["django", "graphql", "reactjs", "redux", "python", "typescript", "scss", "heroku", "postgres"],
-			"positions": [
-				{
-					"title": "Software Contractor",
-					"start": "Dec ’16",
-					"end": "June ’18"
-				}
-			]
-    },
-    {
-      "slug": "book-booster",
-      "name": "BookBooster",
-      "description": [
-        "An initiative for the 2016-17 school year to ",
-        "provide books to 20 Bay Area schools serving low-income students. ",
-        "As of October 2017, BookBooster has raised over 14,000 books ($42,000)!"
-      ],
-      "colleagues": [
-        { "personId": "at" },
-        { "personId": "abi" }
-      ],
-			"positions": [
-				{
-					"title": "Co-founder",
-					"start": "May ’16",
-					"end": "Aug ’18"
-				}
-			],
-      "technologies": ["expressjs", "reactjs", "sequelize", "foundation", "typescript", "scss", "heroku", "postgres"],
-      "images": [
-        "/static/book-booster.jpg"
-      ],
-      "press": [
-        [
-          "MissionLocal – ",
-          {
-            "url": "http://missionlocal.org/2016/11/startup-crowdfunds-books-for-schools/",
-            "text": "Startup Crowdfunds Books for Schools"
-          }
-        ],
-        [
-          {
-            "assetUrl": "/static/book-booster_kcbs.mp3",
-            "text": "Interview with KCBS San Francisco"
-          }
-        ],
-        [
-          "Blog posts by A.T. on ",
-          {
-            "url": "https://medium.com/@albertmcwilliams3/book-deserts-and-the-widening-literacy-gap-a8ce2e83ceb6",
-            "text": "book deserts"
-          },
-          " and ",
-          {
-            "url": "https://medium.com/@albertmcwilliams3/bookbooster-and-the-fight-for-public-schools-4dff5b71383b",
-            "text": "the fight for public schools"
-          }
-        ]
-      ]
-    },
-    {
       "slug": "thum-io",
       "name": "Thum.io",
       "images": [{ "url": "https://www.thum.io" }],
-      "current": true,
       "url": "https://www.thum.io",
       "description": [
         "Creating the fastest real-time website thumbnails.  The only thumbnail generator to stream thumbnails as soon as they are requested."
@@ -220,29 +150,22 @@
       ]
     },
     {
-      "slug": "naturalize-us",
-      "name": "NaturalizeUs",
-      "images": [
-        "/static/naturalize-us.jpg"
-      ],
+      "slug": "verse",
+      "name": "Verse",
+      "images": [{ "url": "https://verse.press" }],
+      "url": "https://verse.press",
       "description": [
-        "Empowering immigrants to become US citizens."
+        "Verse lets you find new poems and create poetry playlists."
       ],
-      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+      "colleagues": [{ "personId": "andrew-badr" }],
+      "technologies": ["django", "graphql", "reactjs", "redux", "python", "typescript", "scss", "heroku", "postgres"],
 			"positions": [
 				{
 					"title": "Software Contractor",
-					"start": "Aug ’17",
-					"end": "Dec ’17"
+					"start": "Dec ’16",
+					"end": "June ’18"
 				}
-			],
-      "colleagues": [
-        { "personId": "hongvan" },
-        { "personId": "annie" }
-      ],
-			"involvedWith": [
-        ["Designed and built out an MVP version of the naturalization application system"]
-      ]
+			]
     },
 		{
       "slug": "chalk",
@@ -319,6 +242,82 @@
 				]
 			]
 		},
+    {
+      "slug": "book-booster",
+      "name": "BookBooster",
+      "description": [
+        "An initiative for the 2016-17 school year to ",
+        "provide books to 20 Bay Area schools serving low-income students. ",
+        "As of October 2017, BookBooster has raised over 14,000 books ($42,000)!"
+      ],
+      "colleagues": [
+        { "personId": "at" },
+        { "personId": "abi" }
+      ],
+			"positions": [
+				{
+					"title": "Co-founder",
+					"start": "May ’16",
+					"end": "Aug ’18"
+				}
+			],
+      "technologies": ["expressjs", "reactjs", "sequelize", "foundation", "typescript", "scss", "heroku", "postgres"],
+      "images": [
+        "/static/book-booster.jpg"
+      ],
+      "press": [
+        [
+          "MissionLocal – ",
+          {
+            "url": "http://missionlocal.org/2016/11/startup-crowdfunds-books-for-schools/",
+            "text": "Startup Crowdfunds Books for Schools"
+          }
+        ],
+        [
+          {
+            "assetUrl": "/static/book-booster_kcbs.mp3",
+            "text": "Interview with KCBS San Francisco"
+          }
+        ],
+        [
+          "Blog posts by A.T. on ",
+          {
+            "url": "https://medium.com/@albertmcwilliams3/book-deserts-and-the-widening-literacy-gap-a8ce2e83ceb6",
+            "text": "book deserts"
+          },
+          " and ",
+          {
+            "url": "https://medium.com/@albertmcwilliams3/bookbooster-and-the-fight-for-public-schools-4dff5b71383b",
+            "text": "the fight for public schools"
+          }
+        ]
+      ]
+    },
+    {
+      "slug": "naturalize-us",
+      "name": "NaturalizeUs",
+      "images": [
+        "/static/naturalize-us.jpg"
+      ],
+      "description": [
+        "Empowering immigrants to become US citizens."
+      ],
+      "technologies": ["django", "reactjs", "graphql", "redux", "jquery", "bootstrap", "python", "javascript", "scss", "heroku", "postgres"],
+			"positions": [
+				{
+					"title": "Software Contractor",
+					"start": "Aug ’17",
+					"end": "Dec ’17"
+				}
+			],
+      "colleagues": [
+        { "personId": "hongvan" },
+        { "personId": "annie" }
+      ],
+			"involvedWith": [
+        ["Designed and built out an MVP version of the naturalization application system"]
+      ]
+    },
 		{
       "slug": "amass",
 			"name": "Amass Media",
