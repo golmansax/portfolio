@@ -49,9 +49,6 @@ const ContentFooter = () => (
               >
               LinkedIn
             </a>
-            <a href='https://twitter.com/golmansax' target='_blank' rel='noopener noreferrer'>
-              Twitter
-            </a>
             <a href='/contact'>Contact</a>
           </div>
         </div>
