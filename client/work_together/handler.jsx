@@ -16,8 +16,8 @@ const WorkTogetherHandler = () => (
       <div className='work-together-handler__section'>
         <h1>Let&rsquo;s work together!</h1>
         <p>
-          I’m available for high-level, remote tech consulting work.
-          I generally work with the founders (CEO or CTO) and help with
+          I’m currently not available for consulting work.
+          I used to work with founders (CEO or CTO) and help with
           CTO-type challenges like hiring/team-building and code architecture.
         </p>
         <br />
