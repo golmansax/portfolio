@@ -89,7 +89,9 @@
       "name": "Andy Kearney"
     },
     "jelinson": {
-      "name": "Julius Elinson"
+      "name": "Julius Elinson",
+      "url": "https://jelinson.com",
+      "github": "jelinson"
     },
     "hongvan": {
       "name": "Hong Van Pham",
